@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Контакты — Палтус FISH</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
 </head>
 <body>
   <header class="top-header">
@@ -74,11 +74,11 @@
       <section class="form-section">
         <h2>ХОТИТЕ С НАМИ СВЯЗАТЬСЯ?</h2>
         <p>Пожалуйста, заполните поля ниже</p>
-        <form id="contact-form">
-          <input type="text" placeholder="Ваше имя" required />
-          <input type="tel" placeholder="Ваш номер телефона" required />
-          <input type="email" placeholder="Ваш почтовый ящик" required />
-          <textarea placeholder="Ваш комментарий" maxlength="1000"></textarea>
+        <form id="contact-form" method="POST" action="send.php">
+          <input type="text" name="name" placeholder="Введите ваше имя">
+          <input type="text" name="phone" placeholder="Введите ваш номер телефона">
+          <input type="email" name="email" placeholder="Введите ваш почтовый ящик">
+          <textarea name="message" placeholder="Введите ваше сообщение"></textarea>
           <button type="submit">Оставить заявку</button>
         </form>
       </section>

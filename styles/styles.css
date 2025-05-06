@@ -11,6 +11,12 @@ body {
   line-height: 1.5;
 }
 
+.logo-header {
+  display: flex;
+  max-width: 447px;
+  align-items: center;
+}
+
 /* Верхний хедер */
 .top-header {
   display: flex;

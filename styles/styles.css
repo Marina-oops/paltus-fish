@@ -66,8 +66,6 @@ img {
 @media (max-width: 480px) {
   .logo-header {
     background-image: url("../images/logo_symbol.png");
-    width: 300px;
-    height: 150px;
   }
 }
 

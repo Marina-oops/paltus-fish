@@ -61,6 +61,12 @@ br {
   width: 100%;
 }
 
+@media (max-width: 480px) {
+  .logo-header {
+    max-width: 76px;
+  }
+}
+
 /* Верхний хедер */
 .top-header {
   display: flex;

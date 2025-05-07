@@ -16,6 +16,8 @@ h1 {
 		font-family: "Roboto", sans-serif;
 		font-weight: 800;
 		font-size: 48px;
+		color: #2A3176;
+		margin-bottom: 54px;
 }
 
 h2 {
@@ -24,6 +26,7 @@ h2 {
 		font-size: 28px;
 		line-height: 120%;
 		letter-spacing: 1%;
+		color: #2A3176;
 }
 
 p {
@@ -160,16 +163,6 @@ button:active {
 /* Контент страницы */
 .contact-page {
   flex: 1;
-}
-
-.contact-page h1 {
-  font-size: 28px;
-  color: #222b66;
-  margin-bottom: 20px;
-}
-
-.contact-info p {
-  margin-bottom: 10px;
 }
 
 .map-wrapper {

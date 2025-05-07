@@ -85,6 +85,7 @@ img {
   display: inline-block;
   width: 100%;
   max-width: 1128px;
+  margin-right: 24px;
 }
 
 .search-icon {
@@ -105,7 +106,6 @@ img {
   border: 2px solid #2a3176;
   border-radius: 15px;
   transition: border-color 0.3s;
-  margin-right: 24px;
 }
 
 .search-input:focus {
@@ -114,6 +114,9 @@ img {
 }
 
 @media (max-width: 480px) {
+  .search-wrapper {
+    margin-right: 0px;
+  }
   .search-input {
     font-size: 14px;
     padding: 15px 11px 15px 42px;

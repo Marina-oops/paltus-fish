@@ -18,6 +18,14 @@ h1 {
 		font-size: 48px;
 }
 
+h2 {
+		font-family: "Roboto", sans-serif;
+		font-weight: 800;
+		font-size: 28px;
+		line-height: 120%;
+		letter-spacing: 1%;
+}
+
 p {
 		font-family: "Nunito", sans-serif;
 		font-size: 24px;

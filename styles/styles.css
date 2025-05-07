@@ -37,6 +37,28 @@ body {
   border-radius: 4px;
 }
 
+button {
+    background: #000000;
+    color: white;
+    border: none;
+    margin-bottom: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 35px;
+    font-size: 1rem; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+button:hover {
+    background: #333333; 
+    transform: scale(1.05); 
+}
+
+button:active {
+    background: #555555; 
+    transform: scale(1); 
+}
+
 #cart-button {
     border: none;
 	  margin-right: 40px;

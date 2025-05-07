@@ -37,9 +37,19 @@ body {
   border-radius: 4px;
 }
 
-.icons .icon {
-  margin-left: 15px;
-  cursor: pointer;
+#cart-button {
+    border: none;
+	  margin-right: 40px;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+}
+
+#cart-button .cart-icon {
+    width: 20px;
+    height: 20px;
 }
 
 /* Навигация */

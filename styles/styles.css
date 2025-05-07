@@ -41,10 +41,8 @@ button {
     background: #000000;
     color: white;
     border: none;
-    margin-bottom: 5px;
-    padding: 10px 15px;
     cursor: pointer;
-    border-radius: 35px;
+    border-radius: 15px;
     font-size: 1rem; 
     transition: background-color 0.3s ease, transform 0.2s ease; 
 }
@@ -61,17 +59,16 @@ button:active {
 
 #cart-button {
     border: none;
-	  margin-right: 40px;
-    padding: 10px 15px;
+    padding: 12px 19px;
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 5px; 
+    gap: 10px; 
 }
 
 #cart-button .cart-icon {
-    width: 20px;
-    height: 20px;
+    width: 32px;
+    height: 32px;
 }
 
 /* Навигация */

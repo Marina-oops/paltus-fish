@@ -11,14 +11,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="top-header">
-    <div class="logo-header"></div>
-    <div class="search-wrapper">
-      <img src="images/search.png" alt="Поиск" class="search-icon">
-      <input type="text" placeholder="Введите название товара" class="search-input">
-    </div>
-    <button id="cart-button" class="cart-button"><img src="images/basket.png" alt="Корзина" class="cart-icon">(<span id="cart-count">0</span>)</button>
-  </header>
+   <header class="top-header">
+  	  <div class="top-header-row">
+  		<div class="logo-header"></div>
+  		<div class="search-wrapper">
+  		  <img src="images/search.png" alt="Поиск" class="search-icon">
+  		  <input type="text" placeholder="Введите название товара" class="search-input">
+  		</div>
+  		<button id="cart-button" class="cart-button">
+  		  <img src="images/basket.png" alt="Корзина" class="cart-icon">(<span id="cart-count">0</span>)
+  		</button>
+  		<div class="new-mobile-element">NEW</div> <!-- Для мобилок -->
+  	  </div>
+	</header>
 
   <nav class="main-nav">
     <button class="catalog-btn">КАТАЛОГ</button>

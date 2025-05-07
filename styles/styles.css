@@ -85,7 +85,7 @@ img {
   display: inline-block;
   width: 100%;
   max-width: 1128px;
-  margin-right: 24px;
+  margin: 0px 24px;
 }
 
 .search-icon {

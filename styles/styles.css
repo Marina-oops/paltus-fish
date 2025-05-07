@@ -61,7 +61,7 @@ img {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center left;
-  margin-right: -20px;
+  margin-left: -20px;
 }
 
 @media (max-width: 480px) {
@@ -99,7 +99,7 @@ img {
 
 .search-input {
   width: 100%;
-  padding: 19px 12px 19px 12px;
+  padding: 19px 12px 19px 48px;
   color: #4f4f4f;
   font-size: 20px;
   border: 2px solid #2a3176;
@@ -115,7 +115,7 @@ img {
 @media (max-width: 480px) {
   .search-input {
     font-size: 14px;
-    padding: 15px 11px 15px 11px;
+    padding: 15px 11px 15px 42px;
   }
 
   .search-icon {

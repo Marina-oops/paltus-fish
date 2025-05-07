@@ -55,7 +55,8 @@ img {
 
 .logo-header {
   display: flex;
-  max-width: 447px;
+  width: 447px;
+  heihgt: 126px;
   align-items: center;
   margin-left: -20px;
   margin-right: 5px;
@@ -68,7 +69,8 @@ img {
 @media (max-width: 480px) {
   .logo-header {
     background-image: url("../images/logo_symbol.png");
-    max-width: 76px;
+    width: 76px;
+    heihgt: 49px;
   }
 }
 

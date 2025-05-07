@@ -58,6 +58,7 @@ br {
   align-items: center;
   margin-left: -20px;
   margin-right: 5px;
+  width: 100%;
 }
 
 /* Верхний хедер */
@@ -113,6 +114,32 @@ button:active {
     width: 32px;
     height: 32px;
     margin-right: 5px;
+}
+
+@media (max-width: 1024px) {
+  #cart-button {
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+  #cart-button .cart-icon {
+    width: 28px;
+    height: 28px;
+  } 
+}
+
+@media (max-width: 768px) {
+  #cart-button {
+    font-size: 17px; 
+    border-radius: 8px;
+    padding: 12px;
+  }
+
+  #cart-button .cart-icon {
+    width: 22px;
+    height: 24px;
+  }  
 }
 
 /* Навигация */

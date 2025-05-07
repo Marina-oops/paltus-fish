@@ -129,7 +129,7 @@ button:active {
   } 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   #cart-button {
     font-size: 17px; 
     border-radius: 8px;

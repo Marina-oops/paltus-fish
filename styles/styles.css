@@ -79,13 +79,46 @@ img {
   border-bottom: 1px solid #ccc;
 }
 
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1128px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+}
+
 .search-input {
-  flex: 1;
-  max-width: 400px;
-  margin: 0 20px;
-  padding: 8px 12px;
-  border: 1px solid #aaa;
+  width: 100%;
+  padding: 19px 12px;
+  color: #4f4f4f;
+  font-size: 20px;
+  border: 2px solid #2a3176;
   border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  border-color: #6CC276;
+  outline: none;
+}
+
+@media (max-width: 480px) {
+  .search-input {
+    font-size: 14px;
+    padding: 15px 11px;
+  }
+
+  .search-icon {
+    left: 14px;
+  }
 }
 
 button {

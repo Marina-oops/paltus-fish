@@ -12,12 +12,13 @@
 </head>
 <body>
   <header class="top-header">
-    <picture>
+    <picture class="logo-header">
       <source media="(max-width: 480px)" srcset="images/logo_symbol.png">
+      <source media="(min-width: 720px)" srcset="images/logo.png">
       <img src="images/logo.png" alt="logo" class="logo-header">
     </picture>
 
-    <img src="images/logo_symbol.png" alt="Test logo" style="width: 100px; border: 2px solid red;">
+    <img srcset="images/logo_symbol.png" alt="Test logo" style="width: 100px; border: 2px solid red;">
     
     <input type="text" placeholder="Введите название товара" class="search-input">
     <button id="cart-button" class="cart-button"><img src="images/basket.png" alt="Корзина" class="cart-icon">(<span id="cart-count">0</span>)

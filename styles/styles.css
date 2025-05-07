@@ -14,7 +14,7 @@ body {
 
 @media (max-width: 768px) { /* поменять потом */
   body {
-    margin: 0px 30px;
+    margin: 0px 64px;
   }
 }
 
@@ -48,8 +48,9 @@ p {
 		line-height: 120%; 
 }
 
-br {
-	font-size: 24px;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .logo-header {

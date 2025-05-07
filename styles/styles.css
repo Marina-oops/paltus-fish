@@ -64,12 +64,13 @@ button:active {
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 10px; 
+    gap: 5px; 
 }
 
 #cart-button .cart-icon {
     width: 32px;
     height: 32px;
+    margin-right: 5px;
 }
 
 /* Навигация */

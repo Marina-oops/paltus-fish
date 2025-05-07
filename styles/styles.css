@@ -60,10 +60,14 @@ img {
   margin-left: -20px;
   margin-right: 5px;
   width: 100%;
+  background-image: url("../images/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 480px) {
   .logo-header {
+    background-image: url("../images/logo_symbol.png");
     max-width: 76px;
   }
 }

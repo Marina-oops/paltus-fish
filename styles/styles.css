@@ -613,7 +613,8 @@ button:active {
 
 .form-section_row {
  display: flex;
- jusify-content: relative;
+ width: 100%;
+ max-width: 1128px;
  gap: 24px;
 }
 

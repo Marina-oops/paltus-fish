@@ -536,7 +536,7 @@ button:active {
   width: 100%;
   max-width: 1272px;
   position: relative;
-  height: 720px;
+  height: 400px;
   object-fit: cover;
   object-position: center;
 }
@@ -546,7 +546,6 @@ button:active {
 	  margin: 22px 0;
 	  border-radius: 22px;
 	  max-width: 852px;
-	  height: 482px;
 	}
 }
 

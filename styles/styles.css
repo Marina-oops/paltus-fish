@@ -444,7 +444,6 @@ button:active {
 
 @media (max-width: 1366px) {
   .container {
-	  gap: 16px;
 	  padding: 24px 0px 86px 0px;
 	}
   .sidebar {
@@ -538,6 +537,8 @@ button:active {
   max-width: 1272px;
   position: relative;
   height: 720px;
+  object-fit: cover;
+  object-position: center;
 }
 
 @media (max-width: 1366px) {

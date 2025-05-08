@@ -93,7 +93,7 @@ img {
   flex-grow: 1;
   max-width: 1128px;
   margin-right: 24px;
-  margin: 0px 24px;
+  margin-left: 4px;
 }
 
 .search-icon {
@@ -212,6 +212,11 @@ button:active {
     height: 22px;
     margin-right: -2px;
   }  
+}
+
+#hamburger-button {
+    width: 56px;
+    height: 42px;
 }
 
 /* Навигация */

@@ -626,7 +626,8 @@ button:active {
   width: 100%;
   max-width: 408px;
   height: 158px;
-  padding: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
   font-size: 20px;
   color: #4f4f4f;
   border: 2px solid #2a3176;
@@ -658,6 +659,7 @@ button:active {
   height: 58px;
   border: none;	
   border-radius: 10px;
+  margin-top: 86px;
 }
 
 /* Подвал */

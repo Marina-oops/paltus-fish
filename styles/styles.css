@@ -381,7 +381,7 @@ button:active {
 /* Основной контейнер */
 .container {
   display: flex;
-  padding: 0px 32px;
+  padding: 32px 0px 130px 0px;
   gap: 24px;
 }
 
@@ -396,6 +396,8 @@ button:active {
   cursor: pointer;
   max-width: 408px;
   width: 100%;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .sidebar ul {
@@ -407,7 +409,6 @@ button:active {
 }
 
 .sidebar a {
-  color: #c3f3a7;
   text-decoration: none;
 }
 

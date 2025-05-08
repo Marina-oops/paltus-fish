@@ -308,6 +308,26 @@ button:active {
   color: #6CC276;
 }
 
+@media (max-width: 1366px) {
+  .main-nav {
+	  font-size: 14px;
+	  max-width: 1030px;
+   }
+
+  .catalog-btn {
+	  padding: 11px 20px;
+	  border-radius: 10px;
+	  max-width: 274px;
+  }
+
+	.nav-links {
+	  border: 1.5px solid #2a3176;
+	  border-radius: 10px;
+	  gap: 32px;
+	  padding: 11px;
+	}
+}
+
 @media (max-width: 480px) {
   .main-nav {
 	display: none;

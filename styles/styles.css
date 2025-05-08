@@ -381,13 +381,21 @@ button:active {
 /* Основной контейнер */
 .container {
   display: flex;
-  padding: 40px;
-  gap: 40px;
+  padding: 0px 32px;
+  gap: 24px;
 }
 
 /* Сайдбар */
 .sidebar {
-  width: 200px;
+  background-color: #2a3176;
+  color: white;
+  border: none;
+  padding: 32px 30px;
+  margin-right: 24px;
+  border-radius: 29px;
+  cursor: pointer;
+  max-width: 408px;
+  width: 100%;
 }
 
 .sidebar ul {
@@ -395,13 +403,12 @@ button:active {
 }
 
 .sidebar li {
-  margin-bottom: 15px;
+  margin-bottom: 36px;
 }
 
 .sidebar a {
-  color: #222b66;
+  color: #c3f3a7;
   text-decoration: none;
-  font-weight: bold;
 }
 
 /* Контент страницы */

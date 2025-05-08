@@ -108,7 +108,7 @@ img {
 	
    .top-header-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     position: relative;
     width: 100%;
@@ -120,13 +120,13 @@ img {
     position: relative;
     left: auto;
     transform: none;
-    order: 1;
     width: auto;
     margin: 0;
+    flex-basis: auto;
   }
 
   #cart-button {
-    order: 2;
+    flex-basis: auto;
     z-index: 1;
   }
 
@@ -134,7 +134,7 @@ img {
     width: 100%;
     min-width: auto;
     margin-top: 10px;
-    order: 3;
+    flex-basis: 100%;
   }
 
   .new-mobile-element {
@@ -142,9 +142,8 @@ img {
     font-size: 18px;
     font-weight: bold;
     color: #222b66;
-    padding: 12px 0;
+    padding: 12px 0px;
     width: 100%;
-    order: 0; 
   }
 }
 

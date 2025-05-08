@@ -441,6 +441,12 @@ button:active {
   padding: 32px 0px 130px 0px;
 }
 
+@media (max-width: 1366px) {
+  .container {
+	  padding: 24px 0px 86px 0px;
+	}
+}
+
 /* Сайдбар */
 .sidebar {
   background-color: #2a3176;
@@ -624,11 +630,10 @@ button:active {
   margin-right: 10px;
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .container {
     flex-direction: column;
-    padding: 20px;
+    padding: 0px;
   }
 
   .sidebar {

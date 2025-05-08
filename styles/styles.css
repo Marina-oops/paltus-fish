@@ -105,14 +105,34 @@ img {
     flex-direction: column;
     align-items: stretch;
   }
-
-  .top-header-row {
+  
+   .top-header-row {
     display: flex;
-    flex-direction: column; /* Вертикальное расположение элементов */
-    align-items: stretch; /* Растягиваем по ширине контейнера */
+    justify-content: space-between;
+    align-items: center;
     position: relative;
     width: 100%;
     margin-bottom: 10px;
+    flex-wrap: wrap; /* Добавлено для переноса на новую строку */
+  }
+  
+  .logo-header {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    order: 1;
+  }
+
+  #cart-button {
+    order: 2;
+    z-index: 1; /* чтобы не перекрывался логотипом */
+  }
+
+  .search-wrapper {
+    width: 100%;
+    min-width: 300px;
+    margin-top: 10px;
+    order: 3;
   }
 
   .new-mobile-element {
@@ -122,31 +142,7 @@ img {
     color: #222b66;
     padding: 12px 0;
     width: 100%;
-  }
-
-  .top-header-row-top {  /* Стили для обертки */
-    display: flex;
-    justify-content: space-between; /* Выравниваем логотип и корзину по краям */
-    align-items: center;
-    width: 100%;
-  }
-
-  .logo-header {
-    position: relative;
-    left: auto;
-    transform: none;
-    width: auto; /* Ширина по содержимому */
-    margin: 0;
-  }
-
-  #cart-button {
-    z-index: 1;
-  }
-
-  .search-wrapper {
-    width: 100%;
-    min-width: auto;
-    margin-top: 10px;
+    order: 0;
   }
 }
 

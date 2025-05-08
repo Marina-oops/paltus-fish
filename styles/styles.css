@@ -147,10 +147,9 @@ img {
     }
 
   .search-wrapper {
-        max-width: 352px;
+        max-width: 480px;
 	width: 100%;
-        margin-right: 0;
-        margin-left: 0;
+	margin: 5px 0px 40px 0px;
     }
 }
 
@@ -209,7 +208,7 @@ button:active {
   #cart-button {
     font-size: 17px; 
     border-radius: 8px;
-    padding: 12px;
+    padding: 12px 11px;
     gap: 4px;
   }
 
@@ -223,6 +222,7 @@ button:active {
 #hamburger-button {
     width: 56px;
     height: 42px;
+    margin-left:-2px;
 }
 
 /* Навигация */

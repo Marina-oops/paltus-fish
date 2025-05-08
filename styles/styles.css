@@ -535,6 +535,14 @@ button:active {
   height: auto;
 }
 
+.details-grid-desktop {
+	display: block;
+}
+
+.details-grid-mob {
+	display: none;
+}
+
 /* Реквизиты / Часы работы / Как пройти */
 .details-grid {
   display: grid;
@@ -552,6 +560,13 @@ button:active {
 }
 
 @media (max-width: 480px) {
+	  .details-grid-mob {
+		display: block;
+	}
+	
+	.details-grid-desktop {
+		display: none;
+	}
   .details-grid {
 	  grid-template-columns: repeat(auto-fit, minmax(171px, 1fr));
 	  gap: 8px;

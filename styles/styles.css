@@ -86,7 +86,7 @@ img {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
   .logo-header {
     background-image: url("../images/logo_symbol.png");
     width: 76px;
@@ -234,7 +234,6 @@ button:active {
     font-size: 16px;
     border-radius: 10px;
     padding: 8px 10px;
-    gap: 4px; 
   }
 
   #cart-button .cart-icon {

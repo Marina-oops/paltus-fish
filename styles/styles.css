@@ -261,7 +261,7 @@ button:active {
   border-radius: 15px;
   display: flex;
   gap: 93px;
-  padding: 155px 17px;
+  padding: 17px 155px;
   max-width: 1128px;
   width: 100%;
 }

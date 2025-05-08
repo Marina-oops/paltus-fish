@@ -77,6 +77,7 @@ img {
     background-image: url("../images/logo_symbol.png");
     width: 76px;
     height: 65px;
+    margin-left: 0px;
   }
 }
 
@@ -107,7 +108,7 @@ img {
 
 .search-input {
   width: 100%;
-  padding: 19px 12px 19px 48px;
+  padding: 14px 12px 15px 48px;
   color: #4f4f4f;
   font-size: 20px;
   border: 2px solid #2a3176;

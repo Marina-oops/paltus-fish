@@ -526,13 +526,10 @@ button:active {
 .map-wrapper {
   margin: 20px 0;
   border: 2px solid #222b66;
-  border-radius: 8px;
+  border-radius: 32px;
   overflow: hidden;
-}
-
-.map-wrapper img {
   width: 100%;
-  height: auto;
+  max-width: 1272px;
 }
 
 .details-grid-desktop {

@@ -241,6 +241,8 @@ button:active {
   align-items: center;
   font-size: 20px;
   font-weight: 800;
+  max-width: 1560px;
+  width: 100%;
 }
 
 .catalog-btn {

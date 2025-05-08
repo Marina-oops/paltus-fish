@@ -281,6 +281,12 @@ button:active {
   color: #6CC276;
 }
 
+@media (max-width: 480px) {
+  .main.nav {
+	display: none;
+   }
+}
+
 /* Основной контейнер */
 .container {
   display: flex;

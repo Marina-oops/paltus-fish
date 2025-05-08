@@ -309,6 +309,7 @@ button:active {
 .main-nav {
   display: flex;
   align-items: center;
+  font-family: "Nunito", sans-serif;
   font-size: 20px;
   font-weight: 700;
   max-width: 1536px;
@@ -396,6 +397,7 @@ button:active {
   cursor: pointer;
   max-width: 408px;
   width: 100%;
+  font-family: "Nunito", sans-serif;
   font-size: 20px;
   font-weight: 700;
 }
@@ -405,10 +407,12 @@ button:active {
 }
 
 .sidebar li {
-  margin-bottom: 36px;
+  margin-bottom: 18px;
+  padding: 7px 0px;
 }
 
 .sidebar a {
+  color: #000;
   text-decoration: none;
 }
 

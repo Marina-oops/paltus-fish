@@ -613,7 +613,7 @@ button:active {
 
 .form-section_row {
  display: flex;
- jusify-content: relarive;
+ jusify-content: relative;
  gap: 24px;
 }
 

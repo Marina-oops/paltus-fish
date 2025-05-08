@@ -61,6 +61,7 @@ img {
 
 .desktop-header {
 	display: block;
+	margin-top: 36px;
 	margin-bottom: 48px;
 }
 
@@ -399,7 +400,7 @@ button:active {
   font-family: "Nunito", sans-serif;
   font-size: 20px;
   font-weight: 700;
-  height: 536px;
+  height: 462px;
 }
 
 .sidebar ul {
@@ -407,7 +408,7 @@ button:active {
 }
 
 .sidebar li {
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   padding: 7px 0px;
   cursor: pointer;
 }

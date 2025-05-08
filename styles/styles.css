@@ -686,7 +686,7 @@ button:active {
   height: 58px;
   border: none;	
   border-radius: 10px;
-  margin-top: 86px;
+  margin-top: 48px;
 }
 
 @media (max-width: 1024px) {

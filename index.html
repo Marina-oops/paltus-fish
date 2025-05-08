@@ -12,18 +12,27 @@
 </head>
 <body>
   <header class="top-header">
-    <div class="top-header-row">
-      <div class="logo-header"></div>
-      <div class="search-wrapper">
-        <img src="images/search.png" alt="Поиск" class="search-icon">
-        <input type="text" placeholder="Введите название товара" class="search-input">
-      </div>
-      <button id="cart-button" class="cart-button">
-        <img src="images/basket.png" alt="Корзина" class="cart-icon">(<span id="cart-count">0</span>)
-      </button>
-      <div class="new-mobile-element">NEW</div> <!-- Для мобилок -->
+     <div class="desktop-header">
+        <div class="logo-header"></div>
+        <div class="search-wrapper">
+          <img src="images/search.png" alt="Поиск" class="search-icon">
+          <input type="text" placeholder="Введите название товара" class="search-input">
+        </div>
+        <button id="cart-button" class="cart-button"><img src="images/basket.png" alt="Корзина" class="cart-icon">(<span id="cart-count">0</span>)</button>
     </div>
-</header>
+
+    <div class="mobile-header">
+        <div class="mobile-header_row1">
+          <div class="logo-header"></div>
+          <button id="cart-button" class="cart-button"><img src="images/basket.png" alt="Корзина" class="cart-icon">(<span id="cart-count">0</span>)</button>
+        </div>
+        <div class="search-wrapper">
+          <img src="images/search.png" alt="Поиск" class="search-icon">
+          <input type="text" placeholder="Введите название товара" class="search-input">
+        </div>
+    </div>
+    
+  </header>
 
   <nav class="main-nav">
     <button class="catalog-btn">КАТАЛОГ</button>

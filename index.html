@@ -135,10 +135,24 @@
         <h1 style="margin-bottom: 16px;">ХОТИТЕ С НАМИ СВЯЗАТЬСЯ?</h1>
         <p style="color: #4f4f4f;">Пожалуйста, заполните поля ниже</p>
         <form id="contact-form" method="POST" action="send.php">
-          <input type="text" name="name" placeholder="Введите ваше имя">
-          <input type="text" name="phone" placeholder="Введите ваш номер телефона">
-          <input type="email" name="email" placeholder="Введите ваш почтовый ящик">
-          <textarea name="message" placeholder="Введите ваше сообщение"></textarea>
+         <div class="form-section_row">
+            <div>
+              <h2>Ваше имя</h2>
+              <input type="text" name="name" placeholder="Введите ваше имя">
+            </div>
+            <div>
+              <h2>Ваш номер телефона</h2>
+              <input type="text" name="phone" placeholder="Введите ваш номер телефона">
+            </div>
+            <div>
+              <h2>Ваш почтовый ящик</h2>
+              <input type="email" name="email" placeholder="Введите ваш почтовый ящик">
+            </div>
+          </div>
+          <div>
+            <h2>Ваш комментарий</h2>
+            <textarea name="message" placeholder="Введите ваше сообщение"></textarea>
+          </div>
           <button type="submit">Оставить заявку</button>
         </form>
       </section>

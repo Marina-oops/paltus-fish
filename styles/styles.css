@@ -185,6 +185,48 @@ img {
      }
 
   .search-wrapper {
+        max-width: 644px;
+	width: 100%;
+	margin: 5px 0px 56px 0px;
+    }
+}
+
+@media (max-width: 480px) {
+  .search-input {
+    font-size: 14px;
+    padding: 15px 11px 15px 42px;
+    margin-right: 0px;
+    border-radius: 10px;
+  }
+
+  .search-icon {
+    left: 14px;
+  }
+	
+  .desktop-header {
+ 	display: none; 
+  } 
+	
+  .mobile-header {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+   }
+
+    .top-header {
+        width: 100%;
+	justify-content: center;
+    }
+    
+     #hamburger-button { 
+	margin-right: auto;
+      }
+	
+     #cart-button {
+       margin-left: auto;
+     }
+
+  .search-wrapper {
         max-width: 480px;
 	width: 100%;
 	margin: 5px 0px 40px 0px;

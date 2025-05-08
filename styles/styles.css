@@ -654,8 +654,6 @@ button:active {
 }
 
 .form-section textarea {
-  width: 100%;
-  max-width: none;
   padding: 20px;
   font-size: 20px;
   color: #4f4f4f;

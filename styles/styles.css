@@ -530,13 +530,39 @@ button:active {
 }
 
 .map-wrapper {
-  margin: 20px 0;
+  margin: 32px 0;
   border: 2px solid #222b66;
   border-radius: 32px;
   overflow: hidden;
   width: 100%;
   max-width: 1272px;
   position: relative;
+  height: 720px;
+}
+
+@media (max-width: 1366px) {
+	  .map-wrapper {
+	  margin: 22px 0;
+	  border-radius: 22px;
+	  max-width: 852px;
+	  height: 482px;
+	}
+}
+
+@media (max-width: 1024px) {
+	  .map-wrapper {
+	  margin: 16px 0;
+	  border-radius: 16px;
+	  height: 320px;
+	}
+}
+
+@media (max-width: 480px) {
+	  .map-wrapper {
+	  margin: 24px 0;
+	  border-radius: 25px;
+	  height: 166px;
+	}
 }
 
 .details-grid-desktop {

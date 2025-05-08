@@ -18,9 +18,9 @@ body {
   }
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 1024px) { 
   body {
-    margin: 0px 64px;
+    margin: 0px 50px;
   }
 }
 
@@ -149,7 +149,7 @@ img {
 	
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
   .search-input {
     font-size: 14px;
     padding: 15px 11px 15px 42px;
@@ -242,7 +242,7 @@ button:active {
   } 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
   #cart-button {
     font-size: 17px; 
     border-radius: 8px;
@@ -330,7 +330,7 @@ button:active {
 	}
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
   .main-nav {
 	display: none;
    }

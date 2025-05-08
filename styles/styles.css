@@ -136,8 +136,10 @@ img {
 
 @media (max-width: 1366px) {
 	.search-input {
-	padding: 10px 8px 11px 32px;
+	padding: 10px 8px 11px 40px;
 	font-size: 14px;
+	border: 1.5px solid #2a3176;
+        border-radius: 10px;
 	}
 	.search-icon {
 	  width: 20px;

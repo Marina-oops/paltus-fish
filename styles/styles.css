@@ -126,6 +126,7 @@ img {
     font-size: 14px;
     padding: 15px 11px 15px 42px;
     margin-right: 0px;
+    border-radius: 10px;
   }
 
   .search-icon {
@@ -144,7 +145,16 @@ img {
 
     .top-header {
         width: 100%;
+	justify-content: center;
     }
+    
+     #hamburger-button { 
+	margin-right: auto;
+      }
+	
+     #cart-button {
+       margin-left: auto;
+     }
 
   .search-wrapper {
         max-width: 480px;

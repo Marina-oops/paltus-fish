@@ -35,7 +35,7 @@ h1 {
 		font-weight: 700;
 		font-size: 48px;
 		color: #2A3176;
-		margin-bottom: 54px;
+		margin-bottom: 46px;
 }
 
 h2 {
@@ -383,7 +383,6 @@ button:active {
 .container {
   display: flex;
   padding: 32px 0px 130px 0px;
-  gap: 24px;
 }
 
 /* Сайдбар */
@@ -419,7 +418,7 @@ button:active {
 	  border-radius: 20px;
 	  max-width: 274px;
 	  font-size: 14px;
-	  height: 360px;
+	  height: 372px;
    }
    .sidebar li {
 	  margin-bottom: 12px;
@@ -441,6 +440,7 @@ button:active {
 /* Контент страницы */
 .contact-page {
   flex: 1;
+  padding-top: 10px;
 }
 
 .map-wrapper {

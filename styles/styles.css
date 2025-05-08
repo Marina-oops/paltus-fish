@@ -81,6 +81,11 @@ img {
 }
 
 @media (max-width: 1366px) {
+	.desktop-header {
+		margin-top: 24px;
+		margin-bottom: 32px;
+	}
+	
   .logo-header {
     width: 300px;
     height: 85px;
@@ -408,7 +413,7 @@ button:active {
 }
 
 .sidebar li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   padding: 7px 0px;
   cursor: pointer;
 }
@@ -420,10 +425,10 @@ button:active {
 	  border-radius: 20px;
 	  max-width: 274px;
 	  font-size: 14px;
-	  height: 372px;
+	  height: 310px;
    }
    .sidebar li {
-	  margin-bottom: 12px;
+	  margin-bottom: 5px;
 	  padding: 5px 0px;
 	}
 }

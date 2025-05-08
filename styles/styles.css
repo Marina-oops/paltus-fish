@@ -439,12 +439,17 @@ button:active {
 .container {
   display: flex;
   padding: 32px 0px 130px 0px;
+  min-width: 0;
 }
 
 @media (max-width: 1366px) {
   .container {
+	  gap: 16px;
 	  padding: 24px 0px 86px 0px;
 	}
+  .sidebar {
+    flex-shrink: 0;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -509,6 +514,7 @@ button:active {
 .contact-page {
   flex: 1;
   padding-top: 8px;
+  min-width: 0;
 }
 
 @media (max-width: 1366px) {
@@ -530,6 +536,7 @@ button:active {
   overflow: hidden;
   width: 100%;
   max-width: 1272px;
+  position: relative;
 }
 
 .details-grid-desktop {

@@ -394,7 +394,6 @@ button:active {
   padding: 32px 30px;
   margin-right: 24px;
   border-radius: 29px;
-  cursor: pointer;
   max-width: 408px;
   width: 100%;
   font-family: "Nunito", sans-serif;
@@ -410,6 +409,7 @@ button:active {
 .sidebar li {
   margin-bottom: 18px;
   padding: 7px 0px;
+  cursor: pointer;
 }
 
 @media (max-width: 1366px) {
@@ -419,7 +419,12 @@ button:active {
 	  border-radius: 20px;
 	  max-width: 274px;
 	  font-size: 14px;
+	  height: 360px;
    }
+   .sidebar li {
+	  margin-bottom: 12px;
+	  padding: 5px 0px;
+	}
 }
 
 @media (max-width: 1024px) {

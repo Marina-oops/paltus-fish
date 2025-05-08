@@ -610,6 +610,8 @@ button:active {
 }
 
 .form-section_row {
+ display: flex;
+ jusify-content: relarive;
  gap: 24px;
 }
 
@@ -638,6 +640,8 @@ button:active {
   border-bottom: 2px solid #000;
   outline: none;
   font-size: 20px;
+  width: 100%;
+  max-width: 408px;
 }
 
 .form-section input:focus,

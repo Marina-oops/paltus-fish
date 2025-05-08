@@ -261,9 +261,12 @@ button:active {
   border-radius: 15px;
   display: flex;
   gap: 93px;
-  padding: 17px 155px;
+  padding: 15px 155px;
   max-width: 1128px;
   width: 100%;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .nav-links li a {

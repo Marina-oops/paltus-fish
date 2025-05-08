@@ -139,21 +139,15 @@ img {
         display: block;
         width: 100%;
         box-sizing: border-box;
-        padding: 0 10px;
    }
 
     .top-header {
         width: 100%;
     }
 
-   .mobile-header_row1 {
-        display: flex;
-	justify-content: space-between;
-	align-items: center;
-   }
-
   .search-wrapper {
-        max-width: none;
+        max-width: 352px;
+	width: 100%;
         margin-right: 0;
         margin-left: 0;
     }

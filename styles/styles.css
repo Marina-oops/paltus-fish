@@ -312,14 +312,14 @@ button:active {
 @media (max-width: 1366px) {
   .main-nav {
 	  font-size: 14px;
-	  max-width: 1000px;
+	  max-width: 1012px;
    }
 
   .catalog-btn {
 	  padding: 11px 20px;
 	  border-radius: 10px;
 	  max-width: 274px;
-	  margin-right: 20px;
+	  margin-right: 17px;
   }
 
 	.nav-links {

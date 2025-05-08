@@ -282,7 +282,7 @@ button:active {
 }
 
 @media (max-width: 480px) {
-  .main.nav {
+  .main-nav {
 	display: none;
    }
 }

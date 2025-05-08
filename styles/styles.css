@@ -243,7 +243,6 @@ button:active {
   font-weight: 700;
   max-width: 1560px;
   width: 100%;
-  margin-right: 164px;
 }
 
 .catalog-btn {
@@ -263,17 +262,18 @@ button:active {
   border: 2px solid #2a3176;
   border-radius: 15px;
   display: flex;
-  gap: 20px;
-  padding: 15px;
-  max-width: 1128px;
+  justify-content: space-between;
+  padding: 15px 155px;
+  max-width: 1028px;
   width: 100%;
-  justify-content: center;
   box-sizing: border-box;
   margin: 0 auto;
 }
 
-.nav-links li {
-  margin-right:73px;
+.nav-links li:not(:last-child)::after {
+  content: "";
+  width: 93px;
+  display: inline-block;
 }
 
 .nav-links li a {

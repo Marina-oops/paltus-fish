@@ -262,18 +262,13 @@ button:active {
   border: 2px solid #2a3176;
   border-radius: 15px;
   display: flex;
-  justify-content: space-between;
-  padding: 15px 155px;
-  max-width: 1028px;
+  gap: 20px;
+  padding: 15px;
+  max-width: 1128px;
+  justify-content: center;
   width: 100%;
   box-sizing: border-box;
   margin: 0 auto;
-}
-
-.nav-links li:not(:last-child)::after {
-  content: "";
-  width: 93px;
-  display: inline-block;
 }
 
 .nav-links li a {

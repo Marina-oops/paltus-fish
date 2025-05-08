@@ -78,6 +78,13 @@ img {
   margin-left: -20px;
 }
 
+@media (max-width: 1366px) {
+  .logo-header {
+    width: 300px;
+    height: 85px;
+  }
+}
+
 @media (max-width: 480px) {
   .logo-header {
     background-image: url("../images/logo_symbol.png");
@@ -125,6 +132,18 @@ img {
 .search-input:focus {
   border-color: #6CC276;
   outline: none;
+}
+
+@media (max-width: 1366px) {
+	.search-input {
+	width: 67%;
+	font-size: 16px;
+	}
+	.search-icon {
+	  width: 20px;
+	  height: 20px;
+	}
+	
 }
 
 @media (max-width: 480px) {
@@ -207,11 +226,11 @@ button:active {
     margin-right: 5px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
   #cart-button {
     font-size: 20px;
     border-radius: 10px;
-    padding: 15px;
+    padding: 12px 15px;
   }
 
   #cart-button .cart-icon {

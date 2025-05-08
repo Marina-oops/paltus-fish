@@ -79,7 +79,7 @@ p {
 
 	h2 {
 		font-size: 16px;
-		margin-bottom: 4px;
+		margin-bottom: 8px;
 	}
 
 	p {
@@ -95,7 +95,7 @@ p {
 
 	h2 {
 		font-size: 20px;
-		margin-bottom: 12px;
+		margin-bottom: 16px;
 	}
 
 	p {
@@ -243,7 +243,7 @@ img {
   .search-wrapper {
         max-width: 924px;
 	width: 100%;
-	margin: 10px 0px 32px 0px;
+	margin: 10px 0px 28px 0px;
     }
 }
 
@@ -285,7 +285,7 @@ img {
   .search-wrapper {
         max-width: 480px;
 	width: 100%;
-	margin: 5px 0px 40px 0px;
+	margin: 5px 0px 36px 0px;
     }
 }
 

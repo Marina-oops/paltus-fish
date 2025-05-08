@@ -53,6 +53,14 @@ img {
   height: auto;
 }
 
+.desktop-header {
+	display: block;
+}
+
+.mobile-header {
+	display: none;
+}
+
 .logo-header {
   display: block;
   width: 447px;
@@ -73,31 +81,10 @@ img {
 }
 
 .top-header {
-  border-bottom: 1px solid #ccc;
-}
-
-.top-header-row {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  width: 100%;
-  flex-wrap: nowrap;
-}
-
-.search-wrapper {
-  flex: 1;
-  position: relative;
-  max-width: none;
-  margin: 0;
-}
-
-.search-input {
-  width: 100%;
-}
-
-.new-mobile-element {
-  display: none;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
 }
 
 .search-wrapper {
@@ -105,6 +92,7 @@ img {
   display: inline-block;
   width: 100%;
   max-width: 1128px;
+  margin-right: 24px;
   margin: 0px 24px;
 }
 
@@ -143,6 +131,21 @@ img {
   .search-icon {
     left: 14px;
   }
+	
+  .desktop-header {
+ 	display: none; 
+  } 
+	
+  .mobile-header {
+        display: block;
+   }
+
+   .mobile-header_row1 {
+        display: flex;
+	justify-content: space-between;
+	align-items: center;
+   }
+
 }
 
 button {
@@ -209,50 +212,6 @@ button:active {
     height: 22px;
     margin-right: -2px;
   }  
-}
-
-@media (max-width: 480px) {
-  .top-header {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .top-header-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .logo-header {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    order: 1;
-  }
-
-  #cart-button {
-    order: 2;
-    z-index: 1; /* чтобы не перекрывался логотипом */
-  }
-
-  .search-wrapper {
-    order: 3;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .new-mobile-element {
-    display: block;
-    font-size: 18px;
-    font-weight: bold;
-    color: #222b66;
-    padding: 12px 0;
-    width: 100%;
-    order: 0;
-  }
 }
 
 /* Навигация */

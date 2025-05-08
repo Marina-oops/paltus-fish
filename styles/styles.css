@@ -61,6 +61,7 @@ img {
 
 .desktop-header {
 	display: block;
+	margin-bottom: 48px;
 }
 
 .mobile-header {
@@ -406,7 +407,7 @@ button:active {
 }
 
 .sidebar li {
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   padding: 7px 0px;
   cursor: pointer;
 }
@@ -440,7 +441,7 @@ button:active {
 /* Контент страницы */
 .contact-page {
   flex: 1;
-  padding-top: 10px;
+  padding-top: 8px;
 }
 
 .map-wrapper {

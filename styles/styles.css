@@ -652,6 +652,30 @@ button:active {
   max-width: none;
 }
 
+@media (max-width: 1024px) {
+	  .form-section input {
+	  padding: 6px 0px;
+	  font-size: 10px;
+	}
+	.form-section textarea {
+	  padding: 10px;
+	  font-size: 10px;
+	  border-radius: 10px;
+	}
+}
+
+@media (max-width: 480px) {
+	  .form-section input {
+	  padding: 14px 0px;
+	  font-size: 18px;
+	}
+	.form-section textarea {
+	  padding: 10px;
+	  font-size: 18px;
+	  border-radius: 10px;
+	}
+}
+
 .form-section input:focus,
 .form-section textarea:focus {
   border-color: #222b66;

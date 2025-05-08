@@ -77,19 +77,19 @@ img {
 }
 
 .top-header-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: nowrap;
 }
 
 .search-wrapper {
-    order: 3;
-    width: 100%;
-    margin-bottom: 10px;
-    min-width: 300px
+  flex: 1;
+  position: relative;
+  max-width: none;
+  margin: 0;
 }
 
 .search-input {
@@ -107,8 +107,12 @@ img {
   }
 	
    .top-header-row {
-    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
+    width: 100%;
+    margin-bottom: 10px;
   }
 	
   .logo-header {

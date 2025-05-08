@@ -626,7 +626,7 @@ button:active {
   width: 100%;
   max-width: 408px;
   height: 158px;
-  padding: 10px 0px;
+  padding: 20px;
   font-size: 20px;
   color: #4f4f4f;
   border: 2px solid #2a3176;
@@ -637,7 +637,7 @@ button:active {
 }
 
 .form-section input {
-  padding: 20px;
+  padding: 10px 0px;
   border: none;
   border-bottom: 2px solid #000;
   outline: none;
@@ -656,6 +656,8 @@ button:active {
   width:100%;
   max-width: 350px;
   height: 58px;
+  border: none;	
+  border-radius: 10px;
 }
 
 /* Подвал */

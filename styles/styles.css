@@ -116,21 +116,23 @@ img {
     flex-wrap: wrap;
   }
 	
-  .logo-header {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  logo-header {
+    position: relative;
+    left: auto;
+    transform: none;
     order: 1;
+    width: auto;
+    margin: 0;
   }
 
   #cart-button {
     order: 2;
-    z-index: 1; /* чтобы не перекрывался логотипом */
+    z-index: 1;
   }
 
   .search-wrapper {
     width: 100%;
-    min-width: 300px;
+    min-width: auto;
     margin-top: 10px;
     order: 3;
   }
@@ -142,7 +144,7 @@ img {
     color: #222b66;
     padding: 12px 0;
     width: 100%;
-    order: 0;
+    order: 0; 
   }
 }
 

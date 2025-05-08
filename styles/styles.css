@@ -703,13 +703,14 @@ button:active {
 	  max-width: 188px;
 	  height: 34px;
 	  border-radius: 5px;
-	  margin-top: 48px;
+	  margin-top: 24px;
 	}
 	.form-section form {
 	  gap: 8px;
 	  margin-top: 24px;
 	}
 	.form-section_row_2 {
+	 gap: 8px;
 	 margin-top: 24px;
 	}
 }

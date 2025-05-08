@@ -545,7 +545,7 @@ button:active {
 
 @media (max-width: 1024px) {
   .details-grid {
-	  grid-template-columns: repeat(auto-fit, minmax(211px, 1fr));
+	  grid-template-columns: repeat(auto-fit, minmax(209px, 1fr));
 	  gap: 8px;
 	  margin-bottom: 16px;
   }
@@ -553,7 +553,7 @@ button:active {
 
 @media (max-width: 480px) {
   .details-grid {
-	  grid-template-columns: repeat(auto-fit, minmax(173px, 1fr));
+	  grid-template-columns: repeat(auto-fit, minmax(171px, 1fr));
 	  gap: 8px;
 	  margin-bottom: 24px;
   }

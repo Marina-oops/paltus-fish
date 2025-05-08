@@ -105,36 +105,14 @@ img {
     flex-direction: column;
     align-items: stretch;
   }
-	
-   .top-header-row {
+
+  .top-header-row {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: column; /* Вертикальное расположение элементов */
+    align-items: stretch; /* Растягиваем по ширине контейнера */
     position: relative;
     width: 100%;
     margin-bottom: 10px;
-    flex-wrap: wrap;
-  }
-	
-  logo-header {
-    position: relative;
-    left: auto;
-    transform: none;
-    width: auto;
-    margin: 0;
-    flex-basis: auto;
-  }
-
-  #cart-button {
-    flex-basis: auto;
-    z-index: 1;
-  }
-
-  .search-wrapper {
-    width: 100%;
-    min-width: auto;
-    margin-top: 10px;
-    flex-basis: 100%;
   }
 
   .new-mobile-element {
@@ -142,8 +120,33 @@ img {
     font-size: 18px;
     font-weight: bold;
     color: #222b66;
-    padding: 12px 0px;
+    padding: 12px 0;
     width: 100%;
+  }
+
+  .top-header-row-top {  /* Стили для обертки */
+    display: flex;
+    justify-content: space-between; /* Выравниваем логотип и корзину по краям */
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo-header {
+    position: relative;
+    left: auto;
+    transform: none;
+    width: auto; /* Ширина по содержимому */
+    margin: 0;
+  }
+
+  #cart-button {
+    z-index: 1;
+  }
+
+  .search-wrapper {
+    width: 100%;
+    min-width: auto;
+    margin-top: 10px;
   }
 }
 

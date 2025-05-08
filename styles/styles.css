@@ -84,7 +84,6 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #ccc;
 }
 
 .search-wrapper {
@@ -138,7 +137,14 @@ img {
 	
   .mobile-header {
         display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 10px;
    }
+
+    .top-header {
+        width: 100%;
+    }
 
    .mobile-header_row1 {
         display: flex;
@@ -146,6 +152,11 @@ img {
 	align-items: center;
    }
 
+  .search-wrapper {
+        max-width: none;
+        margin-right: 0;
+        margin-left: 0;
+    }
 }
 
 button {

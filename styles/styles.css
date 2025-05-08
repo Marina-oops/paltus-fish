@@ -400,6 +400,7 @@ button:active {
   font-family: "Nunito", sans-serif;
   font-size: 20px;
   font-weight: 700;
+  height: 462px;
 }
 
 .sidebar ul {
@@ -412,7 +413,7 @@ button:active {
 }
 
 .sidebar a {
-  color: #000;
+  color: #ffffff;
   text-decoration: none;
 }
 

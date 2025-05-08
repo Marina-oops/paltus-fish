@@ -505,6 +505,18 @@ button:active {
   padding-top: 8px;
 }
 
+@media (max-width: 1366px) {
+  .contact-page {
+	  padding-top: 5px;
+	}
+}
+
+@media (max-width: 1024px) {
+  .contact-page {
+	  padding-top: 0px;
+	}
+}
+
 .map-wrapper {
   margin: 20px 0;
   border: 2px solid #222b66;

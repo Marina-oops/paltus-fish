@@ -980,6 +980,7 @@ button:active {
     max-width: 288px;
     width: 100%;
     height: 53px;
+    margin-bottom: 56px;
 }
 
 .footer-right input {
@@ -992,20 +993,20 @@ button:active {
 
 .button_container {
 	display: flex;
-	justify-content: flex-start; 
-	align-items: center;
+	gap: 80px;
 	width: 100%;
 	max-width: 286px;
+	padding-left: 30px;
 }
 
 .button_tg, 
 .button_vk, 
 .button_disk {
-	width: 60px;
-	height: 60px;
+	width: 40px;
+	height: 40px;
 	transform: rotate(-0.064deg);
 	flex-shrink: 0;
-	border-radius: 60px;
+	border-radius: 40px;
 	transition: all 0.3s ease-in-out;
 }
 	

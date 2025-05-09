@@ -196,9 +196,17 @@ img {
 
 @media (max-width: 480px) {
   .logo-footer {
-    width: 342px;
-    height: 76px;
-    margin-right: 0px;
+    width: 354px;
+    height: 86px;
+    margin-right: -14px;
+  }	
+}
+
+@media (max-width: 412px) {
+  .logo-footer {
+    width: 320px;
+    height: 78px;
+    margin-right: -12px;
   }	
 }
 
@@ -1226,7 +1234,7 @@ button:active {
 	
 	.footer-middle {
 	  display: flex;
-          gap: 8px;
+          gap: 58px;
 	  max-width: 278px;
 	  padding-top: 40px;
 	}
@@ -1273,6 +1281,9 @@ button:active {
 @media (max-width: 412px) {
 	  .footer {
 	  padding: 45px 48px 48px 48px;
+	}
+	.footer-middle {
+          gap: 36px;
 	}
 }
 

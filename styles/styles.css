@@ -184,14 +184,13 @@ img {
 }
 
 @media (max-width: 640px) {
-
   .logo-footer {
     display: flex;
     height: 43px;
     margin-right: 20px;
     min-width: 80px;
     width: 100%;
-    margin-left: -30px;
+    margin-left: -10px;
   }	
 }
 
@@ -959,6 +958,14 @@ button:active {
   width: 100%;
 }
 
+.footer-content-desktop {
+	display: flex;
+}
+
+.footer-content-mobile {
+	display: none;
+}
+
 .footer ul {
   list-style: none;
 }
@@ -1124,6 +1131,80 @@ button:active {
 	
 	.footer-content {
 	  font-size: 8px;
+	}
+	
+	.footer li {
+	  padding-bottom: 12px;
+	}
+	
+	.footer-left {
+	  margin-right: 0px;
+	}
+	
+	.footer-middle {
+	  margin-right: 16px;
+	  max-width: 225px;
+	  padding-top: 11px;
+	}
+	
+	.footer-right {
+	  max-width: 140px;
+	  padding-top: 11px;
+	}
+	
+	.footer_h {
+	  font-size: 9px;
+	  margin-bottom: 12px;
+	}
+	
+	.footer-right button {
+	    border-radius: 6px;
+	    font-size: 8px;
+	    max-width: 140px;
+	    height: 22px;
+	    margin-bottom: 16px;
+	}
+	
+	.footer-right input {
+	          padding: 5px 0px;
+		  font-size: 8px;
+		  max-width: 140px;
+		  margin-bottom: 7px;
+	}
+	
+	.button_container {
+		gap: 28px;
+		max-width: 140px;
+		padding-left: 13px;
+	}
+	
+	.button_tg, 
+	.button_vk, 
+	.button_disk {
+		width: 16px;
+		height: 16px;
+		border-radius: 16px;
+	}
+}
+
+@media (max-width: 480px) {
+	  .footer {
+	  border-radius: 12px;
+	  padding: 16px 29px 28px 17px;
+	  max-width: 924px;
+	  margin: 102px 0px 48px 0px;
+	}
+	
+	.footer-content {
+	  font-size: 8px;
+	}
+
+	.footer-content-desktop {
+	  display: none;
+	}
+
+	.footer-content-mobile {
+	  display: flex;
 	}
 	
 	.footer li {

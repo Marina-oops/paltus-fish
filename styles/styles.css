@@ -1199,7 +1199,7 @@ button:active {
 @media (max-width: 480px) {
 	  .footer {
 	  border-radius: 29px;
-	  padding: 45px 46px 48px 46px;
+	  padding: 45px 71px 48px 71px;
 	  max-width: 420px;
 	  margin: 114px 0px 60px 0px;
 	}

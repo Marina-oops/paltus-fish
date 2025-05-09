@@ -194,6 +194,14 @@ img {
   }	
 }
 
+@media (max-width: 480px) {
+  .logo-footer {
+    width: 254px;
+    height: 53px;
+    margin-right: 0px;
+  }	
+}
+
 .top-header {
   display: flex;
   justify-content: space-between;
@@ -1190,15 +1198,15 @@ button:active {
 
 @media (max-width: 480px) {
 	  .footer {
-	  border-radius: 12px;
-	  padding: 16px 29px 28px 17px;
-	  max-width: 924px;
-	  margin: 102px 0px 48px 0px;
+	  border-radius: 29px;
+	  padding: 45px 46px 48px 46px;
+	  max-width: 420px;
+	  margin: 114px 0px 60px 0px;
 	}
 	
 	.footer-content {
 	  display: block;
-	  font-size: 8px;
+	  font-size: 12px;
 	}
 
 	.footer-content-desktop {
@@ -1210,7 +1218,7 @@ button:active {
 	}
 	
 	.footer li {
-	  padding-bottom: 12px;
+	  padding-bottom: 8px;
 	}
 	
 	.footer-left {
@@ -1218,48 +1226,49 @@ button:active {
 	}
 	
 	.footer-middle {
-	  margin-right: 16px;
-	  max-width: 225px;
-	  padding-top: 11px;
+	  display: flex;
+          gap: 8px;
+	  max-width: 272px;
+	  padding-top: 40px;
 	}
 	
 	.footer-right {
-	  max-width: 140px;
-	  padding-top: 11px;
+	  max-width: 272px;
+	  padding-top: 40px;
 	}
 	
 	.footer_h {
-	  font-size: 9px;
-	  margin-bottom: 12px;
+	  font-size: 16px;
+	  margin-bottom: 16px;
 	}
 	
 	.footer-right button {
-	    border-radius: 6px;
-	    font-size: 8px;
-	    max-width: 140px;
-	    height: 22px;
-	    margin-bottom: 16px;
+	    border-radius: 15px;
+	    font-size: 14px;
+	    max-width: 272px;
+	    height: 48px;
+	    margin-bottom: 40px;
 	}
 	
 	.footer-right input {
-	          padding: 5px 0px;
-		  font-size: 8px;
-		  max-width: 140px;
-		  margin-bottom: 7px;
+	          padding: 12px 0px;
+		  font-size: 12px;
+		  max-width: 272px;
+		  margin-bottom: 18px;
 	}
 	
 	.button_container {
-		gap: 28px;
-		max-width: 140px;
-		padding-left: 13px;
+		gap: 30px;
+		max-width: 272px;
+		padding-left: 30px;
 	}
 	
 	.button_tg, 
 	.button_vk, 
 	.button_disk {
-		width: 16px;
-		height: 16px;
-		border-radius: 16px;
+		width: 40px;
+		height: 40px;
+		border-radius: 40px;
 	}
 }
 

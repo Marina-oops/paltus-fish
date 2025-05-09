@@ -1032,10 +1032,9 @@ button:active {
 
 .button_container {
 	display: flex;
-	gap: 55px;
+	justify-content: center;
 	width: 100%;
 	max-width: 286px;
-	padding-left: 30px;
 }
 
 .button_tg, 
@@ -1116,9 +1115,7 @@ button:active {
 	}
 	
 	.button_container {
-		gap: 36px;
 		max-width: 192px;
-		padding-left: 20px;
 	}
 	
 	.button_tg, 
@@ -1182,9 +1179,7 @@ button:active {
 	}
 	
 	.button_container {
-		gap: 28px;
 		max-width: 140px;
-		padding-left: 13px;
 	}
 	
 	.button_tg, 
@@ -1215,6 +1210,7 @@ button:active {
 
 	.footer-content-mobile {
 	  display: flex;
+	  width: 100%;
 	}
 	
 	.footer li {
@@ -1228,24 +1224,24 @@ button:active {
 	.footer-middle {
 	  display: flex;
           gap: 8px;
-	  max-width: 312px;
+	  max-width: 278px;
 	  padding-top: 40px;
 	}
 	
 	.footer-right {
-	  max-width: 312px;
+	  max-width: 278px;
 	  padding-top: 40px;
 	}
 	
 	.footer_h {
-	  font-size: 16px;
+	  font-size: 15px;
 	  margin-bottom: 16px;
 	}
 	
 	.footer-right button {
 	    border-radius: 15px;
 	    font-size: 14px;
-	    max-width: 312px;
+	    max-width: 278px;
 	    height: 48px;
 	    margin-bottom: 40px;
 	}
@@ -1253,14 +1249,12 @@ button:active {
 	.footer-right input {
 	          padding: 12px 0px;
 		  font-size: 12px;
-		  max-width: 312px;
+		  max-width: 278px;
 		  margin-bottom: 18px;
 	}
 	
 	.button_container {
-		gap: 30px;
-		max-width: 312px;
-		padding-left: 30px;
+		max-width: 278px;
 	}
 	
 	.button_tg, 
@@ -1272,6 +1266,11 @@ button:active {
 	}
 }
 
+@media (max-width: 412px) {
+	  .footer {
+	  padding: 45px 48px 48px 48px;
+	}
+}
 
 .modal-overlay {
   position: fixed;

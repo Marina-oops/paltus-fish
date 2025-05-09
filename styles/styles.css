@@ -960,6 +960,7 @@ button:active {
 
 .footer-content-desktop {
 	display: flex;
+	width: 100%;
 }
 
 .footer-content-mobile {

@@ -129,6 +129,16 @@ img {
   margin-left: -20px;
 }
 
+.logo-footer {
+  display: block;
+  width: 517px;
+  height: 134px;
+  background-image: url("../images/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
 @media (max-width: 1366px) {
 	.desktop-header {
 		margin-top: 24px;
@@ -874,12 +884,37 @@ button:active {
 	}
 }
 
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .form-section form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-section button {
+    grid-column: span 1;
+  }
+}
+
 /* Подвал */
 .footer {
-  margin-top: 60px;
-  border-top: 2px solid #222b66;
-  padding: 40px;
-  background-color: #f9f9f9;
+  border: 2px solid #2a3176;
+  border-radius: 15px;
+  display: flex;
+  padding: 38px 75px 75px 119px;
+  max-width: 1704px;
+  justify-content: relative;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .footer-content {
@@ -929,26 +964,6 @@ button:active {
 .socials a img {
   width: 24px;
   margin-right: 10px;
-}
-
-@media (max-width: 1024px) {
-  .container {
-    flex-direction: column;
-    padding: 0px;
-  }
-
-  .sidebar {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .form-section form {
-    grid-template-columns: 1fr;
-  }
-
-  .form-section button {
-    grid-column: span 1;
-  }
 }
 
 .modal-overlay {

@@ -202,12 +202,21 @@ img {
   }	
 }
 
-@media (max-width: 412px) {
+@media (max-width: 440px) {
   .logo-footer {
     width: 320px;
     height: 78px;
     margin-right: -12px;
   }	
+}
+
+.fish_desktop_top {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	object-fit: cover;	
 }
 
 .top-header {

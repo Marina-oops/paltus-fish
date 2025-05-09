@@ -990,18 +990,33 @@ button:active {
 	  margin-bottom: 26px;
 }
 
-.socials {
- 	display: grid;
-	gap: 80px;
+.button_container {
+	display: flex;
+	justify-content: flex-start; 
+	align-items: center;
+	width: 100%;
+	max-width: 286px;
 }
 
-.socials a img {
-  width: 40px;
-  height: 40px;
-  transform: rotate(-0.064deg);
-  flex-shrink: 0;
-  border-radius: 40px;
-  transition: all 0.3s ease-in-out;
+.button_tg, 
+.button_vk, 
+.button_disk {
+	width: 40px;
+	height: 40px;
+	transform: rotate(-0.064deg);
+	flex-shrink: 0;
+	border-radius: 40px;
+	transition: all 0.3s ease-in-out;
+}
+	
+.button_tg {
+	background-image: url(../images/tg.png);
+}
+.button_vk {
+	background-image: url(../images/vk.png);
+}
+.button_disk {
+	background-image: url(../images/yandex_disk.png);
 }
 
 .modal-overlay {

@@ -918,7 +918,7 @@ button:active {
 /* Подвал */
 .footer {
   border: 2px solid #2a3176;
-  border-radius: 15px;
+  border-radius: 30px;
   display: flex;
   padding: 38px 119px 75px 75px;
   max-width: 1704px;
@@ -947,7 +947,6 @@ button:active {
   color: #000;
   text-decoration: none;
   display: block;
-  margin: 5px 0;
 }
 
 .footer-left {
@@ -956,9 +955,15 @@ button:active {
 
 .footer-middle {
   margin-right: 24px;
-  width: 264px;
+  max-width: 264px;
   width: 100%;
-  padding-top: 40px;
+  padding-top: 36px;
+}
+
+.footer-right {
+  max-width: 288px;
+  width: 100%;
+  padding-top: 36px;
 }
 
 .footer_h {

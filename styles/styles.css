@@ -1001,11 +1001,11 @@ button:active {
 .button_tg, 
 .button_vk, 
 .button_disk {
-	width: 40px;
-	height: 40px;
+	width: 60px;
+	height: 60px;
 	transform: rotate(-0.064deg);
 	flex-shrink: 0;
-	border-radius: 40px;
+	border-radius: 60px;
 	transition: all 0.3s ease-in-out;
 }
 	

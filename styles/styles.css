@@ -653,6 +653,12 @@ button:active {
   width: 100%;
 }
 
+.form-block {
+  display: flex;
+  max-width: 408px;
+  width: 100%;
+}
+
 .form-section textarea {
   padding: 20px;
   font-size: 20px;
@@ -662,6 +668,7 @@ button:active {
   transition: border-color 0.3s;
   border-bottom: 2px solid #000;
   outline: none;
+  font-family: "Nunito", sans-serif;
 }
 
 .form-section input {

@@ -175,6 +175,11 @@ img {
     height: 65px;
     margin-left: 0px;
   }
+  
+  .logo-footer {
+    width: 163px;
+    height: 43px;
+  }	
 }
 
 .top-header {

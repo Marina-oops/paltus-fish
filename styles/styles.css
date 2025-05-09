@@ -940,7 +940,7 @@ button:active {
 }
 
 .footer li {
-  padding-bottom: 30px;
+  padding-bottom: 24px;
 }
 
 .footer a {
@@ -958,12 +958,14 @@ button:active {
   margin-right: 24px;
   width: 264px;
   width: 100%;
+  padding-top: 40px;
 }
 
 .footer_h {
   font-size: 22px;
   font-weight: 500;
   letter-spacing: -2%;
+  color: #2a3176;
 }
 
 .footer-right button {

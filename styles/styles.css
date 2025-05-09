@@ -769,6 +769,61 @@ button:active {
 }
 
 @media (max-width: 1024px) {
+	.form-section {
+	  margin-top: 24px;
+	}
+	
+	.form-section_row {
+	 max-width: 209px;
+	 gap: 8px;
+	}
+	
+	.form-section_row_2 {
+	 max-width: 209px;
+	 gap: 8px;
+	 margin-top: 24px;
+	}
+	
+	.form-section form {
+	  gap: 8px;
+	  margin-top: 24px;
+	}
+	
+	.form-block {
+	  max-width: 209px;
+	}
+	
+	.form-block_area {
+	  max-width: 184px;
+	}
+	
+	.form-section textarea {
+	  padding: 10px;
+	  font-size: 10px;
+	  border-radius: 10px;
+	  width: 184px;
+	  height: 106px;
+	}
+	
+	.number_characters {
+	  font-size: 8px;
+	  width: 184px;
+	}
+	
+	.form-section input {
+	  padding: 6px 0px;
+	  font-size: 10px;
+	}
+	
+	.form-section button {
+	  max-width: 184px;
+	  height: 34px;
+	  border-radius: 5px;
+	  margin-top: 24px;
+	}
+}
+
+/* @media (max-width: 1024px) {
 	.form-section input {
 	  padding: 6px 0px;
 	  font-size: 10px;
@@ -792,7 +847,7 @@ button:active {
 	 gap: 8px;
 	 margin-top: 24px;
 	}
-}
+} */
 
 @media (max-width: 480px) {
 	  .form-section input {

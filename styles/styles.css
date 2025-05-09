@@ -55,6 +55,17 @@ p {
 		line-height: 120%; 
 }
 
+input {
+  padding: 10px 0px;
+  border: none;
+  border-bottom: 2px solid #000;
+  outline: none;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  width: 100%;
+  max-width: none;
+}
+
 @media (max-width: 1366px) {
 	h1 {
 		font-size: 32px;
@@ -919,46 +930,47 @@ button:active {
 
 .footer-content {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
 }
 
-.footer-left ul {
+.footer ul {
   list-style: none;
-  margin-top: 10px;
 }
 
-.footer-left a {
+.footer li {
+  padding-bottom: 30px;
+}
+
+.footer a {
   color: #000;
   text-decoration: none;
   display: block;
   margin: 5px 0;
 }
 
-.footer-middle p,
-.footer-right label {
-  margin-bottom: 10px;
+.footer-left {
+  margin-right: 60px;
 }
 
-.footer-right input {
-  padding: 10px;
+.footer-middle {
+  margin-right: 24px;
+  width: 264px;
   width: 100%;
-  max-width: 250px;
-  border-bottom: 2px solid #aaa;
-  margin-bottom: 10px;
+}
+
+.footer_h {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -2%;
 }
 
 .footer-right button {
-  background-color: #000;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-.footer-right button:hover {
-  background-color: #222b66;
+    border-radius: 15px;
+    font-size: 18px;
+    max-width: 288px;
+    width: 100%;
 }
 
 .socials a img {

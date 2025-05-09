@@ -183,20 +183,15 @@ img {
   }	
 }
 
-@media (max-width: 620px) {
-  .logo-header {
-    background-image: url("../images/logo_symbol.png");
-    width: 76px;
-    height: 65px;
-    margin-left: 0px;
-  }
-  
+@media (max-width: 640px) {
+
   .logo-footer {
     display: flex;
     height: 43px;
     margin-right: 20px;
-    max-width: 163px;
+    min-width: 80px;
     width: 100%;
+    margin-left: -30px;
   }	
 }
 
@@ -1141,7 +1136,7 @@ button:active {
 	
 	.footer-middle {
 	  margin-right: 16px;
-	  max-width: 100px;
+	  max-width: 225px;
 	  padding-top: 11px;
 	}
 	

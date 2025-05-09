@@ -1032,6 +1032,7 @@ button:active {
 
 .button_container {
 	display: flex;
+	gap: 55px;
 	justify-content: center;
 	width: 100%;
 	max-width: 286px;
@@ -1115,6 +1116,7 @@ button:active {
 	}
 	
 	.button_container {
+		gap: 36px;
 		max-width: 192px;
 	}
 	
@@ -1179,6 +1181,7 @@ button:active {
 	}
 	
 	.button_container {
+		gap: 28px;
 		max-width: 140px;
 	}
 	
@@ -1254,6 +1257,7 @@ button:active {
 	}
 	
 	.button_container {
+		gap: 35px;
 		max-width: 278px;
 	}
 	

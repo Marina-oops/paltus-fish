@@ -1013,6 +1013,10 @@ button:active {
 	flex-shrink: 0;
 	border-radius: 40px;
 	transition: all 0.3s ease-in-out;
+	display: block;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center left;
 }
 	
 .button_tg {
@@ -1058,7 +1062,7 @@ button:active {
 	}
 	
 	.footer_h {
-	  font-size: 14px;
+	  font-size: 13px;
 	  margin-bottom: 16px;
 	}
 	

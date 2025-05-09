@@ -1076,7 +1076,7 @@ button:active {
 	
 	.footer-right input {
 	          padding: 10px 0px;
-		  font-size: 16px;
+		  font-size: 10px;
 		  max-width: 192px;
 		  margin-bottom: 18px;
 	}
@@ -1096,6 +1096,71 @@ button:active {
 	}
 }
 
+@media (max-width: 1024px) {
+	  .footer {
+	  border-radius: 12px;
+	  padding: 16px 29px 28px 17px;
+	  max-width: 94px;
+	  margin-bottom: 48px;
+	}
+	
+	.footer-content {
+	  font-size: 8px;
+	}
+	
+	.footer li {
+	  padding-bottom: 12px;
+	}
+	
+	.footer-left {
+	  margin-right: 35px;
+	}
+	
+	.footer-middle {
+	  margin-right: 8px;
+	  max-width: 100px;
+	  padding-top: 14px;
+	}
+	
+	.footer-right {
+	  max-width: 140px;
+	  padding-top: 14px;
+	}
+	
+	.footer_h {
+	  font-size: 10px;
+	  margin-bottom: 12px;
+	}
+	
+	.footer-right button {
+	    border-radius: 6px;
+	    font-size: 8px;
+	    max-width: 140px;
+	    height: 22px;
+	    margin-bottom: 16px;
+	}
+	
+	.footer-right input {
+	          padding: 5px 0px;
+		  font-size: 8px;
+		  max-width: 140px;
+		  margin-bottom: 7px;
+	}
+	
+	.button_container {
+		gap: 20px;
+		max-width: 140px;
+		padding-left: 18px;
+	}
+	
+	.button_tg, 
+	.button_vk, 
+	.button_disk {
+		width: 16px;
+		height: 16px;
+		border-radius: 16px;
+	}
+}
 
 
 .modal-overlay {

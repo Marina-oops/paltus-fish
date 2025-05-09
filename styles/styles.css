@@ -713,8 +713,63 @@ button:active {
   margin-top: 50px;
 }
 
+@media (max-width: 1366px) {
+	.form-section {
+	  margin-top: 67px;
+	}
+	
+	.form-section_row {
+	 max-width: 756px;
+	 gap: 16px;
+	}
+	
+	.form-section_row_2 {
+	 max-width: 756px;
+	 gap: 16px;
+	 margin-top: 16px;
+	}
+	
+	.form-section form {
+	  gap: 16px;
+	  margin-top: 36px;
+	}
+	
+	.form-block {
+	  max-width: 272px;
+	}
+	
+	.form-block_area {
+	  max-width: 241px;
+	}
+	
+	.form-section textarea {
+	  padding: 14px;
+	  font-size: 14px;
+	  border-radius: 10px;
+	  width: 241px;
+	  height: 92px;
+	}
+	
+	.number_characters {
+	  font-size: 10px;
+	  width: 241px;
+	}
+	
+	.form-section input {
+	  padding: 6px 0px;
+	  font-size: 14px;
+	}
+	
+	.form-section button {
+	  max-width: 241px;
+	  height: 38px;
+	  border-radius: 6px;
+	  margin-top: 32px;
+	}
+}
+
 @media (max-width: 1024px) {
-	  .form-section input {
+	.form-section input {
 	  padding: 6px 0px;
 	  font-size: 10px;
 	}

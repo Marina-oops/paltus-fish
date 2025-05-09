@@ -196,8 +196,8 @@ img {
 
 @media (max-width: 480px) {
   .logo-footer {
-    width: 303px;
-    height: 67px;
+    width: 342px;
+    height: 76px;
     margin-right: 0px;
   }	
 }
@@ -1228,12 +1228,12 @@ button:active {
 	.footer-middle {
 	  display: flex;
           gap: 8px;
-	  max-width: 272px;
+	  max-width: 312px;
 	  padding-top: 40px;
 	}
 	
 	.footer-right {
-	  max-width: 272px;
+	  max-width: 312px;
 	  padding-top: 40px;
 	}
 	
@@ -1245,7 +1245,7 @@ button:active {
 	.footer-right button {
 	    border-radius: 15px;
 	    font-size: 14px;
-	    max-width: 272px;
+	    max-width: 312px;
 	    height: 48px;
 	    margin-bottom: 40px;
 	}
@@ -1253,13 +1253,13 @@ button:active {
 	.footer-right input {
 	          padding: 12px 0px;
 		  font-size: 12px;
-		  max-width: 272px;
+		  max-width: 312px;
 		  margin-bottom: 18px;
 	}
 	
 	.button_container {
 		gap: 30px;
-		max-width: 272px;
+		max-width: 312px;
 		padding-left: 30px;
 	}
 	

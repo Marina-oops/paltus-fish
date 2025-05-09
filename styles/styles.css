@@ -219,14 +219,14 @@ img {
 }
 
 @media (max-width: 1366px) {
-  fish_desktop_top img {
+  .fish_desktop_top {
      width: 464px;
      height: 176px;
   }	
 }
 
 @media (max-width: 1024px) {
-  fish_desktop_top img {
+  .fish_desktop_top {
      display: none;
   }	
 }

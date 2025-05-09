@@ -161,6 +161,11 @@ img {
     height: 85px;
     margin-left: -13px;
   }
+
+  .logo-footer {
+    width: 373px;
+    height: 90px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -784,7 +789,7 @@ button:active {
 	  max-width: 241px;
 	  height: 38px;
 	  border-radius: 6px;
-	  margin-top: 32px;
+	  margin-top: 36px;
 	}
 }
 
@@ -1019,6 +1024,75 @@ button:active {
 .button_disk {
 	background-image: url(../images/yandex_disk.png);
 }
+
+
+@media (max-width: 1366px) {
+	  .footer {
+	  border-radius: 30px;
+	  padding: 38px 119px 75px 75px;
+	  max-width: 1704px;
+	  margin-bottom: 96px;
+	}
+	
+	.footer-content {
+	  font-size: 20px;
+	}
+	
+	.footer li {
+	  padding-bottom: 24px;
+	}
+	
+	.footer-left {
+	  margin-right: 60px;
+	}
+	
+	.footer-middle {
+	  margin-right: 24px;
+	  max-width: 264px;
+	  padding-top: 36px;
+	}
+	
+	.footer-right {
+	  max-width: 288px;
+	  padding-top: 36px;
+	}
+	
+	.footer_h {
+	  font-size: 21px;
+	  margin-bottom: 24px;
+	}
+	
+	.footer-right button {
+	    border-radius: 15px;
+	    font-size: 18px;
+	    max-width: 288px;
+	    height: 53px;
+	    margin-bottom: 56px;
+	}
+	
+	.footer-right input {
+	          padding: 10px 0px;
+		  font-size: 16px;
+		  max-width: 286px;
+		  margin-bottom: 26px;
+	}
+	
+	.button_container {
+		gap: 55px;
+		max-width: 286px;
+		padding-left: 30px;
+	}
+	
+	.button_tg, 
+	.button_vk, 
+	.button_disk {
+		width: 40px;
+		height: 40px;
+		border-radius: 40px;
+	}
+}
+
+
 
 .modal-overlay {
   position: fixed;

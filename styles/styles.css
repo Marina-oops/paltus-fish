@@ -632,6 +632,7 @@ button:active {
 
 .form-section_row {
  display: flex;
+ flex-direction: column;
  width: 100%;
  max-width: 1128px;
  gap: 24px;
@@ -654,7 +655,7 @@ button:active {
 }
 
 .form-block {
-  display: flex;
+  display: block;
   max-width: 408px;
   width: 100%;
 }

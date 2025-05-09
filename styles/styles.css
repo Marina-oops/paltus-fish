@@ -659,6 +659,12 @@ button:active {
   width: 100%;
 }
 
+.form-block_area {
+  display: block;
+  max-width: 362px;
+  width: 100%;
+}
+
 .form-section textarea {
   padding: 20px;
   font-size: 20px;

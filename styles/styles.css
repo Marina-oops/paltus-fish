@@ -790,24 +790,24 @@ button:active {
 	}
 	
 	.form-block {
-	  max-width: 209px;
+	  max-width: 303px;
 	}
 	
 	.form-block_area {
-	  max-width: 184px;
+	  max-width: 303px;
 	}
 	
 	.form-section textarea {
 	  padding: 10px;
 	  font-size: 10px;
 	  border-radius: 10px;
-	  width: 184px;
+	  width: 303px;
 	  height: 106px;
 	}
 	
 	.number_characters {
 	  font-size: 8px;
-	  width: 184px;
+	  width: 303px;
 	}
 	
 	.form-section input {
@@ -816,7 +816,7 @@ button:active {
 	}
 	
 	.form-section button {
-	  max-width: 184px;
+	  max-width: 303px;
 	  height: 34px;
 	  border-radius: 5px;
 	  margin-top: 24px;

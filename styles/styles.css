@@ -213,11 +213,12 @@ img {
 .fish_desktop_top {
 	position: absolute;
 	top: 0;
+	right: 0;
 	z-index: -1;
 	object-fit: cover;
 }
 
-@media (max-width: 1336px) {
+@media (max-width: 1366px) {
   fish_desktop_top {
      width: 464px;
      height: 176px;

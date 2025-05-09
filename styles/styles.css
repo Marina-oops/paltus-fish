@@ -1118,18 +1118,18 @@ button:active {
 	}
 	
 	.footer-left {
-	  margin-right: 35px;
+	  margin-right: 70px;
 	}
 	
 	.footer-middle {
-	  margin-right: 8px;
+	  margin-right: 16px;
 	  max-width: 100px;
-	  padding-top: 14px;
+	  padding-top: 11px;
 	}
 	
 	.footer-right {
 	  max-width: 140px;
-	  padding-top: 14px;
+	  padding-top: 11px;
 	}
 	
 	.footer_h {
@@ -1153,7 +1153,7 @@ button:active {
 	}
 	
 	.button_container {
-		gap: 20px;
+		gap: 30px;
 		max-width: 140px;
 		padding-left: 18px;
 	}

@@ -656,8 +656,8 @@ button:active {
 	  border: 2px solid #2a3176;
 	  border-radius: 17px;
 	  display: flex;
-	  padding: 16px 12px 16px 15px;
-	  width: calc(100% - 100px);
+	  padding: 24px 12px 16px 15px;
+	  width: 100%;
 	  box-sizing: border-box;
 	  margin: 0 auto;
 	  height: 88px;
@@ -666,6 +666,7 @@ button:active {
 	  font-weight: 700;
           color: #2a3176;
 	  position: relative;
+	  justify-content: space-between; 
   }
 
   .arrow {
@@ -677,8 +678,8 @@ button:active {
   .arrow_2 {
 	    width: 24px;
 	    height: 24px;
-	    margin-left: 1px;
-	    transform: rotate(90deg);
+	    margin-left: auto;
+  	    flex-shrink: 0;
   }
 
 @media (max-width: 1024px) {

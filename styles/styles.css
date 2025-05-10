@@ -285,15 +285,6 @@ img {
 	right: 0;
     }
 
-    .fish_mobile_footer_2 {
-	position: absolute;
-	bottom: 0;
-	transform: none !important;
-    }
-
-    footer {
-	    position: relative;
-    }
 }
 
 .top-header {

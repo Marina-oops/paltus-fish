@@ -589,7 +589,7 @@ button:active {
 }
 
 .nav-links a:hover {
-    color: #c3f3a7;
+    color: #399d45;
 }
 
 @media (max-width: 1366px) {
@@ -755,6 +755,10 @@ button:active {
 .sidebar a {
   color: #ffffff;
   text-decoration: none;
+}
+
+.sidebar a:hover {
+    color: #c3f3a7;
 }
 
 /* Контент страницы */

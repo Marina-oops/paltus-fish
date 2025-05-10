@@ -775,6 +775,18 @@ button:active {
   min-width: 0;
 }
 
+.deliver-page {
+  flex: 1;
+  padding-top: 8px;
+  min-width: 0;
+}
+
+.deliver-page ul {
+  font-family: "Nunito", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
 @media (max-width: 1366px) {
   .contact-page {
 	  padding-top: 5px;
@@ -804,20 +816,9 @@ button:active {
   padding-left: 1em;
 }
 
-ul.dostavka_list_down {
+.dostavka_list_down {
   list-style: none;
   color: #4f4f4f;
-  padding-left: 1em;
-}
-
-ul.dostavka_list_down li::before {
-  content: "*";
-  color: #4f4f4f;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-  font-weight: 700;
-  font-size: 1.2em;
 }
 
 .map-wrapper {
@@ -872,6 +873,13 @@ ul.dostavka_list_down li::before {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 24px;
   margin-bottom: 32px;
+}
+
+.details-grid-deliver {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(408px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
 }
 
 @media (max-width: 1024px) {

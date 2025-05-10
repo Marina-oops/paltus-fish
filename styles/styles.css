@@ -1475,6 +1475,9 @@ button:active {
   height: 32px;
   margin-bottom: 24px;
   cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 @media (max-width: 1366px) {
@@ -1486,14 +1489,20 @@ button:active {
 
 @media (max-width: 1024px) {
 	.modal {
-	  padding: 24px 24px 64px 40px;
-	  max-width: 526px;
+	  padding: 24px 24px 56px 40px;
+	  max-width: 480px;
+	}
+	.modal h2 {
+	  margin-bottom: 16px;
 	}
 }
 
 @media (max-width: 480px) {
 	.modal {
 	  max-width: 400px;
+	}
+	.modal h2 {
+	  margin-bottom: 24px;
 	}
 }
 

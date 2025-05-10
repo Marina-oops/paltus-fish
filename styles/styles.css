@@ -1476,6 +1476,7 @@ button:active {
   width: 32px;
   height: 32px;
   margin-bottom: 24px;
+  text-align: end;
 }
 
 @keyframes fadeIn {

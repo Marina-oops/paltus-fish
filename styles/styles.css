@@ -1460,7 +1460,7 @@ button:active {
 
 .modal {
   background: white;
-  padding: 24px 40px 64px 40px;
+  padding: 24px 24px 64px 40px;
   border-radius: 30px;
   max-width: 400px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);

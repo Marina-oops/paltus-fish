@@ -214,15 +214,15 @@ img {
 .fish_desktop_aside_1,
 .fish_desktop_aside_2,
 .fish_desktop_aside_3,
-.fish_desktop_aside_4
-.fish_mobile_footer_1 
+.fish_desktop_aside_4,
+.fish_mobile_footer_1, 
 .fish_mobile_footer_2 {
 	position: absolute;
 	z-index: -1;
 	object-fit: cover;
 }
 
-.fish_mobile_footer_1 
+.fish_mobile_footer_1, 
 .fish_mobile_footer_2 {
 	display: none;
 }

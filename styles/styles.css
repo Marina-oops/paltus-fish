@@ -843,6 +843,7 @@ button:active {
 .form-section {
   margin-top: 100px;
   width: 100%;
+  scroll-margin-top: 20px;
 }
 
 .form-section_row {

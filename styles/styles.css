@@ -560,7 +560,7 @@ button:active {
   color: #fff;
 }
 
-.catalog-btn:hover {
+.catalog-btn a:hover {
     color: #c3f3a7;
 }
 
@@ -588,7 +588,7 @@ button:active {
   color: #6CC276;
 }
 
-.nav-links:hover {
+.nav-links a:hover {
     color: #c3f3a7;
 }
 

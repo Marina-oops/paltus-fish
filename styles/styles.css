@@ -661,14 +661,15 @@ button:active {
 	  box-sizing: border-box;
 	  margin: 0 auto;
 	  height: 88px;
-	  font-family: "Nunito", sans-serif;
-          font-size: 28px;
-	  font-weight: 700;
-          color: #2a3176;
 	  position: relative;
 	  justify-content: space-between; 
   }
 
+  .button_quest  li {
+          font-size: 28px;
+	  font-weight: 700;
+          color: #2a3176;
+  }	
   .arrow {
 	    width: 24px;
 	    height: 24px;
@@ -676,8 +677,8 @@ button:active {
   }
 
   .arrow_2 {
-	    width: 24px;
-	    height: 24px;
+	    width: 19px;
+	    height: 39px;
 	    margin-left: auto;
   	    flex-shrink: 0;
   }

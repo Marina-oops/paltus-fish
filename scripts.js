@@ -33,10 +33,12 @@ function showThankYouModal() {
   modal.className = 'modal-overlay';
   modal.innerHTML = `
     <div class="modal">
+      <div class=".close-btn"><img src="images/close.png" alt="Закрыть "></div>
       <h2>ВАША ЗАЯВКА ОТПРАВЛЕНА!</h2>
-      <p>Спасибо за обращение! Если заявка отправлена в будни с 9:00 до 18:00 — мы свяжемся с вами в течение 30 минут</p>
-	  <p>В другое время ответим утром следующего рабочего дня</p>
-      <button class="close-btn">Закрыть</button>
+      <p style="font-weight: 700;">Спасибо за обращение!</p>
+      <p style="font-weight: 700;">Если заявка отправлена в будни с 9:00 до 18:00 — мы свяжемся с вами в течение 30 минут</p>
+      <p></p>
+      <p>В другое время ответим утром следующего рабочего дня</p>
     </div>
   `;
   document.body.appendChild(modal);

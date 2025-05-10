@@ -638,8 +638,7 @@ button:active {
 	  border-radius: 10px;
 	  display: flex;
 	  padding: 16px 12px 16px 15px;
-	  max-width: 924px;
-	  width: 100%;
+	  width: calc(100% - 100px);
 	  box-sizing: border-box;
 	  margin: 0 auto;
 	  height: 56px;
@@ -655,6 +654,12 @@ button:active {
 	    margin-left: 1px;
   }
 	
+}
+
+@media (max-width: 480px) {
+   .button_nav {
+	  width: calc(100% - 60px);
+   }
 }
 
 /* Основной контейнер */

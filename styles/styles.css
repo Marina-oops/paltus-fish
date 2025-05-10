@@ -675,11 +675,6 @@ button:active {
 	  justify-content: space-between; 
   }
 
-  .button_quest  li {
-          font-size: 28px;
-	  font-weight: 700;
-          color: #2a3176;
-  }	
   .arrow {
 	    width: 24px;
 	    height: 24px;
@@ -703,10 +698,6 @@ button:active {
 	  padding: 16px 8px 11px 10px;
 	  height: 58px;
   }
-
-  .button_quest  li {
-          font-size: 18px;
-  }	
 
   .arrow_2 {
 	    width: 26px;
@@ -756,13 +747,8 @@ button:active {
 	  border-radius: 15px;
 	  padding: 10px 12px 18px 15px;
 	  height: 48px;
-	  width: calc(100% - 100px);
   }
-
-  .button_quest  li {
-          font-size: 16px;
-  }	
-
+	
   .arrow_2 {
 	    width: 20px;
 	    height: 10px;
@@ -783,11 +769,6 @@ button:active {
 	  height: 94px;
 	  width: calc(100% - 60px);
   }
-
-  .button_quest  li {
-          font-size: 20px;
-	  line-height: 120%;
-  }	
 
   .arrow_2 {
 	    width: 22px;
@@ -891,30 +872,7 @@ button:active {
   font-family: "Nunito", sans-serif;
   font-size: 24px;
   font-weight: 400;
-}
-
-@media (max-width: 1366px) {
-  .contact-page {
-	  padding-top: 5px;
-	}
-  .deliver-page li {
-	  font-size: 16px;
-	}
-}
-
-@media (max-width: 1024px) {
-  .contact-page {
-	  padding-top: 0px;
-	}
-  .deliver-page li {
-	  font-size: 12px;
-	}
-}
-
-@media (max-width: 480px) {
-  .deliver-page li {
-	  font-size: 16px;
-	}
+  line-height: 120%;
 }
 
 .deliver,
@@ -945,6 +903,82 @@ button:active {
 .dostavka_list_down {
   list-style: none;
   color: #4f4f4f;
+}
+
+@media (max-width: 1366px) {
+  .contact-page {
+	  padding-top: 5px;
+	}
+  .deliver-page li {
+	  font-size: 16px;
+	}
+  .deliver,
+  .pay,
+  .garant {
+	margin-bottom: 64px;
+   }
+
+   .pay h2 {
+	margin-top: 22px;
+   }
+}
+
+@media (max-width: 1024px) {
+  .contact-page {
+	  padding-top: 0px;
+	}
+  .deliver-page li {
+	  font-size: 12px;
+	}
+  .deliver,
+  .pay,
+  .garant {
+	margin-bottom: 48px;
+   }
+
+   .pay h2 {
+	margin-top: 24px;
+   }
+}
+
+@media (max-width: 480px) {
+  .deliver-page li {
+	  font-size: 16px;
+	}
+  .deliver,
+  .pay,
+  .garant {
+	margin-bottom: 64px;
+   }
+
+   .pay h2 {
+	margin-top: 16px;
+   }
+}
+
+.button_quest  li {
+          font-size: 28px;
+	  font-weight: 700;
+          color: #2a3176;
+  }	
+
+@media (max-width: 1366px) {
+  .button_quest  li {
+          font-size: 18px;
+  }	
+}
+
+@media (max-width: 1024px) {
+  .button_quest  li {
+          font-size: 16px;
+  }	
+}
+
+@media (max-width: 480px) {
+  .button_quest  li {
+          font-size: 20px;
+	  line-height: 120%;
+  }	
 }
 
 .map-wrapper {

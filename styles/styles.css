@@ -276,13 +276,13 @@ img {
      display: none;
   }
 
-   .fish_mobile_footer_1 {
+   .fish_mobile_footer_2 {
 	display: block;
 	margin-left: -50px;
     	margin-top: -120px;
     }
 	
-   .fish_mobile_footer_2 {
+   .fish_mobile_footer_1 {
 	display: block;
 	margin-left: 740px;
         margin-bottom: -160px;

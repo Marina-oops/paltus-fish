@@ -27,6 +27,36 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('callback-form');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const inputs = form.querySelectorAll('input, textarea');
+    let isValid = true;
+
+    // Простая валидация
+    inputs.forEach(input => {
+      if (!input.value.trim()) {
+        input.style.borderColor = 'red';
+        isValid = false;
+      } else {
+        input.style.borderColor = '#aaa';
+      }
+    });
+
+    if (!isValid) return;
+
+    // Имитация отправки данных
+    setTimeout(() => {
+      showThankYouModal();
+      form.reset();
+    }, 500);
+  });
+});
+
+
 // Создание и отображение модального окна
 function showThankYouModal() {
   const modal = document.createElement('div');

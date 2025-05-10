@@ -247,6 +247,10 @@ img {
 	top: 1319px;
 }
 
+.fish_desktop_aside_3 {
+	top: 1918px;
+}
+
 @media (max-width: 1366px) {
   .fish_desktop_top {
      width: 464px;
@@ -674,6 +678,7 @@ button:active {
 	    width: 24px;
 	    height: 24px;
 	    margin-left: 1px;
+	    cursor: pointer;
   }
 
   .arrow_2 {
@@ -682,6 +687,7 @@ button:active {
 	    margin-left: auto;
   	    flex-shrink: 0;
 	    margin-top: 10px;
+	    cursor: pointer;
   }
 
 @media (max-width: 1024px) {

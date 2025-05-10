@@ -603,8 +603,8 @@ button:active {
 	width: 100%;
 	height: 100vh;
 	position: fixed;
-	top: 200px;
-	right: -100%;
+	top: 184px;
+	left: -100%;
 	background: white;
 	display: flex;
 	flex-direction: column;

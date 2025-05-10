@@ -638,7 +638,7 @@ button:active {
 	  border-radius: 10px;
 	  display: flex;
 	  padding: 16px 12px 16px 15px;
-	  max-width: 643px;
+	  max-width: 924px;
 	  width: 100%;
 	  box-sizing: border-box;
 	  margin: 0 auto;
@@ -647,6 +647,10 @@ button:active {
           font-size: 16px;
 	  font-weight: 700;
   }
+
+  arrow {
+	padding-left: 1px;
+   }
 	
 }
 

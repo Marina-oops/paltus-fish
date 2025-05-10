@@ -210,12 +210,34 @@ img {
   }	
 }
 
-.fish_desktop_top {
+.fish_desktop_top,
+.fish_desktop_aside_1,
+.fish_desktop_aside_2,
+.fish_desktop_aside_3,
+.fish_desktop_aside_4 {
 	position: absolute;
-	top: 0;
-	right: 0;
 	z-index: -1;
 	object-fit: cover;
+}
+
+.fish_desktop_top {
+	top: 0;
+	right: 0;
+}
+
+.fish_desktop_aside_1,
+.fish_desktop_aside_2,
+.fish_desktop_aside_3,
+.fish_desktop_aside_4 {
+	left: 0;
+}
+
+.fish_desktop_aside_1 {
+	top: 755px;
+}
+
+.fish_desktop_aside_2 {
+	top: 1319px;
 }
 
 @media (max-width: 1366px) {

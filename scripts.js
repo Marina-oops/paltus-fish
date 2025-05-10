@@ -25,37 +25,35 @@ document.addEventListener('DOMContentLoaded', () => {
       form.reset();
     }, 500);
   });
+
+    const callbackForms = ['callback-form', 'callback-form_2'];
+    callbackForms.forEach(formId => {
+    const form = document.getElementById(formId);
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const phoneInput = this.querySelector('input[type="tel"]');
+        let isValid = true;
+
+        // Валидация номера телефона
+        if (!phoneInput.value.trim()) {
+          phoneInput.style.borderColor = 'red';
+          isValid = false;
+        } else {
+          phoneInput.style.borderColor = 'black';
+        }
+
+        if (!isValid) return;
+
+        // Имитация отправки и показ модалки
+        setTimeout(() => {
+          showThankYouModal();
+          this.reset();
+        }, 500);
+      });
+    }
+  }); 
 });
-
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('callback-form');
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const inputs = form.querySelectorAll('input, textarea');
-    let isValid = true;
-
-    // Простая валидация
-    inputs.forEach(input => {
-      if (!input.value.trim()) {
-        input.style.borderColor = 'red';
-        isValid = false;
-      } else {
-        input.style.borderColor = 'black';
-      }
-    });
-
-    if (!isValid) return;
-
-    // Имитация отправки данных
-    setTimeout(() => {
-      showThankYouModal();
-      form.reset();
-    }, 500);
-  });
-});
-
 
 // Создание и отображение модального окна
 function showThankYouModal() {

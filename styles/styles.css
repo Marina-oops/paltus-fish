@@ -685,7 +685,10 @@ button:active {
 	  margin: 0 auto;
 	  height: 88px;
 	  position: relative;
-	  justify-content: space-between; 
+	  justify-content: space-between;
+	  font-size: 28px !important;
+	  font-weight: 700 !important;
+	  color: #2a3176;
   }
 
   .arrow {
@@ -710,6 +713,7 @@ button:active {
 	  border-radius: 12px;
 	  padding: 16px 8px 11px 10px;
 	  height: 58px;
+          font-size: 18px !important;
   }
 
   .arrow_2 {
@@ -760,6 +764,7 @@ button:active {
 	  border-radius: 15px;
 	  padding: 10px 12px 18px 15px;
 	  height: 48px;
+	  font-size: 16px !important;
   }
 	
   .arrow_2 {
@@ -781,6 +786,7 @@ button:active {
 	  padding: 22px 20px 22px 20px;
 	  height: 94px;
 	  width: calc(100% - 60px);
+	  font-size: 18px !important;
   }
 
   .arrow_2 {
@@ -961,25 +967,6 @@ button:active {
 	  font-weight: 700;
           color: #2a3176;
   }	
-
-@media (max-width: 1366px) {
-  .button_quest  li {
-          font-size: 18px;
-  }	
-}
-
-@media (max-width: 1024px) {
-  .button_quest  li {
-          font-size: 16px;
-  }	
-}
-
-@media (max-width: 480px) {
-  .button_quest  li {
-          font-size: 20px;
-	  line-height: 120%;
-  }	
-}
 
 .map-wrapper {
   margin: 32px 0;

@@ -646,11 +646,14 @@ button:active {
 	  font-family: "Nunito", sans-serif;
           font-size: 16px;
 	  font-weight: 700;
+	  position: relative;
   }
 
-  arrow {
-	padding-left: 1px;
-   }
+  .arrow {
+	    width: 24px;
+	    height: 24px;
+	    margin-left: 1px;
+  }
 	
 }
 

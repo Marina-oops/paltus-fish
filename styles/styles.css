@@ -810,7 +810,7 @@ button:active {
 	width: 100%;
 }
 
-.dostavka_list ul {
+.dostavka_list {
   list-style-type: circle;
   list-style-position: inside;
   padding-left: 1em;

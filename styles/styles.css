@@ -268,6 +268,12 @@ img {
      height: 267px;
      top: 884px;
   }
+
+  .fish_desktop_aside_3 {
+     width: 296px;
+     height: 262px;
+     top: 1285px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -683,12 +689,31 @@ button:active {
 
   .arrow_2 {
 	    width: 39px;
-	    height: 19px;
+	    height: 21px;
 	    margin-left: auto;
   	    flex-shrink: 0;
 	    margin-top: 10px;
 	    cursor: pointer;
   }
+
+@media (max-width: 1366px) {
+	
+   .button_quest {
+	  border-radius: 12px;
+	  padding: 16px 8px 11px 10px;
+	  height: 58px;
+  }
+
+  .button_quest  li {
+          font-size: 18px;
+  }	
+
+  .arrow_2 {
+	    width: 26px;
+	    height: 14px;
+	    margin-top: 5px;
+  }	
+}
 
 @media (max-width: 1024px) {
   .main-nav {
@@ -727,12 +752,48 @@ button:active {
 	  font-weight: 700;
   }
 
+ .button_quest {
+	  border-radius: 15px;
+	  padding: 10px 12px 18px 15px;
+	  height: 48px;
+	  width: calc(100% - 100px);
+  }
+
+  .button_quest  li {
+          font-size: 16px;
+  }	
+
+  .arrow_2 {
+	    width: 20px;
+	    height: 10px;
+	    margin-top: 8px;
+  }	
+
+
 }
 
 @media (max-width: 480px) {
    .button_nav {
 	  width: calc(100% - 60px);
    }
+
+   .button_quest {
+	  border-radius: 17px;
+	  padding: 22px 20px 22px 20px;
+	  height: 94px;
+	  width: calc(100% - 60px);
+  }
+
+  .button_quest  li {
+          font-size: 20px;
+	  line-height: 120%;
+  }	
+
+  .arrow_2 {
+	    width: 22px;
+	    height: 11px;
+	    margin-top: 8px;
+  }	
 }
 
 /* Основной контейнер */
@@ -836,11 +897,23 @@ button:active {
   .contact-page {
 	  padding-top: 5px;
 	}
+  .deliver-page li {
+	  font-size: 16px;
+	}
 }
 
 @media (max-width: 1024px) {
   .contact-page {
 	  padding-top: 0px;
+	}
+  .deliver-page li {
+	  font-size: 12px;
+	}
+}
+
+@media (max-width: 480px) {
+  .deliver-page li {
+	  font-size: 16px;
 	}
 }
 
@@ -935,9 +1008,21 @@ button:active {
   margin-bottom: 48px;
 }
 
+@media (max-width: 1366px) {
+  .details-grid-deliver {
+	  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
+
 @media (max-width: 1024px) {
   .details-grid {
 	  grid-template-columns: repeat(auto-fit, minmax(209px, 1fr));
+	  gap: 8px;
+	  margin-bottom: 16px;
+  }
+
+  .details-grid-deliver {
+	  grid-template-columns: repeat(auto-fit, minmax(302px, 1fr));
 	  gap: 8px;
 	  margin-bottom: 16px;
   }

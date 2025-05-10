@@ -48,13 +48,31 @@ function showThankYouModal() {
 
 // Открыть закрыть меню
 
-const menu = document.querySelector(".menu-mob");
-const burgerButton = document.querySelector(".hamburger-button");
+document.addEventListener('DOMContentLoaded', () => {
+  const menu = document.querySelector(".menu-mob");
+  const burgerButton = document.querySelector("#hamburger-button");
+  const overlay = document.createElement('div');
+  overlay.className = 'menu-overlay';
 
-if (burgerButton && menu) {
-  burgerButton.addEventListener("click", function() {
-    menu.classList.toggle("active");
-    burgerButton.classList.toggle("active");
-    document.body.style.overflow = menu.classList.contains("active") ? "hidden" : "visible";
-  });
-}
+  if (burgerButton && menu) {
+
+    document.body.appendChild(overlay);
+
+    const toggleMenu = () => {
+      menu.classList.toggle("active");
+      document.body.style.overflow = menu.classList.contains("active") ? "hidden" : "visible";
+    };
+
+    burgerButton.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    overlay.addEventListener('click', toggleMenu);
+    
+    menu.querySelectorAll('.button_nav').forEach(item => {
+      item.addEventListener('click', toggleMenu);
+    });
+
+  }
+});

@@ -674,6 +674,13 @@ button:active {
 	    height: 24px;
 	    margin-left: 1px;
   }
+
+  .arrow_2 {
+	    width: 24px;
+	    height: 24px;
+	    margin-left: 1px;
+	    transform: rotate(90deg);
+  }
 	
 }
 
@@ -761,7 +768,7 @@ button:active {
     color: #c3f3a7;
 }
 
-/* Контент страницы */
+/* Контент страницы контакты */
 .contact-page {
   flex: 1;
   padding-top: 8px;
@@ -778,6 +785,39 @@ button:active {
   .contact-page {
 	  padding-top: 0px;
 	}
+}
+
+.deliver,
+.pay,
+.garant {
+	width: 100%;
+	margin-bottom: 96px;
+}
+
+.faq {
+	width: 100%;
+}
+
+.dostavka_list ul {
+  list-style-type: circle;
+  list-style-position: inside;
+  padding-left: 1em;
+}
+
+ul.dostavka_list_down {
+  list-style: none;
+  color: #4f4f4f;
+  padding-left: 1em;
+}
+
+ul.dostavka_list_down li::before {
+  content: "*";
+  color: #4f4f4f;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  font-weight: 700;
+  font-size: 1.2em;
 }
 
 .map-wrapper {

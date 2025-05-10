@@ -652,6 +652,12 @@ button:active {
     .menu_list .active a {
 	  color: #6CC276;
     }
+
+   .menu_list_deliver {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+   }
 	
   .button_nav {
 	  list-style: none;
@@ -810,8 +816,16 @@ button:active {
 	width: 100%;
 }
 
+.pay h2 {
+	margin-top: 32px;
+}
+
+.pay p {
+	margin-bottom: 1em;
+}
+
 .dostavka_list {
-  list-style-type: circle;
+  list-style-type: disk;
   list-style-position: inside;
   padding-left: 1em;
 }

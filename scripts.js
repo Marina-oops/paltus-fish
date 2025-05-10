@@ -36,7 +36,7 @@ function showThankYouModal() {
       <div class="close-btn" style="text-align: end;"><img src="images/close.png" alt="Закрыть "></div>
       <h2>ВАША ЗАЯВКА ОТПРАВЛЕНА!</h2>
       <p style="font-weight: 700;">Спасибо за обращение!</p>
-      <p style="font-weight: 700;">Если заявка отправлена в&nbsp;будни с&nbsp;9:00 до&nbsp;18:00 —&nbsp;мы свяжемся с&nbsp;вами&nbsp;в&nbsp;течение&nbsp;30&nbsp;минут</p>
+      <p style="font-weight: 700;">Если заявка отправлена в&nbsp;будни с&nbsp;9:00 до&nbsp;18:00 —&nbsp;мы&nbsp;свяжемся с&nbsp;вами&nbsp;в&nbsp;течение&nbsp;30&nbsp;минут</p>
       <p style="color: white;">Д</p>
       <p>В другое время ответим утром следующего рабочего дня</p>
     </div>

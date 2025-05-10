@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         input.style.borderColor = 'red';
         isValid = false;
       } else {
-        input.style.borderColor = '#aaa';
+        input.style.borderColor = 'black';
       }
     });
 
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         input.style.borderColor = 'red';
         isValid = false;
       } else {
-        input.style.borderColor = '#aaa';
+        input.style.borderColor = 'black';
       }
     });
 

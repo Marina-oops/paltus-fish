@@ -244,11 +244,25 @@ img {
   .fish_desktop_top {
      width: 464px;
      height: 176px;
-  }	
+  }
+
+  .fish_desktop_aside_1 {
+     width: 448px;
+     height: 243px;
+  }
+
+  .fish_desktop_aside_2 {
+     width: 336px;
+     height: 267px;
+  }
 }
 
 @media (max-width: 1024px) {
-  .fish_desktop_top {
+  .fish_desktop_top,
+  .fish_desktop_aside_1,
+  .fish_desktop_aside_2,
+  .fish_desktop_aside_3,
+  .fish_desktop_aside_4 {
      display: none;
   }	
 }

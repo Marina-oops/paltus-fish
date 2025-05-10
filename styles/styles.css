@@ -781,7 +781,7 @@ button:active {
   min-width: 0;
 }
 
-.deliver-page ul {
+.deliver-page li {
   font-family: "Nunito", sans-serif;
   font-size: 24px;
   font-weight: 400;
@@ -877,7 +877,7 @@ button:active {
 
 .details-grid-deliver {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(408px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 24px;
   margin-bottom: 48px;
 }

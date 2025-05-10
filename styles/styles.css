@@ -520,6 +520,14 @@ button:active {
     cursor: pointer;
 }
 
+#hamburger-button img {
+  transition: transform 0.3s ease;
+}
+
+#hamburger-button.active img {
+  transform: rotate(90deg);
+}
+
 /* Навигация */
 .main-nav {
   display: flex;

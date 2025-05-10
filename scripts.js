@@ -45,3 +45,16 @@ function showThankYouModal() {
     modal.remove();
   });
 }
+
+// Открыть закрыть меню
+
+const menu = document.querySelector(".menu-mob");
+const burgerButton = document.querySelector(".hamburger-button");
+
+if (burgerButton && menu) {
+  burgerButton.addEventListener("click", function() {
+    menu.classList.toggle("active");
+    burgerButton.classList.toggle("active");
+    document.body.style.overflow = menu.classList.contains("active") ? "hidden" : "visible";
+  });
+}

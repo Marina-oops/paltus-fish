@@ -613,7 +613,7 @@ button:active {
    }
 
   .menu-mob.active {
-	right: 0%;
+	left: 0%;
    }	
 
   .menu_list {

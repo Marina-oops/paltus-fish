@@ -214,10 +214,17 @@ img {
 .fish_desktop_aside_1,
 .fish_desktop_aside_2,
 .fish_desktop_aside_3,
-.fish_desktop_aside_4 {
+.fish_desktop_aside_4
+.fish_mobile_footer_1 
+.fish_mobile_footer_2 {
 	position: absolute;
 	z-index: -1;
 	object-fit: cover;
+}
+
+.fish_mobile_footer_1 
+.fish_mobile_footer_2 {
+	display: none;
 }
 
 .fish_desktop_top {
@@ -228,7 +235,8 @@ img {
 .fish_desktop_aside_1,
 .fish_desktop_aside_2,
 .fish_desktop_aside_3,
-.fish_desktop_aside_4 {
+.fish_desktop_aside_4,
+.fish_mobile_footer_2 {
 	left: 0;
 }
 
@@ -249,11 +257,13 @@ img {
   .fish_desktop_aside_1 {
      width: 448px;
      height: 243px;
+     top: 506px;
   }
 
   .fish_desktop_aside_2 {
      width: 336px;
      height: 267px;
+     top: 884px;
   }
 }
 
@@ -264,7 +274,26 @@ img {
   .fish_desktop_aside_3,
   .fish_desktop_aside_4 {
      display: none;
-  }	
+  }
+
+  .fish_mobile_footer_1 
+  .fish_mobile_footer_2 {
+	display: block;
+   }
+
+   .fish_mobile_footer_1 {
+	right: 0;
+    }
+
+    .fish_mobile_footer_2 {
+	position: absolute;
+	bottom: 0;
+	transform: none !important;
+    }
+
+    footer {
+	    position: relative;
+    }
 }
 
 .top-header {

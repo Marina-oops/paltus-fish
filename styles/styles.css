@@ -661,6 +661,19 @@ button:active {
 	  position: relative;
   }
 
+.deliver-page {
+  flex: 1;
+  padding-top: 8px;
+  min-width: 0;
+}
+
+.deliver-page li {
+  font-family: "Nunito", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
 .button_quest {
 	  list-style: none;
 	  border: 2px solid #2a3176;
@@ -860,19 +873,6 @@ button:active {
   flex: 1;
   padding-top: 8px;
   min-width: 0;
-}
-
-.deliver-page {
-  flex: 1;
-  padding-top: 8px;
-  min-width: 0;
-}
-
-.deliver-page li {
-  font-family: "Nunito", sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 120%;
 }
 
 .deliver,

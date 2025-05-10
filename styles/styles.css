@@ -284,8 +284,8 @@ img {
 	
    .fish_mobile_footer_1 {
 	display: block;
-	margin-left: 740px;
-        margin-bottom: -160px;
+	right: 0;
+        margin-top: 20px;
     }
 
 }

@@ -33,7 +33,7 @@ function showThankYouModal() {
   modal.className = 'modal-overlay';
   modal.innerHTML = `
     <div class="modal">
-      <div class="close-btn" style="text-align: end;"><img src="images/close.png" alt="Закрыть "></div>
+      <div class="close-btn"><img src="images/close.png" alt="Закрыть "></div>
       <h2>ВАША ЗАЯВКА ОТПРАВЛЕНА!</h2>
       <p style="font-weight: 700;">Спасибо за обращение!</p>
       <p style="font-weight: 700;">Если заявка отправлена в&nbsp;будни с&nbsp;9:00 до&nbsp;18:00 —&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;течение&nbsp;30&nbsp;минут</p>

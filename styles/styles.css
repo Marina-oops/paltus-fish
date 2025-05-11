@@ -1745,6 +1745,20 @@ button:active {
     }
 }
 
+@media (max-width: 1263px) {
+    .main-nav {
+        max-width: 1012px;
+    }
+    .footer-middle {
+        max-width: 150px;
+    }
+    .form-section button,
+    .form-block_area {
+	max-width: 262px;
+    }
+}
+
+
 @media (max-width: 1152px) {
     .details-grid {
         grid-template-columns: repeat(auto-fit, minmax(209px, 1fr));
@@ -1760,7 +1774,7 @@ button:active {
     }
     .form-section button,
     .form-block_area {
-	  max-width: 344px;
+	  max-width: 224px;
    }
 }
 

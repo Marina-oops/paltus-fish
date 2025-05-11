@@ -1758,12 +1758,23 @@ button:active {
    .footer-middle {
         gap: 18px;
     }
+
+    .logo-footer {
+        width: 258px;
+        height: 73px;
+    }
 }
 
 @media (max-width: 430px) {
    .footer-middle {
         gap: 6px;
     }
+
+    .logo-footer {
+        width: 246px;
+        height: 70px;
+    }	
+   
 }
 
 @media (max-width: 402px) {
@@ -1789,13 +1800,24 @@ button:active {
     }
 
    .footer-middle {
-        gap: 36px;
+        gap: 52px;
     }
+
+    .logo-footer {
+        width: 264px;
+        height: 75px;
+    }
+
 }
 
-@media (max-width: 385px) {
-   .footer-middle {
-        gap: 20px;
+@media (max-width: 375px) {
+   .logo-footer {
+        width: 232px;
+        height: 66px;
+    }
+
+    .footer-middle {
+        gap: 36px;
     }
 }
 

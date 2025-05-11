@@ -110,21 +110,30 @@ document.addEventListener('DOMContentLoaded', () => {
  // Открытие и закрытие блоков с вопросами
 
 document.addEventListener('DOMContentLoaded', () => {
- const buttons = document.querySelectorAll('.button_quest');
+  const buttons = document.querySelectorAll('.button_quest');
 
   buttons.forEach(button => {
     button.addEventListener('click', () => {
-      const currentContent = button.nextElementSibling;
+      const content = button.querySelector('.accordion-content');
+      const isOpen = content.classList.contains('open');
 
-      document.querySelectorAll('.accordion-content').forEach(content => {
-        if (content !== currentContent) {
-          content.classList.remove('open');
-          content.previousElementSibling.classList.remove('open');
+      document.querySelectorAll('.accordion-content').forEach(otherContent => {
+        if (otherContent !== content) {
+          otherContent.classList.remove('open');
+          otherContent.style.maxHeight = null;
+          otherContent.parentElement.classList.remove('open');
         }
       });
 
-      currentContent.classList.toggle('open');
-      button.classList.toggle('open');
+      if (!isOpen) {
+        content.classList.add('open');
+        content.style.maxHeight = content.scrollHeight + "px";
+        button.classList.add('open');
+      } else {
+        content.classList.remove('open');
+        content.style.maxHeight = null;
+        button.classList.remove('open');
+      }
     });
   });
 });

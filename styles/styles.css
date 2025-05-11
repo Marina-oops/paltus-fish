@@ -685,7 +685,7 @@ button:active {
 	  width: 100%;
 	  box-sizing: border-box;
 	  margin: 0 auto;
-	  height: 88px;
+	  height: 100%;
 	  position: relative;
 	  justify-content: space-between;
 	  font-size: 28px !important;
@@ -886,14 +886,14 @@ button:active {
   min-width: 0;
 }
 
-.deliver,
 .pay,
 .garant {
 	width: 100%;
 	margin-bottom: 96px;
 }
 
-.faq {
+.faq,
+.deliver {
 	width: 100%;
 }
 

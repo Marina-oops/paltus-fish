@@ -982,7 +982,6 @@ button:active {
 	  .map-wrapper {
 	  margin: 22px 0;
 	  border-radius: 22px;
-	  max-width: 852px;
 	}
 }
 
@@ -1156,14 +1155,7 @@ button:active {
 	  margin-top: 67px;
 	}
 	
-	.form-section_row {
-	 max-width: 756px;
-	 gap: 16px;
-	}
-	
 	.form-section_row_2 {
-	 max-width: 756px;
-	 gap: 16px;
 	 margin-top: 16px;
 	}
 	
@@ -1171,20 +1163,15 @@ button:active {
 	  gap: 16px;
 	  margin-top: 36px;
 	}
-	
-	.form-block {
-	  max-width: 272px;
-	}
-	
+
 	.form-block_area {
-	  max-width: 241px;
+	        max-width: 326px;
 	}
 	
 	.form-section textarea {
 	  padding: 14px;
 	  font-size: 14px;
 	  border-radius: 10px;
-	  width: 241px;
 	  height: 92px;
 	}
 	
@@ -1461,7 +1448,6 @@ button:active {
 	  .footer {
 	  border-radius: 20px;
 	  padding: 26px 80px 50px 50px;
-	  max-width: 1142px;
 	  margin-bottom: 64px;
 	}
 	
@@ -1474,12 +1460,11 @@ button:active {
 	}
 	
 	.footer-left {
-	  margin-right: 40px;
+	  margin-right: 140px;
 	}
 	
 	.footer-middle {
 	  margin-right: 16px;
-	  max-width: 176px;
 	  padding-top: 24px;
 	}
 	
@@ -1748,6 +1733,20 @@ button:active {
     }
 }
 
+@media (max-width: 1440px) {
+    .main-nav {
+        max-width: 1188px;
+    }
+    .form-block_area {
+	max-width: 326px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .main-nav {
+        max-width: 1028px;
+    }
+}
 
 @media (max-width: 834px) {
     .details-grid-deliver {

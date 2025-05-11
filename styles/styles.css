@@ -683,9 +683,9 @@ button:active {
 	  display: flex;
 	  padding: 24px 12px 24px 15px;
 	  width: 100%;
+	  align-items: center;
 	  box-sizing: border-box;
 	  margin: 0 auto;
-	  height: 100%;
 	  position: relative;
 	  justify-content: space-between;
 	  font-size: 28px !important;

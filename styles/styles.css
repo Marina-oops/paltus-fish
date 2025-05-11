@@ -607,7 +607,7 @@ button:active {
 @media (max-width: 1512px) {
   .main-nav {
 	  font-size: 14px;
-	  max-width: 1012px;
+	  max-width: 1260px;
    }
 
   .catalog-btn {
@@ -1736,7 +1736,9 @@ button:active {
     .form-block_area {
 	max-width: 268px;
     }
-
+    .footer-left {
+        margin-right: 100px;
+    }
     .footer-middle {
         max-width: 158px;
     }
@@ -1752,6 +1754,10 @@ button:active {
     .footer-middle {
         max-width: 144px;
     }
+    .main-nav {
+	 max-width: 900px;
+    }
+    
 }
 
 @media (max-width: 834px) {

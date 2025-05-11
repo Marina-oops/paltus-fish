@@ -690,6 +690,7 @@ button:active {
 	  justify-content: space-between;
 	  font-size: 28px !important;
 	  font-weight: 700 !important;
+	  cursor: pointer;
 	  color: #2a3176;
 	  transition: background-color 0.2s ease;
   }

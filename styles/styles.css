@@ -1743,7 +1743,7 @@ button:active {
 
 @media (max-width: 1280px) {
     .main-nav {
-        max-width: 1028px;
+        max-width: 928px;
     }
 
     .form-section button,

@@ -1872,18 +1872,18 @@ button:active {
 
 }
 
-@media (max-width: 393px) {
+@media (max-width: 394px) {
     .logo-footer {
         width: 256px;
         height: 72px;
     }
 
     .footer-middle {
-        gap: 26px;
+        gap: 40px;
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 385px) {
     .logo-footer {
         width: 238px;
         height: 67px;

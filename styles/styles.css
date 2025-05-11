@@ -691,6 +691,13 @@ button:active {
 	  font-size: 28px !important;
 	  font-weight: 700 !important;
 	  color: #2a3176;
+	  cursor: pointer;
+	  transition: background-color 0.2s ease;
+  }
+
+ .button_quest:hover {
+	  background-color: #2a3176;
+	  color: #000;
   }
 
   .arrow {
@@ -1749,7 +1756,7 @@ button:active {
 
     .form-section button,
     .form-block_area {
-	max-width: 264px;
+	max-width: 260px;
     }
     .footer-left {
         margin-right: 90px;

@@ -1671,15 +1671,6 @@ button:active {
 	}
 }
 
-@media (max-width: 412px) {
-	  .footer {
-	  padding: 45px 48px 48px 48px;
-	}
-	.footer-middle {
-          gap: 36px;
-	}
-}
-
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -1777,6 +1768,19 @@ button:active {
    
 }
 
+@media (max-width: 412px) {
+	  .footer {
+	  padding: 45px 48px 48px 48px;
+	}
+	.footer-middle {
+          gap: 36px;
+	}
+	.logo-footer {
+	        width: 278px;
+	        height: 79px;
+	}
+}
+
 @media (max-width: 402px) {
    .details-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -1810,7 +1814,7 @@ button:active {
 
 }
 
-@media (max-width: 375px) {
+@media (max-width: 385px) {
    .logo-footer {
         width: 232px;
         height: 66px;

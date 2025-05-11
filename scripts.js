@@ -106,3 +106,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   }
 });
+
+ // Открытие и закрытие блоков с вопросами
+
+document.addEventListener('DOMContentLoaded', () => {
+ const buttons = document.querySelectorAll('.button_quest');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const currentContent = button.nextElementSibling;
+
+      document.querySelectorAll('.accordion-content').forEach(content => {
+        if (content !== currentContent) {
+          content.classList.remove('open');
+          content.previousElementSibling.classList.remove('open');
+        }
+      });
+
+      currentContent.classList.toggle('open');
+      button.classList.toggle('open');
+    });
+  });
+});

@@ -714,7 +714,6 @@ button:active {
    .button_quest {
 	  border-radius: 12px;
 	  padding: 16px 8px 11px 10px;
-	  height: 58px;
           font-size: 18px !important;
   }
 
@@ -765,7 +764,6 @@ button:active {
  .button_quest {
 	  border-radius: 15px;
 	  padding: 13px 12px 18px 15px;
-	  height: 48px;
 	  font-size: 16px !important;
   }
 	
@@ -776,12 +774,6 @@ button:active {
   }	
 }
 
-@media (max-width: 554px) {
-   .button_quest {
-	  height: 64px;
-  }
-}
-
 @media (max-width: 480px) {
    .button_nav {
 	  width: calc(100% - 60px);
@@ -790,7 +782,6 @@ button:active {
    .button_quest {
 	  border-radius: 17px;
 	  padding: 22px 20px 22px 20px;
-	  height: 94px;
 	  font-size: 18px !important;
   }
 
@@ -923,7 +914,6 @@ button:active {
   .deliver-page li {
 	  font-size: 16px;
 	}
-  .deliver,
   .pay,
   .garant {
 	margin-bottom: 64px;
@@ -941,7 +931,6 @@ button:active {
   .deliver-page li {
 	  font-size: 12px;
 	}
-  .deliver,
   .pay,
   .garant {
 	margin-bottom: 48px;
@@ -956,7 +945,6 @@ button:active {
   .deliver-page li {
 	  font-size: 16px;
 	}
-  .deliver,
   .pay,
   .garant {
 	margin-bottom: 64px;

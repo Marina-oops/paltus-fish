@@ -1804,6 +1804,9 @@ button:active {
     .form-block_area {
 	max-width: 420px;
     }
+    .details-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
 }
 
 @media (max-width: 440px) {
@@ -1830,6 +1833,9 @@ button:active {
 }
 
 @media (max-width: 414px) {
+	.details-grid {
+	        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	}
 	.footer {
 	  padding: 45px 48px 48px 48px;
 	}

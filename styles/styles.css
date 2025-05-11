@@ -721,13 +721,19 @@ button:active {
 	transform: rotate(180deg);
 }
 
+.button_quest.open {
+	transform: rotate(180deg);
+	border-radius: 0px;
+	border-bottom: none;
+}
+
 .accordion-content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease;
   padding: 0 15px;
   box-sizing: border-box;
-  border: 2px solid #2a3176;
+  border: 2px solid #fff;
   border-top: none;
   border-radius: 0 0 17px 17px;
   background-color: #fff;
@@ -735,7 +741,15 @@ button:active {
 
 .accordion-content.open {
   max-height: 300px;
-  padding: 20px 15px;
+  border: 2px solid #2a3176;
+  padding: 24px 12px 24px 15px;
+  margin-top: -15px;
+}
+
+.accordion-content.open:hover {
+  background-color: #2a3176;
+  color: #fff;
+  cursor: pointer;
 }
 
 .accordion-item {

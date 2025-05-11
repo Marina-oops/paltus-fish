@@ -763,7 +763,7 @@ button:active {
 
  .button_quest {
 	  border-radius: 15px;
-	  padding: 13px 12px 18px 15px;
+	  padding: 18px 12px 18px 15px;
 	  font-size: 16px !important;
   }
 	
@@ -936,6 +936,10 @@ button:active {
 	margin-bottom: 48px;
    }
 
+  .pay {
+	margin-top: 48px;
+   }
+
    .pay h2 {
 	margin-top: 24px;
    }
@@ -1036,7 +1040,7 @@ button:active {
   }
 
   .details-grid-deliver {
-	  grid-template-columns: repeat(auto-fit, minmax(209px, 1fr));
+	  grid-template-columns: repeat(auto-fit, minmax(226px, 1fr));
 	  gap: 8px;
 	  margin-bottom: 16px;
   }

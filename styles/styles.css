@@ -1780,6 +1780,18 @@ button:active {
     }
 }
 
+@media (max-width: 440px) {
+   .footer-middle {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 430px) {
+   .footer-middle {
+        gap: 6px;
+    }
+}
+
 @media (max-width: 385px) {
    .footer-middle {
         gap: 20px;

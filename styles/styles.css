@@ -12,7 +12,7 @@ body {
   margin: 0px 108px;
 }
  
-@media (max-width: 1366px) {
+@media (max-width: 1512px) {
   body {
     margin: 0px 72px;
   }
@@ -68,7 +68,7 @@ input {
   max-width: none;
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1512px) {
 	h1 {
 		font-size: 32px;
 		margin-bottom: 30px;
@@ -152,7 +152,7 @@ img {
   background-position: center left;
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1512px) {
 	.desktop-header {
 		margin-top: 24px;
 		margin-bottom: 32px;
@@ -253,7 +253,7 @@ img {
 	top: 1918px;
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1512px) {
   .fish_desktop_top {
      width: 464px;
      height: 176px;
@@ -342,7 +342,7 @@ img {
   outline: none;
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1512px) {
 	.search-input {
 	padding: 10px 8px 11px 40px;
 	font-size: 14px;
@@ -461,7 +461,7 @@ button:active {
     transform: scale(1); 
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1512px) {
 	  button {
 	    font-size: 16px;
 	}
@@ -496,7 +496,7 @@ button:active {
     margin-right: 5px;
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1512px) {
   #cart-button {
     font-size: 16px;
     border-radius: 10px;
@@ -604,7 +604,7 @@ button:active {
     color: #399d45;
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1512px) {
   .main-nav {
 	  font-size: 14px;
 	  max-width: 1012px;
@@ -709,7 +709,7 @@ button:active {
 	    cursor: pointer;
   }
 
-@media (max-width: 1366px) {
+@media (max-width: 1512px) {
 	
    .button_quest {
 	  border-radius: 12px;
@@ -799,7 +799,7 @@ button:active {
   min-width: 0;
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1512px) {
   .container {
 	  padding: 24px 0px 86px 0px;
 	}
@@ -840,7 +840,7 @@ button:active {
   cursor: pointer;
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1512px) {
   .sidebar {
 	  padding: 22px 20px;
 	  margin-right: 16px;
@@ -907,7 +907,7 @@ button:active {
   color: #4f4f4f;
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1512px) {
   .contact-page {
 	  padding-top: 5px;
 	}
@@ -978,7 +978,7 @@ button:active {
   object-position: center;
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1512px) {
 	  .map-wrapper {
 	  margin: 22px 0;
 	  border-radius: 22px;
@@ -1026,7 +1026,7 @@ button:active {
   margin-bottom: 48px;
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1512px) {
   .details-grid-deliver {
 	  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   }
@@ -1151,7 +1151,7 @@ button:active {
   margin-top: 50px;
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1512px) {
 	.form-section {
 	  margin-top: 67px;
 	}
@@ -1457,7 +1457,7 @@ button:active {
 		margin-top: -5px;
  }
 
-@media (max-width: 1366px) {
+@media (max-width: 1512px) {
 	  .footer {
 	  border-radius: 20px;
 	  padding: 26px 80px 50px 50px;
@@ -1699,7 +1699,7 @@ button:active {
   width: 100%;
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1512px) {
 	.modal {
 	  padding: 28px 36px 43px 38px;
 	  max-width: 378px;

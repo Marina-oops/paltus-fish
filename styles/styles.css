@@ -1728,7 +1728,20 @@ button:active {
     }
 }
 
-@media (max-width: 1281px) {
+@media (max-width: 1366px) {
+    .main-nav {
+        max-width: 1012px;
+    }
+    .footer-middle {
+        max-width: 150px;
+    }
+    .form-section button,
+    .form-block_area {
+	max-width: 296px;
+    }
+}
+
+@media (max-width: 1280px) {
     .main-nav {
         max-width: 1028px;
     }
@@ -1745,21 +1758,7 @@ button:active {
     }
 }
 
-@media (max-width: 1266px) {
-    .main-nav {
-        max-width: 1012px;
-    }
-    .footer-middle {
-        max-width: 150px;
-    }
-    .form-section button,
-    .form-block_area {
-	max-width: 262px;
-    }
-}
-
-
-@media (max-width: 1153px) {
+@media (max-width: 1152px) {
     .details-grid-deliver,
     .details-grid {
         grid-template-columns: repeat(auto-fit, minmax(209px, 1fr));
@@ -1779,25 +1778,25 @@ button:active {
    }
 }
 
-@media (max-width: 1025px) {
+@media (max-width: 1024px) {
     .details-grid-deliver {
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
 }
 
-@media (max-width: 835px) {
+@media (max-width: 834px) {
     .details-grid-deliver {
         grid-template-columns: repeat(auto-fit, minmax(209px, 1fr));
     }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 768px) {
     .footer-middle {
         max-width: 102px;
     }
 }
 
-@media (max-width: 481px) {
+@media (max-width: 480px) {
     .footer-middle {
         max-width: 278px;
     }
@@ -1807,7 +1806,7 @@ button:active {
     }
 }
 
-@media (max-width: 441px) {
+@media (max-width: 440px) {
    .footer-middle {
         gap: 18px;
     }
@@ -1818,7 +1817,7 @@ button:active {
     }
 }
 
-@media (max-width: 431px) {
+@media (max-width: 430px) {
    .footer-middle {
         gap: 6px;
     }
@@ -1830,7 +1829,7 @@ button:active {
    
 }
 
-@media (max-width: 415px) {
+@media (max-width: 414px) {
 	.footer {
 	  padding: 45px 48px 48px 48px;
 	}
@@ -1843,7 +1842,7 @@ button:active {
 	}
 }
 
-@media (max-width: 403px) {
+@media (max-width: 402px) {
    .details-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }

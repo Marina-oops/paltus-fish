@@ -761,7 +761,22 @@ button:active {
 	    width: 26px;
 	    height: 14px;
 	    margin-top: 5px;
-  }	
+  }
+
+	.button_quest.open {
+    	  border-top-left-radius: 12px;
+    	  border-top-right-radius: 12px;
+       }
+
+	.accordion-content {
+	  padding: 0 10px;
+	  border-radius: 0 0 12px 12px;
+	}
+	
+	.accordion-content.open {
+	  padding: 16px 8px 16px 10px;
+	  margin-top: -11px;
+	}
 }
 
 @media (max-width: 1024px) {
@@ -811,7 +826,22 @@ button:active {
 	    width: 20px;
 	    height: 10px;
 	    margin-top: 8px;
-  }	
+  }
+
+  .button_quest.open {
+    	  border-top-left-radius: 15px;
+    	  border-top-right-radius: 15px;
+   }
+
+	.accordion-content {
+	  padding: 0 15px;
+	  border-radius: 0 0 15px 15px;
+	}
+	
+	.accordion-content.open {
+	  padding: 18px 12px 18px 15px;
+	  margin-top: -15px;
+	}
 }
 
 @media (max-width: 480px) {
@@ -830,6 +860,22 @@ button:active {
 	    height: 11px;
 	    margin-top: 8px;
   }	
+
+  .button_quest.open {
+    	  border-top-left-radius: 17px;
+    	  border-top-right-radius: 17px;
+   }
+
+	.accordion-content {
+	  padding: 0 20px;
+	  border-radius: 0 0 17px 17px;
+	}
+	
+	.accordion-content.open {
+	  padding: 22px 20px 22px 20px;
+	  margin-top: -18px;
+	}
+	
 }
 
 /* Основной контейнер */

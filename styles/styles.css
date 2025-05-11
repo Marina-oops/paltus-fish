@@ -1797,6 +1797,12 @@ button:active {
     }
 }
 
+@media (max-width: 480px) {
+    .footer-middle {
+        max-width: 278px;
+    }
+}
+
 @media (max-width: 440px) {
    .footer-middle {
         gap: 18px;

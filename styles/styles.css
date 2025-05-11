@@ -697,7 +697,7 @@ button:active {
 
  .button_quest:hover {
 	  background-color: #2a3176;
-	  color: #000;
+	  color: #fff;
   }
 
   .arrow {
@@ -726,7 +726,7 @@ button:active {
   overflow: hidden;
   transition: max-height 0.5s ease;
 }
-.accordion-content.open {
+.accordion-content.open .button_quest {
   max-height: 200px;
 }
 

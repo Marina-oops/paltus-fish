@@ -719,6 +719,10 @@ button:active {
 	transform: rotate(180deg);
 }
 
+.button_quest.open .arrow_2:hover {
+	transform: rotate(180deg);
+}
+
 .button_quest.open {
 	border-radius: 0px;
 	border-bottom: none;

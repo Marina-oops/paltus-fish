@@ -1177,7 +1177,6 @@ button:active {
 	
 	.number_characters {
 	  font-size: 10px;
-	  width: 241px;
 	}
 	
 	.form-section input {
@@ -1721,18 +1720,6 @@ button:active {
   }
 }
 
-@media (max-width: 1152px) {
-    .details-grid {
-        grid-template-columns: repeat(auto-fit, minmax(209px, 1fr));
-    }
-    .footer-left {
-        margin-right: 0px;
-    }
-    .footer-middle {
-        max-width: 144px;
-    }
-}
-
 @media (max-width: 1440px) {
     .main-nav {
         max-width: 1188px;
@@ -1745,6 +1732,25 @@ button:active {
 @media (max-width: 1280px) {
     .main-nav {
         max-width: 1028px;
+    }
+    .form-block_area {
+	max-width: 268px;
+    }
+
+    .footer-middle {
+        max-width: 158px;
+    }
+}
+
+@media (max-width: 1152px) {
+    .details-grid {
+        grid-template-columns: repeat(auto-fit, minmax(209px, 1fr));
+    }
+    .footer-left {
+        margin-right: 0px;
+    }
+    .footer-middle {
+        max-width: 144px;
     }
 }
 

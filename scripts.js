@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
  // Открытие и закрытие блоков с вопросами
-/*
+
 document.addEventListener('DOMContentLoaded', () => {
   const buttons = document.querySelectorAll('.button_quest');
 
@@ -128,34 +128,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-*/
 
-document.addEventListener('DOMContentLoaded', () => {
-  const buttons = document.querySelectorAll('.button_quest');
 
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      const content = button.querySelector('.accordion-content');
-      const isOpen = content.classList.contains('open');
-
-      // Закрываем все открытые аккордеоны
-      document.querySelectorAll('.accordion-content').forEach(otherContent => {
-        if (otherContent !== content) {
-          otherContent.classList.remove('open');
-          otherContent.style.maxHeight = null;
-          otherContent.parentElement.classList.remove('open');
-        }
-      });
-
-      if (!isOpen) {
-        content.classList.add('open');
-        content.style.maxHeight = content.scrollHeight + "px";
-        button.classList.add('open');
-      } else {
-        content.classList.remove('open');
-        content.style.maxHeight = null;
-        button.classList.remove('open');
-      }
-    });
-  });
-});

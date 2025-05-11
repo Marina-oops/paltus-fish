@@ -1735,33 +1735,15 @@ button:active {
 
     .form-section button,
     .form-block_area {
-	max-width: 268px;
+	max-width: 264px;
     }
     .footer-left {
-        margin-right: 100px;
+        margin-right: 90px;
     }
     .footer-middle {
-        max-width: 158px;
+        max-width: 156px;
     }
 }
-
-@media (max-width: 1278px) {
-    .main-nav {
-        max-width: 1012px;
-    }
-
-    .form-section button,
-    .form-block_area {
-	max-width: 268px;
-    }
-    .footer-left {
-        margin-right: 100px;
-    }
-    .footer-middle {
-        max-width: 158px;
-    }
-}
-
 
 @media (max-width: 1152px) {
     .details-grid-deliver,

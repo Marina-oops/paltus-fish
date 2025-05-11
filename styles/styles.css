@@ -1730,7 +1730,7 @@ button:active {
 
 @media (max-width: 1366px) {
     .main-nav {
-        max-width: 1012px;
+        max-width: 912px;
     }
     .footer-middle {
         max-width: 150px;
@@ -1770,7 +1770,7 @@ button:active {
         max-width: 144px;
     }
     .main-nav {
-	 max-width: 800px;
+	 max-width: 900px;
     }
     .form-section button,
     .form-block_area {

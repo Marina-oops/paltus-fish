@@ -762,7 +762,7 @@ button:active {
 
  .button_quest {
 	  border-radius: 15px;
-	  padding: 10px 12px 18px 15px;
+	  padding: 13px 12px 18px 15px;
 	  height: 48px;
 	  font-size: 16px !important;
   }
@@ -772,8 +772,12 @@ button:active {
 	    height: 10px;
 	    margin-top: 8px;
   }	
+}
 
-
+@media (max-width: 554px) {
+   .button_quest {
+	  height: 64px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -785,7 +789,6 @@ button:active {
 	  border-radius: 17px;
 	  padding: 22px 20px 22px 20px;
 	  height: 94px;
-	  width: calc(100% - 60px);
 	  font-size: 18px !important;
   }
 
@@ -1043,7 +1046,7 @@ button:active {
   }
 
   .details-grid-deliver {
-	  grid-template-columns: repeat(auto-fit, minmax(302px, 1fr));
+	  grid-template-columns: repeat(auto-fit, minmax(209px, 1fr));
 	  gap: 8px;
 	  margin-bottom: 16px;
   }

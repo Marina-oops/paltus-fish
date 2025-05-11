@@ -1728,22 +1728,9 @@ button:active {
     }
 }
 
-@media (max-width: 1366px) {
-    .main-nav {
-        max-width: 912px;
-    }
-    .footer-middle {
-        max-width: 150px;
-    }
-    .form-section button,
-    .form-block_area {
-	max-width: 296px;
-    }
-}
-
 @media (max-width: 1280px) {
     .main-nav {
-        max-width: 928px;
+        max-width: 1028px;
     }
 
     .form-section button,
@@ -1757,6 +1744,24 @@ button:active {
         max-width: 158px;
     }
 }
+
+@media (max-width: 1265px) {
+    .main-nav {
+        max-width: 1012px;
+    }
+
+    .form-section button,
+    .form-block_area {
+	max-width: 268px;
+    }
+    .footer-left {
+        margin-right: 100px;
+    }
+    .footer-middle {
+        max-width: 158px;
+    }
+}
+
 
 @media (max-width: 1152px) {
     .details-grid-deliver,

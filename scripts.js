@@ -114,26 +114,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   buttons.forEach(button => {
     button.addEventListener('click', () => {
-      const content = button.querySelector('.accordion-content');
-      const isOpen = content.classList.contains('open');
+      const currentContent = button.nextElementSibling;
 
-      document.querySelectorAll('.accordion-content').forEach(otherContent => {
-        if (otherContent !== content) {
-          otherContent.classList.remove('open');
-          otherContent.style.maxHeight = null;
-          otherContent.parentElement.classList.remove('open');
+      document.querySelectorAll('.accordion-content').forEach(content => {
+        if (content !== currentContent) {
+          content.classList.remove('open');
+          content.previousElementSibling.classList.remove('open');
         }
       });
 
-      if (!isOpen) {
-        content.classList.add('open');
-        content.style.maxHeight = content.scrollHeight + "px";
-        button.classList.add('open');
-      } else {
-        content.classList.remove('open');
-        content.style.maxHeight = null;
-        button.classList.remove('open');
-      }
+      currentContent.classList.toggle('open');
+      button.classList.toggle('open');
     });
   });
 });

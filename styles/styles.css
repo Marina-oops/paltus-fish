@@ -691,7 +691,6 @@ button:active {
 	  font-size: 28px !important;
 	  font-weight: 700 !important;
 	  color: #2a3176;
-	  cursor: pointer;
 	  transition: background-color 0.2s ease;
   }
 
@@ -725,9 +724,6 @@ button:active {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease;
-}
-.accordion-content.open .button_quest {
-  max-height: 200px;
 }
 
 @media (max-width: 1512px) {

@@ -724,6 +724,8 @@ button:active {
 .button_quest.open {
 	border-radius: 0px;
 	border-bottom: none;
+    	border-top-left-radius: 12px;
+    	border-top-right-radius: 12px;
 }
 
 .accordion-content {
@@ -743,6 +745,7 @@ button:active {
   border: 2px solid #2a3176;
   padding: 24px 12px 24px 15px;
   margin-top: -15px;
+  border-top: none;
 }
 
 .accordion-content.open:hover {

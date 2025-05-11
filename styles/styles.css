@@ -1736,6 +1736,19 @@ button:active {
   }
 }
 
+@media (max-width: 1152px) {
+    .details-grid {
+        grid-template-columns: repeat(auto-fit, minmax(209px, 1fr));
+    }
+    .footer-left {
+        margin-right: 0px;
+    }
+    .footer-middle {
+        max-width: 144px;
+    }
+}
+
+
 @media (max-width: 834px) {
     .details-grid-deliver {
         grid-template-columns: repeat(auto-fit, minmax(209px, 1fr));

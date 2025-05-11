@@ -1278,7 +1278,7 @@ button:active {
 	  height: 138px;
 	  margin-top: 12px;
 	}
-	
+
 	.number_characters {
 	  font-size: 12px;
 	  width: 420px;
@@ -1801,6 +1801,10 @@ button:active {
     .footer-middle {
         max-width: 278px;
     }
+    .form-section button, 
+    .form-block_area {
+	max-width: 420px;
+    }
 }
 
 @media (max-width: 440px) {
@@ -1885,8 +1889,8 @@ button:active {
 
 @media (max-width: 385px) {
     .logo-footer {
-        width: 238px;
-        height: 67px;
+        width: 240px;
+        height: 68px;
     }
 
     .footer-middle {

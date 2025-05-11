@@ -722,7 +722,6 @@ button:active {
 }
 
 .button_quest.open {
-	transform: rotate(180deg);
 	border-radius: 0px;
 	border-bottom: none;
 }

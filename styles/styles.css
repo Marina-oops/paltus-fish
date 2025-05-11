@@ -690,14 +690,8 @@ button:active {
 	  justify-content: space-between;
 	  font-size: 28px !important;
 	  font-weight: 700 !important;
-	  cursor: pointer;
 	  color: #2a3176;
 	  transition: background-color 0.2s ease;
-  }
-
- .button_quest:hover {
-	  background-color: #2a3176;
-	  color: #fff;
   }
 
   .arrow {
@@ -717,6 +711,10 @@ button:active {
 	    transition: transform 0.3s ease;
   }
 
+.arrow_2:hover {
+	transform: rotate(180deg);
+}
+
 .button_quest.open .arrow_2 {
 	transform: rotate(180deg);
 }
@@ -731,7 +729,6 @@ button:active {
 .accordion-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease;
   padding: 0 15px;
   box-sizing: border-box;
   border: 2px solid #fff;
@@ -746,12 +743,6 @@ button:active {
   padding: 24px 12px 24px 15px;
   margin-top: -15px;
   border-top: none;
-}
-
-.accordion-content.open:hover {
-  background-color: #2a3176;
-  color: #fff;
-  cursor: pointer;
 }
 
 .accordion-item {

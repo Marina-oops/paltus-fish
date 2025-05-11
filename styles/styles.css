@@ -36,6 +36,7 @@ h1 {
 		font-size: 48px;
 		color: #2A3176;
 		margin-bottom: 46px;
+	        line-height: 120%;
 }
 
 h2 {
@@ -46,6 +47,7 @@ h2 {
 		letter-spacing: 1%;
 		color: #2A3176;
 		margin-bottom: 16px;
+	        line-height: 120%;
 }
 
 p {
@@ -1750,3 +1752,38 @@ button:active {
     opacity: 1;
   }
 }
+
+@media (max-width: 400px) {
+   .details-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    p {
+        font-size: 16.5px;
+    }
+  
+  .form-section input {
+        font-size: 16.5px;
+  }
+ 
+  button {
+        font-size: 18px;
+  }
+
+   .footer li {
+        padding-bottom: 8px;
+        font-size: 10.5px;
+    }
+
+   .footer-middle {
+        gap: 36px;
+    }
+}
+
+@media (max-width: 385px) {
+   .footer-middle {
+        gap: 20px;
+    }
+}
+
+

@@ -1108,7 +1108,7 @@ button:active {
   transition: border-color 0.3s;
   outline: none;
   font-family: "Nunito", sans-serif;
-  width: 410px;
+  max-width: 410px;
   max-width: 100%;
   height: 138px;
 }
@@ -1762,7 +1762,6 @@ button:active {
     .form-block_area {
 	  max-width: 344px;
    }
-    
 }
 
 @media (max-width: 834px) {

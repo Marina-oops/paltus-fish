@@ -1736,6 +1736,17 @@ button:active {
   }
 }
 
+@media (max-width: 834px) {
+    .details-grid-deliver {
+        grid-template-columns: repeat(auto-fit, minmax(209px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-middle {
+        max-width: 102px;
+    }
+}
 
 @media (max-width: 440px) {
    .footer-middle {
@@ -1760,7 +1771,7 @@ button:active {
    
 }
 
-@media (max-width: 412px) {
+@media (max-width: 414px) {
 	  .footer {
 	  padding: 45px 48px 48px 48px;
 	}

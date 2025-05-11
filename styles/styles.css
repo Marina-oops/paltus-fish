@@ -719,15 +719,11 @@ button:active {
 	transform: rotate(180deg);
 }
 
-.button_quest.open .arrow_2:hover {
-	transform: rotate(180deg);
-}
-
 .button_quest.open {
 	border-radius: 0px;
 	border-bottom: none;
-    	border-top-left-radius: 12px;
-    	border-top-right-radius: 12px;
+    	border-top-left-radius: 17px;
+    	border-top-right-radius: 17px;
 }
 
 .accordion-content {
@@ -745,7 +741,7 @@ button:active {
   max-height: 300px;
   border: 2px solid #2a3176;
   padding: 24px 12px 24px 15px;
-  margin-top: -15px;
+  margin-top: -16px;
   border-top: none;
 }
 

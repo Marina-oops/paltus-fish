@@ -1814,14 +1814,25 @@ button:active {
 
 }
 
-@media (max-width: 385px) {
-   .logo-footer {
-        width: 232px;
-        height: 66px;
+@media (max-width: 393px) {
+    .logo-footer {
+        width: 256px;
+        height: 72px;
     }
 
     .footer-middle {
-        gap: 36px;
+        gap: 26px;
+    }
+}
+
+@media (max-width: 375px) {
+    .logo-footer {
+        width: 238px;
+        height: 67px;
+    }
+
+    .footer-middle {
+        gap: 26px;
     }
 }
 

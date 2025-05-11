@@ -1779,6 +1779,12 @@ button:active {
    }
 }
 
+@media (max-width: 1024px) {
+    .details-grid-deliver {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+}
+
 @media (max-width: 834px) {
     .details-grid-deliver {
         grid-template-columns: repeat(auto-fit, minmax(209px, 1fr));

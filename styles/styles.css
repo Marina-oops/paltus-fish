@@ -546,7 +546,7 @@ button:active {
   font-family: "Nunito", sans-serif;
   font-size: 20px;
   font-weight: 700;
-  max-width: 1536px;
+  max-width: 1564px;
   width: 100%;
 }
 
@@ -1070,14 +1070,12 @@ button:active {
 .form-section_row {
  display: flex;
  width: 100%;
- max-width: 1128px;
  gap: 24px;
 }
 
 .form-section_row_2 {
  display: flex;
  width: 100%;
- max-width: 1128px;
  gap: 24px;
  margin-top: 24px;
 }
@@ -1092,7 +1090,6 @@ button:active {
 
 .form-block {
   display: block;
-  max-width: 408px;
   width: 100%;
 }
 
@@ -1165,7 +1162,7 @@ button:active {
 	}
 
 	.form-block_area {
-	        max-width: 326px;
+	        max-width: 344px;
 	}
 	
 	.form-section textarea {
@@ -1185,7 +1182,7 @@ button:active {
 	}
 	
 	.form-section button {
-	  max-width: 241px;
+	  max-width: 344px;
 	  height: 38px;
 	  border-radius: 6px;
 	  margin-top: 36px;
@@ -1724,6 +1721,8 @@ button:active {
     .main-nav {
         max-width: 1188px;
     }
+	
+    .form-section button,
     .form-block_area {
 	max-width: 326px;
     }
@@ -1733,6 +1732,8 @@ button:active {
     .main-nav {
         max-width: 1028px;
     }
+
+    .form-section button,
     .form-block_area {
 	max-width: 268px;
     }
@@ -1757,6 +1758,10 @@ button:active {
     .main-nav {
 	 max-width: 900px;
     }
+    .form-section button,
+    .form-block_area {
+	  max-width: 344px;
+   }
     
 }
 
@@ -1796,7 +1801,7 @@ button:active {
 }
 
 @media (max-width: 414px) {
-	  .footer {
+	.footer {
 	  padding: 45px 48px 48px 48px;
 	}
 	.footer-middle {

@@ -1745,7 +1745,7 @@ button:active {
     }
 }
 
-@media (max-width: 1265px) {
+@media (max-width: 1278px) {
     .main-nav {
         max-width: 1012px;
     }

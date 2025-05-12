@@ -133,6 +133,16 @@ img {
    margin-bottom: 1em;
 }
 
+.text_blog a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #2a3176;
+}
+
+.text_blog a:hover {
+    color: #c3f3a7;
+}
+
 @media (max-width: 480px) {
 	.img_blog {
 		margin-bottom: 16px;

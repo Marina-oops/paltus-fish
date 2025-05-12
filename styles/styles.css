@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
   color: #000;
   background-color: #fff;
   line-height: 1.5;
@@ -1138,6 +1138,45 @@ button:active {
   transform: scale(1.1);
 }
 
+.block-review {
+	padding: 20px;
+	border: 2px solid #2a3176;
+        border-radius: 30px;
+	max-width: 408px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.block-review::after {
+	  content: "";
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  height: 2px;
+	  background-color: #2a3176;
+	  width: calc(100% - 60px);
+}
+
+.img-review {
+	margin-bottom: 20px;
+	display: flex;
+	max-height: 150px;
+	width: 100%;
+}
+.block-review-text {
+	    font-size: 20px;
+	    display: flex;
+	    width: 100%;
+	    min-height: 135px;
+	    margin-bottom: 8px;
+}
+.block-review-name {
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    width: 100%;
+}
+
 .slider-container {
   overflow: hidden;
   width: 100%;
@@ -1163,17 +1202,17 @@ button:active {
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 16px;
+  height: 16px;
   background-color: #bbb;
-  margin: 0 5px;
+  margin: 0 8px;
   border-radius: 50%;
   transition: background-color 0.3s, transform 0.3s;
   cursor: pointer;
 }
 
 .dot.active {
-  background-color: #0094ff;
+  background-color: #2a3176;
   transform: scale(1.3);
 }
 

@@ -121,6 +121,11 @@ img {
   height: auto;
 }
 
+img_blog {
+  width: 409;
+  height: auto;
+}
+
 .desktop-header {
 	display: block;
 	margin-top: 36px;
@@ -738,11 +743,14 @@ button:active {
 }
 
 .accordion-content.open {
-  max-height: 300px;
+  max-height: 1000px;
   border: 2px solid #2a3176;
   padding: 24px 12px 24px 15px;
   margin-top: -16px;
   border-top: none;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
 }
 
 .accordion-item {

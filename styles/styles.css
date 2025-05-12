@@ -1118,6 +1118,11 @@ button:active {
 	}
 }
 
+.star-img-site {
+  width: 48px;
+  height: 48px;
+}
+
 .star-img {
   width: 42px;
   height: 42px;
@@ -1142,26 +1147,25 @@ button:active {
 	    background: #ffffff; 
 	    border: 2px solid #000000;
 	    border-radius: 10px;
-	    cursor: pointer;
+	    height: 58px;
 	    font-weight: 400;
 	    font-family: "Nunito", sans-serif;
 	    font-size: 16px;
 	    transition: background-color 0.3s ease, transform 0.2s ease; 
 }
 
-.button_photo:hover {
-    background: #2a3176; 
-    transform: scale(1.05); 
+.clip {
+          position: relative;
+	  background-image: url(../images/clip.svg);
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  max-width: 30px;
+	  height: auto;
+	  transition: all 0.3s ease-in-out;
 }
 
-.button_photo:active {
-    background: #222b66; 
-    transform: scale(1); 
-}
-
-clip {
-    width: 100%;
-    height: auto;
+.clip:hover {
+	background-image: url(../images/clip_hover.svg);
 }
 
 .details-grid-desktop {

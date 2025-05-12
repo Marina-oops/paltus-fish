@@ -882,6 +882,7 @@ button:active {
 	.accordion-content.open {
 	  padding: 22px 20px 22px 20px;
 	  margin-top: -18px;
+	  display: block;
 	}
 	
 }

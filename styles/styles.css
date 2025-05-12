@@ -121,14 +121,11 @@ img {
   height: auto;
 }
 
-.img_blog {
-  height: auto;
-}
-
 .text_blog {
    display: flex;
    max-width: 750px;
    width: 100%;
+   flex-direction: column;
 }
 
 @media (max-width: 480px) {

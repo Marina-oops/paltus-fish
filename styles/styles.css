@@ -1147,16 +1147,6 @@ button:active {
 	box-sizing: border-box;
 }
 
-.block-review::after {
-	  content: "";
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  height: 2px;
-	  background-color: #2a3176;
-	  width: calc(100% - 60px);
-}
-
 .img-review {
 	margin-bottom: 20px;
 	display: flex;
@@ -1169,12 +1159,24 @@ button:active {
 	    width: 100%;
 	    min-height: 135px;
 	    margin-bottom: 8px;
+	    line-height: 120%;
 }
 .block-review-name {
 	    display: flex;
 	    justify-content: center;
 	    align-items: center;
 	    width: 100%;
+}
+.block-review-name::before {
+	  content: "";
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  height: 2px;
+	  background-color: #2a3176;
+	  width: calc(100% - 60px);
+	  margin-top: 24px;
+	  margin-bottom: 16px;
 }
 
 .slider-container {

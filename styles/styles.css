@@ -1139,7 +1139,7 @@ button:active {
 }
 
 .block-review {
-	padding: 20px;
+	padding: 20px 20px 14px 20px;
 	border: 2px solid #2a3176;
         border-radius: 30px;
 	max-width: 408px;
@@ -1167,7 +1167,7 @@ button:active {
 	    align-items: center;
 	    width: 100%;
 }
-.block-review-name::before {
+.line {
 	  content: "";
 	  display: flex;
 	  justify-content: center;

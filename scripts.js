@@ -188,14 +188,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Наведение
     star.addEventListener('mouseover', () => {
       stars.forEach((s, i) => {
-        s.src = i <= index ? 'images/star-full.png' : 'images/star-empty.png';
+        s.src = i <= index ? 'images/star-full.svg' : 'images/star-empty.svg';
       });
     });
 
     // Убираем наведение
     star.addEventListener('mouseout', () => {
       stars.forEach((s, i) => {
-        s.src = i < currentRating ? 'images/star-full.png' : 'images/star-empty.png';
+        s.src = i < currentRating ? 'images/star-full.svg' : 'images/star-empty.svg';
       });
     });
 

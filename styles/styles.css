@@ -1119,8 +1119,8 @@ button:active {
 }
 
 .star-img {
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
   cursor: pointer;
   transition: transform 0.2s ease;
 }

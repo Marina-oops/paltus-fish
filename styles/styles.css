@@ -121,6 +121,10 @@ img {
   height: auto;
 }
 
+.img_blog {
+    max-width: 409px;
+}
+
 .text_blog {
    display: flex;
    max-width: 750px;

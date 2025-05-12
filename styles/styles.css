@@ -126,6 +126,11 @@ img {
    max-width: 750px;
    width: 100%;
    flex-direction: column;
+   list-style: none;
+}
+
+.text_blog li {
+   margin-bottom: 1em;
 }
 
 @media (max-width: 480px) {

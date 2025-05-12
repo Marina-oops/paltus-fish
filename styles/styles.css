@@ -1138,11 +1138,55 @@ button:active {
   transform: scale(1.1);
 }
 
+.review-slider {
+  overflow: hidden;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.slider-container {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease;
+  cursor: grab;
+}
+
+.review-card {
+  min-width: 300px;
+  padding: 20px;
+  background: #fff;
+  border: 2px solid #2a3176;
+  border-radius: 16px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.dots .dot {
+  width: 12px;
+  height: 12px;
+  background-color: #d1d1d1;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dots .dot.active {
+  background-color: #2a3176;
+  transform: scale(1.3);
+}
+
+
 .buttons_feedback {
     display: flex;
     flex-direction: column;
     margin-top: 98px;
-    max-width: 410px;
+    max-width: 408px;
     width: 100%;
 }
 
@@ -1276,7 +1320,7 @@ button:active {
 
 .form-block_area {
   display: block;
-  max-width: 410px;
+  max-width: 408px;
   width: 100%;
 }
 

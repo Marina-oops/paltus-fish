@@ -1902,7 +1902,7 @@ button:active {
         grid-template-columns: repeat(auto-fit, minmax(209px, 1fr));
     }
     .img_blog {
-    	max-width: 262px;
+    	max-width: 282px;
      }
     .text_blog {
 	 max-width: 527px;
@@ -1914,7 +1914,7 @@ button:active {
         max-width: 102px;
     }
     .img_blog {
-    	max-width: 208px;
+    	max-width: 258px;
      }
 }
 

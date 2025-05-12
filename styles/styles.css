@@ -121,9 +121,10 @@ img {
   height: auto;
 }
 
-.img_blog img {
-  width: 409;
+.img_blog {
+  width: 409px;
   height: auto;
+  max-width: none;
 }
 
 @media (max-width: 480px) {

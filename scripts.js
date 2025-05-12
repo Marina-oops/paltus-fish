@@ -114,7 +114,7 @@ function showThankYouFeedbackModal() {
       <h2>СПАСИБО ЗА ВАШ ОТЗЫВ!</h2>
       <p style="font-weight: 700;">Мы признательны вам за&nbsp;вашу&nbsp;оценку! Она&nbsp;будет полезна другим пользователям</p>
       <p style="color: white;">Д</p>
-      <p>После проверки отзыва на&nbsp;соответствие требованиям, он&nbsp;будет опубликован на&nbsp;сайте! Мы сообщим Вам об&nbsp;этом по&nbsp;электронной почте</p>
+      <p>После проверки отзыва на&nbsp;соответствие требованиям, он&nbsp;будет опубликован на&nbsp;сайте! Мы сообщим вам об&nbsp;этом по&nbsp;электронной почте</p>
     </div>
   `;
   document.body.appendChild(modal);
@@ -205,4 +205,17 @@ document.addEventListener('DOMContentLoaded', () => {
       ratingInput.value = currentRating;
     });
   });
+});
+
+// скрепка
+
+document.querySelector('.clip').addEventListener('click', function () {
+    document.getElementById('fileInput').click();
+});
+
+document.getElementById('fileInput').addEventListener('change', function () {
+    const file = this.files[0];
+    if (file) {
+      document.querySelector('.button_photo').innerHTML = file.name;
+    }
 });

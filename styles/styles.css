@@ -752,7 +752,7 @@ button:active {
 }
 
 .accordion-content.open {
-  max-height: 1000px;
+  max-height: 2000px;
   border: 2px solid #2a3176;
   padding: 24px 12px 24px 15px;
   margin-top: -16px;

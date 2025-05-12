@@ -1842,6 +1842,10 @@ button:active {
     .form-block_area {
 	max-width: 326px;
     }
+
+    .img_blog {
+    	max-width: 308px;
+     }
 }
 
 @media (max-width: 1280px) {

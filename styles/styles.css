@@ -1149,6 +1149,8 @@ button:active {
 .photo_feedback {
     display: flex;
     flex-direction: row;
+    gap: 20px;
+    align-items: center;
 }
 
 .button_photo {
@@ -1171,7 +1173,8 @@ button:active {
 	  background-repeat: no-repeat;
 	  background-size: cover;
 	  max-width: 30px;
-	  height: auto;
+	  height: 30px;
+	  width: 100%;
 	  transition: all 0.3s ease-in-out;
 }
 

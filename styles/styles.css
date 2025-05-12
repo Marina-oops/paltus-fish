@@ -121,13 +121,13 @@ img {
   height: auto;
 }
 
-img_blog {
+.img_blog {
   width: 409;
   height: auto;
 }
 
 @media (max-width: 480px) {
-	img_blog {
+	.img_blog {
 		margin-bottom: 32px;
 	}
 }

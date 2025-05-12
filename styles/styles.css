@@ -122,9 +122,13 @@ img {
 }
 
 .img_blog {
-  width: 409px;
   height: auto;
-  max-width: none;
+}
+
+.text_blog {
+   display: flex;
+   max-width: 750px;
+   width: 100%;
 }
 
 @media (max-width: 480px) {

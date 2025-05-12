@@ -1118,6 +1118,11 @@ button:active {
 	}
 }
 
+.rating-site {
+	margin-top: 24px;
+	margin-bottom: 64px;
+}
+
 .star-img-site {
   width: 48px;
   height: 48px;
@@ -1136,6 +1141,9 @@ button:active {
 .buttons_feedback {
     display: flex;
     flex-direction: column;
+    margin-top: 98px;
+    max-width: 410px;
+    width: 100%;
 }
 
 .photo_feedback {
@@ -1151,7 +1159,10 @@ button:active {
 	    font-weight: 400;
 	    font-family: "Nunito", sans-serif;
 	    font-size: 16px;
-	    transition: background-color 0.3s ease, transform 0.2s ease; 
+	    transition: background-color 0.3s ease, transform 0.2s ease;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
 }
 
 .clip {

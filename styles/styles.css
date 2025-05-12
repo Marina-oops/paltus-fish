@@ -126,6 +126,13 @@ img_blog {
   height: auto;
 }
 
+@media (max-width: 480px) {
+	img_blog {
+		margin-bottom: 32px;
+	}
+}
+
+
 .desktop-header {
 	display: block;
 	margin-top: 36px;

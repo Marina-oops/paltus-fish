@@ -1128,6 +1128,11 @@ button:active {
   height: 48px;
 }
 
+.star-img-site-review {
+  width: 42px;
+  height: 42px;
+}
+
 .star-img {
   width: 42px;
   height: 42px;
@@ -1177,6 +1182,7 @@ button:active {
 	  width: calc(100% - 60px);
 	  margin-top: 24px;
 	  margin-bottom: 16px;
+	  margin-left: 30px;
 }
 
 .slider-container {
@@ -1194,7 +1200,6 @@ button:active {
 .slide {
   min-width: 100%;
   box-sizing: border-box;
-  padding: 1rem;
 }
 
 .slider-dots {

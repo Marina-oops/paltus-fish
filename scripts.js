@@ -219,3 +219,77 @@ document.getElementById('fileInput').addEventListener('change', function () {
       document.querySelector('.button_photo').innerHTML = file.name;
     }
 });
+
+// слайдер
+
+  const slider = document.getElementById('slider');
+  const dotsContainer = document.getElementById('dots');
+  const cards = slider.querySelectorAll('.review-card');
+
+  let cardWidth = cards[0].offsetWidth + 20; // ширина + gap
+  let activeIndex = 0;
+
+  cards.forEach((_, index) => {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    if (index === 0) dot.classList.add('active');
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = dotsContainer.querySelectorAll('.dot');
+
+  function updateActiveDot() {
+    activeIndex = Math.round(slider.scrollLeft / cardWidth);
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle('active', idx === activeIndex);
+    });
+  }
+
+  slider.addEventListener('scroll', () => {
+    updateActiveDot();
+  });
+
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+
+  slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
+  });
+
+  slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
+  });
+
+  slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    slider.scrollLeft = scrollLeft - walk;
+  });
+
+  slider.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].pageX;
+    scrollLeft = slider.scrollLeft;
+  });
+
+  slider.addEventListener('touchmove', (e) => {
+    const x = e.touches[0].pageX;
+    const walk = (x - startX) * 1.5;
+    slider.scrollLeft = scrollLeft - walk;
+  });
+
+  window.addEventListener('resize', () => {
+    cardWidth = cards[0].offsetWidth + 20;
+    updateActiveDot();
+  });

@@ -1797,6 +1797,7 @@ button:active {
 	
 	.footer-content {
 	  font-size: 8px;
+          justify-content: space-between;
 	}
 	
 	.footer li {

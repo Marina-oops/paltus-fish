@@ -2002,6 +2002,95 @@ button:active {
   }
 }
 
+@media (max-width: 1512px) {
+     
+     .rating-site {
+	    margin-top: 16px;
+	    margin-bottom: 42px;
+      }
+
+      .star-img-site {
+	width: 32px;
+	height: 32px;
+      }
+	
+      .star-img-site-review,
+      .star-img {
+	    width: 28px;
+	    height: 28px;
+       }
+
+     .block-review-text {
+	     font-size: 14px;
+	     min-height: 135px;
+     }
+
+	.block-review {
+	    padding: 14px 14px 10px 14px;
+	    border-radius: 20px;
+	}
+	
+        .review-m {
+	    margin-bottom: 64px;
+       }
+	.buttons_feedback {
+   	  margin-top: 85px;
+	  max-width: 344px;
+	  gap: 22px;
+	}
+	.button_photo {
+   	  font-size: 11px;
+	  border-radius: 6px;
+    	  height: 38px;
+	}
+
+	.img-review {
+	    margin-bottom: 14px;
+	}
+
+	.line {
+	    width: calc(100% - 40px);
+	    margin-top: 16px;
+	    margin-bottom: 11px;
+	    margin-left: 20px;
+	}
+
+	.dot {
+	  	width: 11px;
+    		height: 11px;
+	}
+
+	.form-block_area {
+        	max-width: 344px;
+    	}
+	.form-section textarea {
+	        padding: 14px;
+	        font-size: 14px;
+	        border-radius: 10px;
+	        width: 344px;
+    	}
+	.textareah textarea {
+	   height: 144px;
+	}
+	.clip {
+	    max-width: 20px;
+	    height: 20px;
+	}
+
+	.photo_feedback {
+	    gap: 14px;
+	}
+
+	.form-section button {
+        	max-width: 344px;
+    	}
+	
+	.button_review button {
+	    max-width: 294px;
+	    margin-top: 0px;
+	}
+}
+
 @media (max-width: 1440px) {
     .main-nav {
         max-width: 1188px;

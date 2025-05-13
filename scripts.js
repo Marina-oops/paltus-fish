@@ -221,7 +221,7 @@ document.getElementById('fileInput').addEventListener('change', function () {
 });
 
 // слайдер
-
+document.addEventListener('DOMContentLoaded', () => {
   const track = document.querySelector('.slider-track');
   const dots = document.querySelectorAll('.dot');
   const slides = document.querySelectorAll('.slide');
@@ -276,3 +276,62 @@ document.getElementById('fileInput').addEventListener('change', function () {
     }
     updateSliderPosition();
   }
+});
+  
+// слайдер-моб
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.slider-track-2');
+  const dots = document.querySelectorAll('.dot');
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function updateSliderPosition() {
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentSlide].classList.add('active');
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      currentSlide = index;
+      updateSliderPosition();
+    });
+  });
+
+  // Перетаскивание мышью / пальцем
+  let startX = 0;
+  let isDragging = false;
+
+  track.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.clientX;
+  });
+
+  track.addEventListener('touchstart', (e) => {
+    isDragging = true;
+    startX = e.touches[0].clientX;
+  });
+
+  track.addEventListener('mouseup', (e) => {
+    if (!isDragging) return;
+    const delta = e.clientX - startX;
+    handleSwipe(delta);
+    isDragging = false;
+  });
+
+  track.addEventListener('touchend', (e) => {
+    if (!isDragging) return;
+    const delta = e.changedTouches[0].clientX - startX;
+    handleSwipe(delta);
+    isDragging = false;
+  });
+
+  function handleSwipe(delta) {
+    if (delta > 50 && currentSlide > 0) {
+      currentSlide--;
+    } else if (delta < -50 && currentSlide < slides.length - 1) {
+      currentSlide++;
+    }
+    updateSliderPosition();
+  }
+});

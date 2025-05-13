@@ -2127,6 +2127,10 @@ button:active {
     .footer-middle {
         max-width: 156px;
     }
+    .details-grid-1280 .details-grid {
+	gap: 16px;
+        margin-bottom: 24px;
+    }
 }
 
 @media (max-width: 1152px) {

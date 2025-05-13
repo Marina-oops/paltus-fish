@@ -1546,7 +1546,7 @@ button:active {
 	}
 	
 	.form-block {
-	  max-width: 312px;
+	  max-width: 360px;
 	  margin-bottom: 24px;
 	}
 	
@@ -2176,7 +2176,13 @@ button:active {
     .form-block_area {
         max-width: 244px;
     }
- 
+    .photo_feedback {
+	gap: 8px;
+     }
+    .button_review button {
+        max-width: 190px;
+        margin-top: 0px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -2191,6 +2197,25 @@ button:active {
     }
     .form-block_area {
         max-width: 222px;
+    }
+    .photo_feedback {
+	gap: 8px;
+     }
+    .button_review button {
+        max-width: 190px;
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 744px) {
+    .form-section_row_2 {
+        max-width: 430px;
+    }
+    .form-block_area {
+        max-width: 214px;
+    }
+    .button_review button {
+        max-width: 184px;
     }
 }
 
@@ -2270,6 +2295,10 @@ button:active {
         width: 258px;
         height: 73px;
     }
+
+    .form-block {
+	        max-width: 320px;
+    }
 }
 
 @media (max-width: 430px) {
@@ -2300,6 +2329,9 @@ button:active {
 	        width: 278px;
 	        height: 79px;
 	}
+	.form-block {
+	        max-width: 312px;
+        }
 }
 
 @media (max-width: 402px) {

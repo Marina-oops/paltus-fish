@@ -227,6 +227,8 @@ document.getElementById('fileInput').addEventListener('change', function () {
   const slides = document.querySelectorAll('.slide');
   let currentSlide = 0;
 
+  track.style.width = `${slides.length * 100}%`;
+
   function updateSliderPosition() {
     track.style.transform = `translateX(-${currentSlide * 100}%)`;
     dots.forEach(dot => dot.classList.remove('active'));
@@ -268,10 +270,10 @@ document.getElementById('fileInput').addEventListener('change', function () {
   });
 
   function handleSwipe(delta) {
-    if (delta > 50 && currentSlide > 0) {
-      currentSlide--;
-    } else if (delta < -50 && currentSlide < slides.length - 1) {
-      currentSlide++;
-    }
-    updateSliderPosition();
+  if (delta > 50) {
+    currentSlide = Math.max(0, currentSlide - 1);
+  } else if (delta < -50) {
+    currentSlide = Math.min(slides.length - 1, currentSlide + 1);
   }
+  updateSliderPosition();
+}

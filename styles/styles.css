@@ -1242,6 +1242,7 @@ button:active {
 
 .button_review button {
     max-width: 360px;
+    margin-top: 0px;
 }
 
 .photo_feedback {
@@ -2153,7 +2154,6 @@ button:active {
 	
 	.button_review button {
 	    max-width: 271px;
-	    margin-top: 0px;
 	}
 	
 }

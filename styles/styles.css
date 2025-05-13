@@ -2119,9 +2119,17 @@ button:active {
 	     min-height: 120px;
      }
 
-	
+	.review-m {
+	    margin-bottom: 64px;
+       }
+	.buttons_feedback {
+   	  margin-top: 24px;
+	}
+	.button_photo {
+   	  font-size: 18px;
+	}
 }
-
+	
 @media (max-width: 440px) {
    .footer-middle {
         gap: 18px;

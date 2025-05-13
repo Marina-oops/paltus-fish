@@ -222,58 +222,74 @@ document.getElementById('fileInput').addEventListener('change', function () {
 
 // слайдер
 
-  const track = document.querySelector('.slider-track');
-  const dots = document.querySelectorAll('.dot');
-  const slides = document.querySelectorAll('.slide');
-  let currentSlide = 0;
+  const slider = document.getElementById('slider');
+  const dotsContainer = document.getElementById('dots');
+  const cards = slider.querySelectorAll('.review-card');
 
-  track.style.width = `${slides.length * 100}%`;
+  let cardWidth = cards[0].offsetWidth + 20; // ширина + gap
+  let activeIndex = 0;
 
-  function updateSliderPosition() {
-    track.style.transform = `translateX(-${currentSlide * 100}%)`;
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[currentSlide].classList.add('active');
-  }
+  cards.forEach((_, index) => {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    if (index === 0) dot.classList.add('active');
+    dotsContainer.appendChild(dot);
+  });
 
-  dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-      currentSlide = index;
-      updateSliderPosition();
+  const dots = dotsContainer.querySelectorAll('.dot');
+
+  function updateActiveDot() {
+    activeIndex = Math.round(slider.scrollLeft / cardWidth);
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle('active', idx === activeIndex);
     });
+   }
+
+slider.addEventListener('scroll', () => {
+    updateActiveDot();
   });
 
-  let startX = 0;
-  let isDragging = false;
+  let isDown = false;
+  let startX;
+  let scrollLeft;
 
-  track.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    startX = e.clientX;
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+ });
+
+slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
   });
 
-  track.addEventListener('touchstart', (e) => {
-    isDragging = true;
-    startX = e.touches[0].clientX;
+slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
+});
+
+slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    slider.scrollLeft = scrollLeft - walk;
   });
 
-  track.addEventListener('mouseup', (e) => {
-    if (!isDragging) return;
-    const delta = e.clientX - startX;
-    handleSwipe(delta);
-    isDragging = false;
+slider.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].pageX;
+    scrollLeft = slider.scrollLeft;
   });
 
-  track.addEventListener('touchend', (e) => {
-    if (!isDragging) return;
-    const delta = e.changedTouches[0].clientX - startX;
-    handleSwipe(delta);
-    isDragging = false;
+slider.addEventListener('touchmove', (e) => {
+    const x = e.touches[0].pageX;
+    const walk = (x - startX) * 1.5;
+    slider.scrollLeft = scrollLeft - walk;
   });
 
-  function handleSwipe(delta) {
-  if (delta > 50) {
-    currentSlide = Math.max(0, currentSlide - 1);
-  } else if (delta < -50) {
-    currentSlide = Math.min(slides.length - 1, currentSlide + 1);
-  }
-  updateSliderPosition();
-}
+ window.addEventListener('resize', () => {
+    cardWidth = cards[0].offsetWidth + 20;
+    updateActiveDot();
+  });

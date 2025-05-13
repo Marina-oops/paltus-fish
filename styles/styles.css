@@ -1392,6 +1392,10 @@ button:active {
   height: 138px;
 }
 
+.textareah {
+   height: 215px;
+}
+
 .number_characters {
   font-size: 14px;
   color: #4f4f4f;
@@ -2113,7 +2117,7 @@ button:active {
 	    margin-left: 15px;
 	}
 
-	dot{
+	.dot {
 	  	width: 8px;
     		height: 8px;
 	}
@@ -2130,9 +2134,10 @@ button:active {
 	        font-size: 10px;
 	        border-radius: 10px;
 	        width: 303px;
-	        height: 118px;
     	}
-
+	.textareah {
+	   height: 118px;
+	}
 	.clip {
 	    max-width: 16px;
 	    height: 16px;
@@ -2143,7 +2148,11 @@ button:active {
 	}
 	.button_review {
 	    max-width: 271px;
+	    margin-top: 0px;
 	}
+	.form-section button {
+        	max-width: 303px;
+    	}
 }
 
 @media (max-width: 834px) {

@@ -1118,6 +1118,10 @@ button:active {
 	}
 }
 
+.review-m {
+	margin-bottom: 96px;
+}
+
 .rating-site {
 	margin-top: 24px;
 	margin-bottom: 64px;
@@ -2087,6 +2091,35 @@ button:active {
 		max-width: 100%;
 		margin-bottom: 16px;
      }
+     .block-review-name {
+	 margin-bottom: 24px;
+     }
+
+     .review-name {
+	margin-bottom: 32px;
+     }
+
+     .rating-site {
+	    margin-top: 20px;
+	    margin-bottom: 32px;
+      }
+
+      .star-img-site {
+	    width: 35px;
+	    height: 35px;
+       }
+
+      .star-img-site-review {
+	    width: 35px;
+	    height: 35px;
+       }
+
+     .block-review-text {
+	     font-size: 16px;
+	     min-height: 120px;
+     }
+
+	
 }
 
 @media (max-width: 440px) {

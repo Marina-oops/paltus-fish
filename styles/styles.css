@@ -2098,12 +2098,18 @@ button:active {
 	
     .form-section button,
     .form-block_area {
-	max-width: 326px;
+	max-width: 320px;
     }
-
     .img_blog {
     	max-width: 308px;
      }
+     .buttons_feedback {
+        max-width: 320px;
+     }
+     .button_review button {
+        max-width: 286px;
+        margin-top: 0px;
+    }
 }
 
 @media (max-width: 1280px) {

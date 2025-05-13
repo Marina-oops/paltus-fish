@@ -2119,7 +2119,7 @@ button:active {
 
     .form-section button,
     .form-block_area {
-	max-width: 260px;
+	max-width: 266px;
     }
     .footer-left {
         margin-right: 90px;
@@ -2130,6 +2130,16 @@ button:active {
     .details-grid-1280 .details-grid {
 	gap: 16px;
         margin-bottom: 24px;
+    }
+    .block-review-text {
+        font-size: 13px;
+    }
+    .buttons_feedback {
+        max-width: 266px;
+    }
+    .button_review button {
+        max-width: 232px;
+        margin-top: 0px;
     }
 }
 

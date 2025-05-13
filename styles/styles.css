@@ -2022,7 +2022,7 @@ button:active {
 
      .block-review-text {
 	     font-size: 14px;
-	     min-height: 135px;
+	     min-height: 90px;
      }
 
 	.block-review {
@@ -2034,7 +2034,7 @@ button:active {
 	    margin-bottom: 64px;
        }
 	.buttons_feedback {
-   	  margin-top: 85px;
+   	  margin-top: 71px;
 	  max-width: 344px;
 	  gap: 22px;
 	}
@@ -2086,7 +2086,7 @@ button:active {
     	}
 	
 	.button_review button {
-	    max-width: 294px;
+	    max-width: 310px;
 	    margin-top: 0px;
 	}
 }

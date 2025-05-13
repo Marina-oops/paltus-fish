@@ -281,8 +281,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // слайдер-моб
 document.addEventListener('DOMContentLoaded', () => {
   const track = document.querySelector('.slider-track-2');
-  const dots = document.querySelectorAll('.dot');
-  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot-2');
+  const slides = document.querySelectorAll('.slide-2');
   let currentSlide = 0;
 
   function updateSliderPosition() {

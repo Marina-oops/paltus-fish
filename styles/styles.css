@@ -1219,7 +1219,7 @@ button:active {
 }
 
 .dot.active {
-  background-color: #c3f3a7;
+  background-color: #6CC276;
   transform: scale(1.3);
 }
 
@@ -2109,8 +2109,11 @@ button:active {
 }
 
 @media (max-width: 414px) {
+	
 	.details-grid {
-	        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	        /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+		display: flex;
+        	flex-direction: column;
 	}
 	.footer {
 	  padding: 45px 48px 48px 48px;

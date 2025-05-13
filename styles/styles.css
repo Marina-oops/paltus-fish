@@ -1388,7 +1388,7 @@ button:active {
   height: 138px;
 }
 
-.textareah {
+.textareah textarea {
    height: 215px;
 }
 
@@ -2136,7 +2136,7 @@ button:active {
 	        border-radius: 10px;
 	        width: 303px;
     	}
-	.textareah {
+	.textareah textarea {
 	   height: 118px;
 	}
 	.clip {
@@ -2154,6 +2154,7 @@ button:active {
 	
 	.button_review button {
 	    max-width: 271px;
+	    margin-top: 0px;
 	}
 	
 }

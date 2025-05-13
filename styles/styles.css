@@ -2119,7 +2119,7 @@ button:active {
 
     .form-section button,
     .form-block_area {
-	max-width: 266px;
+	max-width: 260px;
     }
     .footer-left {
         margin-right: 90px;
@@ -2135,10 +2135,10 @@ button:active {
         font-size: 13px;
     }
     .buttons_feedback {
-        max-width: 266px;
+        max-width: 260px;
     }
     .button_review button {
-        max-width: 232px;
+        max-width: 226px;
         margin-top: 0px;
     }
 }
@@ -2158,9 +2158,17 @@ button:active {
 	 max-width: 900px;
     }
     .form-section button,
-    .form-block_area {
+    .form-block_area,
+    .buttons_feedback {
 	  max-width: 224px;
    }
+    .block-review-text {
+        font-size: 11px;
+    }
+    .button_review button {
+        max-width: 190px;
+        margin-top: 0px;
+    }
 }
 
 @media (max-width: 1024px) {

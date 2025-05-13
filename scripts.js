@@ -227,6 +227,8 @@ document.getElementById('fileInput').addEventListener('change', function () {
   const slides = document.querySelectorAll('.slide');
   let currentSlide = 0;
 
+  track.style.width = `${slides.length * 100}%`;
+
   function updateSliderPosition() {
     track.style.transform = `translateX(-${currentSlide * 100}%)`;
     dots.forEach(dot => dot.classList.remove('active'));

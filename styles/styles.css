@@ -1285,14 +1285,18 @@ button:active {
 	display: flex;
 	width: 100%;
 	max-width: 961px;
+	flex-wrap: wrap;
 	flex-direction: row;
-	gap: 32px;
+	margin-right: -32px;
+        margin-bottom: -24px;
 }
 
 .category-names {
 	display: flex;
 	flex-direction: row;
 	gap: 10px;
+	margin-right: 32px;
+        margin-bottom: 24px;
 }
 
 .category-names-text,
@@ -1301,7 +1305,6 @@ button:active {
 		font-weight: 400;
 		font-size: 28px;
 		line-height: 120%;
-		margin-bottom: 16px;
 }
 
 .number-category-names {

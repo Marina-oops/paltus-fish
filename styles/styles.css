@@ -2228,6 +2228,9 @@ button:active {
 	}
 	.row-3 {
 		width: 368px;
+		.line {
+		  height: 1px;
+		}
 	}
 	.product {
 	    max-width: 168px;

@@ -1205,7 +1205,7 @@ button:active {
 		padding: 0px;
 		max-width: 264px;
 	}
-	img:hover {
+	.block-review:hover {
 		transform: scale(1.05);
 		cursor: pointer;
 	}

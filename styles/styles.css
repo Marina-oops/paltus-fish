@@ -1294,7 +1294,7 @@ button:active {
 	flex-wrap: wrap;
 	flex-direction: row;
 	margin-right: -32px;
-        margin-bottom: -24px;
+        margin-bottom: -16px;
 }
 
 .category-names {
@@ -1302,7 +1302,7 @@ button:active {
 	flex-direction: row;
 	gap: 10px;
 	margin-right: 32px;
-        margin-bottom: 24px;
+        margin-bottom: 16px;
 }
 
 .category-names-text,

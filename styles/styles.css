@@ -602,6 +602,10 @@ button:active {
     color: #c3f3a7;
 }
 
+.catalog-btn .active a {
+  color: #c3f3a7;
+}
+
 .nav-links {
   list-style: none;
   border: 2px solid #2a3176;

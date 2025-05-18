@@ -1224,6 +1224,10 @@ button:active {
 	  margin-top: 16px;
 	  margin-bottom: 10px;
 	}
+	img {
+	  border-radius: 30px;
+	  box-sizing: border-box;
+	}
 }
 
 .slider-container {

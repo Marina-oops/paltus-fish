@@ -602,7 +602,7 @@ button:active {
     color: #c3f3a7;
 }
 
-.catalog-btn .active a {
+.catalog-btn a:active {
   color: #c3f3a7;
 }
 

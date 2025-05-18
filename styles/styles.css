@@ -2134,10 +2134,10 @@ button:active {
 	    margin-top: 0px;
 	}
 	.catalog-page {
-		max-width: 757px;
+		max-width: 969px;
 		.block-review {
 			padding: 0px;
-			max-width: 176px;
+			max-width: 226px;
 		}
 		.line {
 		  margin-top: 10px;
@@ -2146,15 +2146,15 @@ button:active {
 	}
 	.details-grid-catalog {
 	  display: grid;
-	  grid-template-columns: repeat(auto-fit, minmax(176px, 1fr));
+	  grid-template-columns: repeat(auto-fit, minmax(226px, 1fr));
 	  gap: 16px;
 	  margin-bottom: 22px;
 	}
 	.row-3 {
-		width: 378px;
+		width: 484px;
 	}
 	.product {
-	    max-width: 176px;
+	    max-width: 226px;
 	}
 }
 

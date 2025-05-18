@@ -2134,6 +2134,7 @@ button:active {
 	    margin-top: 0px;
 	}
 	.catalog-page {
+		max-width: 757px;
 		.block-review {
 			padding: 0px;
 			max-width: 176px;
@@ -2150,7 +2151,7 @@ button:active {
 	  margin-bottom: 22px;
 	}
 	.row-3 {
-		width: 384px;
+		width: 378px;
 	}
 	.product {
 	    max-width: 176px;

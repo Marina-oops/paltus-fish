@@ -2140,6 +2140,7 @@ button:active {
 			max-width: 226px;
 		}
 		.line {
+		  height: 1px;
 		  margin-top: 10px;
 		  margin-bottom: 6px;
 		}

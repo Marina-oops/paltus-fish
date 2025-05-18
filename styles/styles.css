@@ -2283,6 +2283,26 @@ button:active {
         max-width: 190px;
         margin-top: 0px;
     }
+    .catalog-page {
+		max-width: 610px;
+        	padding-left: 2px;
+		.block-review {
+			padding: 0px;
+			max-width: 140px;
+		}
+		.line {
+		  height: 1px;
+		}
+     }
+	.details-grid-catalog {
+	  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	}
+	.row-3 {
+		width: 296px;
+	}
+	.product {
+	    max-width: 140px;
+	}
 }
 
 @media (max-width: 1024px) {
@@ -2387,6 +2407,27 @@ button:active {
 	.button_review button {
 	    max-width: 271px;
 	    margin-top: 0px;
+	}
+	.catalog-page {
+		max-width: 924px;
+        	padding-left: 0px;
+		.block-review {
+			padding: 0px;
+			max-width: 224px;
+		}
+		.line {
+		  height: 1px;
+		}
+     }
+	.details-grid-catalog {
+	  grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
+	  gap: 8px;
+	}
+	.row-3 {
+		width: 456px;
+	}
+	.product {
+	    max-width: 224px;
 	}
 	
 }

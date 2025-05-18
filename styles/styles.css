@@ -989,7 +989,7 @@ button:active {
 .catalog-page {
   flex: 1;
   padding-top: 8px;
-  width: 1129px;
+  max-width: 1129px;
 }
 
 /* Контент страницы контакты */

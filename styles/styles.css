@@ -1198,7 +1198,7 @@ button:active {
 .catalog-page {
 	.block-review {
 		border: 1px solid #2a3176;
-		padding: 20px 20px 14px 20px;
+		padding: 0px;
 		max-width: 264px;
 	}
 	.line {

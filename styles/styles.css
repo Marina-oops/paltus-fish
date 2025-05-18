@@ -2693,9 +2693,24 @@ button:active {
 }
 
 @media (max-width: 428px) {
+    .catalog-page {
+		.block-review {
+			padding: 0px;
+			max-width: 180px;
+		}
+		.line {
+		  height: 1px ;
+		}
+        }
+	.details-grid-catalog {
+	  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	}
     .row-3 {
 		width: 368px;
      }
+    .product {
+	    max-width: 180px;
+    }
 }
 
 @media (max-width: 414px) {

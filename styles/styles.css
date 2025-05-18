@@ -1202,10 +1202,10 @@ button:active {
 	  margin-left: 30px;
 }
 
-.pdoduct {
+.product {
     display: flex;
     width: 100%;
-    max-width: 176px;
+    max-width: 264px;
     flex-direction: column;
 }
 
@@ -2151,6 +2151,9 @@ button:active {
 	}
 	.row-3 {
 		width: 384px;
+	}
+	.product {
+	    max-width: 176px;
 	}
 }
 

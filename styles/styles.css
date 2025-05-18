@@ -992,6 +992,11 @@ button:active {
   max-width: 1129px;
 }
 
+.row-3 {
+	flex: 1;
+	width: 552px;
+}
+
 /* Контент страницы контакты */
 .contact-page {
   flex: 1;

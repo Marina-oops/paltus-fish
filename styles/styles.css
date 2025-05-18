@@ -2146,7 +2146,6 @@ button:active {
 		}
 	}
 	.details-grid-catalog {
-	  display: grid;
 	  grid-template-columns: repeat(auto-fit, minmax(226px, 1fr));
 	  gap: 16px;
 	  margin-bottom: 22px;
@@ -2209,6 +2208,30 @@ button:active {
         max-width: 226px;
         margin-top: 0px;
     }
+    .catalog-page {
+		max-width: 722px;
+        	padding-left: 2px;
+		.block-review {
+			padding: 0px;
+			max-width: 168px;
+		}
+		.line {
+		  height: 1px;
+		  margin-top: 10px;
+		  margin-bottom: 6px;
+		}
+     }
+	.details-grid-catalog {
+	  grid-template-columns: repeat(auto-fit, minmax(168px, 1fr));
+	  gap: 16px;
+	  margin-bottom: 16px;
+	}
+	.row-3 {
+		width: 368px;
+	}
+	.product {
+	    max-width: 168px;
+	}
 }
 
 @media (max-width: 1152px) {

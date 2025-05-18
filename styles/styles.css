@@ -2231,13 +2231,13 @@ button:active {
 	  margin-bottom: 16px;
 	}
 	.row-3 {
-		width: 368px;
-		.line {
-		  height: 1px;
-		}
+		width: 352px;
 	}
 	.product {
 	    max-width: 168px;
+	    .line {
+		  height: 1px;
+		}
 	}
 }
 

@@ -2742,7 +2742,7 @@ button:active {
 		}
         }
 	.details-grid-catalog {
-	  grid-template-columns: repeat(auto-fit, minmax(172px, 1fr));
+	  grid-template-columns: repeat(auto-fit, minmax(171px, 1fr));
 	}
 	.row-3 {
 		width: 352px;

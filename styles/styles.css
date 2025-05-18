@@ -1226,8 +1226,7 @@ button:active {
 	font-weight: 700;
 	font-size: 24px;
 	line-height: 120%;
-	margin-bottom: 10px;
-	min-height: 60px;
+	margin-bottom: 24px;
 }
 .buttons_products {
     display: flex;
@@ -1266,8 +1265,18 @@ button:active {
 	  color: #000;
 	}
 	button {
-		font-size: 16,5px;
-		height: 47px;
+		font-size: 16.5px;
+		height: 49px;
+		border-radius: 9px;
+		max-width: 204px;
+        	width: 100%;
+	}
+}
+
+.catalog-categories {
+	.product:hover {
+		transform: scale(1.05);
+		cursor: pointer;
 	}
 }
 
@@ -1276,9 +1285,10 @@ button:active {
 	width: 100%;
 	max-width: 1080px;
 	flex-direction: row;
-	gap: 42px;
+	justify-content: space-between;
 	margin-top: 19px;
 	margin-left: 22px;
+	margin-bottom: 48px;
 }
 
 .categories {
@@ -1347,12 +1357,20 @@ button:active {
 	  height: 53px;
 	  width: 100%;
 	  transition: all 0.3s ease-in-out;
+	  margin-top: -2.5px;
 }
 
 .share:hover {
 	background-image: url(../images/share-hover.svg);
 }
 
+.filt_sort {
+    display: flex;
+    max-width: 78px;
+    width: 100%;
+    gap: 10px;
+    flex-direction: row;
+}
 
 .slider-container {
   overflow: hidden;

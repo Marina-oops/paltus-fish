@@ -1229,6 +1229,11 @@ button:active {
 	margin-bottom: 10px;
 	min-height: 60px;
 }
+.buttons_products {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
 
 .product {
     display: flex;
@@ -1259,6 +1264,10 @@ button:active {
 	a {
 	  text-decoration: none;
 	  color: #000;
+	}
+	button {
+		font-size: 16,5px;
+		height: 47px;
 	}
 }
 
@@ -1326,6 +1335,21 @@ button:active {
 .sort:active {
 	background-image: url(../images/sort-active.svg);
 }
+
+.share {
+	  background-image: url(../images/share.svg);
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  max-width: 53px;
+	  height: 53px;
+	  width: 100%;
+	  transition: all 0.3s ease-in-out;
+}
+
+.share:hover {
+	background-image: url(../images/share-hover.svg);
+}
+
 
 .slider-container {
   overflow: hidden;

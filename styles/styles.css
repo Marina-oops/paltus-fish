@@ -1228,6 +1228,10 @@ button:active {
 	  border-radius: 30px;
 	  box-sizing: border-box;
 	}
+	a {
+	  text-decoration: none;
+	  color: #000;
+	}
 }
 
 .slider-container {
@@ -2852,6 +2856,9 @@ button:active {
 	}
 	.product {
 	    max-width: 153px;
+	}
+	a {
+		
 	}
 }
 

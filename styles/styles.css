@@ -2126,6 +2126,25 @@ button:active {
 	    max-width: 310px;
 	    margin-top: 0px;
 	}
+	.catalog-page {
+		.block-review {
+			padding: 0px;
+			max-width: 176px;
+		}
+		.line {
+		  margin-top: 10px;
+		  margin-bottom: 6px;
+		}
+	}
+	.details-grid-catalog {
+	  display: grid;
+	  grid-template-columns: repeat(auto-fit, minmax(176px, 1fr));
+	  gap: 16px;
+	  margin-bottom: 22px;
+	}
+	.row-3 {
+		width: 384px;
+	}
 }
 
 @media (max-width: 1440px) {

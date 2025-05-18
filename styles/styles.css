@@ -49,14 +49,6 @@ h2 {
 		margin-bottom: 16px;
 }
 
-h3 {
-		font-family: "Nunito", sans-serif;
-		font-weight: 400;
-		font-size: 28px;
-		line-height: 120%;
-		margin-bottom: 16px;
-}
-
 p {
 		font-family: "Nunito", sans-serif;
 		font-size: 24px;
@@ -1209,6 +1201,35 @@ button:active {
 	  margin-left: 30px;
 }
 
+.line-product {
+	  content: "";
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  height: 1px;
+	  background-color: #2a3176;
+	  width: 100%;
+	  margin-top: 24px;
+	  margin-bottom: 16px;
+}
+.name_product {
+	font-family: "Nunito", sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 120%;
+	margin-bottom: 10px;
+	min-height: 60px;
+}
+
+.cost {
+	font-family: "Nunito", sans-serif;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 120%;
+	margin-bottom: 10px;
+	min-height: 60px;
+}
+
 .product {
     display: flex;
     width: 100%;
@@ -1241,10 +1262,82 @@ button:active {
 	}
 }
 
+.categories-with-filters {
+	display: flex;
+	width: 100%;
+	max-width: 1080px;
+	flex-direction: row;
+	gap: 42px;
+	margin-top: 19px;
+	margin-left: 22px;
+}
+
+.categories {
+	display: flex;
+	width: 100%;
+	max-width: 961px;
+	flex-direction: row;
+	gap: 32px;
+}
+
+.category-names {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.category-names-text,
+.number-category-names {
+		font-family: "Nunito", sans-serif;
+		font-weight: 400;
+		font-size: 28px;
+		line-height: 120%;
+		margin-bottom: 16px;
+}
+
+.number-category-names {
+	color: #4f4f4f;
+}
+
+.filter {
+	  background-image: url(../images/filter.svg);
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  max-width: 32px;
+	  height: 32px;
+	  width: 100%;
+	  transition: all 0.3s ease-in-out;
+}
+
+.filter:active {
+	background-image: url(../images/filter-active.svg);
+}
+
+.sort {
+	  background-image: url(../images/sort.svg);
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  max-width: 36px;
+	  height: 36px;
+	  width: 100%;
+	  transition: all 0.3s ease-in-out;
+}
+
+.sort:active {
+	background-image: url(../images/sort-active.svg);
+}
+
 .slider-container {
   overflow: hidden;
   width: 100%;
   position: relative;
+}
+
+.block-review-name {
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    width: 100%;
 }
 
 .slider-track,

@@ -2646,20 +2646,20 @@ button:active {
     .catalog-page {
 		.block-review {
 			padding: 0px;
-			max-width: 172px;
+			max-width: 182px;
 		}
 		.line {
 		  height: 1px ;
 		}
         }
 	.details-grid-catalog {
-	  grid-template-columns: repeat(auto-fit, minmax(172px, 1fr));
+	  grid-template-columns: repeat(auto-fit, minmax(182px, 1fr));
 	}
 	.row-3 {
 		width: 380px;
 	}
 	.product {
-	    max-width: 172px;
+	    max-width: 182px;
 	}
 }
 
@@ -2672,9 +2672,24 @@ button:active {
         width: 246px;
         height: 70px;
     }	
+    .catalog-page {
+		.block-review {
+			padding: 0px;
+			max-width: 172px;
+		}
+		.line {
+		  height: 1px ;
+		}
+        }
+	.details-grid-catalog {
+	  grid-template-columns: repeat(auto-fit, minmax(172px, 1fr));
+	}
    .row-3 {
 	width: 370px;
    }
+   .product {
+	    max-width: 172px;
+    }
 }
 
 @media (max-width: 414px) {

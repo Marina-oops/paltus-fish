@@ -988,7 +988,6 @@ button:active {
 
 .catalog-page {
   flex: 1;
-  padding-top: 8px;
   max-width: 1129px;
 }
 
@@ -1205,6 +1204,10 @@ button:active {
 		border: 1px solid #2a3176;
 		padding: 0px;
 		max-width: 264px;
+	}
+	img:hover {
+		transform: scale(1.05);
+		cursor: pointer;
 	}
 	.line {
 	  height: 1px;

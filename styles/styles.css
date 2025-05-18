@@ -1202,6 +1202,13 @@ button:active {
 	  margin-left: 30px;
 }
 
+.pdoduct {
+    display: flex;
+    width: 100%;
+    max-width: 176px;
+    flex-direction: column;
+}
+
 .catalog-page {
 	.block-review {
 		border: 1px solid #2a3176;

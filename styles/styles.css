@@ -2610,6 +2610,24 @@ button:active {
 	        height: 138px;
 	        margin-top: 12px;
 	}
+	.catalog-page {
+		.block-review {
+			padding: 0px;
+			max-width: 202px;
+		}
+		.line {
+		  height: 1px ;
+		}
+        }
+	.details-grid-catalog {
+	  grid-template-columns: repeat(auto-fit, minmax(202px, 1fr));
+	}
+	.row-3 {
+		width: 420px;
+	}
+	.product {
+	    max-width: 202px;
+	}
 }
 	
 @media (max-width: 440px) {
@@ -2625,6 +2643,24 @@ button:active {
     .form-block {
 	        max-width: 320px;
     }
+    .catalog-page {
+		.block-review {
+			padding: 0px;
+			max-width: 172px;
+		}
+		.line {
+		  height: 1px ;
+		}
+        }
+	.details-grid-catalog {
+	  grid-template-columns: repeat(auto-fit, minmax(172px, 1fr));
+	}
+	.row-3 {
+		width: 380px;
+	}
+	.product {
+	    max-width: 172px;
+	}
 }
 
 @media (max-width: 430px) {
@@ -2636,7 +2672,9 @@ button:active {
         width: 246px;
         height: 70px;
     }	
-   
+   .row-3 {
+	width: 370px;
+   }
 }
 
 @media (max-width: 414px) {
@@ -2658,6 +2696,9 @@ button:active {
 	.form-block {
 	        max-width: 312px;
         }
+	.row-3 {
+		width: 352px;
+   	}
 }
 
 @media (max-width: 402px) {
@@ -2690,6 +2731,24 @@ button:active {
         width: 264px;
         height: 75px;
     }
+    .catalog-page {
+		.block-review {
+			padding: 0px;
+			max-width: 162px;
+		}
+		.line {
+		  height: 1px ;
+		}
+        }
+	.details-grid-catalog {
+	  grid-template-columns: repeat(auto-fit, minmax(162px, 1fr));
+	}
+	.row-3 {
+		width: 342px;
+	}
+	.product {
+	    max-width: 162px;
+	}
 
 }
 
@@ -2702,6 +2761,9 @@ button:active {
     .footer-middle {
         gap: 40px;
     }
+    .row-3 {
+		width: 334px;
+     }
 }
 
 @media (max-width: 385px) {
@@ -2713,6 +2775,24 @@ button:active {
     .footer-middle {
         gap: 26px;
     }
+    .catalog-page {
+		.block-review {
+			padding: 0px;
+			max-width: 150px;
+		}
+		.line {
+		  height: 1px ;
+		}
+        }
+	.details-grid-catalog {
+	  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	}
+	.row-3 {
+		width: 315px;
+	}
+	.product {
+	    max-width: 150px;
+	}
 }
 
 

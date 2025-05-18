@@ -2166,7 +2166,6 @@ button:active {
     .main-nav {
         max-width: 1188px;
     }
-	
     .form-section button,
     .form-block_area {
 	max-width: 320px;
@@ -2181,6 +2180,23 @@ button:active {
         max-width: 286px;
         margin-top: 0px;
     }
+    .catalog-page {
+		max-width: 896px;
+        	padding-left: 2px;
+		.block-review {
+			padding: 0px;
+			max-width: 168px;
+		}
+		.line {
+		  height: 1px;
+		}
+     }
+	.details-grid-catalog {
+	  grid-template-columns: repeat(auto-fit, minmax(212px, 1fr));
+	}
+	.row-3 {
+		width: 440px;
+	}
 }
 
 @media (max-width: 1280px) {
@@ -2232,12 +2248,6 @@ button:active {
 	}
 	.row-3 {
 		width: 352px;
-	}
-	.product {
-	    max-width: 168px;
-	    .line {
-		  height: 1px;
-		}
 	}
 }
 

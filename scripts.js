@@ -350,7 +350,7 @@ function initProductCatalog() {
   let sortAsc = true;
 
   const cartCounter = document.getElementById('cart-count');
-  const productContainer = document.querySelector('.details-grid-catalog');
+  const productContainer = document.querySelector('.details-grid-catalog-2');
   const categoryElements = document.querySelectorAll('.category-names');
   const filterButton = document.querySelector('.filter');
   const sortButton = document.querySelector('.sort');

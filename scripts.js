@@ -349,7 +349,7 @@ function initProductCatalog() {
   let selectedSubcategories = new Set();
   let sortAsc = true;
 
-  const cartCounter = document.getElementById('cart-button');
+  const cartCounter = document.getElementById('cart-count');
   const productContainer = document.querySelector('.details-grid-catalog');
   const categoryElements = document.querySelectorAll('.category-names');
   const filterButton = document.querySelector('.filter');

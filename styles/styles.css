@@ -1247,6 +1247,10 @@ button:active {
 		padding: 0px;
 		max-width: 264px;
 	}
+	.block-review:hover {
+		transform: scale(1.05);
+		cursor: pointer;
+	}
 	.line {
 	  height: 1px;
 	  margin-top: 16px;
@@ -1317,6 +1321,13 @@ button:active {
 	color: #4f4f4f;
 }
 
+.category-names.active {
+	.category-names-text,
+	.number-category-names {
+      		color: #6cc276;
+	}
+}
+
 .filter {
 	  background-image: url(../images/filter.svg);
 	  background-repeat: no-repeat;
@@ -1367,6 +1378,20 @@ button:active {
     width: 100%;
     gap: 10px;
     flex-direction: row;
+}
+
+.subfilters {
+      margin-top: 20px;
+    }
+
+.subfilters label {
+      display: inline-block;
+      margin-right: 15px;
+      cursor: pointer;
+}
+
+.subfilters input[type="checkbox"] {
+      margin-right: 5px;
 }
 
 .slider-container {

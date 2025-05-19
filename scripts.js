@@ -474,7 +474,7 @@ function initProductCatalog() {
       filterDiv.appendChild(label);
     });
 
-    const container = document.querySelector('.catalog-page');
+    const container = document.querySelector('.sub_category');
     if (container) {
       container.appendChild(filterDiv);
     }

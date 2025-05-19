@@ -1382,29 +1382,34 @@ button:active {
 }
 
 .sub_category {
-	display: flex;
-	width: 100%;
-	max-width: 961px;
-	flex-wrap: wrap;
-	flex-direction: row;
-	font-family: "Nunito", sans-serif;
-	font-weight: 400;
-	font-size: 20px;
-	line-height: 120%;
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    margin-bottom: 48px;
 }
 
 .subfilters {
-      margin-top: 20px;
-    }
+    display: flex;
+    flex-direction: row;
+    max-width: 961px;
+    width: 100%;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-left: 22px;
+}
 
 .subfilters label {
-      display: inline-block;
-      margin-right: 15px;
+      display: flex;
       cursor: pointer;
+      flex-direction: row;
 }
 
 .subfilters input[type="checkbox"] {
-      margin-right: 5px;
+      margin-right: 10px;
+      width: 25px;
+      height: 25px;
+      border: 1px solid #2a3176;
 }
 
 .slider-container {

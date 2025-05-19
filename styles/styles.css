@@ -1381,7 +1381,7 @@ button:active {
     flex-direction: row;
 }
 
-.subcategory {
+.sub_category {
 	display: flex;
 	width: 100%;
 	max-width: 961px;

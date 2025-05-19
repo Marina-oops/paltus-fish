@@ -1315,6 +1315,7 @@ button:active {
 		font-weight: 400;
 		font-size: 28px;
 		line-height: 120%;
+		cursor: pointer;
 }
 
 .number-category-names {
@@ -1378,6 +1379,18 @@ button:active {
     width: 100%;
     gap: 10px;
     flex-direction: row;
+}
+
+.subcategory {
+	display: flex;
+	width: 100%;
+	max-width: 961px;
+	flex-wrap: wrap;
+	flex-direction: row;
+	font-family: "Nunito", sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 120%;
 }
 
 .subfilters {

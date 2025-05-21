@@ -2459,6 +2459,79 @@ button:active {
 	.product {
 	    max-width: 168px;
 	}
+
+	.category-names-text,
+	.number-category-names {
+    		font-size: 18px;
+	}
+
+	.categories {
+	    max-width: 644px;
+	    margin-right: -22px;
+	    margin-bottom: -11px;
+	}
+	.category-names {
+	    gap: 6px;
+	    margin-right: 22px;
+	    margin-bottom: 11px;
+	}
+	.categories-with-filters {
+	    max-width: 690px;
+	    margin-top: 12px;
+	    margin-left: 18px;
+	    margin-bottom: 32px;
+	}
+	.filt_sort {
+	    max-width: 52px;
+	    gap: 6px;
+	}
+	.filter {
+	    max-width: 22px;
+	    height: 22px;
+	    margin-top: 1px;
+	}
+	.sort {
+	    max-width: 24px;
+	    height: 24px;
+	}
+	.sub_category {
+	    font-size: 13px;
+	    margin-bottom: 32px;
+	}
+	.subfilters {
+	    max-width: 690px;
+	    gap: 12px;
+	    margin-left: 18px;
+	}
+	.subfilters input[type="checkbox"] {
+	    margin-right: 6px;
+	    width: 16px;
+	    height: 16px;
+	}
+	.name_product {
+	    font-size: 12px;
+	    margin-bottom: 6px;
+	    min-height: 44px;
+	}
+	.cost {
+	    font-size: 16px;
+	    margin-bottom: 16px;
+	}
+	.buttons_products {
+	    gap: 6px;
+	}
+	.catalog-page {
+	    button {
+	        font-size: 11px;
+	        height: 32px;
+	        border-radius: 6px;
+	    }
+	}
+	.share {
+	    max-width: 35px;
+	    height: 35px;
+	    margin-top: -2px;
+	}
 }
 
 @media (max-width: 1152px) {

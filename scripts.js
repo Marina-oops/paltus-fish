@@ -328,20 +328,44 @@ function initProductCatalog() {
     },
     {
       id: 9,
-      name: "Спиннинг ультралайт MAXIMUS",
-      price: 2500,
-      image: "images/category-1.png",
-      category: "СПИННИНГИ",
-      subcategory: "Троллинговые"
-    },
-    {
-      id: 10,
-      name: "Спиннинг медиум Shimano Catana",
-      price: 5300,
-      image: "images/category-1.png",
+      name: "Спиннинг Dy nano ATARASHII XP3 Travel (1.58м, 0.2-1гр)",
+      price: 2318,
+      image: "images/spinnings/spin-1.jpg",
       category: "СПИННИНГИ",
       subcategory: "Морские"
-    }
+    },
+      {
+      id: 10,
+      name: "Спиннинг SFT Deep Sea Jig Traveler (2.1м, 300-1000гр)",
+      price: 13500,
+      image: "images/spinnings/spin-2.jpg",
+      category: "СПИННИНГИ",
+      subcategory: "Морские"
+      },
+      {
+      id: 11,
+      name: "Спиннинг Yin Tai APOLLO 77073 (2.10м, 5-20гр)",
+      price: 1253,
+      image: "images/spinnings/spin-3.jpg",
+      category: "СПИННИНГИ",
+      subcategory: "Штекерные"
+      },
+     {
+      id: 12,
+      name: "Спиннинг Dy PREMIER (2.70м, 100-200гр)",
+      price: 1517,
+      image: "images/spinnings/spin-4.jpg",
+      category: "СПИННИНГИ",
+      subcategory: "Штекерные"
+     },
+     {
+      id: 13,
+      name: "Спиннинг WFT Oceanic Pro TIDECUTTER Travel (2,10м, 200-700гр)",
+      price: 4250,
+      image: "images/spinnings/spin-5.jpg",
+      category: "СПИННИНГИ",
+      subcategory: "Морские"
+     }
   ];
 
   let cartCount = 0;

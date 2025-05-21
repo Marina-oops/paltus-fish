@@ -2532,6 +2532,10 @@ button:active {
 	    height: 35px;
 	    margin-top: -2px;
 	}
+	.line-product {
+	    margin-top: 16px;
+	    margin-bottom: 11px;
+	}
 }
 
 @media (max-width: 1152px) {

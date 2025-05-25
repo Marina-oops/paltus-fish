@@ -282,10 +282,85 @@ function createModal() {
   }
 }
 
+function showProductModal(product) {
+  createModal(); // Создаём модалку, если нет
+
+  const modal = document.querySelector('#productModal');
+  if (!modal) {
+    console.error('Модальное окно не найдено');
+    return;
+  }
+
+  // Заполняем данные
+  modal.querySelector('#modalTitle').textContent = product.name || 'Без названия';
+  modal.querySelector('#modalPrice').textContent = product.price ? `${product.price} руб.` : 'Цена не указана';
+
+  const modalDescription = modal.querySelector('#modalDescription');
+  if (Array.isArray(product.description)) {
+    modalDescription.innerHTML = product.description.map(p => `<p>${p}</p>`).join('');
+  } else {
+    modalDescription.innerHTML = `<p>${product.description || ''}</p>`;
+  }
+
+  const modalSlider = modal.querySelector('#modalSlider');
+  if (product.images && Array.isArray(product.images) && product.images.length > 0) {
+    modalSlider.innerHTML = product.images.map((src, i) => 
+      `<img src="${src}" style="max-width:100%; display:${i === 0 ? 'block' : 'none'};" class="modal-slide" data-index="${i}">`
+    ).join('') + `
+      <div style="text-align:center; margin-top:10px;">
+        ${product.images.map((_, i) => `<button class="slide-dot" data-index="${i}" style="margin:0 5px; padding:3px 7px; cursor:pointer;">${i+1}</button>`).join('')}
+      </div>
+    `;
+
+    const slides = modalSlider.querySelectorAll('.modal-slide');
+    const dots = modalSlider.querySelectorAll('.slide-dot');
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const index = +dot.dataset.index;
+        slides.forEach((slide, i) => slide.style.display = (i === index ? 'block' : 'none'));
+      });
+    });
+
+  } else {
+    modalSlider.innerHTML = '<p>Изображения отсутствуют</p>';
+  }
+
+  modal.querySelector('#modalAddToCart').onclick = () => {
+    addToCart(product.id);
+  };
+
+  modal.querySelector('#modalShare').onclick = () => {
+    const shareUrl = `${window.location.origin}${window.location.pathname}?product=${product.id}`;
+    if (navigator.share) {
+      navigator.share({
+        title: product.name,
+        text: 'Посмотрите этот товар!',
+        url: shareUrl
+      }).catch(err => console.error('Ошибка при попытке поделиться:', err));
+    } else {
+      navigator.clipboard.writeText(shareUrl)
+        .then(() => alert('Ссылка на товар скопирована в буфер обмена'))
+        .catch(err => console.error('Не удалось скопировать ссылку:', err));
+    }
+  };
+
+  modal.querySelector('.close').onclick = () => {
+    modal.style.display = 'none';
+  };
+
+  modal.onclick = (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  };
+
+  modal.style.display = 'flex';
+}
+
 // Функция для товаров
 
 function initProductCatalog() {
-  createModal();
   const products = [
     {
       id: 1,
@@ -421,89 +496,6 @@ function initProductCatalog() {
     "КАТУШКИ": ["Для удочек", "Для нахлыста", "Для спиннингов", "Фидерные катушки"],
     "ЛЕСКИ И ШНУРЫ": ["Лески", "Шнуры"]
   };
-
-  function showProductModal(product) {
-    const modal = document.querySelector('#productModal');
-    if (!modal) {
-      console.error('Модальное окно не найдено');
-      return;
-    }
-  
-    const modalTitle = modal.querySelector('#modalTitle');
-    const modalPrice = modal.querySelector('#modalPrice');
-    const modalSlider = modal.querySelector('#modalSlider');
-    const modalDescription = modal.querySelector('#modalDescription');
-    const modalAddToCart = modal.querySelector('#modalAddToCart');
-    const modalShare = modal.querySelector('#modalShare');
-    const modalCloseBtn = modal.querySelector('.close');
-  
-    // Заполнение данных в модальном окне
-    modalTitle.textContent = product.name || 'Без названия';
-    modalPrice.textContent = product.price ? `${product.price} руб.` : 'Цена не указана';
-  
-    // Описание
-    if (Array.isArray(product.description)) {
-      modalDescription.innerHTML = product.description.map(p => `<p>${p}</p>`).join('');
-    } else {
-      modalDescription.innerHTML = `<p>${product.description || ''}</p>`;
-    }
-  
-    // Слайдер изображений
-    if (product.images && Array.isArray(product.images) && product.images.length > 0) {
-      modalSlider.innerHTML = `
-        <div class="slider-wrapper">
-          ${product.images.map((src, index) => `
-            <img src="${src}" class="slide${index === 0 ? ' active' : ''}" />
-          `).join('')}
-          <div class="slider-dots">
-            ${product.images.map((_, index) => `
-              <span class="dot${index === 0 ? ' active' : ''}" data-index="${index}"></span>
-            `).join('')}
-          </div>
-        </div>
-      `;
-  
-      const slides = modalSlider.querySelectorAll('.slide');
-      const dots = modalSlider.querySelectorAll('.dot');
-  
-      dots.forEach(dot => {
-        dot.addEventListener('click', () => {
-          const index = +dot.getAttribute('data-index');
-          slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
-          dots.forEach((d, i) => d.classList.toggle('active', i === index));
-        });
-      });
-    } else {
-      modalSlider.innerHTML = '<p>Изображения отсутствуют</p>';
-    }
-  
-    // Кнопка "Добавить в корзину"
-    modalAddToCart.onclick = () => {
-      addToCart(product.id);
-    };
-  
-    // Кнопка "Поделиться"
-    modalShare.onclick = () => {
-      const shareUrl = `${window.location.href}?product=${product.id}`;
-      if (navigator.share) {
-        navigator.share({
-          title: product.name,
-          text: 'Посмотрите этот товар!',
-          url: shareUrl
-        }).catch(err => console.error('Ошибка при попытке поделиться:', err));
-      } else {
-        navigator.clipboard.writeText(shareUrl)
-          .then(() => alert('Ссылка на товар скопирована в буфер обмена'))
-          .catch(err => console.error('Не удалось скопировать ссылку:', err));
-      }
-    };
-  
-   modalCloseBtn.onclick = () => {
-    modal.style.display = 'none';
-  };
-
-  modal.style.display = 'flex';
-}
     
   function renderProducts() {
     if (!productContainer) return;
@@ -518,7 +510,9 @@ function initProductCatalog() {
 
     productContainer.innerHTML = '';
     filtered.forEach(product => {
-      productContainer.innerHTML += `
+      const productDiv = document.createElement('div');
+      productDiv.className = 'product';
+      productDiv.innerHTML = `
         <div class="product">
           <div class="block-review">
             <img src="${product.image}" alt="Категория">
@@ -532,23 +526,19 @@ function initProductCatalog() {
           </div>
         </div>
       `;
-    });
+      productContainer.appendChild(productDiv);
 
-    productContainer.querySelectorAll('.product .block-review').forEach(elem => {
-        elem.addEventListener('click', (e) => {
-          const productId = +elem.closest('.product').querySelector('button[data-id]').dataset.id;
-          const product = products.find(p => p.id === productId);
-          if (product) showProductModal(product);
-        });
-      });
+    productDiv.querySelector('.block-review').addEventListener('click', () => {
+      showProductModal(product);
+    });
     
-    productContainer.querySelectorAll('button[data-id]').forEach(button => {
+    productDiv.querySelectorAll('button[data-id]').forEach(button => {
       button.addEventListener('click', () => {
         addToCart();
       });
     });
 
-    productContainer.querySelectorAll('.share').forEach(button => {
+    productDiv.querySelectorAll('.share').forEach(button => {
       button.addEventListener('click', (e) => {
         const productId = e.currentTarget.getAttribute('data-id');
         const shareUrl = `${window.location.origin.href}${productId}`;
@@ -570,6 +560,7 @@ function initProductCatalog() {
           });
         }
       });
+    });
   });
 
  }

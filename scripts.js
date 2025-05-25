@@ -469,7 +469,7 @@ function initProductCatalog() {
       const modal = document.querySelector('.modal-2');
       const modalTitle = document.getElementById('modalTitle');
       const modalPrice = document.getElementById('modalPrice');
-      const modalSlider = document.querySelector('modalSlider');
+      const modalSlider = document.getElementById('modalSlider');
       const modalDescription = document.getElementById('modalDescription');
       const modalAddToCart = document.getElementById('modalAddToCart');
       const modalShare = document.getElementById('modalShare');

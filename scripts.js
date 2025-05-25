@@ -474,7 +474,7 @@ function initProductCatalog() {
       const modalAddToCart = document.getElementById('modalAddToCart');
       const modalShare = document.getElementById('modalShare');
 
-      if (!modalPrice) {
+      if (!modalTitle) {
         console.error('ОШИБКА: modalTitle');
         return;
       }

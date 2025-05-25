@@ -425,7 +425,7 @@ function initProductCatalog() {
     productContainer.querySelectorAll('.share').forEach(button => {
       button.addEventListener('click', (e) => {
         const productId = e.currentTarget.getAttribute('data-id');
-        const shareUrl = `${window.location.origin}/product/${productId}`;
+        const shareUrl = `${window.location.origin.href}${productId}`;
     
         if (navigator.share) {
           navigator.share({

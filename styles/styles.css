@@ -2227,9 +2227,6 @@ button:active {
   z-index: 9999;
 }
 
-.modal-2.hidden {
-  display: none;
-}
 .modal-content {
   background: #fff;
   border-radius: 12px;

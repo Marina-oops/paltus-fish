@@ -264,15 +264,25 @@ function createModal() {
     const modalHTML = `
       <div id="productModal" class="modal-2">
         <div class="modal-content">
+         <div class="title-modal-box">
           <span class="close">&times;</span>
-          <h2 id="modalTitle"></h2>
+          <h1 id="modalTitle"></h1>
+          </div>
           <div class="modal-body">
-            <div class="slider" id="modalSlider"></div>
-            <p id="modalDescription"></p>
-            <div class="modal-price" id="modalPrice"></div>
-            <div class="modal-actions">
-              <button id="modalAddToCart">Добавить в корзину</button>
-              <button id="modalShare">Поделиться</button>
+            <div class="slider" id="modalSlider">
+              <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+            <div class="description-modal">
+              <p id="modalDescription"></p>
+              <div class="modal-price" id="modalPrice"></div>
+              <div class="modal-actions">
+                <button id="modalAddToCart">Добавить в корзину</button>
+                <button id="modalShare">Поделиться</button>
+              </div>
             </div>
           </div>
         </div>

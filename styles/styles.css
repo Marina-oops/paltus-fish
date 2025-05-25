@@ -1375,8 +1375,14 @@ button:active {
 	  max-width: 53px;
 	  height: 53px;
 	  width: 100%;
-	  transition: all 0.3s ease-in-out;
+	  transition: background-color 0.3s ease, transform 0.2s ease; 
 	  margin-top: -2.5px;
+	  cursor: pointer;
+}
+
+.share:hover {
+    background: #333333; 
+    transform: scale(1.05); 
 }
 
 .filt_sort {

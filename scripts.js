@@ -267,6 +267,16 @@ function initProductCatalog() {
       name: "Удилище Komandor штекерное JuniorCarp, 390см",
       price: 3905,
       image: "images/udilishe/udilishe-1.jpg",
+      images: [
+        "images/udilishe/udilishe-1.jpg",
+        "images/udilishe/udilishe-2.jpg",
+        "images/udilishe/udilishe-3.jpg"
+      ],
+      description: [
+        "Разработан для ловли щуки в труднодоступных местах, эффективен в технике «‎Кавер Шэдинг». Отличается высокой отзывчивостью на малейшие подвижки вершинки спиннинга и способность к активной игре.",
+        "Материал: прочный пластик с текстурированным покрытием и металлизированной окраской. Система балансировки TMB с подвижными и зафиксированными шариками обеспечивает дальний заброс, живую игру и устойчивость. ",
+        "Универсален в разных стилях ловли. Бюджетная цена делает воблер привлекательным для широкого круга российских рыболовов.",
+      ],
       category: "УДИЛИЩА",
       subcategory: "На горбушу"
     },
@@ -366,7 +376,6 @@ function initProductCatalog() {
       category: "СПИННИНГИ",
       subcategory: "Морские"
      }
-  ];
 
   let cartCount = 0;
   let currentCategory = "УДИЛИЩА";
@@ -446,6 +455,82 @@ function initProductCatalog() {
       });
   });
 }
+
+  function showProductModal(product) {
+      const modal = document.querySelector('.modal-2');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalPrice = document.getElementById('modalPrice');
+      const modalSlider = document.querySelector('.modal-slider');
+      const modalDescription = document.getElementById('modalDescription');
+      const modalAddToCart = document.getElementById('modalAddToCart');
+      const modalShare = document.getElementById('modalShare');
+
+      modalTitle.textContent = product.name;
+      modalPrice.textContent = `${product.price} руб.`;
+
+      if (Array.isArray(product.description)) {
+        modalDescription.innerHTML = product.description.map(p => `<p>${p}</p>`).join('');
+      } else {
+        modalDescription.innerHTML = `<p>${product.description}</p>`;
+      }
+    
+      if (product.images && product.images.length > 0) {
+        modalSlider.innerHTML = `
+          <div class="slider-wrapper">
+            ${product.images.map((src, index) => `
+              <img src="${src}" class="slide${index === 0 ? ' active' : ''}" />
+            `).join('')}
+            <div class="slider-dots">
+              ${product.images.map((_, index) => `
+                <span class="dot${index === 0 ? ' active' : ''}" data-index="${index}"></span>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }
+    
+      const slides = modalSlider.querySelectorAll('.slide');
+      const dots = modalSlider.querySelectorAll('.dot');
+    
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          const index = +dot.getAttribute('data-index');
+          slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+          });
+          dots.forEach((d, i) => {
+            d.classList.toggle('active', i === index);
+          });
+        });
+      });
+    
+      modalAddToCart.onclick = () => {
+        addToCart(product.id);
+      };
+    
+      modalShare.onclick = () => {
+        const shareUrl = `${window.location.href}?product=${product.id}`;
+        if (navigator.share) {
+          navigator.share({
+            title: product.name,
+            text: 'Посмотрите этот товар!',
+            url: shareUrl
+          }).catch(err => console.error('Ошибка при попытке поделиться:', err));
+        } else {
+          navigator.clipboard.writeText(shareUrl).then(() => {
+            alert('Ссылка на товар скопирована в буфер обмена');
+          }).catch(err => {
+            console.error('Не удалось скопировать ссылку:', err);
+          });
+        }
+      };
+    
+      modal.classList.add('open');
+    }
+    
+    document.querySelector('.modal-2 .close').addEventListener('click', () => {
+    document.querySelector('.modal-2').classList.remove('open');
+    });
 
   function addToCart() {
     cartCount++;

@@ -622,13 +622,17 @@ function initProductCatalog() {
           });
         }
       };
+
+      const modalCloseBtn = modal.querySelector('.close');
+      if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', () => {
+          modal.classList.remove('open');
+        });
+      }
     
       modal.classList.add('open');
     }
-    
-    document.querySelector('.modal-2 .close').addEventListener('click', () => {
-    document.querySelector('.modal-2').classList.remove('open');
-    });
+  
 }
 
 

@@ -2227,6 +2227,30 @@ button:active {
   z-index: 9999;
 }
 
+.title-modal-box {
+	display: flex;
+	flex-direction: row;
+}
+
+.description-modal {
+	display: flex;
+	flex-direction: column;
+}
+
+.modal-body {
+	display: flex;
+	flex-direction: row;
+}
+
+#modalDescription p {
+	font-size: 24px;
+}
+
+.modal-price {
+	font-size: 36px;
+	font-weight: 700px;
+}
+
 .modal-content {
   background: #fff;
   border-radius: 12px;

@@ -375,7 +375,7 @@ function initProductCatalog() {
       image: "images/spinnings/spin-5.jpg",
       category: "СПИННИНГИ",
       subcategory: "Морские"
-     }
+     };
 
   let cartCount = 0;
   let currentCategory = "УДИЛИЩА";
@@ -425,6 +425,15 @@ function initProductCatalog() {
       `;
     });
 
+    productContainer.querySelectorAll('.product .block-review').forEach(elem => {
+        elem.addEventListener('click', (e) => {
+          const productId = +elem.closest('.product').querySelector('button[data-id]').dataset.id;
+          const product = products.find(p => p.id === productId);
+          if (product) showProductModal(product);
+        });
+      });
+    }
+    
     productContainer.querySelectorAll('button[data-id]').forEach(button => {
       button.addEventListener('click', () => {
         addToCart();
@@ -455,12 +464,12 @@ function initProductCatalog() {
       });
   });
 }
-
+  
   function showProductModal(product) {
       const modal = document.querySelector('.modal-2');
       const modalTitle = document.getElementById('modalTitle');
       const modalPrice = document.getElementById('modalPrice');
-      const modalSlider = document.querySelector('.modal-slider');
+      const modalSlider = document.querySelector('modalSlider');
       const modalDescription = document.getElementById('modalDescription');
       const modalAddToCart = document.getElementById('modalAddToCart');
       const modalShare = document.getElementById('modalShare');
@@ -474,7 +483,7 @@ function initProductCatalog() {
         modalDescription.innerHTML = `<p>${product.description}</p>`;
       }
     
-      if (product.images && product.images.length > 0) {
+      if (product.images && Array.isArray(product.images) && product.images.length > 0) {
         modalSlider.innerHTML = `
           <div class="slider-wrapper">
             ${product.images.map((src, index) => `

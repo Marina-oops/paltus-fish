@@ -410,7 +410,7 @@ function initProductCatalog() {
           <div class="cost">${product.price} руб.</div>
           <div class="buttons_products">
             <button type="button" data-id="${product.id}">Добавить в корзину</button>
-            <div class="share" role="button"></div>
+            <div class="share" type="button"></div>
           </div>
         </div>
       `;

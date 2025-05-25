@@ -309,29 +309,34 @@ function showProductModal(product) {
 
   const modalSlider = modal.querySelector('#modalSlider');
   if (product.images && Array.isArray(product.images) && product.images.length > 0) {
-    modalSlider.innerHTML = product.images.map((src, i) => 
-      `<img src="${src}" class="modal-slide" data-index="${i}">`
-    ).join('') + `
-      <div class="slider-dots-wrapper" style="margin-top:10px;">
-        ${product.images.map((_, i) => `<span class="slider-dots${i === 0 ? ' active' : ''}" data-index="${i}"></span>`).join('')}
-      </div>
-    `;
-
-    const slides = modalSlider.querySelectorAll('.modal-slide');
-    const dots = modalSlider.querySelectorAll('.slider-dots');
-
-    dots.forEach(dot => {
-      dot.addEventListener('click', () => {
-        const index = +dot.dataset.index;
-    
-        slides.forEach((slide, i) => {
-          slide.style.display = i === index ? 'block' : 'none';
-        });
-    
-        dots.forEach(d => d.classList.remove('active'));
-        dot.classList.add('active');
+    modalSlider.innerHTML = `
+    <div class="slider-track-3">
+      ${product.images.map((src, i) => 
+        `<img src="${src}" class="modal-slide${i === 0 ? ' active' : ''}" data-index="${i}">`
+      ).join('')}
+    </div>
+    <div class="slider-dots-wrapper">
+      ${product.images.map((_, i) => 
+        `<span class="dot-3${i === 0 ? ' active' : ''}" data-index="${i}"></span>`
+      ).join('')}
+    </div>
+  `;
+  
+  const slides = modalSlider.querySelectorAll('.modal-slide');
+  const dots = modalSlider.querySelectorAll('.dot-3');
+  
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const index = +dot.dataset.index;
+  
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
       });
+  
+      dots.forEach(d => d.classList.remove('active'));
+      dot.classList.add('active');
     });
+  });
 
   } else {
     modalSlider.innerHTML = '<p>Изображения отсутствуют</p>';

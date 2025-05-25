@@ -280,8 +280,8 @@ function createModal() {
               <p id="modalDescription"></p>
               <div class="modal-price" id="modalPrice"></div>
               <div class="modal-actions">
-                <button type="button" data-id="${product.id}">Добавить в корзину</button>
-                <div class="share" type="button" data-id="${product.id}"></div>
+                <button type="button">Добавить в корзину</button>
+                <div class="share" type="button"></div>
               </div>
             </div>
           </div>

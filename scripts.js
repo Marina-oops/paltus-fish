@@ -375,7 +375,8 @@ function initProductCatalog() {
       image: "images/spinnings/spin-5.jpg",
       category: "СПИННИНГИ",
       subcategory: "Морские"
-     };
+     }
+    ];
 
   let cartCount = 0;
   let currentCategory = "УДИЛИЩА";

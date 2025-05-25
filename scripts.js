@@ -410,7 +410,7 @@ function initProductCatalog() {
           <div class="cost">${product.price} руб.</div>
           <div class="buttons_products">
             <button type="button" data-id="${product.id}">Добавить в корзину</button>
-            <div class="share" type="button"></div>
+            <div class="share" type="button" data-id="${product.id}"></div>
           </div>
         </div>
       `;
@@ -421,7 +421,31 @@ function initProductCatalog() {
         addToCart();
       });
     });
-  }
+
+    productContainer.querySelectorAll('.share').forEach(button => {
+      button.addEventListener('click', (e) => {
+        const productId = e.currentTarget.getAttribute('data-id');
+        const shareUrl = `${window.location.origin}/product/${productId}`;
+    
+        if (navigator.share) {
+          navigator.share({
+            title: 'Товар на сайте',
+            text: 'Посмотрите этот товар!',
+            url: shareUrl
+          }).catch(err => {
+            console.error('Ошибка при попытке поделиться:', err);
+          });
+        } else {
+          // Фолбэк: копируем ссылку в буфер обмена
+          navigator.clipboard.writeText(shareUrl).then(() => {
+            alert('Ссылка на товар скопирована в буфер обмена');
+          }).catch(err => {
+            console.error('Не удалось скопировать ссылку:', err);
+          });
+        }
+      });
+  });
+}
 
   function addToCart() {
     cartCount++;

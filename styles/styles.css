@@ -1379,11 +1379,6 @@ button:active {
 	  margin-top: -2.5px;
 }
 
-.share:hover {
-	background-image: url(../images/share-hover.svg);
-	cursor: pointer;
-}
-
 .filt_sort {
     display: flex;
     max-width: 78px;

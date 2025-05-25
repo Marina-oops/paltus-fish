@@ -474,6 +474,11 @@ function initProductCatalog() {
       const modalAddToCart = document.getElementById('modalAddToCart');
       const modalShare = document.getElementById('modalShare');
 
+      if (!modalTitle || !modalPrice) {
+        console.error('ОШИБКА: modalTitle или modalPrice не найдены в DOM');
+        return;
+      }
+
       modalTitle.textContent = product.name;
       modalPrice.textContent = `${product.price} руб.`;
 

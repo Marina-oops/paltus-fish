@@ -265,16 +265,11 @@ function createModal() {
       <div id="productModal" class="modal-2">
         <div class="modal-content">
          <div class="title-modal-box">
-          <span class="close">&times;</span>
+          <span class="close-btn">&times;</span>
           <h1 id="modalTitle"></h1>
           </div>
           <div class="modal-body">
             <div class="slider" id="modalSlider">
-              <div class="slider-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-              </div>
             </div>
             <div class="description-modal">
               <p id="modalDescription"></p>
@@ -315,20 +310,26 @@ function showProductModal(product) {
   const modalSlider = modal.querySelector('#modalSlider');
   if (product.images && Array.isArray(product.images) && product.images.length > 0) {
     modalSlider.innerHTML = product.images.map((src, i) => 
-      `<img src="${src}" style="max-width:100%; display:${i === 0 ? 'block' : 'none'};" class="modal-slide" data-index="${i}">`
+      `<img src="${src}" class="modal-slide" data-index="${i}">`
     ).join('') + `
-      <div style="text-align:center; margin-top:10px;">
-        ${product.images.map((_, i) => `<button class="slide-dot" data-index="${i}" style="margin:0 5px; padding:3px 7px; cursor:pointer;">${i+1}</button>`).join('')}
+      <div class="slider-dots-wrapper" style="margin-top:10px;">
+        ${product.images.map((_, i) => `<span class="slider-dots${i === 0 ? ' active' : ''}" data-index="${i}"></span>`).join('')}
       </div>
     `;
 
     const slides = modalSlider.querySelectorAll('.modal-slide');
-    const dots = modalSlider.querySelectorAll('.slide-dot');
+    const dots = modalSlider.querySelectorAll('.slider-dots');
 
     dots.forEach(dot => {
       dot.addEventListener('click', () => {
         const index = +dot.dataset.index;
-        slides.forEach((slide, i) => slide.style.display = (i === index ? 'block' : 'none'));
+    
+        slides.forEach((slide, i) => {
+          slide.style.display = i === index ? 'block' : 'none';
+        });
+    
+        dots.forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
       });
     });
 

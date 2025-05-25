@@ -464,7 +464,6 @@ function initProductCatalog() {
         }
       });
   });
-}
   
   function showProductModal(product) {
       const modal = document.querySelector('.modal-2');
@@ -630,6 +629,7 @@ function initProductCatalog() {
 
   renderProducts();
 }
+
 
 // Модальные окна
 function showThankYouModal() {

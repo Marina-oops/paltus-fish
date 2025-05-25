@@ -399,12 +399,12 @@ function initProductCatalog() {
 
   function showProductModal(product) {
       const modal = document.querySelector('.modal-2');
-      const modalTitle = document.getElementById('modalTitle');
-      const modalPrice = document.getElementById('modalPrice');
-      const modalSlider = document.querySelector('#modalSlider');
-      const modalDescription = document.getElementById('modalDescription');
-      const modalAddToCart = document.getElementById('modalAddToCart');
-      const modalShare = document.getElementById('modalShare');
+      const modalTitle = modal.querySelector('#modalTitle');
+      const modalPrice = modal.querySelector('#modalPrice');
+      const modalSlider = modal.querySelector('#modalSlider');
+      const modalDescription = modal.querySelector('#modalDescription');
+      const modalAddToCart = modal.querySelector('#modalAddToCart');
+      const modalShare = modal.querySelector('#modalShare');
 
       modalTitle.textContent = product.name;
       modalPrice.textContent = `${product.price} руб.`;

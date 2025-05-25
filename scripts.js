@@ -258,9 +258,34 @@ function initSlider(trackSelector, dotsSelector, slidesSelector) {
   }
 }
 
+
+function createModal() {
+  if (!document.querySelector('#productModal')) {
+    const modalHTML = `
+      <div id="productModal" class="modal-2">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 id="modalTitle"></h2>
+          <div class="modal-body">
+            <div class="slider" id="modalSlider"></div>
+            <p id="modalDescription"></p>
+            <div class="modal-price" id="modalPrice"></div>
+            <div class="modal-actions">
+              <button id="modalAddToCart">Добавить в корзину</button>
+              <button id="modalShare">Поделиться</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+  }
+}
+
 // Функция для товаров
 
 function initProductCatalog() {
+  createModal();
   const products = [
     {
       id: 1,
@@ -398,14 +423,12 @@ function initProductCatalog() {
   };
 
   function showProductModal(product) {
-    // Явный поиск модального окна по ID
     const modal = document.querySelector('#productModal');
     if (!modal) {
-      console.error('Модальное окно с ID #productModal не найдено в DOM');
+      console.error('Модальное окно не найдено');
       return;
     }
   
-    // Поиск элементов внутри модального окна с проверкой на null
     const modalTitle = modal.querySelector('#modalTitle');
     const modalPrice = modal.querySelector('#modalPrice');
     const modalSlider = modal.querySelector('#modalSlider');
@@ -413,11 +436,6 @@ function initProductCatalog() {
     const modalAddToCart = modal.querySelector('#modalAddToCart');
     const modalShare = modal.querySelector('#modalShare');
     const modalCloseBtn = modal.querySelector('.close');
-  
-    if (!modalTitle || !modalPrice || !modalSlider || !modalDescription || !modalAddToCart || !modalShare || !modalCloseBtn) {
-      console.error('Один или несколько элементов модального окна не найдены');
-      return;
-    }
   
     // Заполнение данных в модальном окне
     modalTitle.textContent = product.name || 'Без названия';
@@ -480,14 +498,12 @@ function initProductCatalog() {
       }
     };
   
-    // Закрытие модального окна
-    modalCloseBtn.onclick = () => {
-      modal.classList.remove('open');
-    };
-  
-    // Открыть модальное окно
-    modal.classList.add('open');
-  }
+   modalCloseBtn.onclick = () => {
+    modal.style.display = 'none';
+  };
+
+  modal.style.display = 'flex';
+}
     
   function renderProducts() {
     if (!productContainer) return;

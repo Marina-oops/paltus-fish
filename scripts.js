@@ -474,8 +474,13 @@ function initProductCatalog() {
       const modalAddToCart = document.getElementById('modalAddToCart');
       const modalShare = document.getElementById('modalShare');
 
-      if (!modalTitle || !modalPrice) {
-        console.error('ОШИБКА: modalTitle или modalPrice не найдены в DOM');
+      if (!modalPrice) {
+        console.error('ОШИБКА: modalTitle');
+        return;
+      }
+
+      if (!modalPrice) {
+        console.error('ОШИБКА: modalPrice не найдены в DOM');
         return;
       }
 

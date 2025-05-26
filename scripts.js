@@ -361,9 +361,18 @@ function showProductModal(product) {
     }
   };
 
-  modal.querySelector('.close-btn').onclick = () => {
+ const closeBtn = modal.querySelector('.close-btn');
+  closeBtn.onclick = () => {
     modal.style.display = 'none';
   };
+
+  const closeImg = closeBtn.querySelector('img');
+  if (closeImg) {
+    closeImg.onclick = (e) => {
+      e.stopPropagation();
+      modal.style.display = 'none';
+    };
+  }
 
   modal.onclick = (e) => {
     if (e.target === modal) {

@@ -311,6 +311,7 @@ function showProductModal(product) {
   createModal(); // Создаём модалку, если нет
 
   const modal = document.querySelector('#productModal');
+  modal.style.display = 'flex';
   if (!modal) {
     console.error('Модальное окно не найдено');
     return;

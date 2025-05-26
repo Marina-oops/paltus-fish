@@ -361,7 +361,7 @@ function showProductModal(product) {
     }
   };
 
-  modal.querySelector('.close').onclick = () => {
+  modal.querySelector('.close-btn').onclick = () => {
     modal.style.display = 'none';
   };
 

@@ -2241,8 +2241,11 @@ button:active {
 	}
 	justify-content: space-between;
 	.close-btn {
-	    width: 34px;
-	    height: 34px;
+	  width: 34px;
+	  height: 34px;
+	  cursor: pointer;
+	  display: flex;
+	  justify-content: flex-end;
 	}
 }
 

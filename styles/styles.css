@@ -2210,16 +2210,12 @@ button:active {
   margin-bottom: 24px;
 }
 
-.close-btn {
+.modal .close-btn {
   width: 32px;
   height: 32px;
   cursor: pointer;
   display: flex;
   justify-content: flex-end;
-  background-image: url("../images/close.png");
-}
-
-.modal .close-btn {
   width: 100%;
   margin-bottom: 24px;
 }

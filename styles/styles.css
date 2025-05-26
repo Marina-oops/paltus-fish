@@ -2266,7 +2266,7 @@ button:active {
 
 .modal-slide {
 	display: none;
-	max-width: 100%;
+	width: 100%;
 	height: auto;
 	transition: opacity 0.3s ease;
 }

@@ -265,7 +265,7 @@ function createModal() {
       <div id="productModal" class="modal-2">
         <div class="modal-content">
          <div class="title-modal-box">
-          <span class="close-btn">&times;</span>
+          <div class="close-btn"><img src="images/close.png" alt="Закрыть "></div>
           <h1 id="modalTitle"></h1>
           </div>
           <div class="modal-body">

@@ -284,6 +284,26 @@ function createModal() {
       </div>
     `;
     document.body.insertAdjacentHTML('beforeend', modalHTML);
+    const modal = document.querySelector('#productModal');
+     const closeBtn = modal.querySelector('.close-btn');
+    closeBtn.onclick = () => {
+      modal.style.display = 'none';
+    };
+  
+    const closeImg = closeBtn.querySelector('img');
+    if (closeImg) {
+      closeImg.onclick = (e) => {
+        e.stopPropagation();
+        modal.style.display = 'none';
+      };
+    }
+  
+    modal.onclick = (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    };
+    
   }
 }
 
@@ -358,25 +378,6 @@ function showProductModal(product) {
       navigator.clipboard.writeText(shareUrl)
         .then(() => alert('Ссылка на товар скопирована в буфер обмена'))
         .catch(err => console.error('Не удалось скопировать ссылку:', err));
-    }
-  };
-
- const closeBtn = modal.querySelector('.close-btn');
-  closeBtn.onclick = () => {
-    modal.style.display = 'none';
-  };
-
-  const closeImg = closeBtn.querySelector('img');
-  if (closeImg) {
-    closeImg.onclick = (e) => {
-      e.stopPropagation();
-      modal.style.display = 'none';
-    };
-  }
-
-  modal.onclick = (e) => {
-    if (e.target === modal) {
-      modal.style.display = 'none';
     }
   };
 

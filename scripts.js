@@ -269,7 +269,7 @@ function createModal() {
           <h1 id="modalTitle"></h1>
           </div>
           <div class="modal-body">
-            <div class="slider" id="modalSlider">
+            <div class="slider-product" id="modalSlider">
             </div>
             <div class="description-modal">
               <p id="modalDescription"></p>

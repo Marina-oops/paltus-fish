@@ -724,6 +724,7 @@ function showThankYouFeedbackModal() {
 }
 
 const Cart = {
+  items: [],
   // Инициализация корзины
   init() {
     this.cacheElements();
@@ -752,7 +753,7 @@ const Cart = {
   // Переход на страницу корзины
   goToBasket() {
     this.saveCartState();
-    window.location.href = '/basket.html';
+    window.location.href = 'basket.html';
   },
 
   // Сохранение состояния в localStorage

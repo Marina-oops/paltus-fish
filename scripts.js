@@ -869,7 +869,7 @@ const Cart = {
         </div>
         <div class="cart-item-controls">
           <div class="buttons-plus-minus">
-            <div class="quantity-btn minus" data-id="${item.id} role="button""></div>
+            <div class="quantity-btn minus" data-id="${item.id}" role="button"></div>
             <span class="quantity">${item.quantity}</span>
             <div class="quantity-btn plus" data-id="${item.id}" role="button"></div>
           </div>

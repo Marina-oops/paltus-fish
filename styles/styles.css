@@ -2075,9 +2075,13 @@ button:active {
 }
 .prices {
 	margin-top: 32px;
-	margin-bottom: 64px;
-	gap: 16px;
+	margin-bottom: 48px;
 	font-size: 20px;
+}
+.pre-price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
 }
 .text-price {
 	font-size: 22px;
@@ -2085,7 +2089,9 @@ button:active {
 }
 .total-price {
 	font-size: 24px;
-	font-weight: 700px;
+	font-weight: 700;
+	display: flex;
+        justify-content: space-between;
 }
 .text-total-price {
 	font-size: 26px;
@@ -2097,6 +2103,8 @@ button:active {
     width: 100%;
     margin-top: 32px;
     margin-bottom: 32px;
+    padding: 14px;
+    justify-content: center;
 }
 
 .promokod {
@@ -2105,7 +2113,7 @@ button:active {
     padding: 32px;
     color: #4f4f4f;
     font-size: 22px;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
 }
 
 .text-pers {

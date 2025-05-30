@@ -1984,31 +1984,32 @@ button:active {
     justify-content: space-between;
 }
 
-.quantity-btn minus {
-	position: relative;
-	background-image: url(../images/minus.svg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	width: 100%;
-	max-width: 24px;
-	height: auto;
+.quantity-btn {
+	.minus {
+		background-image: url(../images/minus.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		max-width: 24px;
+		height: 24px;
+	}
+	.plus {
+		background-image: url(../images/plus.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		max-width: 24px;
+		height: 24px;
+	}
 }
-.quantity-btn plus {
-	position: relative;
-	background-image: url(../images/plus.svg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	width: 100%;
-	max-width: 24px;
-	height: auto;
-}
+
 .remove-btn {
 	background-image: url(../images/remove.svg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
 	max-width: 36px;
-	height: auto;
+	height: 36px;
 }
 
 .buttons-plus-minus {

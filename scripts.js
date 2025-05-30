@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initClip();
   initSliders();
   initProductCatalog();
+  Cart.init();
 });
 
 // Функция для формы "contact-form"
@@ -722,3 +723,97 @@ function showThankYouFeedbackModal() {
     modal.remove();
   });
 }
+
+const Cart = {
+  // Инициализация корзины
+  init() {
+    this.cacheElements();
+    this.bindEvents();
+    this.restoreCartState();
+    this.updateUI();
+  },
+
+  // Кэширование DOM-элементов
+  cacheElements() {
+    this.elements = {
+      cartButton: document.getElementById('cart-button'),
+      cartCount: document.getElementById('cart-count'),
+      // cartTotal: document.getElementById('cart-total'),
+      // cartItems: document.getElementById('cart-items')
+    };
+  },
+
+  // Навешивание обработчиков событий
+  bindEvents() {
+    if (this.elements.cartButton) {
+      this.elements.cartButton.addEventListener('click', () => this.goToBasket());
+    }
+  },
+
+  // Переход на страницу корзины
+  goToBasket() {
+    this.saveCartState();
+    window.location.href = 'basket.html';
+  },
+
+  // Сохранение состояния в localStorage
+  saveCartState() {
+    localStorage.setItem('cart', JSON.stringify({
+      count: this.getCount(),
+      // Можно хранить больше данных:
+      // items: this.items,
+      // lastUpdated: new Date().toISOString()
+    }));
+  },
+
+  // Восстановление состояния из localStorage
+  restoreCartState() {
+    const savedCart = localStorage.getItem('cart');
+    if (savedCart) {
+      try {
+        const cartData = JSON.parse(savedCart);
+        if (cartData.count) {
+          this.setCount(cartData.count);
+        }
+      } catch (e) {
+        console.error('Ошибка восстановления корзины:', e);
+      }
+    }
+  },
+
+  // Работа с количеством товаров
+  getCount() {
+    return this.elements.cartCount ? this.elements.cartCount.textContent : '0';
+  },
+
+  setCount(count) {
+    if (this.elements.cartCount) {
+      this.elements.cartCount.textContent = count;
+    }
+  },
+
+  incrementCount(amount = 1) {
+    const current = parseInt(this.getCount()) || 0;
+    this.setCount(current + amount);
+    this.saveCartState();
+    this.updateUI();
+  },
+
+  decrementCount(amount = 1) {
+    const current = parseInt(this.getCount()) || 0;
+    this.setCount(Math.max(0, current - amount));
+    this.saveCartState();
+    this.updateUI();
+  },
+
+  // Обновление интерфейса
+  updateUI() {
+    const count = this.getCount();
+    if (count === '0') {
+      this.elements.cartButton?.classList.add('empty');
+    } else {
+      this.elements.cartButton?.classList.remove('empty');
+    }
+  },
+
+};

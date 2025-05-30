@@ -515,12 +515,6 @@ button:active {
     gap: 5px; 
 }
 
-#cart-button .active {
-	button {
-	    background: #6cc276; 
-	}
-}
-
 #cart-button .cart-icon {
     width: 32px;
     height: 32px;
@@ -2085,7 +2079,7 @@ button:active {
 }
 .text-price {
 	font-size: 22px;
-	font-weight: 700px;
+	font-weight: 700;
 }
 .total-price {
 	font-size: 24px;
@@ -2102,7 +2096,6 @@ button:active {
     border-radius: 10px;
     width: 100%;
     margin-top: 32px;
-    margin-bottom: 32px;
     padding: 14px;
     justify-content: center;
 }
@@ -2119,6 +2112,36 @@ button:active {
 .text-pers {
     color: #4f4f4f;
     font-size: 16px;
+}
+
+.promo-input-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+#promo-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.promo-submit {
+  background: none;
+  border: none;
+  padding: 0 10px;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.promo-submit img {
+  width: 28px;
+  height: 24px;
 }
 
 @media (max-width: 1512px) {

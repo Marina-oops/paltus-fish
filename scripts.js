@@ -864,15 +864,17 @@ const Cart = {
           <img src="${item.image}" alt="${item.name}">
         </div>
         <div class="cart-item-details">
-          <h3>${item.name}</h3>
-          <div class="cart-item-price">${item.price} руб. × ${item.quantity}</div>
-          <div class="cart-item-total">${item.price * item.quantity} руб.</div>
+          <h2>${item.name}</h2>
+          <div class="cart-item-price">${item.price} руб./шт. × ${item.quantity} шт.</div>
         </div>
         <div class="cart-item-controls">
-          <button class="quantity-btn minus" data-id="${item.id}">-</button>
-          <span class="quantity">${item.quantity}</span>
-          <button class="quantity-btn plus" data-id="${item.id}">+</button>
-          <button class="remove-btn" data-id="${item.id}">×</button>
+          <div class="buttons-plus-minus">
+            <div class="quantity-btn minus" data-id="${item.id} role="button""></div>
+            <span class="quantity">${item.quantity}</span>
+            <div class="quantity-btn plus" data-id="${item.id}" role="button"></div>
+          </div>
+          <div class="cart-item-total">${item.price * item.quantity} руб.</div>
+          <div class="remove-btn" data-id="${item.id}" role="button"></div>
         </div>
       `;
       

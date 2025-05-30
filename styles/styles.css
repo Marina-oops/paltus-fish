@@ -515,6 +515,12 @@ button:active {
     gap: 5px; 
 }
 
+#cart-button .active {
+	button {
+	    background: #6cc276; 
+	}
+}
+
 #cart-button .cart-icon {
     width: 32px;
     height: 32px;

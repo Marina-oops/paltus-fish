@@ -802,6 +802,13 @@ const Cart = {
     this.updateUI();
   },
 
+  // Обновление счетчика товаров
+  updateCount(count) {
+    if (this.elements.cartCount) {
+      this.elements.cartCount.textContent = count;
+    }
+  },
+  
   // Удаление товара из корзины
   removeProduct(productId) {
     this.items = this.items.filter(item => item.id !== productId);
@@ -832,7 +839,7 @@ const Cart = {
   // Обновление интерфейса
   updateUI() {
     const count = this.getTotalItemsCount();
-    this.setCount(count);
+    this.updateCount(count);
     
     if (this.elements.cartItemsContainer) {
       this.renderCartItems();

@@ -22,7 +22,7 @@
           <img src="images/search.png" alt="Поиск" class="search-icon">
           <input type="text" placeholder="Введите название товара" class="search-input">
         </div>
-        <button id="cart-button" class="cart-button.active"><img src="images/basket.png" alt="Корзина" class="cart-icon">(<span id="cart-count">0</span>)</button>
+        <button id="cart-button" class="cart-button" style="background: #6cc276;"><img src="images/basket.png" alt="Корзина" class="cart-icon">(<span id="cart-count">0</span>)</button>
     </div>
   </header>
  
@@ -85,16 +85,18 @@
             </div>
           </div>
           <div class="total-price">
-            <span>Итого</span>
+            <span>ИТОГО</span>
             <span id="cart-total" class="text-total-price">0 руб.</span>
           </div>
           <button class="checkout-btn">Оформить заказ</button>
         </div>
         <div class="promokod"> 
-          <form id="promokod">
-          <input type="text" placeholder="Введите промокод"><img src="images/mini-arrow.svg" alt="Стрелка" class="mini-arrow">
-          <hr>
-          </form>
+          <div class="promo-input-container">
+            <input type="text" placeholder="Введите промокод" id="promo-input">
+            <button type="submit" class="promo-submit">
+              <img src="images/mini-arrow.svg" alt="Применить промокод">
+            </button>
+          </div>
         </div>
         <div class="text-pers">Завершая оформление заказа, я соглашаюсь с Условиями обработки персональных данных, а также с Условиями продажи</div>
       </div>

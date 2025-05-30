@@ -566,12 +566,6 @@ function initProductCatalog() {
         showAddToCartNotification(product);
     });
       
-    productDiv.querySelectorAll('button[data-id]').forEach(button => {
-      button.addEventListener('click', () => {
-        addToCart();
-      });
-    });
-
     productDiv.querySelectorAll('.share').forEach(button => {
       button.addEventListener('click', (e) => {
         const productId = e.currentTarget.getAttribute('data-id');
@@ -786,7 +780,7 @@ const Cart = {
   // Переход на страницу корзины
   goToBasket() {
     this.saveCartState();
-    window.location.href = 'basket.html';
+    window.location.href = '/basket.html';
   },
 
   // Сохранение состояния в localStorage

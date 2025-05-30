@@ -563,7 +563,6 @@ function initProductCatalog() {
 
     productDiv.querySelector('.add-to-cart').addEventListener('click', () => {
         Cart.addProduct(product);
-        showAddToCartNotification(product);
     });
       
     productDiv.querySelectorAll('.share').forEach(button => {
@@ -592,33 +591,6 @@ function initProductCatalog() {
   });
 
  }
-
-function showAddToCartNotification(product) {
-    const notification = document.createElement('div');
-    notification.className = 'add-to-cart-notification';
-    notification.innerHTML = `
-      <div class="notification-content">
-        <img src="${product.image}" alt="${product.name}">
-        <div>
-          <p>Товар добавлен в корзину</p>
-          <p>${product.name}</p>
-        </div>
-      </div>
-    `;
-    
-    document.body.appendChild(notification);
-    
-    setTimeout(() => {
-      notification.classList.add('show');
-    }, 10);
-    
-    setTimeout(() => {
-      notification.classList.remove('show');
-      setTimeout(() => {
-        notification.remove();
-      }, 300);
-    }, 3000);
-  }
   
   function addToCart() {
     cartCount++;

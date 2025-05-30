@@ -1985,22 +1985,21 @@ button:active {
 }
 
 .quantity-btn {
-	.minus {
-		background-image: url(../images/minus.svg);
-		background-repeat: no-repeat;
-		background-size: cover;
-		width: 100%;
-		max-width: 24px;
-		height: 24px;
-	}
-	.plus {
-		background-image: url(../images/plus.svg);
-		background-repeat: no-repeat;
-		background-size: cover;
-		width: 100%;
-		max-width: 24px;
-		height: 24px;
-	}
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  max-width: 24px;
+  height: 24px;
+  border: none;
+  cursor: pointer;
+}
+
+.quantity-btn.minus {
+  background-image: url(../images/minus.svg);
+}
+
+.quantity-btn.plus {
+  background-image: url(../images/plus.svg);
 }
 
 .remove-btn {
@@ -2010,6 +2009,7 @@ button:active {
 	width: 100%;
 	max-width: 36px;
 	height: 36px;
+	cursor: pointer;
 }
 
 .buttons-plus-minus {
@@ -2031,6 +2031,7 @@ button:active {
 }
 
 .cart-item-image {
+    display: flex;
     img {
 	max-width: 50%;
     }

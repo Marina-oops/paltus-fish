@@ -561,7 +561,7 @@ function initProductCatalog() {
       showProductModal(product);
     });
 
-    productDiv.querySelector('.add-to-cart').addEventListener('click', () => {
+    productDiv.querySelector('button[data-id]').addEventListener('click', () => {
         Cart.addProduct(product);
     });
       

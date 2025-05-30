@@ -772,7 +772,7 @@ const Cart = {
       try {
         const cartData = JSON.parse(savedCart);
         this.items = cartData.items || [];
-        this.setCount(cartData.count || '0');
+        this.updateCount(cartData.count || '0');
       } catch (e) {
         console.error('Ошибка восстановления корзины:', e);
         this.items = [];

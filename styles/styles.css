@@ -2020,6 +2020,7 @@ button:active {
     width: 100%;
     max-width: 116px;
     justify-content: space-between;
+    align-items: center;
     height: 58px;
 }
 
@@ -2030,15 +2031,15 @@ button:active {
     max-width: 1128px;
     padding: 28px;
     gap: 24px;
-}
-
-.cart-items {
-    gap: 32px;
+    margin-bottom: 32px;
 }
 
 .cart-item-image {
     display: flex;
-    max-width: 15%;
+    max-width: 10%;
+}
+.cart-item-details {
+    max-width: 548px;
 }
 
 .cart-item-price {
@@ -2046,12 +2047,13 @@ button:active {
 }
 .cart-item-total {
 	font-size: 24px;
+	font-weight: 700;
 }
 .cart-item-controls {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 300px;
+    max-width: 366px;
 }
 
 @media (max-width: 1512px) {

@@ -2014,12 +2014,13 @@ button:active {
 
 .buttons-plus-minus {
     background: #f4f4f4;
-    border-radius: 32px;
+    border-radius: 15px;
     padding: 12px 14px;
     display: flex;
     width: 100%;
     max-width: 116px;
     justify-content: space-between;
+    height: 58px;
 }
 
 .cart-item {
@@ -2028,13 +2029,16 @@ button:active {
     border-radius: 32px;
     max-width: 1128px;
     padding: 28px;
+    gap: 24px;
+}
+
+.cart-items {
+    gap: 32px;
 }
 
 .cart-item-image {
     display: flex;
-    img {
-	max-width: 50%;
-    }
+    max-width: 15%;
 }
 
 .cart-item-price {

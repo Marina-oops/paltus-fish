@@ -1979,6 +1979,58 @@ button:active {
 		margin-top: -5px;
  }
 
+.basket-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quantity-btn minus {
+	background-image: url(../images/minus.svg);
+}
+.quantity-btn plus {
+	background-image: url(../images/plus.svg);
+}
+.remove-btn {
+	background-image: url(../images/remove.svg);
+}
+
+.buttons-plus-minus {
+    background: #f4f4f4;
+    border-radius: 32px;
+    padding: 12px 14px;
+    display: flex;
+    width: 100%;
+    max-width: 116px;
+    justify-content: space-between;
+}
+
+.cart-item {
+    display: flex;
+    border: 2px solid #2a3176;
+    border-radius: 32px;
+    max-width: 1128px;
+    padding: 28px;
+}
+
+.cart-item-image {
+    img {
+	max-width: 30%;
+    }
+}
+
+.cart-item-price {
+	color: #4f4f4f;
+}
+.cart-item-total {
+	font-size: 24px;
+}
+.cart-item-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+}
+
 @media (max-width: 1512px) {
 	  .footer {
 	  border-radius: 20px;

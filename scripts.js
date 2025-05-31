@@ -695,7 +695,7 @@ class ProductSlider {
   
   constructor(products = []) {
     this.products = products || [];
-    this.sliderContainer = document.querySelector('.details-grid-catalog-2');
+    this.sliderContainer = document.querySelector('.slider-items');
     this.prevBtn = document.querySelector('.slider-arrow.prev');
     this.nextBtn = document.querySelector('.slider-arrow.next');
     this.currentPosition = 0;

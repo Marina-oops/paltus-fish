@@ -867,7 +867,7 @@ function showThankYouFeedbackModal() {
 function initSearch() {
   const searchInput = document.querySelector('.search-input');
   const searchIcon = document.querySelector('.search-icon');
-  const searchForm = document.querySelector('.search-form');
+  const searchForm = document.querySelector('.search-wrapper');
 
   if (!searchInput || !searchIcon) return;
 

@@ -2109,6 +2109,15 @@ button:active {
     margin-bottom: 16px;
 }
 
+.promo-notification {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
 .text-pers {
     color: #4f4f4f;
     font-size: 16px;

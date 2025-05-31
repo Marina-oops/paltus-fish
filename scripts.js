@@ -698,8 +698,9 @@ class ProductSlider {
     this.sliderContainer = document.querySelector('.slider-items');
     this.prevBtn = document.querySelector('.slider-arrow.prev');
     this.nextBtn = document.querySelector('.slider-arrow.next');
-    this.currentPosition = 0;
+    this.currentIndex = 0;
     this.visibleItems = 5;
+    this.itemWidth = 0;
 
     if (this.sliderContainer && this.prevBtn && this.nextBtn) {
       this.initSlider();
@@ -710,19 +711,26 @@ class ProductSlider {
 
   initSlider() {
     if (!this.products.length) return;
-
+    this.calculateItemWidth(); 
     this.renderProducts();
     this.setupEventListeners();
     this.updateSlider();
   }
 
+  calculateItemWidth() {
+    if (this.sliderContainer.firstChild) {
+      this.itemWidth = this.sliderContainer.firstChild.offsetWidth;
+    }
+  }
+  
   renderProducts() {
     this.sliderContainer.innerHTML = '';
+    this.sliderContainer.style.width = `${(this.products.length * 100) / this.visibleItems}%`;
     
     this.products.forEach(product => {
       const productDiv = document.createElement('div');
       productDiv.className = 'product';
-      productDiv.style.minWidth = `calc(100% / ${this.visibleItems})`;
+      productDiv.style.width = `${100 / this.visibleItems}%`;
       productDiv.innerHTML = `
         <div class="product">
           <div class="block-review">
@@ -779,6 +787,7 @@ class ProductSlider {
         this.currentIndex--;
         this.updateSlider();
       }
+      this.updateControls();
     });
 
     this.nextBtn.addEventListener('click', () => {
@@ -786,13 +795,13 @@ class ProductSlider {
         this.currentIndex++;
         this.updateSlider();
       }
+      this.updateControls();
     });
   }
 
   updateSlider() {
-    const itemWidth = 100 / this.visibleItems;
-    this.sliderContainer.style.transform = `translateX(-${this.currentIndex * itemWidth}%)`;
-    this.updateControls();
+    const offset = -this.currentIndex * (100 / this.visibleItems);
+    this.sliderContainer.style.transform = `translateX(${offset}%)`;
   }
 
   updateControls() {

@@ -915,7 +915,7 @@ const Cart = {
   getDiscount() {
     const cartData = JSON.parse(localStorage.getItem('cart')) || {};
     return cartData.discount || null;
-  }
+  },
   
   // Отрисовка товаров в корзине
   renderCartItems() {

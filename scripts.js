@@ -913,6 +913,7 @@ function renderSearchResults(PRODUCTS, container) {
         <div class="cost">${product.price} руб.</div>
         <div class="buttons_products">
           <button type="button" data-id="${product.id}">Добавить в корзину</button>
+          <div class="share" type="button" data-id="${product.id}"></div>
         </div>
       </div>
     `;

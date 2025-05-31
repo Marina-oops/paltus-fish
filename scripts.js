@@ -751,12 +751,15 @@ const Cart = {
       this.elements.cartButton.addEventListener('click', () => this.goToBasket());
     }
     
-    const promoForm = document.querySelector('.promokod');
-    if (promoForm) {
-      promoForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        this.applyPromoCode(this.elements.promoInput.value.trim());
-      });
+    const promoSubmitBtn = document.querySelector('.promo-submit');
+    if (promoSubmitBtn) {
+        promoSubmitBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const promoInput = document.getElementById('promo-input');
+            if (promoInput) {
+                this.applyPromoCode(promoInput.value.trim());
+            }
+        });
     }
   },
 
@@ -884,6 +887,11 @@ const Cart = {
       this.showNotification(`Промокод "${code}" применен! Скидка ${discountPercent}%`);
       this.updateUI();
       return true;
+
+      if (this.elements.promoInput) {
+        this.elements.promoInput.value = '';
+      }
+      return true;
     }
     
     this.showNotification('Неверный промокод');
@@ -903,11 +911,11 @@ const Cart = {
     const subtotal = this.calculateSubtotal();
     const discount = this.getDiscount();
     const discountAmount = discount ? discount.amount : 0;
-    const total = subtotal - discountAmount;
+    const total = Math.round(subtotal - discountAmount);
 
     // Обновляем суммы в корзине
     document.querySelectorAll('#cart-total.text-price').forEach(el => {
-      el.textContent = subtotal.toFixed(2) + ' руб.';
+      el.textContent = Math.round(subtotal) + ' руб.';
     });
 
     // Обновляем скидку
@@ -915,7 +923,7 @@ const Cart = {
     const promoElement = document.querySelector('.pre-price:nth-child(3) .text-price');
     
     if (discount) {
-      discountElement.textContent = `-${discountAmount.toFixed(2)} руб.`;
+      discountElement.textContent = `-${Math.round(discountAmount)} руб.`;
       promoElement.textContent = discount.code;
     } else {
       discountElement.textContent = '0 руб.';
@@ -924,7 +932,7 @@ const Cart = {
 
     // Обновляем итоговую сумму
     if (this.elements.cartTotal) {
-      this.elements.cartTotal.textContent = total.toFixed(2) + ' руб.';
+      this.elements.cartTotal.textContent = total + ' руб.';
     }
   },
 
@@ -933,11 +941,19 @@ const Cart = {
     const notification = document.createElement('div');
     notification.className = 'promo-notification';
     notification.textContent = message;
-    document.querySelector('.promokod').appendChild(notification);
-    
-    setTimeout(() => {
-      notification.remove();
-    }, 3000);
+
+    const promokodContainer = document.querySelector('.promokod');
+        if (promokodContainer) {
+            // Удаляем предыдущие уведомления
+            const oldNotifications = promokodContainer.querySelectorAll('.promo-notification');
+            oldNotifications.forEach(el => el.remove());
+            
+            promokodContainer.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
   },
 
   

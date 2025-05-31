@@ -1,3 +1,120 @@
+const PRODUCTS = [
+    {
+      id: 1,
+      name: "Удилище Komandor штекерное JuniorCarp, 390см",
+      price: 3905,
+      image: "images/udilishe/udilishe-1.jpg",
+      images: [
+        "images/udilishe/udilishe-1.jpg",
+        "images/udilishe/udilishe-2.jpg",
+        "images/udilishe/udilishe-3.jpg"
+      ],
+      description: [
+        "Разработан для ловли щуки в труднодоступных местах, эффективен в технике «‎Кавер Шэдинг». Отличается высокой отзывчивостью на малейшие подвижки вершинки спиннинга и способность к активной игре.",
+        "Материал: прочный пластик с текстурированным покрытием и металлизированной окраской. Система балансировки TMB с подвижными и зафиксированными шариками обеспечивает дальний заброс, живую игру и устойчивость. ",
+        "Универсален в разных стилях ловли. Бюджетная цена делает воблер привлекательным для широкого круга российских рыболовов.",
+      ],
+      category: "УДИЛИЩА",
+      subcategory: "На горбушу"
+    },
+    {
+      id: 2,
+      name: "Удилище фидерное NAMAZU Tatsujin, 3.6м, до 180гр, IM6-7",
+      price: 1999,
+      image: "images/udilishe/udilishe-2.jpg",
+      category: "УДИЛИЩА",
+      subcategory: "Фидерные"
+    },
+    {
+      id: 3,
+      name: "Удилище матчевое телескопическое Dayo Crossfire Match, 3.9м, 20-80гр",
+      price: 2915,
+      image: "images/udilishe/udilishe-3.jpg",
+      category: "УДИЛИЩА",
+      subcategory: "Матчевые телескопические"
+    },
+    {
+      id: 4,
+      name: "Удилище маховое б/к NAMAZU EXPANSE Pole, 7м, 15-40гр, IM7",
+      price: 2317,
+      image: "images/udilishe/udilishe-4.jpg",
+      category: "УДИЛИЩА",
+      subcategory: "Маховые"
+    },
+    {
+      id: 5,
+      name: "Удилище DY COMPETITION (с кольцами, карповое, 3.6м)",
+      price: 4333,
+      image: "images/udilishe/udilishe-5.jpg",
+      category: "УДИЛИЩА",
+      subcategory: "Карповые"
+    },
+    {
+      id: 6,
+      name: "Карповое удилище 390см JUNIOR CARP",
+      price: 1925,
+      image: "images/udilishe/udilishe-6.png",
+      category: "УДИЛИЩА",
+      subcategory: "Карповые"
+    },
+    {
+      id: 7,
+      name: "Карповое удилище RAIDЕR DOSTO CARP 3.9м, 3.25 lb. до 150гр",
+      price: 4915,
+      image: "images/udilishe/udilishe-7.jpg",
+      category: "УДИЛИЩА",
+      subcategory: "Карповые"
+    },
+    {
+      id: 8,
+      name: "Удилище штекерное карповое YINTAI Lightning Carp 3.3м, 120гр",
+      price: 3925,
+      image: "images/udilishe/udilishe-8.jpg",
+      category: "УДИЛИЩА",
+      subcategory: "Карповые"
+    },
+    {
+      id: 9,
+      name: "Спиннинг Dy nano ATARASHII XP3 Travel (1.58м, 0.2-1гр)",
+      price: 2318,
+      image: "images/spinnings/spin-1.jpg",
+      category: "СПИННИНГИ",
+      subcategory: "Морские"
+    },
+      {
+      id: 10,
+      name: "Спиннинг SFT Deep Sea Jig Traveler (2.1м, 300-1000гр)",
+      price: 13500,
+      image: "images/spinnings/spin-2.jpg",
+      category: "СПИННИНГИ",
+      subcategory: "Морские"
+      },
+      {
+      id: 11,
+      name: "Спиннинг Yin Tai APOLLO 77073 (2.10м, 5-20гр)",
+      price: 1253,
+      image: "images/spinnings/spin-3.jpg",
+      category: "СПИННИНГИ",
+      subcategory: "Штекерные"
+      },
+     {
+      id: 12,
+      name: "Спиннинг Dy PREMIER (2.70м, 100-200гр)",
+      price: 1517,
+      image: "images/spinnings/spin-4.jpg",
+      category: "СПИННИНГИ",
+      subcategory: "Штекерные"
+     },
+     {
+      id: 13,
+      name: "Спиннинг WFT Oceanic Pro TIDECUTTER Travel (2,10м, 200-700гр)",
+      price: 4250,
+      image: "images/spinnings/spin-5.jpg",
+      category: "СПИННИНГИ",
+      subcategory: "Морские"
+     }
+    ];
+
 document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initCallbackForms();
@@ -8,10 +125,14 @@ document.addEventListener('DOMContentLoaded', () => {
   initClip();
   initSliders();
   initProductCatalog();
+  initSearch();
   Cart.init();
   Cart.updateUI();
   if (document.querySelector('.cart-slider')) {
-    new ProductSlider();
+    new ProductSlider(PRODUCTS);
+  }
+  if (window.location.pathname.includes('search.html')) {
+      initSearchPage();
   }
 });
 
@@ -393,123 +514,6 @@ function showProductModal(product) {
 // Функция для товаров
 
 function initProductCatalog() {
-  const products = [
-    {
-      id: 1,
-      name: "Удилище Komandor штекерное JuniorCarp, 390см",
-      price: 3905,
-      image: "images/udilishe/udilishe-1.jpg",
-      images: [
-        "images/udilishe/udilishe-1.jpg",
-        "images/udilishe/udilishe-2.jpg",
-        "images/udilishe/udilishe-3.jpg"
-      ],
-      description: [
-        "Разработан для ловли щуки в труднодоступных местах, эффективен в технике «‎Кавер Шэдинг». Отличается высокой отзывчивостью на малейшие подвижки вершинки спиннинга и способность к активной игре.",
-        "Материал: прочный пластик с текстурированным покрытием и металлизированной окраской. Система балансировки TMB с подвижными и зафиксированными шариками обеспечивает дальний заброс, живую игру и устойчивость. ",
-        "Универсален в разных стилях ловли. Бюджетная цена делает воблер привлекательным для широкого круга российских рыболовов.",
-      ],
-      category: "УДИЛИЩА",
-      subcategory: "На горбушу"
-    },
-    {
-      id: 2,
-      name: "Удилище фидерное NAMAZU Tatsujin, 3.6м, до 180гр, IM6-7",
-      price: 1999,
-      image: "images/udilishe/udilishe-2.jpg",
-      category: "УДИЛИЩА",
-      subcategory: "Фидерные"
-    },
-    {
-      id: 3,
-      name: "Удилище матчевое телескопическое Dayo Crossfire Match, 3.9м, 20-80гр",
-      price: 2915,
-      image: "images/udilishe/udilishe-3.jpg",
-      category: "УДИЛИЩА",
-      subcategory: "Матчевые телескопические"
-    },
-    {
-      id: 4,
-      name: "Удилище маховое б/к NAMAZU EXPANSE Pole, 7м, 15-40гр, IM7",
-      price: 2317,
-      image: "images/udilishe/udilishe-4.jpg",
-      category: "УДИЛИЩА",
-      subcategory: "Маховые"
-    },
-    {
-      id: 5,
-      name: "Удилище DY COMPETITION (с кольцами, карповое, 3.6м)",
-      price: 4333,
-      image: "images/udilishe/udilishe-5.jpg",
-      category: "УДИЛИЩА",
-      subcategory: "Карповые"
-    },
-    {
-      id: 6,
-      name: "Карповое удилище 390см JUNIOR CARP",
-      price: 1925,
-      image: "images/udilishe/udilishe-6.png",
-      category: "УДИЛИЩА",
-      subcategory: "Карповые"
-    },
-    {
-      id: 7,
-      name: "Карповое удилище RAIDЕR DOSTO CARP 3.9м, 3.25 lb. до 150гр",
-      price: 4915,
-      image: "images/udilishe/udilishe-7.jpg",
-      category: "УДИЛИЩА",
-      subcategory: "Карповые"
-    },
-    {
-      id: 8,
-      name: "Удилище штекерное карповое YINTAI Lightning Carp 3.3м, 120гр",
-      price: 3925,
-      image: "images/udilishe/udilishe-8.jpg",
-      category: "УДИЛИЩА",
-      subcategory: "Карповые"
-    },
-    {
-      id: 9,
-      name: "Спиннинг Dy nano ATARASHII XP3 Travel (1.58м, 0.2-1гр)",
-      price: 2318,
-      image: "images/spinnings/spin-1.jpg",
-      category: "СПИННИНГИ",
-      subcategory: "Морские"
-    },
-      {
-      id: 10,
-      name: "Спиннинг SFT Deep Sea Jig Traveler (2.1м, 300-1000гр)",
-      price: 13500,
-      image: "images/spinnings/spin-2.jpg",
-      category: "СПИННИНГИ",
-      subcategory: "Морские"
-      },
-      {
-      id: 11,
-      name: "Спиннинг Yin Tai APOLLO 77073 (2.10м, 5-20гр)",
-      price: 1253,
-      image: "images/spinnings/spin-3.jpg",
-      category: "СПИННИНГИ",
-      subcategory: "Штекерные"
-      },
-     {
-      id: 12,
-      name: "Спиннинг Dy PREMIER (2.70м, 100-200гр)",
-      price: 1517,
-      image: "images/spinnings/spin-4.jpg",
-      category: "СПИННИНГИ",
-      subcategory: "Штекерные"
-     },
-     {
-      id: 13,
-      name: "Спиннинг WFT Oceanic Pro TIDECUTTER Travel (2,10м, 200-700гр)",
-      price: 4250,
-      image: "images/spinnings/spin-5.jpg",
-      category: "СПИННИНГИ",
-      subcategory: "Морские"
-     }
-    ];
-
   let cartCount = 0;
   let currentCategory = "УДИЛИЩА";
   let selectedSubcategories = new Set();
@@ -532,7 +536,7 @@ function initProductCatalog() {
   function renderProducts() {
     if (!productContainer) return;
 
-    let filtered = products.filter(p => p.category === currentCategory);
+    let filtered = PRODUCTS.filter(p => p.category === currentCategory);
 
     if (selectedSubcategories.size > 0) {
       filtered = filtered.filter(p => selectedSubcategories.has(p.subcategory));
@@ -597,7 +601,7 @@ function initProductCatalog() {
 
   if (window.location.pathname.includes('basket.html')) {
     if (products && products.length > 0) {
-      new ProductSlider(products);
+      new ProductSlider(PRODUCTS);
     }
   }
   
@@ -693,8 +697,8 @@ function initProductCatalog() {
 
 class ProductSlider {
   
-  constructor(products = []) {
-    this.products = products;
+  constructor(PRODUCTS) {
+    this.products = PRODUCTS;
     this.sliderWrapper = document.querySelector('.cart-slider');
     this.sliderContainer = document.querySelector('.slider-items');
     this.prevBtn = document.querySelector('.slider-arrow.prev');
@@ -851,6 +855,90 @@ function showThankYouFeedbackModal() {
   modal.querySelector('.close-btn').addEventListener('click', () => {
     modal.remove();
   });
+}
+
+function initSearch() {
+  const searchInput = document.querySelector('.search-input');
+  const searchIcon = document.querySelector('.search-icon');
+
+  if (!searchInput || !searchIcon) return;
+
+  const handleSearch = () => {
+    const searchTerm = searchInput.value.trim();
+    if (searchTerm) {
+      localStorage.setItem('searchQuery', searchTerm);
+      window.location.href = 'search.html';
+    }
+  };
+
+  searchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') handleSearch();
+  });
+
+  searchIcon.addEventListener('click', handleSearch);
+}
+
+function initSearchPage() {
+  const searchQuery = localStorage.getItem('searchQuery') || '';
+  const productContainer = document.querySelector('.details-grid-catalog-2');
+  
+  if (!productContainer) return;
+  
+  const filteredProducts = PRODUCTS.filter(product => 
+    product.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  renderSearchResults(filteredProducts, productContainer);
+  updateSearchHeader(filteredProducts.length, searchQuery);
+}
+
+function renderSearchResults(products, container) {
+  container.innerHTML = '';
+
+  if (products.length === 0) {
+    container.innerHTML = '<p class="no-results">По вашему запросу ничего не найдено</p>';
+    return;
+  }
+
+  products.forEach(product => {
+    const productDiv = document.createElement('div');
+    productDiv.className = 'product';
+    productDiv.innerHTML = `
+      <div class="product">
+        <div class="block-review">
+          <img src="${product.image}" alt="${product.name}">
+        </div>
+        <div class="line-product"></div>
+        <div class="name_product">${product.name}</div>
+        <div class="cost">${product.price} руб.</div>
+        <div class="buttons_products">
+          <button type="button" data-id="${product.id}">Добавить в корзину</button>
+        </div>
+      </div>
+    `;
+    container.appendChild(productDiv);
+
+    productDiv.querySelector('.block-review').addEventListener('click', () => {
+        showProductModal(product);
+      });
+
+      productDiv.querySelector('button[data-id]').addEventListener('click', () => {
+        Cart.addProduct(product);
+      });
+
+      productDiv.querySelector('.share').addEventListener('click', (e) => {
+        this.handleShareClick(e, product.id);
+      });
+  });
+}
+
+function updateSearchHeader(count, query) {
+  const resultsHeader = document.querySelector('.search-results-header');
+  if (resultsHeader) {
+    resultsHeader.innerHTML = count > 0 
+      ? `Найдено ${count} товаров по запросу "${query}"`
+      : `По запросу "${query}" ничего не найдено`;
+  }
 }
 
 const Cart = {

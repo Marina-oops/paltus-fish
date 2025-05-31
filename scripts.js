@@ -390,126 +390,6 @@ function showProductModal(product) {
   modal.style.display = 'flex';
 }
 
-class ProductSlider {
-  constructor(products) {
-    this.products = products;
-    this.sliderContainer = document.querySelector('.details-grid-catalog-2');
-    this.prevBtn = document.querySelector('.slider-arrow.prev');
-    this.nextBtn = document.querySelector('.slider-arrow.next');
-    this.currentPosition = 0;
-    this.visibleItems = 5;
-    this.itemWidth = 0;
-
-    this.initSlider();
-  }
-
-  initSlider() {
-    this.renderProducts();
-    this.setupEventListeners();
-    this.calculateItemWidth();
-    this.updateSliderControls();
-    window.addEventListener('resize', () => {
-      this.calculateItemWidth();
-      this.updateSliderPosition();
-    });
-  }
-
-  calculateItemWidth() {
-    if (this.sliderContainer.children.length > 0) {
-      const item = this.sliderContainer.children[0];
-      const style = window.getComputedStyle(item);
-      this.itemWidth = item.offsetWidth + 
-                      parseInt(style.marginLeft) + 
-                      parseInt(style.marginRight);
-    }
-  }
-
-  renderProducts() {
-    this.sliderContainer.innerHTML = '';
-    
-    this.products.forEach(product => {
-      const productDiv = document.createElement('div');
-      productDiv.className = 'product';
-      productDiv.innerHTML = `
-        <div class="product">
-          <div class="block-review">
-            <img src="${product.image}" alt="${product.name}">
-          </div>
-          <div class="line-product"></div>
-          <div class="name_product">${product.name}</div>
-          <div class="cost">${product.price} руб.</div>
-          <div class="buttons_products">
-            <button type="button" data-id="${product.id}">Добавить в корзину</button>
-            <div class="share" type="button" data-id="${product.id}"></div>
-          </div>
-        </div>
-      `;
-      this.sliderContainer.appendChild(productDiv);
-
-      // Добавляем обработчики событий
-      productDiv.querySelector('.block-review').addEventListener('click', () => {
-        showProductModal(product);
-      });
-
-      productDiv.querySelector('button[data-id]').addEventListener('click', () => {
-        Cart.addProduct(product);
-      });
-
-      productDiv.querySelector('.share').addEventListener('click', (e) => {
-        this.handleShareClick(e, product.id);
-      });
-    });
-  }
-
-  handleShareClick(e, productId) {
-    const shareUrl = `${window.location.origin}/${productId}`;
-    if (navigator.share) {
-      navigator.share({
-        title: 'Товар на сайте',
-        text: 'Посмотрите этот товар!',
-        url: shareUrl
-      }).catch(err => {
-        console.error('Ошибка при попытке поделиться:', err);
-      });
-    } else {
-      navigator.clipboard.writeText(shareUrl).then(() => {
-        alert('Ссылка на товар скопирована в буфер обмена');
-      }).catch(err => {
-        console.error('Не удалось скопировать ссылку:', err);
-      });
-    }
-  }
-
-  setupEventListeners() {
-    this.prevBtn.addEventListener('click', () => this.scroll('prev'));
-    this.nextBtn.addEventListener('click', () => this.scroll('next'));
-  }
-
-  scroll(direction) {
-    const scrollAmount = this.itemWidth * this.visibleItems;
-    const maxPosition = (this.products.length - this.visibleItems) * this.itemWidth;
-    
-    if (direction === 'prev') {
-      this.currentPosition = Math.max(0, this.currentPosition - scrollAmount);
-    } else {
-      this.currentPosition = Math.min(maxPosition, this.currentPosition + scrollAmount);
-    }
-    
-    this.updateSliderPosition();
-    this.updateSliderControls();
-  }
-
-  updateSliderPosition() {
-    this.sliderContainer.style.transform = `translateX(-${this.currentPosition}px)`;
-  }
-
-  updateSliderControls() {
-    const maxPosition = (this.products.length - this.visibleItems) * this.itemWidth;
-    this.prevBtn.style.visibility = this.currentPosition <= 0 ? 'hidden' : 'visible';
-    this.nextBtn.style.visibility = this.currentPosition >= maxPosition ? 'hidden' : 'visible';
-  }
-}
-
 // Функция для товаров
 
 function initProductCatalog() {
@@ -807,6 +687,125 @@ const slider = new ProductSlider(products);
 
 }
 
+class ProductSlider {
+  constructor(products) {
+    this.products = products;
+    this.sliderContainer = document.querySelector('.details-grid-catalog-2');
+    this.prevBtn = document.querySelector('.slider-arrow.prev');
+    this.nextBtn = document.querySelector('.slider-arrow.next');
+    this.currentPosition = 0;
+    this.visibleItems = 5;
+    this.itemWidth = 0;
+
+    this.initSlider();
+  }
+
+  initSlider() {
+    this.renderProducts();
+    this.setupEventListeners();
+    this.calculateItemWidth();
+    this.updateSliderControls();
+    window.addEventListener('resize', () => {
+      this.calculateItemWidth();
+      this.updateSliderPosition();
+    });
+  }
+
+  calculateItemWidth() {
+    if (this.sliderContainer.children.length > 0) {
+      const item = this.sliderContainer.children[0];
+      const style = window.getComputedStyle(item);
+      this.itemWidth = item.offsetWidth + 
+                      parseInt(style.marginLeft) + 
+                      parseInt(style.marginRight);
+    }
+  }
+
+  renderProducts() {
+    this.sliderContainer.innerHTML = '';
+    
+    this.products.forEach(product => {
+      const productDiv = document.createElement('div');
+      productDiv.className = 'product';
+      productDiv.innerHTML = `
+        <div class="product">
+          <div class="block-review">
+            <img src="${product.image}" alt="${product.name}">
+          </div>
+          <div class="line-product"></div>
+          <div class="name_product">${product.name}</div>
+          <div class="cost">${product.price} руб.</div>
+          <div class="buttons_products">
+            <button type="button" data-id="${product.id}">Добавить в корзину</button>
+            <div class="share" type="button" data-id="${product.id}"></div>
+          </div>
+        </div>
+      `;
+      this.sliderContainer.appendChild(productDiv);
+
+      // Добавляем обработчики событий
+      productDiv.querySelector('.block-review').addEventListener('click', () => {
+        showProductModal(product);
+      });
+
+      productDiv.querySelector('button[data-id]').addEventListener('click', () => {
+        Cart.addProduct(product);
+      });
+
+      productDiv.querySelector('.share').addEventListener('click', (e) => {
+        this.handleShareClick(e, product.id);
+      });
+    });
+  }
+
+  handleShareClick(e, productId) {
+    const shareUrl = `${window.location.origin}/${productId}`;
+    if (navigator.share) {
+      navigator.share({
+        title: 'Товар на сайте',
+        text: 'Посмотрите этот товар!',
+        url: shareUrl
+      }).catch(err => {
+        console.error('Ошибка при попытке поделиться:', err);
+      });
+    } else {
+      navigator.clipboard.writeText(shareUrl).then(() => {
+        alert('Ссылка на товар скопирована в буфер обмена');
+      }).catch(err => {
+        console.error('Не удалось скопировать ссылку:', err);
+      });
+    }
+  }
+
+  setupEventListeners() {
+    this.prevBtn.addEventListener('click', () => this.scroll('prev'));
+    this.nextBtn.addEventListener('click', () => this.scroll('next'));
+  }
+
+  scroll(direction) {
+    const scrollAmount = this.itemWidth * this.visibleItems;
+    const maxPosition = (this.products.length - this.visibleItems) * this.itemWidth;
+    
+    if (direction === 'prev') {
+      this.currentPosition = Math.max(0, this.currentPosition - scrollAmount);
+    } else {
+      this.currentPosition = Math.min(maxPosition, this.currentPosition + scrollAmount);
+    }
+    
+    this.updateSliderPosition();
+    this.updateSliderControls();
+  }
+
+  updateSliderPosition() {
+    this.sliderContainer.style.transform = `translateX(-${this.currentPosition}px)`;
+  }
+
+  updateSliderControls() {
+    const maxPosition = (this.products.length - this.visibleItems) * this.itemWidth;
+    this.prevBtn.style.visibility = this.currentPosition <= 0 ? 'hidden' : 'visible';
+    this.nextBtn.style.visibility = this.currentPosition >= maxPosition ? 'hidden' : 'visible';
+  }
+}
 
 // Модальные окна
 function showThankYouModal() {

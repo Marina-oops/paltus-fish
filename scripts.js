@@ -882,6 +882,12 @@ function initSearch() {
     if (e.key === 'Enter') handleSearch();
   });
 
+   searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === 'Go' || e.key === 'Search' || e.keyCode === 13 || e.keyCode === 10 || e.keyCode === 100) {
+      handleSearch();
+    }
+  });
+
   searchIcon.addEventListener('click', handleSearch);
 }
 

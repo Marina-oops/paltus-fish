@@ -695,6 +695,7 @@ class ProductSlider {
   
   constructor(products = []) {
     this.products = products;
+    this.sliderWrapper = document.querySelector('.cart-slider');
     this.sliderContainer = document.querySelector('.slider-items');
     this.prevBtn = document.querySelector('.slider-arrow.prev');
     this.nextBtn = document.querySelector('.slider-arrow.next');
@@ -702,7 +703,7 @@ class ProductSlider {
     this.visibleItems = 5;
     this.itemWidth = 0;
 
-    if (this.sliderContainer && this.prevBtn && this.nextBtn) {
+    if (this.sliderWrapper && this.sliderContainer && this.prevBtn && this.nextBtn) {
       this.initSlider();
     } else {
       console.error('Не найдены необходимые элементы для слайдера');
@@ -718,19 +719,18 @@ class ProductSlider {
   }
 
   calculateItemWidth() {
-    if (this.sliderContainer.firstChild) {
-      this.itemWidth = this.sliderContainer.firstChild.offsetWidth;
-    }
+    const sliderWidth = this.sliderWrapper.offsetWidth;
+    this.itemWidth = sliderWidth / this.visibleItems;
   }
   
   renderProducts() {
     this.sliderContainer.innerHTML = '';
-    this.sliderContainer.style.width = `${(this.products.length * 100) / this.visibleItems}%`;
+    this.sliderContainer.style.width = `${this.products.length * this.itemWidth}px`;
     
     this.products.forEach(product => {
       const productDiv = document.createElement('div');
       productDiv.className = 'product';
-      productDiv.style.width = `${100 / this.visibleItems}%`;
+      productDiv.style.width = `${this.itemWidth}px`;
       productDiv.innerHTML = `
         <div class="product">
           <div class="block-review">
@@ -782,26 +782,29 @@ class ProductSlider {
   }
 
   setupEventListeners() {
-    this.prevBtn.addEventListener('click', () => {
-      if (this.currentIndex > 0) {
-        this.currentIndex--;
-        this.updateSlider();
-      }
-      this.updateControls();
+    this.prevBtn.addEventListener('click', () => this.move(-1));
+    this.nextBtn.addEventListener('click', () => this.move(1));
+    
+    window.addEventListener('resize', () => {
+      this.calculateItemWidth();
+      this.updateSlider();
     });
-
-    this.nextBtn.addEventListener('click', () => {
-      if (this.currentIndex < this.products.length - this.visibleItems) {
-        this.currentIndex++;
-        this.updateSlider();
-      }
-      this.updateControls();
-    });
+  }
+  
+  move(direction) {
+    const newIndex = this.currentIndex + direction;
+    
+    // Проверяем границы
+    if (newIndex >= 0 && newIndex <= this.products.length - this.visibleItems) {
+      this.currentIndex = newIndex;
+      this.updateSlider();
+    }
   }
 
   updateSlider() {
-    const offset = -this.currentIndex * (100 / this.visibleItems);
-    this.sliderContainer.style.transform = `translateX(${offset}%)`;
+    const offset = -this.currentIndex * this.itemWidth;
+    this.sliderContainer.style.transform = `translateX(${offset}px)`;
+    this.updateControls();
   }
 
   updateControls() {

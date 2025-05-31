@@ -600,7 +600,7 @@ function initProductCatalog() {
  }
 
   if (window.location.pathname.includes('basket.html')) {
-    if (products && products.length > 0) {
+    if (PRODUCTS && PRODUCTS.length > 0) {
       new ProductSlider(PRODUCTS);
     }
   }
@@ -698,7 +698,7 @@ function initProductCatalog() {
 class ProductSlider {
   
   constructor(PRODUCTS) {
-    this.products = PRODUCTS;
+    this.PRODUCTS = PRODUCTS;
     this.sliderWrapper = document.querySelector('.cart-slider');
     this.sliderContainer = document.querySelector('.slider-items');
     this.prevBtn = document.querySelector('.slider-arrow.prev');
@@ -715,7 +715,7 @@ class ProductSlider {
   }
 
   initSlider() {
-    if (!this.products.length) return;
+    if (!this.PRODUCTS.length) return;
     this.calculateItemWidth(); 
     this.renderProducts();
     this.setupEventListeners();
@@ -729,9 +729,9 @@ class ProductSlider {
   
   renderProducts() {
     this.sliderContainer.innerHTML = '';
-    this.sliderContainer.style.width = `${this.products.length * this.itemWidth}px`;
+    this.sliderContainer.style.width = `${this.PRODUCTS.length * this.itemWidth}px`;
     
-    this.products.forEach(product => {
+    this.PRODUCTS.forEach(product => {
       const productDiv = document.createElement('div');
       productDiv.className = 'product';
       productDiv.style.width = `${this.itemWidth}px`;
@@ -799,7 +799,7 @@ class ProductSlider {
     const newIndex = this.currentIndex + direction;
     
     // Проверяем границы
-    if (newIndex >= 0 && newIndex <= this.products.length - this.visibleItems) {
+    if (newIndex >= 0 && newIndex <= this.PRODUCTS.length - this.visibleItems) {
       this.currentIndex = newIndex;
       this.updateSlider();
     }
@@ -813,7 +813,7 @@ class ProductSlider {
 
   updateControls() {
     this.prevBtn.style.display = this.currentIndex <= 0 ? 'none' : 'block';
-    this.nextBtn.style.display = this.currentIndex >= this.products.length - this.visibleItems ? 'none' : 'block';
+    this.nextBtn.style.display = this.currentIndex >= this.PRODUCTS.length - this.visibleItems ? 'none' : 'block';
   }
 }
 
@@ -892,15 +892,15 @@ function initSearchPage() {
   updateSearchHeader(filteredProducts.length, searchQuery);
 }
 
-function renderSearchResults(products, container) {
+function renderSearchResults(PRODUCTS, container) {
   container.innerHTML = '';
 
-  if (products.length === 0) {
+  if (PRODUCTS.length === 0) {
     container.innerHTML = '<p class="no-results">По вашему запросу ничего не найдено</p>';
     return;
   }
 
-  products.forEach(product => {
+  PRODUCTS.forEach(product => {
     const productDiv = document.createElement('div');
     productDiv.className = 'product';
     productDiv.innerHTML = `

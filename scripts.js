@@ -738,8 +738,10 @@ const Cart = {
     this.elements = {
       cartButton: document.getElementById('cart-button'),
       cartCount: document.getElementById('cart-count'),
-      cartTotal: document.getElementById('cart-total'),
-      cartItemsContainer: document.getElementById('cart-items')
+      cartItemsContainer: document.getElementById('cart-items'),
+      promoInput: document.getElementById('promo-input'),
+      cartTotalPrice: document.querySelector('#cart-total.text-price'),
+      cartTotal: document.getElementById('cart-total.text-total-price')
     };
   },
 
@@ -747,6 +749,14 @@ const Cart = {
   bindEvents() {
     if (this.elements.cartButton) {
       this.elements.cartButton.addEventListener('click', () => this.goToBasket());
+    }
+    
+    const promoForm = document.querySelector('.promokod');
+    if (promoForm) {
+      promoForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        this.applyPromoCode(this.elements.promoInput.value.trim());
+      });
     }
   },
 
@@ -761,7 +771,7 @@ const Cart = {
     localStorage.setItem('cart', JSON.stringify({
       count: this.getTotalItemsCount(),
       items: this.items,
-      total: this.calculateTotal()
+      discount: this.getDiscount() || null
     }));
   },
 
@@ -802,6 +812,11 @@ const Cart = {
     this.updateUI();
   },
 
+  // Расчет суммы без учета скидки
+  calculateSubtotal() {
+    return this.items.reduce((total, item) => total + (item.price * item.quantity), 0);
+  },
+  
   // Обновление счетчика товаров
   updateCount(count) {
     if (this.elements.cartCount) {
@@ -831,11 +846,50 @@ const Cart = {
     return this.items.reduce((total, item) => total + item.quantity, 0);
   },
 
-  // Расчет общей суммы
-  calculateTotal() {
-    return this.items.reduce((total, item) => total + (item.price * item.quantity), 0);
+  // Получение текущей скидки
+  getDiscount() {
+    const cartData = JSON.parse(localStorage.getItem('cart')) || {};
+    return cartData.discount || null;
   },
 
+// Применение промокода
+  applyPromoCode(promoCode) {
+    const validPromoCodes = {
+      'FISH10': 10,    // 10% скидка
+      'FISH20': 20,    // 20% скидка
+      'FISH50': 50     // 50% скидка
+    };
+
+    if (!promoCode) {
+      this.showNotification('Введите промокод');
+      return false;
+    }
+
+    const code = promoCode.toUpperCase();
+    
+    if (validPromoCodes.hasOwnProperty(code)) {
+      const discountPercent = validPromoCodes[code];
+      const subtotal = this.calculateSubtotal();
+      const discountAmount = (subtotal * discountPercent) / 100;
+
+      // Сохраняем скидку
+      const cartData = JSON.parse(localStorage.getItem('cart')) || {};
+      cartData.discount = {
+        code: code,
+        percent: discountPercent,
+        amount: discountAmount
+      };
+      localStorage.setItem('cart', JSON.stringify(cartData));
+
+      this.showNotification(`Промокод "${code}" применен! Скидка ${discountPercent}%`);
+      this.updateUI();
+      return true;
+    }
+    
+    this.showNotification('Неверный промокод');
+    return false;
+  },
+  
   // Обновление интерфейса
   updateUI() {
 
@@ -858,45 +912,20 @@ const Cart = {
 
     // Обновляем скидку
     const discountElement = document.querySelector('.pre-price:nth-child(2) .text-price');
+    const promoElement = document.querySelector('.pre-price:nth-child(3) .text-price');
+    
     if (discount) {
       discountElement.textContent = `-${discountAmount.toFixed(2)} руб.`;
-      document.querySelector('.pre-price:nth-child(3) .text-price').textContent = discount.code;
+      promoElement.textContent = discount.code;
     } else {
       discountElement.textContent = '0 руб.';
-      document.querySelector('.pre-price:nth-child(3) .text-price').textContent = '0 руб.';
+      promoElement.textContent = '0 руб.';
     }
 
     // Обновляем итоговую сумму
-    document.getElementById('cart-total.text-total-price').textContent = total.toFixed(2) + ' руб.';
-  },
-
-  // Метод для применения промокода
-  applyPromoCode(promoCode) {
-    const validPromoCodes = {
-      'FISH10': 10,    // 10% скидка
-      'FISH20': 20,    // 20% скидка
-      'FISH50': 50     // 50% скидка
-    };
-
-    if (validPromoCodes.hasOwnProperty(promoCode)) {
-      const discountPercent = validPromoCodes[promoCode];
-      const subtotal = this.calculateSubtotal();
-      const discountAmount = (subtotal * discountPercent) / 100;
-
-      // Сохраняем скидку
-      const cartData = JSON.parse(localStorage.getItem('cart')) || {};
-      cartData.discount = {
-        code: promoCode,
-        percent: discountPercent,
-        amount: discountAmount
-      };
-      localStorage.setItem('cart', JSON.stringify(cartData));
-
-      // Показываем уведомление
-      this.showNotification(`Промокод "${promoCode}" применен! Скидка ${discountPercent}%`);
-      return true;
+    if (this.elements.cartTotal) {
+      this.elements.cartTotal.textContent = total.toFixed(2) + ' руб.';
     }
-    return false;
   },
 
   // Метод для отображения уведомлений
@@ -911,11 +940,6 @@ const Cart = {
     }, 3000);
   },
 
-  // Метод для получения текущей скидки
-  getDiscount() {
-    const cartData = JSON.parse(localStorage.getItem('cart')) || {};
-    return cartData.discount || null;
-  },
   
   // Отрисовка товаров в корзине
   renderCartItems() {
@@ -980,30 +1004,3 @@ const Cart = {
   }
 
 };
-
-// Инициализация обработчика промокода
-document.addEventListener('DOMContentLoaded', () => {
-  const promoForm = document.querySelector('.promokod');
-  
-  if (promoForm) {
-    promoForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const promoInput = document.getElementById('promo-input');
-      const promoCode = promoInput.value.trim().toUpperCase();
-      
-      if (!promoCode) {
-        Cart.showNotification('Введите промокод');
-        return;
-      }
-      
-      if (Cart.applyPromoCode(promoCode)) {
-        Cart.updateUI();
-        promoInput.value = '';
-      } else {
-        Cart.showNotification('Неверный промокод');
-      }
-    });
-  }
- Cart.init();
-});

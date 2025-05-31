@@ -1079,7 +1079,6 @@ const Cart = {
   updateCount(count) {
     document.querySelectorAll('.cart-count').forEach(el => {
       el.textContent = count;
-      el.style.display = count > 0 ? 'inline' : 'none';
     });
   },
   

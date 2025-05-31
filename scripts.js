@@ -871,7 +871,7 @@ function initSearch() {
 
   if (!searchInput || !searchIcon) return;
 
-  const handleSearch = () => {
+  const handleSearch = (e) => {
     e.preventDefault();
     const searchTerm = searchInput.value.trim();
     if (searchTerm) {

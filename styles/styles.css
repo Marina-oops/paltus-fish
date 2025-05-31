@@ -2002,7 +2002,8 @@ button:active {
   background-image: url(../images/plus.svg);
 }
 
-.remove-btn {
+.remove-btn,
+.promo-remove {
 	background-image: url(../images/remove.svg);
 	background-repeat: no-repeat;
 	background-size: cover;

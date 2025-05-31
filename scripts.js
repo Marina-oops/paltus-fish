@@ -1077,9 +1077,10 @@ const Cart = {
   
   // Обновление счетчика товаров
   updateCount(count) {
-    if (this.elements.cartCount) {
-      this.elements.cartCount.textContent = count;
-    }
+    document.querySelectorAll('.cart-count').forEach(el => {
+      el.textContent = count;
+      el.style.display = count > 0 ? 'inline' : 'none';
+    });
   },
   
   // Удаление товара из корзины

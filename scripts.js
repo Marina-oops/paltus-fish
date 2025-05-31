@@ -688,6 +688,108 @@ const slider = new ProductSlider(products);
 }
 
 class ProductSlider {
+
+  const products = [
+    {
+      id: 1,
+      name: "Удилище Komandor штекерное JuniorCarp, 390см",
+      price: 3905,
+      image: "images/udilishe/udilishe-1.jpg",
+      images: [
+        "images/udilishe/udilishe-1.jpg",
+        "images/udilishe/udilishe-2.jpg",
+        "images/udilishe/udilishe-3.jpg"
+      ],
+      description: [
+        "Разработан для ловли щуки в труднодоступных местах, эффективен в технике «‎Кавер Шэдинг». Отличается высокой отзывчивостью на малейшие подвижки вершинки спиннинга и способность к активной игре.",
+        "Материал: прочный пластик с текстурированным покрытием и металлизированной окраской. Система балансировки TMB с подвижными и зафиксированными шариками обеспечивает дальний заброс, живую игру и устойчивость. ",
+        "Универсален в разных стилях ловли. Бюджетная цена делает воблер привлекательным для широкого круга российских рыболовов.",
+      ],
+      category: "УДИЛИЩА",
+      subcategory: "На горбушу"
+    },
+    {
+      id: 2,
+      name: "Удилище фидерное NAMAZU Tatsujin, 3.6м, до 180гр, IM6-7",
+      price: 1999,
+      image: "images/udilishe/udilishe-2.jpg",
+      category: "УДИЛИЩА",
+      subcategory: "Фидерные"
+    },
+    {
+      id: 3,
+      name: "Удилище матчевое телескопическое Dayo Crossfire Match, 3.9м, 20-80гр",
+      price: 2915,
+      image: "images/udilishe/udilishe-3.jpg",
+      category: "УДИЛИЩА",
+      subcategory: "Матчевые телескопические"
+    },
+    {
+      id: 4,
+      name: "Удилище маховое б/к NAMAZU EXPANSE Pole, 7м, 15-40гр, IM7",
+      price: 2317,
+      image: "images/udilishe/udilishe-4.jpg",
+      category: "УДИЛИЩА",
+      subcategory: "Маховые"
+    },
+    {
+      id: 5,
+      name: "Удилище DY COMPETITION (с кольцами, карповое, 3.6м)",
+      price: 4333,
+      image: "images/udilishe/udilishe-5.jpg",
+      category: "УДИЛИЩА",
+      subcategory: "Карповые"
+    },
+    {
+      id: 6,
+      name: "Карповое удилище 390см JUNIOR CARP",
+      price: 1925,
+      image: "images/udilishe/udilishe-6.png",
+      category: "УДИЛИЩА",
+      subcategory: "Карповые"
+    },
+    {
+      id: 7,
+      name: "Карповое удилище RAIDЕR DOSTO CARP 3.9м, 3.25 lb. до 150гр",
+      price: 4915,
+      image: "images/udilishe/udilishe-7.jpg",
+      category: "УДИЛИЩА",
+      subcategory: "Карповые"
+    },
+    {
+      id: 8,
+      name: "Удилище штекерное карповое YINTAI Lightning Carp 3.3м, 120гр",
+      price: 3925,
+      image: "images/udilishe/udilishe-8.jpg",
+      category: "УДИЛИЩА",
+      subcategory: "Карповые"
+    },
+    {
+      id: 9,
+      name: "Спиннинг Dy nano ATARASHII XP3 Travel (1.58м, 0.2-1гр)",
+      price: 2318,
+      image: "images/spinnings/spin-1.jpg",
+      category: "СПИННИНГИ",
+      subcategory: "Морские"
+    },
+      {
+      id: 10,
+      name: "Спиннинг SFT Deep Sea Jig Traveler (2.1м, 300-1000гр)",
+      price: 13500,
+      image: "images/spinnings/spin-2.jpg",
+      category: "СПИННИНГИ",
+      subcategory: "Морские"
+      },
+      {
+      id: 11,
+      name: "Спиннинг Yin Tai APOLLO 77073 (2.10м, 5-20гр)",
+      price: 1253,
+      image: "images/spinnings/spin-3.jpg",
+      category: "СПИННИНГИ",
+      subcategory: "Штекерные"
+      },
+    ];  
+  
   constructor(products) {
     this.products = products;
     this.sliderContainer = document.querySelector('.details-grid-catalog-2');

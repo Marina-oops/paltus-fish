@@ -872,29 +872,35 @@ function initSearch() {
   if (!searchInput || !searchIcon) return;
 
   const handleSearch = (e) => {
-    e.preventDefault();
+   if (e) e.preventDefault();
     const searchTerm = searchInput.value.trim();
     if (searchTerm) {
       localStorage.setItem('searchQuery', searchTerm);
-      window.location.href = 'search.html';
+     window.location.href = `search.html?query=${encodeURIComponent(searchTerm)}`;
     }
   };
 
-  if (searchForm) {
-    searchForm.addEventListener('submit', handleSearch);
-  } else {
-    searchInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') handleSearch(e);
-    });
+  searchForm.addEventListener('submit', handleSearch);
+  
+  searchInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.keyCode === 13) {
+      handleSearch(e);
+    }
+  });
 
   searchIcon.addEventListener('click', handleSearch);
   }
 }
 
 function initSearchPage() {
-  const searchQuery = localStorage.getItem('searchQuery') || '';
+  const urlParams = new URLSearchParams(window.location.search);
+  let searchQuery = urlParams.get('query') || localStorage.getItem('searchQuery') || '';
+
+  if (!urlParams.has('query') && searchQuery) {
+    window.history.replaceState(null, null, `?query=${encodeURIComponent(searchQuery)}`);
+  }
+    
   const productContainer = document.querySelector('.details-grid-catalog-2');
-  
   if (!productContainer) return;
   
   const filteredProducts = PRODUCTS.filter(product => 

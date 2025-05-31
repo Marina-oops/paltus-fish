@@ -934,6 +934,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+ Cart.init();
+});
 
   // Отрисовка товаров в корзине
   renderCartItems() {

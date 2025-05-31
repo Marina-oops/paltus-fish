@@ -2171,6 +2171,56 @@ button:active {
   height: 24px;
 }
 
+.pop-products {
+  margin-top: 40px;
+}
+
+.cart-slider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.slider-items {
+  display: flex;
+  gap: 15px;
+  overflow: hidden;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+.slider-item {
+  min-width: calc(20% - 12px);
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.slider-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.slider-arrow {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.slider-arrow:hover {
+  background: #f5f5f5;
+}
+
 @media (max-width: 1512px) {
 	  .footer {
 	  border-radius: 20px;

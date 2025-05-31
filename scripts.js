@@ -763,6 +763,14 @@ const Cart = {
             }
         });
     }
+
+    const promoRemoveBtn = document.querySelector('.promo-remove');
+    if (promoRemoveBtn) {
+      promoRemoveBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.removePromoCode();
+      });
+    }
   },
 
   // Переход на страницу корзины
@@ -788,6 +796,7 @@ const Cart = {
         const cartData = JSON.parse(savedCart);
         this.items = cartData.items || [];
         this.updateCount(cartData.count || '0');
+        this.togglePromoRemoveButton(!!cartData.discount);
       } catch (e) {
         console.error('Ошибка восстановления корзины:', e);
         this.items = [];
@@ -857,6 +866,24 @@ const Cart = {
     return cartData.discount || null;
   },
 
+  removePromoCode() {
+    const cartData = JSON.parse(localStorage.getItem('cart')) || {};
+    delete cartData.discount;
+    localStorage.setItem('cart', JSON.stringify(cartData));
+    
+    this.showNotification('Промокод удален');
+    this.updateUI();
+    this.togglePromoRemoveButton(false);
+  },
+
+  // Метод для показа/скрытия кнопки удаления
+  togglePromoRemoveButton(show) {
+    const removeBtn = document.querySelector('.promo-remove');
+    if (removeBtn) {
+      removeBtn.style.display = show ? 'block' : 'none';
+    }
+  },
+  
 // Применение промокода
   applyPromoCode(promoCode) {
     const validPromoCodes = {
@@ -891,6 +918,8 @@ const Cart = {
       if (this.elements.promoInput) {
         this.elements.promoInput.value = '';
       }
+      
+      this.togglePromoRemoveButton(true);
       this.updateUI();
       return true;
     }
@@ -913,7 +942,8 @@ const Cart = {
     const discount = this.getDiscount();
     const discountAmount = discount ? discount.amount : 0;
     const total = Math.round(subtotal - discountAmount);
-
+    
+    this.togglePromoRemoveButton(!!discount);
     // Обновляем суммы в корзине
      if (this.elements.cartSubtotal) {
       this.elements.cartSubtotal.textContent = Math.round(subtotal) + ' руб.';

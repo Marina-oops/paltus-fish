@@ -888,6 +888,7 @@ function initSearch() {
     });
 
   searchIcon.addEventListener('click', handleSearch);
+  }
 }
 
 function initSearchPage() {

@@ -838,6 +838,14 @@ const Cart = {
 
   // Обновление интерфейса
   updateUI() {
+
+    const count = this.getTotalItemsCount();
+    this.updateCount(count);
+
+    if (this.elements.cartItemsContainer) {
+      this.renderCartItems();
+    }
+    
     const subtotal = this.calculateSubtotal();
     const discount = this.getDiscount();
     const discountAmount = discount ? discount.amount : 0;

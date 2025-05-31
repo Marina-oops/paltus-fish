@@ -1544,6 +1544,7 @@ button:active {
 .details-grid-catalog-2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(264px, 1fr));
+  width: 100%;
   gap: 24px;
   margin-bottom: 32px;
 }

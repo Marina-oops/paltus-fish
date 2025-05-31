@@ -390,6 +390,126 @@ function showProductModal(product) {
   modal.style.display = 'flex';
 }
 
+class ProductSlider {
+  constructor(products) {
+    this.products = products;
+    this.sliderContainer = document.querySelector('.details-grid-catalog-2');
+    this.prevBtn = document.querySelector('.slider-arrow.prev');
+    this.nextBtn = document.querySelector('.slider-arrow.next');
+    this.currentPosition = 0;
+    this.visibleItems = 5;
+    this.itemWidth = 0;
+
+    this.initSlider();
+  }
+
+  initSlider() {
+    this.renderProducts();
+    this.setupEventListeners();
+    this.calculateItemWidth();
+    this.updateSliderControls();
+    window.addEventListener('resize', () => {
+      this.calculateItemWidth();
+      this.updateSliderPosition();
+    });
+  }
+
+  calculateItemWidth() {
+    if (this.sliderContainer.children.length > 0) {
+      const item = this.sliderContainer.children[0];
+      const style = window.getComputedStyle(item);
+      this.itemWidth = item.offsetWidth + 
+                      parseInt(style.marginLeft) + 
+                      parseInt(style.marginRight);
+    }
+  }
+
+  renderProducts() {
+    this.sliderContainer.innerHTML = '';
+    
+    this.products.forEach(product => {
+      const productDiv = document.createElement('div');
+      productDiv.className = 'product';
+      productDiv.innerHTML = `
+        <div class="product">
+          <div class="block-review">
+            <img src="${product.image}" alt="${product.name}">
+          </div>
+          <div class="line-product"></div>
+          <div class="name_product">${product.name}</div>
+          <div class="cost">${product.price} руб.</div>
+          <div class="buttons_products">
+            <button type="button" data-id="${product.id}">Добавить в корзину</button>
+            <div class="share" type="button" data-id="${product.id}"></div>
+          </div>
+        </div>
+      `;
+      this.sliderContainer.appendChild(productDiv);
+
+      // Добавляем обработчики событий
+      productDiv.querySelector('.block-review').addEventListener('click', () => {
+        showProductModal(product);
+      });
+
+      productDiv.querySelector('button[data-id]').addEventListener('click', () => {
+        Cart.addProduct(product);
+      });
+
+      productDiv.querySelector('.share').addEventListener('click', (e) => {
+        this.handleShareClick(e, product.id);
+      });
+    });
+  }
+
+  handleShareClick(e, productId) {
+    const shareUrl = `${window.location.origin}/${productId}`;
+    if (navigator.share) {
+      navigator.share({
+        title: 'Товар на сайте',
+        text: 'Посмотрите этот товар!',
+        url: shareUrl
+      }).catch(err => {
+        console.error('Ошибка при попытке поделиться:', err);
+      });
+    } else {
+      navigator.clipboard.writeText(shareUrl).then(() => {
+        alert('Ссылка на товар скопирована в буфер обмена');
+      }).catch(err => {
+        console.error('Не удалось скопировать ссылку:', err);
+      });
+    }
+  }
+
+  setupEventListeners() {
+    this.prevBtn.addEventListener('click', () => this.scroll('prev'));
+    this.nextBtn.addEventListener('click', () => this.scroll('next'));
+  }
+
+  scroll(direction) {
+    const scrollAmount = this.itemWidth * this.visibleItems;
+    const maxPosition = (this.products.length - this.visibleItems) * this.itemWidth;
+    
+    if (direction === 'prev') {
+      this.currentPosition = Math.max(0, this.currentPosition - scrollAmount);
+    } else {
+      this.currentPosition = Math.min(maxPosition, this.currentPosition + scrollAmount);
+    }
+    
+    this.updateSliderPosition();
+    this.updateSliderControls();
+  }
+
+  updateSliderPosition() {
+    this.sliderContainer.style.transform = `translateX(-${this.currentPosition}px)`;
+  }
+
+  updateSliderControls() {
+    const maxPosition = (this.products.length - this.visibleItems) * this.itemWidth;
+    this.prevBtn.style.visibility = this.currentPosition <= 0 ? 'hidden' : 'visible';
+    this.nextBtn.style.visibility = this.currentPosition >= maxPosition ? 'hidden' : 'visible';
+  }
+}
+
 // Функция для товаров
 
 function initProductCatalog() {
@@ -594,6 +714,8 @@ function initProductCatalog() {
   });
 
  }
+
+const slider = new ProductSlider(products);
   
   function addToCart() {
     cartCount++;
@@ -1076,93 +1198,3 @@ const Cart = {
   }
 
 };
-
-class ProductSlider {
-  constructor() {
-    this.slider = document.querySelector('.slider-items');
-    this.prevBtn = document.querySelector('.slider-arrow.prev');
-    this.nextBtn = document.querySelector('.slider-arrow.next');
-    this.products = [];
-    this.currentPosition = 0;
-    this.visibleItems = 5;
-
-    this.init();
-  }
-
-  async init() {
-    await this.fetchProducts();
-    this.renderProducts();
-    this.setupEventListeners();
-  }
-
-  async fetchProducts() {
-    // Здесь можно заменить на реальный API запрос
-    this.products = [
-      {id: 1, name: "Удилище Komandor", price: 3905, image: "images/udilishe-1.jpg"},
-      {id: 2, name: "Фидерное удилище", price: 1999, image: "images/udilishe-2.jpg"},
-      {id: 3, name: "Матчевое удилище", price: 2915, image: "images/udilishe-3.jpg"},
-      {id: 4, name: "Маховое удилище", price: 2317, image: "images/udilishe-4.jpg"},
-      {id: 5, name: "Карповое удилище", price: 4333, image: "images/udilishe-5.jpg"},
-      {id: 6, name: "Спиннинг Dy nano", price: 2318, image: "images/spin-1.jpg"},
-      {id: 7, name: "Спиннинг SFT Deep", price: 13500, image: "images/spin-2.jpg"},
-      {id: 8, name: "Спиннинг Yin Tai", price: 1253, image: "images/spin-3.jpg"},
-      {id: 9, name: "Спиннинг Dy PREMIER", price: 1517, image: "images/spin-4.jpg"},
-      {id: 10, name: "Спиннинг WFT Oceanic", price: 4250, image: "images/spin-5.jpg"}
-    ];
-  }
-
-  renderProducts() {
-    const sliderItems = this.products.map(product => `
-      <div class="slider-item" data-id="${product.id}">
-        <img src="${product.image}" alt="${product.name}" style="width:100%; height:120px; object-fit:cover;">
-        <h4>${product.name}</h4>
-        <p>${product.price} руб.</p>
-        <button class="add-to-cart-btn">В корзину</button>
-      </div>
-    `).join('');
-
-    this.slider.innerHTML = sliderItems;
-    this.updateSliderControls();
-  }
-
-  setupEventListeners() {
-    this.prevBtn.addEventListener('click', () => this.scroll('prev'));
-    this.nextBtn.addEventListener('click', () => this.scroll('next'));
-    
-    this.slider.addEventListener('click', (e) => {
-      if (e.target.classList.contains('add-to-cart-btn')) {
-        const productId = parseInt(e.target.closest('.slider-item').dataset.id);
-        const product = this.products.find(p => p.id === productId);
-        if (product) {
-          Cart.addProduct(product);
-        }
-      }
-    });
-  }
-
-  scroll(direction) {
-    const itemWidth = this.slider.children[0].offsetWidth + 15; // ширина + gap
-    const maxPosition = (this.products.length - this.visibleItems) * itemWidth;
-    
-    if (direction === 'prev') {
-      this.currentPosition = Math.max(0, this.currentPosition - (itemWidth * this.visibleItems));
-    } else {
-      this.currentPosition = Math.min(maxPosition, this.currentPosition + (itemWidth * this.visibleItems));
-    }
-    
-    this.slider.scrollTo({
-      left: this.currentPosition,
-      behavior: 'smooth'
-    });
-    
-    this.updateSliderControls();
-  }
-
-  updateSliderControls() {
-    const itemWidth = this.slider.children[0]?.offsetWidth + 15 || 0;
-    const maxPosition = (this.products.length - this.visibleItems) * itemWidth;
-    
-    this.prevBtn.style.visibility = this.currentPosition <= 0 ? 'hidden' : 'visible';
-    this.nextBtn.style.visibility = this.currentPosition >= maxPosition ? 'hidden' : 'visible';
-  }
-}

@@ -2177,29 +2177,23 @@ button:active {
 }
 
 .cart-slider {
-  display: flex;
-  align-items: center;
-  gap: 15px;
   position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .slider-items {
   display: flex;
-  gap: 15px;
-  overflow: hidden;
-  width: 100%;
-  scroll-behavior: smooth;
+  transition: transform 0.3s ease;
+  will-change: transform;
   .product {
 	min-width: 264px;
   }
 }
 
 .slider-item {
-  min-width: calc(20% - 12px);
-  border: 1px solid #eee;
-  padding: 15px;
-  border-radius: 8px;
-  transition: transform 0.3s;
+  flex: 0 0 auto;
+  padding: 0 10px;
 }
 
 .slider-item:hover {
@@ -2208,17 +2202,19 @@ button:active {
 }
 
 .slider-arrow {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(255,255,255,0.7);
+  border: none;
   width: 40px;
   height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  font-size: 20px;
-  flex-shrink: 0;
 }
 
 .slider-arrow:hover {

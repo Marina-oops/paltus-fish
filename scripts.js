@@ -867,10 +867,12 @@ function showThankYouFeedbackModal() {
 function initSearch() {
   const searchInput = document.querySelector('.search-input');
   const searchIcon = document.querySelector('.search-icon');
+  const searchForm = document.querySelector('.search-form');
 
   if (!searchInput || !searchIcon) return;
 
   const handleSearch = () => {
+    e.preventDefault();
     const searchTerm = searchInput.value.trim();
     if (searchTerm) {
       localStorage.setItem('searchQuery', searchTerm);
@@ -878,15 +880,12 @@ function initSearch() {
     }
   };
 
-  searchInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') handleSearch();
-  });
-
-   searchInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === 'Go' || e.key === 'Search' || e.keyCode === 13 || e.keyCode === 10 || e.keyCode === 100) {
-      handleSearch();
-    }
-  });
+  if (searchForm) {
+    searchForm.addEventListener('submit', handleSearch);
+  } else {
+    searchInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') handleSearch(e);
+    });
 
   searchIcon.addEventListener('click', handleSearch);
 }

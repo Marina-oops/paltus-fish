@@ -908,35 +908,7 @@ const Cart = {
     const cartData = JSON.parse(localStorage.getItem('cart')) || {};
     return cartData.discount || null;
   }
-};
-
-// Инициализация обработчика промокода
-document.addEventListener('DOMContentLoaded', () => {
-  const promoForm = document.querySelector('.promokod');
   
-  if (promoForm) {
-    promoForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const promoInput = document.getElementById('promo-input');
-      const promoCode = promoInput.value.trim().toUpperCase();
-      
-      if (!promoCode) {
-        Cart.showNotification('Введите промокод');
-        return;
-      }
-      
-      if (Cart.applyPromoCode(promoCode)) {
-        Cart.updateUI();
-        promoInput.value = '';
-      } else {
-        Cart.showNotification('Неверный промокод');
-      }
-    });
-  }
- Cart.init();
-});
-
   // Отрисовка товаров в корзине
   renderCartItems() {
     if (!this.elements.cartItemsContainer) return;
@@ -998,5 +970,32 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-  
+
 };
+
+// Инициализация обработчика промокода
+document.addEventListener('DOMContentLoaded', () => {
+  const promoForm = document.querySelector('.promokod');
+  
+  if (promoForm) {
+    promoForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const promoInput = document.getElementById('promo-input');
+      const promoCode = promoInput.value.trim().toUpperCase();
+      
+      if (!promoCode) {
+        Cart.showNotification('Введите промокод');
+        return;
+      }
+      
+      if (Cart.applyPromoCode(promoCode)) {
+        Cart.updateUI();
+        promoInput.value = '';
+      } else {
+        Cart.showNotification('Неверный промокод');
+      }
+    });
+  }
+ Cart.init();
+});

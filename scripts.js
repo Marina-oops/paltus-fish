@@ -124,9 +124,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initStars();
   initClip();
   initSliders();
-  initProductCatalog();
   initSearch();
   Cart.init();
+  initProductCatalog();
   Cart.updateUI();
   if (document.querySelector('.cart-slider')) {
     new ProductSlider(PRODUCTS);
@@ -521,12 +521,10 @@ function showProductModal(product) {
 // Функция для товаров
 
 function initProductCatalog() {
-  let cartCount = 0;
   let currentCategory = "УДИЛИЩА";
   let selectedSubcategories = new Set();
   let sortAsc = true;
 
-  const cartCounter = document.getElementById('cart-count');
   const productContainer = document.querySelector('.details-grid-catalog-2');
   const categoryElements = document.querySelectorAll('.category-names');
   const filterButton = document.querySelector('.filter');

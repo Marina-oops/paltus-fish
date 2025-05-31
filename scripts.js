@@ -822,6 +822,7 @@ const Cart = {
       });
     }
     
+    this.recalculateDiscount();
     this.saveCartState();
     this.updateUI();
   },
@@ -863,7 +864,15 @@ const Cart = {
   // Получение текущей скидки
   getDiscount() {
     const cartData = JSON.parse(localStorage.getItem('cart')) || {};
-    return cartData.discount || null;
+    if (cartData.discount) {
+      const subtotal = this.calculateSubtotal();
+      return {
+        code: cartData.discount.code,
+        percent: cartData.discount.percent,
+        amount: (subtotal * cartData.discount.percent) / 100
+      };
+    }
+    return null;
   },
 
   removePromoCode() {
@@ -881,6 +890,19 @@ const Cart = {
     const removeBtn = document.querySelector('.promo-remove');
     if (removeBtn) {
       removeBtn.style.display = show ? 'block' : 'none';
+    }
+  },
+  
+  recalculateDiscount() {
+    const cartData = JSON.parse(localStorage.getItem('cart')) || {};
+    const discount = cartData.discount;
+    
+    if (discount) {
+      const subtotal = this.calculateSubtotal();
+      const newDiscountAmount = (subtotal * discount.percent) / 100;
+      
+      cartData.discount.amount = newDiscountAmount;
+      localStorage.setItem('cart', JSON.stringify(cartData));
     }
   },
   
@@ -909,9 +931,10 @@ const Cart = {
       cartData.discount = {
         code: code,
         percent: discountPercent,
-        amount: discountAmount
       };
       localStorage.setItem('cart', JSON.stringify(cartData));
+
+      this.recalculateDiscount();
 
       this.showNotification(`Промокод "${code}" применен! Скидка ${discountPercent}%`);
       

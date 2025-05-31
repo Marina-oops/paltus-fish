@@ -694,15 +694,12 @@ function initProductCatalog() {
 class ProductSlider {
   
   constructor(products = []) {
-    this.products = products || [];
+    this.products = products;
     this.sliderContainer = document.querySelector('.slider-items');
     this.prevBtn = document.querySelector('.slider-arrow.prev');
     this.nextBtn = document.querySelector('.slider-arrow.next');
     this.currentPosition = 0;
     this.visibleItems = 5;
-    this.itemWidth = 0;
-
-    this.initSlider();
 
     if (this.sliderContainer && this.prevBtn && this.nextBtn) {
       this.initSlider();
@@ -712,30 +709,11 @@ class ProductSlider {
   }
 
   initSlider() {
+    if (!this.products.length) return;
 
-    if (!this.products || this.products.length === 0) {
-      console.warn('Нет товаров для отображения в слайдере');
-      return;
-    }
-    
     this.renderProducts();
     this.setupEventListeners();
-    this.calculateItemWidth();
-    this.updateSliderControls();
-    window.addEventListener('resize', () => {
-      this.calculateItemWidth();
-      this.updateSliderPosition();
-    });
-  }
-
-  calculateItemWidth() {
-    if (this.sliderContainer.children.length > 0) {
-      const item = this.sliderContainer.children[0];
-      const style = window.getComputedStyle(item);
-      this.itemWidth = item.offsetWidth + 
-                      parseInt(style.marginLeft) + 
-                      parseInt(style.marginRight);
-    }
+    this.updateSlider();
   }
 
   renderProducts() {
@@ -744,6 +722,7 @@ class ProductSlider {
     this.products.forEach(product => {
       const productDiv = document.createElement('div');
       productDiv.className = 'product';
+      productDiv.style.minWidth = `calc(100% / ${this.visibleItems})`;
       productDiv.innerHTML = `
         <div class="product">
           <div class="block-review">
@@ -795,32 +774,30 @@ class ProductSlider {
   }
 
   setupEventListeners() {
-    this.prevBtn.addEventListener('click', () => this.scroll('prev'));
-    this.nextBtn.addEventListener('click', () => this.scroll('next'));
+    this.prevBtn.addEventListener('click', () => {
+      if (this.currentIndex > 0) {
+        this.currentIndex--;
+        this.updateSlider();
+      }
+    });
+
+    this.nextBtn.addEventListener('click', () => {
+      if (this.currentIndex < this.products.length - this.visibleItems) {
+        this.currentIndex++;
+        this.updateSlider();
+      }
+    });
   }
 
-  scroll(direction) {
-    const scrollAmount = this.itemWidth * this.visibleItems;
-    const maxPosition = (this.products.length - this.visibleItems) * this.itemWidth;
-    
-    if (direction === 'prev') {
-      this.currentPosition = Math.max(0, this.currentPosition - scrollAmount);
-    } else {
-      this.currentPosition = Math.min(maxPosition, this.currentPosition + scrollAmount);
-    }
-    
-    this.updateSliderPosition();
-    this.updateSliderControls();
+  updateSlider() {
+    const itemWidth = 100 / this.visibleItems;
+    this.sliderContainer.style.transform = `translateX(-${this.currentIndex * itemWidth}%)`;
+    this.updateControls();
   }
 
-  updateSliderPosition() {
-    this.sliderContainer.style.transform = `translateX(-${this.currentPosition}px)`;
-  }
-
-  updateSliderControls() {
-    const maxPosition = (this.products.length - this.visibleItems) * this.itemWidth;
-    this.prevBtn.style.visibility = this.currentPosition <= 0 ? 'hidden' : 'visible';
-    this.nextBtn.style.visibility = this.currentPosition >= maxPosition ? 'hidden' : 'visible';
+  updateControls() {
+    this.prevBtn.style.display = this.currentIndex <= 0 ? 'none' : 'block';
+    this.nextBtn.style.display = this.currentIndex >= this.products.length - this.visibleItems ? 'none' : 'block';
   }
 }
 

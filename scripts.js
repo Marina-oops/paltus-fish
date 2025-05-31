@@ -890,7 +890,6 @@ function initSearch() {
 
   searchIcon.addEventListener('click', handleSearch);
   }
-}
 
 function initSearchPage() {
   const urlParams = new URLSearchParams(window.location.search);

@@ -575,30 +575,9 @@ function initProductCatalog() {
       showProductModal(product);
     });
 
-    const addToCartBtn = productDiv.querySelector('.add-to-cart-btn');
-        if (addToCartBtn) {
-            addToCartBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-
-                const productId = parseInt(e.currentTarget.getAttribute('data-id'));
-                const productToAdd = PRODUCTS.find(p => p.id === productId);
-                
-                if (productToAdd) {
-                    Cart.addProduct(productToAdd);
-                    
-                    addToCartBtn.classList.add('added');
-                    setTimeout(() => {
-                        addToCartBtn.classList.remove('added');
-                    }, 1000);
-                    
-                    const originalText = addToCartBtn.textContent;
-                    addToCartBtn.textContent = 'Добавлено!';
-                    setTimeout(() => {
-                        addToCartBtn.textContent = originalText;
-                    }, 1500);
-                }
-            });
-        }
+    productDiv.querySelector('button[data-id]').addEventListener('click', () => {
+        Cart.addProduct(product);
+    });
       
     productDiv.querySelectorAll('.share').forEach(button => {
       button.addEventListener('click', (e) => {

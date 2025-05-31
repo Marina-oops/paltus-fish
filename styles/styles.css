@@ -2180,6 +2180,7 @@ button:active {
   position: relative;
   width: 100%;
   overflow: hidden;
+  padding: 7px;
 }
 
 .slider-items {

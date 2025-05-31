@@ -595,7 +595,11 @@ function initProductCatalog() {
 
  }
 
-const slider = new ProductSlider(products);
+  if (products && products.length > 0) {
+    new ProductSlider(products);
+  } else {
+    console.warn('Не удалось загрузить товары для слайдера');
+  }
   
   function addToCart() {
     cartCount++;
@@ -689,8 +693,8 @@ const slider = new ProductSlider(products);
 
 class ProductSlider {
   
-  constructor(products) {
-    this.products = products;
+  constructor(products = []) {
+    this.products = products || [];
     this.sliderContainer = document.querySelector('.details-grid-catalog-2');
     this.prevBtn = document.querySelector('.slider-arrow.prev');
     this.nextBtn = document.querySelector('.slider-arrow.next');
@@ -699,9 +703,21 @@ class ProductSlider {
     this.itemWidth = 0;
 
     this.initSlider();
+
+    if (this.sliderContainer && this.prevBtn && this.nextBtn) {
+      this.initSlider();
+    } else {
+      console.error('Не найдены необходимые элементы для слайдера');
+    }
   }
 
   initSlider() {
+
+    if (!this.products || this.products.length === 0) {
+      console.warn('Нет товаров для отображения в слайдере');
+      return;
+    }
+    
     this.renderProducts();
     this.setupEventListeners();
     this.calculateItemWidth();

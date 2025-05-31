@@ -740,8 +740,10 @@ const Cart = {
       cartCount: document.getElementById('cart-count'),
       cartItemsContainer: document.getElementById('cart-items'),
       promoInput: document.getElementById('promo-input'),
-      cartTotalPrice: document.querySelector('#cart-total.text-price'),
-      cartTotal: document.getElementById('cart-total.text-total-price')
+      cartSubtotal: document.getElementById('cart-subtotal'),
+      cartDiscount: document.getElementById('cart-discount'),
+      cartPromo: document.getElementById('cart-promo'),
+      cartTotal: document.getElementById('cart-total') 
     };
   },
 
@@ -858,9 +860,9 @@ const Cart = {
 // Применение промокода
   applyPromoCode(promoCode) {
     const validPromoCodes = {
-      'FISH10': 10,    // 10% скидка
-      'FISH20': 20,    // 20% скидка
-      'FISH50': 50     // 50% скидка
+      'FISH10': 10,
+      'FISH20': 20,
+      'FISH50': 50
     };
 
     if (!promoCode) {
@@ -885,12 +887,11 @@ const Cart = {
       localStorage.setItem('cart', JSON.stringify(cartData));
 
       this.showNotification(`Промокод "${code}" применен! Скидка ${discountPercent}%`);
-      this.updateUI();
-      return true;
-
+      
       if (this.elements.promoInput) {
         this.elements.promoInput.value = '';
       }
+      this.updateUI();
       return true;
     }
     
@@ -914,20 +915,19 @@ const Cart = {
     const total = Math.round(subtotal - discountAmount);
 
     // Обновляем суммы в корзине
-    document.querySelectorAll('#cart-total.text-price').forEach(el => {
-      el.textContent = Math.round(subtotal) + ' руб.';
-    });
+     if (this.elements.cartSubtotal) {
+      this.elements.cartSubtotal.textContent = Math.round(subtotal) + ' руб.';
+    }
 
     // Обновляем скидку
-    const discountElement = document.querySelector('.pre-price:nth-child(2) .text-price');
-    const promoElement = document.querySelector('.pre-price:nth-child(3) .text-price');
-    
-    if (discount) {
-      discountElement.textContent = `-${Math.round(discountAmount)} руб.`;
-      promoElement.textContent = discount.code;
-    } else {
-      discountElement.textContent = '0 руб.';
-      promoElement.textContent = '0 руб.';
+    if (this.elements.cartDiscount && this.elements.cartPromo) {
+      if (discount) {
+        this.elements.cartDiscount.textContent = `-${Math.round(discountAmount)} руб.`;
+        this.elements.cartPromo.textContent = discount.code;
+      } else {
+        this.elements.cartDiscount.textContent = '0 руб.';
+        this.elements.cartPromo.textContent = '0 руб.';
+      }
     }
 
     // Обновляем итоговую сумму

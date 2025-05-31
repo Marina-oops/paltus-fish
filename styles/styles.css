@@ -2180,13 +2180,6 @@ button:active {
   position: relative;
   width: 100%;
   overflow: hidden;
-	button {
-	        font-size: 16.5px;
-	        height: 49px;
-	        border-radius: 9px;
-	        max-width: 204px;
-	        width: 100%;
-	}
 }
 
 .slider-items {
@@ -2194,9 +2187,16 @@ button:active {
   transition: transform 0.3s ease;
   will-change: transform;
   gap: 24px;
-  .product {
-	min-width: 264px;
-  }
+	  .product {
+		min-width: 264px;
+	  }
+	button {
+	        font-size: 16.5px;
+	        height: 49px;
+	        border-radius: 9px;
+	        max-width: 204px;
+	        width: 100%;
+	}
 }
 
 .slider-item {

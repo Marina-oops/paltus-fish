@@ -442,6 +442,7 @@ function showProductModal(product) {
     console.error('Модальное окно не найдено');
     return;
   }
+  modal.style.display = 'flex';
 
   // Заполняем данные
   modal.querySelector('#modalTitle').textContent = product.name || 'Без названия';
@@ -489,25 +490,31 @@ function showProductModal(product) {
     modalSlider.innerHTML = '<p>Изображения отсутствуют</p>';
   }
 
-  modal.querySelector('#modalAddToCart').onclick = () => {
-    addToCart(product.id);
-  };
+  const addToCartBtn = modal.querySelector('.modal-actions button');
+  if (addToCartBtn) {
+    addToCartBtn.onclick = () => {
+      Cart.addProduct(product);
+    };
+  }
 
-  modal.querySelector('#modalShare').onclick = () => {
-    const shareUrl = `${window.location.origin}${window.location.pathname}?product=${product.id}`;
-    if (navigator.share) {
-      navigator.share({
-        title: product.name,
-        text: 'Посмотрите этот товар!',
-        url: shareUrl
-      }).catch(err => console.error('Ошибка при попытке поделиться:', err));
-    } else {
-      navigator.clipboard.writeText(shareUrl)
-        .then(() => alert('Ссылка на товар скопирована в буфер обмена'))
-        .catch(err => console.error('Не удалось скопировать ссылку:', err));
-    }
-  };
-
+  const shareBtn = modal.querySelector('.modal-actions .share');
+  if (shareBtn) {
+    shareBtn.onclick = () => {
+      const shareUrl = `${window.location.origin}${window.location.pathname}?product=${product.id}`;
+      if (navigator.share) {
+        navigator.share({
+          title: product.name,
+          text: 'Посмотрите этот товар!',
+          url: shareUrl
+        }).catch(err => console.error('Ошибка при попытке поделиться:', err));
+      } else {
+        navigator.clipboard.writeText(shareUrl)
+          .then(() => alert('Ссылка на товар скопирована в буфер обмена'))
+          .catch(err => console.error('Не удалось скопировать ссылку:', err));
+      }
+    };
+  }  
+    
   modal.style.display = 'flex';
 }
 

@@ -575,9 +575,30 @@ function initProductCatalog() {
       showProductModal(product);
     });
 
-    productDiv.querySelector('button[data-id]').addEventListener('click', () => {
-        Cart.addProduct(product);
-    });
+    const addToCartBtn = productDiv.querySelector('.add-to-cart-btn');
+        if (addToCartBtn) {
+            addToCartBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+
+                const productId = parseInt(e.currentTarget.getAttribute('data-id'));
+                const productToAdd = PRODUCTS.find(p => p.id === productId);
+                
+                if (productToAdd) {
+                    Cart.addProduct(productToAdd);
+                    
+                    addToCartBtn.classList.add('added');
+                    setTimeout(() => {
+                        addToCartBtn.classList.remove('added');
+                    }, 1000);
+                    
+                    const originalText = addToCartBtn.textContent;
+                    addToCartBtn.textContent = 'Добавлено!';
+                    setTimeout(() => {
+                        addToCartBtn.textContent = originalText;
+                    }, 1500);
+                }
+            });
+        }
       
     productDiv.querySelectorAll('.share').forEach(button => {
       button.addEventListener('click', (e) => {
@@ -955,19 +976,23 @@ function updateSearchHeader(count, query) {
   const resultsHeader = document.querySelector('.search-results-header');
   if (resultsHeader) {
     resultsHeader.innerHTML = count > 0 
-      ? `Найдено ${count} товаров по запросу "${query}"`
-      : `По запросу "${query}" ничего не найдено`;
+      ? `Найдено ${count} товаров по запросу &laquo;${query}&raquo;`
+      : `По запросу &laquo;${query}&raquo; ничего не найдено`;
   }
 }
 
 const Cart = {
   items: [],
+  isInitialized: false,
   // Инициализация корзины
   init() {
+    if (this.isInitialized) return;
+      
     this.cacheElements();
     this.bindEvents();
     this.restoreCartState();
     this.updateUI();
+    this.isInitialized = true;
   },
 
   // Кэширование DOM-элементов
@@ -986,9 +1011,12 @@ const Cart = {
 
   // Навешивание обработчиков событий
   bindEvents() {
-    if (this.elements.cartButton) {
-      this.elements.cartButton.addEventListener('click', () => this.goToBasket());
-    }
+    document.querySelectorAll('#cart-button').forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.goToBasket();
+      });
+    });
     
     const promoSubmitBtn = document.querySelector('.promo-submit');
     if (promoSubmitBtn) {
@@ -1062,6 +1090,7 @@ const Cart = {
     this.recalculateDiscount();
     this.saveCartState();
     this.updateUI();
+    this.showAddToCartAnimation();
   },
 
   // Расчет суммы без учета скидки
@@ -1226,6 +1255,16 @@ const Cart = {
     }
   },
 
+  showAddToCartAnimation() {
+    const cartButton = document.getElementById('cart-button');
+    if (cartButton) {
+      cartButton.classList.add('animate-bounce');
+      setTimeout(() => {
+        cartButton.classList.remove('animate-bounce');
+      }, 1000);
+    }
+  },
+    
   // Метод для отображения уведомлений
   showNotification(message) {
     const notification = document.createElement('div');

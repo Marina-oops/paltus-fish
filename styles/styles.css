@@ -2186,6 +2186,7 @@ button:active {
   display: flex;
   transition: transform 0.3s ease;
   will-change: transform;
+  gap: 24px;
   .product {
 	min-width: 264px;
   }
@@ -2206,7 +2207,7 @@ button:active {
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  background: rgba(255,255,255,0.7);
+  background: #2a3176;
   border: none;
   width: 40px;
   height: 40px;
@@ -2217,8 +2218,16 @@ button:active {
   justify-content: center;
 }
 
+.slider-arrow.prev {
+  left: 10px;
+}
+
+.slider-arrow.next {
+  right: 10px;
+}
+
 .slider-arrow:hover {
-  background: #f5f5f5;
+  background: #6CC276;
 }
 
 @media (max-width: 1512px) {

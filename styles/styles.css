@@ -2180,6 +2180,13 @@ button:active {
   position: relative;
   width: 100%;
   overflow: hidden;
+	.button {
+	        font-size: 16.5px;
+	        height: 49px;
+	        border-radius: 9px;
+	        max-width: 204px;
+	        width: 100%;
+	}
 }
 
 .slider-items {

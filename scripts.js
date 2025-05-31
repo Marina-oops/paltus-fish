@@ -595,8 +595,10 @@ function initProductCatalog() {
 
  }
 
-  if (products && products.length > 0) {
-    new ProductSlider(products);
+  if (window.location.pathname.includes('basket.html')) {
+    if (products && products.length > 0) {
+      new ProductSlider(products);
+    }
   }
   
   function addToCart() {

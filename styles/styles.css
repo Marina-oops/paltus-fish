@@ -2189,6 +2189,9 @@ button:active {
   overflow: hidden;
   width: 100%;
   scroll-behavior: smooth;
+  .product {
+	min-width: 264px;
+  }
 }
 
 .slider-item {

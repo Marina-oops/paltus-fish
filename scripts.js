@@ -597,8 +597,6 @@ function initProductCatalog() {
 
   if (products && products.length > 0) {
     new ProductSlider(products);
-  } else {
-    console.warn('Не удалось загрузить товары для слайдера');
   }
   
   function addToCart() {

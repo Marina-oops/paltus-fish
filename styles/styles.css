@@ -278,6 +278,10 @@ img {
 	top: 1918px;
 }
 
+.fish_desktop_aside_4 {
+	top: 2578px;
+}
+
 @media (max-width: 1512px) {
   .fish_desktop_top {
      width: 464px;
@@ -2602,6 +2606,46 @@ button:active {
 	}
 }
 
+.about-us-container,
+.content-specialists,
+.top-specialists-places,
+.top-specialists-products {
+	display: flex;
+	flex-direction: row;
+}
+
+.top-specialists-places {
+	justify-content: space-between;
+}
+
+.places {
+  border: 2px solid #222b66;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 186px;
+  position: relative;
+  height: 50px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.places-name {
+	font-size: 16px;
+}
+
+.about-us-container {
+	margin-bottom: 54px;
+}
+
+.specialists-container {
+    border: 2px solid #2a3176;
+    border-radius: 28px;
+    padding: 72px 48px;
+    color: #4f4f4f;
+    font-size: 20px;
+    margin-bottom: 54px;
+}
 
 @media (max-width: 1512px) {
 	.modal {

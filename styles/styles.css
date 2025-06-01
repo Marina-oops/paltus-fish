@@ -2635,16 +2635,37 @@ button:active {
 }
 
 .about-us-container {
+	margin-top: 21px;
 	margin-bottom: 54px;
+}
+.row-1 {
+	display:flex;
+	max-width: 698px;
 }
 
 .specialists-container {
     border: 2px solid #2a3176;
     border-radius: 28px;
-    padding: 72px 48px;
+    padding: 64px 48px;
     color: #4f4f4f;
     font-size: 20px;
     margin-bottom: 54px;
+}
+.header-specialists {
+    display: flex;
+    justify-content: space-between;
+}
+.arrow-left {
+ 	margin-right: 10px;
+}
+.about-specialists {
+    display: flex;
+    flex-direction: column;
+    max-width: 592px;
+}
+.cart-specialists {
+	max-width: 466px;
+	gap: 24px;
 }
 
 @media (max-width: 1512px) {

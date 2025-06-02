@@ -2639,13 +2639,13 @@ hr {
 
 .top-specialists-products-container {
 	margin-top: 32px;
-	margin-bottom: 54px;
+	margin-bottom: 48px;
 	.name_product {
 	    font-size: 16px;
 	}
 	.cost {
 	    font-size: 18px;
-	    margin-bottom: 10px;
+	    margin-bottom: 8px;
 	}
 	.block-review:hover {
 		transform: scale(1.05);
@@ -2673,6 +2673,8 @@ hr {
 
 .places-name {
 	font-size: 16px;
+	margin-top: 10px;
+    	line-height: 120%;
 }
 
 .about-us-container {

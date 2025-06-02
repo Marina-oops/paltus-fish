@@ -2606,7 +2606,7 @@ button:active {
 	}
 }
 
-.about-us-container,
+.text-about-us,
 .content-specialists,
 .top-specialists-places,
 .top-specialists-products {
@@ -2637,6 +2637,8 @@ button:active {
 .about-us-container {
 	margin-top: 21px;
 	margin-bottom: 54px;
+	flex-direction: column;
+	display:flex;
 }
 .row-1 {
 	display:flex;
@@ -2647,10 +2649,6 @@ button:active {
 .row-2 {
     display: flex;
     max-width: 554px;
-}
-.text-about-us {
-	display:flex;
-	flex-direction: column;
 }
 .specialists-container {
     border: 2px solid #2a3176;

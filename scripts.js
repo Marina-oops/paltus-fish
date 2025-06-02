@@ -720,10 +720,6 @@ function initSpecialistsSlider() {
 
   let currentSlide = 0;
   const slideCount = slides.length;
-    
-  slides.forEach((slide, index) => {
-    slide.style.left = `${index * 100}%`;
-  });
 
   const showSlide = (index) => {
     currentSlide = index;

@@ -2626,6 +2626,13 @@ hr {
 	justify-content: space-between;
 }
 
+.content-specialists {
+	gap: 24px;
+	p {
+		font-size: 20px;
+	}
+}
+
 .places {
   border: 2px solid #222b66;
   border-radius: 10px;
@@ -2680,12 +2687,8 @@ hr {
 }
 .cart-specialists {
 	max-width: 466px;
-	gap: 24px;
 	h2 {
 	 	margin-bottom: 8px;
-	}
-	p {
-		font-size: 20px;
 	}
 }
 

@@ -2636,6 +2636,23 @@ hr {
 .top-specialists-products-container {
 	margin-top: 32px;
 	margin-bottom: 54px;
+	.name_product {
+	    font-size: 16px;
+	}
+	.cost {
+	    font-size: 18px;
+	    margin-bottom: 10px;
+	}
+	.block-review:hover {
+		transform: scale(1.05);
+		cursor: pointer;
+	}
+	button {
+	        font-size: 18px;
+	        height: 52px;
+	        border-radius: 10px;
+	        width: 100%;
+	}
 }
 
 .places {
@@ -2674,7 +2691,6 @@ hr {
     border: 2px solid #2a3176;
     border-radius: 28px;
     padding: 64px 48px;
-    color: #4f4f4f;
     font-size: 20px;
     margin-bottom: 54px;
 }

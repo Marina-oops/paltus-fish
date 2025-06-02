@@ -713,7 +713,7 @@ function renderFeaturedProducts() {
   const container = document.querySelector('.top-specialists-products');
   if (!container) return;
 
-  const featuredProductIds = [1, 3, 5];
+  const featuredProductIds = [1, 9, 10];
   
   const featuredProducts = PRODUCTS.filter(product => 
     featuredProductIds.includes(product.id)

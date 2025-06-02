@@ -125,6 +125,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initClip();
   initSliders();
   initSearch();
+  if (window.location.pathname.includes('about-us.html')) {
+       initSpecialistsSlider();
+  }
   Cart.init();
   initProductCatalog();
   Cart.updateUI();
@@ -133,9 +136,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   if (window.location.pathname.includes('search.html')) {
       initSearchPage();
-  }
-  if (window.location.pathname.includes('about_us.html')) {
-       renderFeaturedProducts();
   }
 });
 
@@ -709,23 +709,54 @@ function initProductCatalog() {
 
 }
 
-function renderFeaturedProducts() {
-  const container = document.querySelector('.top-specialists-products');
-  if (!container) return;
-
-  const featuredProductIds = [1, 9, 10];
+function initSpecialistsSlider() {
+  const slider = document.querySelector('.slider-specialists');
+  const slides = document.querySelectorAll('.content-specialists');
+  const prevBtn = document.querySelector('.arrow-left');
+  const nextBtn = document.querySelector('.arrow-right');
   
-  const featuredProducts = PRODUCTS.filter(product => 
-    featuredProductIds.includes(product.id)
-  );
+  if (!slider || !slides.length || !prevBtn || !nextBtn) return;
 
-  container.innerHTML = '';
+  const specialistsProducts = {
+    0: [1, 9, 10],
+    1: [2, 4, 6], 
+    2: [7, 8, 9] 
+  };
+  
+  let currentSlide = 0;
+  const slideCount = slides.length;
 
-  featuredProducts.forEach(product => {
-    const productDiv = document.createElement('div');
-    productDiv.className = 'product';
-    productDiv.innerHTML = `
-      <div class="product">
+  const showPrevSlide = () => {
+    currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+    updateSlider();
+    renderProductsForSpecialist(currentSlide);
+  };
+
+  const showNextSlide = () => {
+    currentSlide = (currentSlide + 1) % slideCount;
+    updateSlider();
+    renderProductsForSpecialist(currentSlide);
+  };
+
+  const updateSlider = () => {
+    const offset = -currentSlide * 100;
+    slider.style.transform = `translateX(${offset}%)`;
+  };
+
+  const renderProductsForSpecialist = (specialistIndex) => {
+    const container = slides[specialistIndex].querySelector('.top-specialists-products');
+    if (!container) return;
+    
+    const productIds = specialistsProducts[specialistIndex] || [];
+    const products = PRODUCTS.filter(p => productIds.includes(p.id));
+    
+    container.innerHTML = '';
+    
+    products.forEach(product => {
+      const productDiv = document.createElement('div');
+      productDiv.className = 'product';
+      productDiv.innerHTML = `
+        <div class="product">
         <div class="block-review">
           <img src="${product.image}" alt="${product.name}">
         </div>
@@ -750,7 +781,34 @@ function renderFeaturedProducts() {
         btn.textContent = 'В корзину';
       }, 1000);
     });
-  });
+   });
+  };
+
+  const setupTouchEvents = () => {
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    slider.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, {passive: true});
+    
+    slider.addEventListener('touchend', e => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, {passive: true});
+    
+    const handleSwipe = () => {
+      const diff = touchStartX - touchEndX;
+      if (diff > 50) showNextSlide();
+      if (diff < -50) showPrevSlide();
+    }
+  };
+
+  prevBtn.addEventListener('click', showPrevSlide);
+  nextBtn.addEventListener('click', showNextSlide);
+  setupTouchEvents();
+  updateSlider();
+  renderProductsForSpecialist(0);
 }
 
 class ProductSlider {
@@ -1000,6 +1058,11 @@ function renderSearchResults(PRODUCTS, container) {
 
       productDiv.querySelector('button[data-id]').addEventListener('click', () => {
         Cart.addProduct(product);
+         const btn = productDiv.querySelector('button[data-id]');
+          btn.textContent = 'Добавлено!';
+          setTimeout(() => {
+            btn.textContent = 'В корзину';
+          }, 1000);
       });
 
       productDiv.querySelector('.share').addEventListener('click', (e) => {

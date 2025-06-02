@@ -736,7 +736,7 @@ function initSpecialistsSlider() {
     
     const productIds = [
       [2, 4, 6],
-      [11, 5, 12],
+      [11, 6, 12],
       [1, 9, 10]
     ][specialistIndex] || [];
       

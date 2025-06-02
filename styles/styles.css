@@ -2613,6 +2613,12 @@ hr {
 	}
 }
 
+.slider-specialists {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
 .text-about-us,
 .content-specialists,
 .top-specialists-places,

@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initClip();
   initSliders();
   initSearch();
-  if (window.location.pathname.includes('about-us.html')) {
+  if (window.location.pathname.includes('about_us.html')) {
        initSpecialistsSlider();
   }
   Cart.init();

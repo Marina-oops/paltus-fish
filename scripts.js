@@ -721,24 +721,29 @@ function initSpecialistsSlider() {
   let currentSlide = 0;
   const slideCount = slides.length;
 
+  slider.style.position = 'relative';
+  slider.style.overflow = 'hidden';
+  slider.style.width = '100%';
+    
   slides.forEach((slide, index) => {
-    slide.style.display = index === 0 ? 'block' : 'none';
+    slide.style.position = 'absolute';
+    slide.style.width = '100%';
+    slide.style.left = `${index * 100}%`;
+    slide.style.transition = 'transform 0.5s ease';
   });
 
   const showSlide = (index) => {
-    slides.forEach((slide, i) => {
-      slide.style.display = i === index ? 'block' : 'none';
-    });
     currentSlide = index;
+    const offset = -currentSlide * 100;
+    slider.style.transform = `translateX(${offset}%)`;
     
     renderProductsForSpecialist(index);
   };
     
   const renderProductsForSpecialist = (specialistIndex) => {
     const container = slides[specialistIndex].querySelector('.top-specialists-products');
-    if (!container) return;
     
-     if (container.dataset.loaded === 'true') return;
+     if (!container || container.dataset.loaded === 'true') return;
     
     const productIds = [
       [1, 9, 10], 
@@ -747,6 +752,8 @@ function initSpecialistsSlider() {
     ][specialistIndex] || [];
       
     const products = PRODUCTS.filter(p => productIds.includes(p.id));
+
+    if (!products.length) return;
     
     container.innerHTML = '';
     
@@ -794,6 +801,10 @@ function initSpecialistsSlider() {
   });
     
     showSlide(0);
+    
+    window.addEventListener('resize', () => {
+    showSlide(currentSlide);
+  });
 }
 
 class ProductSlider {

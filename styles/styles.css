@@ -1205,6 +1205,13 @@ button:active {
 	  margin-left: 30px;
 }
 
+hr {
+    height: 2px;
+    background-color: #2a3176;
+    margin-top: 36px;
+    margin-bottom: 8px;
+}
+
 .line-product {
 	  content: "";
 	  display: flex;
@@ -2674,6 +2681,12 @@ button:active {
 .cart-specialists {
 	max-width: 466px;
 	gap: 24px;
+	h2 {
+	 	margin-bottom: 8px;
+	}
+	p {
+		font-size: 20px;
+	}
 }
 
 @media (max-width: 1512px) {

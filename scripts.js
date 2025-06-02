@@ -710,6 +710,7 @@ function initProductCatalog() {
 }
 
 function initSpecialistsSlider() {
+    
   const slider = document.querySelector('.slider-specialists');
   const slides = document.querySelectorAll('.content-specialists');
   const prevBtn = document.querySelector('.arrow-left');
@@ -717,37 +718,34 @@ function initSpecialistsSlider() {
   
   if (!slider || !slides.length || !prevBtn || !nextBtn) return;
 
-  const specialistsProducts = {
-    0: [1, 9, 10],
-    1: [2, 4, 6], 
-    2: [7, 8, 9] 
-  };
-  
   let currentSlide = 0;
   const slideCount = slides.length;
 
-  const showPrevSlide = () => {
-    currentSlide = (currentSlide - 1 + slideCount) % slideCount;
-    updateSlider();
-    renderProductsForSpecialist(currentSlide);
-  };
+  slides.forEach((slide, index) => {
+    slide.style.display = index === 0 ? 'block' : 'none';
+  });
 
-  const showNextSlide = () => {
-    currentSlide = (currentSlide + 1) % slideCount;
-    updateSlider();
-    renderProductsForSpecialist(currentSlide);
+  const showSlide = (index) => {
+    slides.forEach((slide, i) => {
+      slide.style.display = i === index ? 'block' : 'none';
+    });
+    currentSlide = index;
+    
+    renderProductsForSpecialist(index);
   };
-
-  const updateSlider = () => {
-    const offset = -currentSlide * 100;
-    slider.style.transform = `translateX(${offset}%)`;
-  };
-
+    
   const renderProductsForSpecialist = (specialistIndex) => {
     const container = slides[specialistIndex].querySelector('.top-specialists-products');
     if (!container) return;
     
-    const productIds = specialistsProducts[specialistIndex] || [];
+     if (container.dataset.loaded === 'true') return;
+    
+    const productIds = [
+      [1, 9, 10], 
+      [2, 4, 6],
+      [7, 8, 5]
+    ][specialistIndex] || [];
+      
     const products = PRODUCTS.filter(p => productIds.includes(p.id));
     
     container.innerHTML = '';
@@ -782,33 +780,20 @@ function initSpecialistsSlider() {
       }, 1000);
     });
    });
+    container.dataset.loaded = 'true';
   };
+    
+   prevBtn.addEventListener('click', () => {
+    const newIndex = (currentSlide - 1 + slideCount) % slideCount;
+    showSlide(newIndex);
+  });
 
-  const setupTouchEvents = () => {
-    let touchStartX = 0;
-    let touchEndX = 0;
+  nextBtn.addEventListener('click', () => {
+    const newIndex = (currentSlide + 1) % slideCount;
+    showSlide(newIndex);
+  });
     
-    slider.addEventListener('touchstart', e => {
-      touchStartX = e.changedTouches[0].screenX;
-    }, {passive: true});
-    
-    slider.addEventListener('touchend', e => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
-    }, {passive: true});
-    
-    const handleSwipe = () => {
-      const diff = touchStartX - touchEndX;
-      if (diff > 50) showNextSlide();
-      if (diff < -50) showPrevSlide();
-    }
-  };
-
-  prevBtn.addEventListener('click', showPrevSlide);
-  nextBtn.addEventListener('click', showNextSlide);
-  setupTouchEvents();
-  updateSlider();
-  renderProductsForSpecialist(0);
+    showSlide(0);
 }
 
 class ProductSlider {

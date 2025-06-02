@@ -2614,6 +2614,7 @@ button:active {
 	flex-direction: row;
 }
 
+.text-about-us,
 .top-specialists-places {
 	justify-content: space-between;
 }

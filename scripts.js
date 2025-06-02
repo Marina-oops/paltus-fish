@@ -134,6 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.location.pathname.includes('search.html')) {
       initSearchPage();
   }
+  if (window.location.pathname.includes('about_us.html')) {
+       renderFeaturedProducts();
+  }
 });
 
 // Функция для формы "contact-form"
@@ -698,6 +701,57 @@ function initProductCatalog() {
 
   renderProducts();
 
+}
+
+function renderFeaturedProducts() {
+  const container = document.querySelector('.top-specialists-products');
+  if (!container) return;
+
+  const featuredProductIds = [1, 3, 5];
+  
+  const featuredProducts = PRODUCTS.filter(product => 
+    featuredProductIds.includes(product.id)
+  );
+
+  container.innerHTML = '';
+
+  featuredProducts.forEach(product => {
+    const productDiv = document.createElement('div');
+    productDiv.className = 'product';
+    productDiv.innerHTML = `
+      <div class="product">
+        <div class="block-review">
+          <img src="${product.image}" alt="${product.name}">
+        </div>
+        <div class="line-product"></div>
+        <div class="name_product">${product.name}</div>
+        <div class="cost">${product.price} руб.</div>
+        <div class="buttons_products">
+          <button type="button" data-id="${product.id}">Добавить в корзину</button>
+          <div class="share" type="button" data-id="${product.id}"></div>
+        </div>
+      </div>
+    `;
+    container.appendChild(productDiv);
+
+    productDiv.querySelector('.block-review').addEventListener('click', () => {
+      showProductModal(product);
+    });
+
+    productDiv.querySelector('button[data-id]').addEventListener('click', () => {
+      Cart.addProduct(product);
+      
+      const btn = productDiv.querySelector('button[data-id]');
+      btn.textContent = 'Добавлено!';
+      setTimeout(() => {
+        btn.textContent = 'Добавить в корзину';
+      }, 1000);
+    });
+
+      productDiv.querySelector('.share').addEventListener('click', (e) => {
+        this.handleShareClick(e, product.id);
+      }); 
+  });
 }
 
 class ProductSlider {

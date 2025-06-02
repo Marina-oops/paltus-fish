@@ -735,9 +735,9 @@ function initSpecialistsSlider() {
      if (!container || container.dataset.loaded === 'true') return;
     
     const productIds = [
-      [1, 9, 10], 
       [2, 4, 6],
-      [11, 8, 12]
+      [11, 5, 12],
+      [1, 9, 10]
     ][specialistIndex] || [];
       
     const products = PRODUCTS.filter(p => productIds.includes(p.id));

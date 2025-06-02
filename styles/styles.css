@@ -2647,6 +2647,9 @@ hr {
 	p {
 		font-size: 20px;
 	}
+	h2 {
+		letter-spacing: -0.8px;
+	}
 }
 
 .top-specialists-products {

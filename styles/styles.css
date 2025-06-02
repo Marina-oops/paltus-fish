@@ -160,7 +160,7 @@ img {
   display: block;
   width: 447px;
   height: 126px;
-  background-image: url("../images/logo_32.png");
+  background-image: url("../images/logo.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center left;
@@ -197,7 +197,7 @@ img {
 
 @media (max-width: 1024px) {
   .logo-header {
-    background-image: url("../images/logo_symbol.png");
+    background-image: url("../images/logo_32.png");
     width: 76px;
     height: 65px;
     margin-left: 0px;

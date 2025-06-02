@@ -2633,6 +2633,11 @@ hr {
 	}
 }
 
+.top-specialists-products-container {
+	margin-top: 32px;
+	margin-bottom: 54px;
+}
+
 .places {
   border: 2px solid #222b66;
   border-radius: 10px;

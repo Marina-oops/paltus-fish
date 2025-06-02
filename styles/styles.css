@@ -2636,13 +2636,21 @@ button:active {
 
 .about-us-container {
 	margin-top: 21px;
-	margin-bottom: 54px;
+	margin-bottom: 26px;
 }
 .row-1 {
 	display:flex;
 	max-width: 698px;
+	width: 100%;
 }
-
+.row-2 {
+    display: flex;
+    max-width: 554px;
+    margin-bottom: 26px;
+}
+.text-about-us {
+	display:flex;
+}
 .specialists-container {
     border: 2px solid #2a3176;
     border-radius: 28px;

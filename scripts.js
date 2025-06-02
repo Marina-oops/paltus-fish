@@ -720,16 +720,9 @@ function initSpecialistsSlider() {
 
   let currentSlide = 0;
   const slideCount = slides.length;
-
-  slider.style.position = 'relative';
-  slider.style.overflow = 'hidden';
-  slider.style.width = '100%';
     
   slides.forEach((slide, index) => {
-    slide.style.position = 'absolute';
-    slide.style.width = '100%';
     slide.style.left = `${index * 100}%`;
-    slide.style.transition = 'transform 0.5s ease';
   });
 
   const showSlide = (index) => {

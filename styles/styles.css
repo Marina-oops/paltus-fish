@@ -2614,9 +2614,9 @@ hr {
 }
 
 .slider-specialists {
-  display: flex;
-  transition: transform 0.5s ease;
-  width: 100%;
+      position: relative;
+      width: 100%;
+      overflow: hidden;
 }
 
 .text-about-us,
@@ -2634,8 +2634,8 @@ hr {
 
 .content-specialists {
 	gap: 24px;
-	flex: 0 0 100%;
-  	width: 100%;
+	width: 100%;
+     	transition: transform 0.5s ease;
 	p {
 		font-size: 20px;
 	}
@@ -2711,6 +2711,15 @@ hr {
 .header-specialists {
     display: flex;
     justify-content: space-between;
+}
+.arrow-left, 
+.arrow-right {
+      cursor: pointer;
+      transition: transform 0.3s;
+}
+.arrow-left:hover, 
+.arrow-right:hover {
+      transform: scale(1.1);
 }
 .arrow-left {
  	margin-right: 10px;

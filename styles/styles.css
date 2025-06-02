@@ -198,8 +198,8 @@ img {
 @media (max-width: 1024px) {
   .logo-header {
     background-image: url("../images/logo_32.png");
-    width: 76px;
-    height: 65px;
+    width: 57px;
+    height: 57px;
     margin-left: 0px;
   }
   
@@ -407,15 +407,6 @@ img {
         box-sizing: border-box;
    }
 
-    .top-header {
-        width: 100%;
-	justify-content: center;
-    }
-    
-     #hamburger-button { 
-	margin-right: auto;
-      }
-	
      #cart-button {
        margin-left: auto;
      }
@@ -448,16 +439,7 @@ img {
         width: 100%;
         box-sizing: border-box;
    }
-
-    .top-header {
-        width: 100%;
-	justify-content: center;
-    }
     
-     #hamburger-button { 
-	margin-right: auto;
-      }
-	
      #cart-button {
        margin-left: auto;
      }
@@ -554,7 +536,7 @@ button:active {
 }
 
 #hamburger-button {
-    width: 56px;
+    width: 75px;
     height: 42px;
     margin-left:-2px;
     cursor: pointer;

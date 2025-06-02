@@ -732,9 +732,7 @@ function renderFeaturedProducts() {
         <div class="line-product"></div>
         <div class="name_product">${product.name}</div>
         <div class="cost">${product.price} руб.</div>
-        <div class="buttons_products">
-          <button type="button" data-id="${product.id}">В корзину</button>
-        </div>
+        <button type="button" data-id="${product.id}">В корзину</button>
       </div>
     `;
     container.appendChild(productDiv);

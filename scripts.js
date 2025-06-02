@@ -578,6 +578,12 @@ function initProductCatalog() {
 
     productDiv.querySelector('button[data-id]').addEventListener('click', () => {
         Cart.addProduct(product);
+
+        const btn = productDiv.querySelector('button[data-id]');
+              btn.textContent = 'Добавлено!';
+              setTimeout(() => {
+                btn.textContent = 'Добавлено в корзину';
+              }, 1000);
     });
       
     productDiv.querySelectorAll('.share').forEach(button => {
@@ -727,8 +733,7 @@ function renderFeaturedProducts() {
         <div class="name_product">${product.name}</div>
         <div class="cost">${product.price} руб.</div>
         <div class="buttons_products">
-          <button type="button" data-id="${product.id}">Добавить в корзину</button>
-          <div class="share" type="button" data-id="${product.id}"></div>
+          <button type="button" data-id="${product.id}">В корзину</button>
         </div>
       </div>
     `;
@@ -744,13 +749,9 @@ function renderFeaturedProducts() {
       const btn = productDiv.querySelector('button[data-id]');
       btn.textContent = 'Добавлено!';
       setTimeout(() => {
-        btn.textContent = 'Добавить в корзину';
+        btn.textContent = 'В корзину';
       }, 1000);
     });
-
-      productDiv.querySelector('.share').addEventListener('click', (e) => {
-        this.handleShareClick(e, product.id);
-      }); 
   });
 }
 
@@ -817,6 +818,12 @@ class ProductSlider {
 
       productDiv.querySelector('button[data-id]').addEventListener('click', () => {
         Cart.addProduct(product);
+
+          const btn = productDiv.querySelector('button[data-id]');
+              btn.textContent = 'Добавлено!';
+              setTimeout(() => {
+                btn.textContent = 'Добавлено в корзину';
+              }, 1000);
       });
 
       productDiv.querySelector('.share').addEventListener('click', (e) => {
@@ -1348,7 +1355,6 @@ const Cart = {
       this.elements.cartItemsContainer.appendChild(itemElement);
     });
     
-    // Навешиваем обработчики для кнопок
     document.querySelectorAll('.quantity-btn.minus').forEach(btn => {
       btn.addEventListener('click', (e) => {
         const id = parseInt(e.target.getAttribute('data-id'));

@@ -527,6 +527,9 @@ function initProductCatalog() {
   let currentCategory = "УДИЛИЩА";
   let selectedSubcategories = new Set();
   let sortAsc = true;
+  let minPrice = 0;
+  let maxPrice = 10000;
+  let isPriceFilterVisible = false;
 
   const productContainer = document.querySelector('.details-grid-catalog-2');
   const categoryElements = document.querySelectorAll('.category-names');
@@ -550,6 +553,7 @@ function initProductCatalog() {
       filtered = filtered.filter(p => selectedSubcategories.has(p.subcategory));
     }
 
+    filtered = filtered.filter(p => p.price >= minPrice && p.price <= maxPrice);
     filtered.sort((a, b) => sortAsc ? a.price - b.price : b.price - a.price);
 
     productContainer.innerHTML = '';
@@ -659,6 +663,13 @@ function initProductCatalog() {
 
   if (filterButton) {
     filterButton.addEventListener('click', () => {
+      
+      const priceFilterContainer = document.querySelector('.price-filter-container');
+      isPriceFilterVisible = !isPriceFilterVisible;
+      if (priceFilterContainer) {
+        priceFilterContainer.style.display = isPriceFilterVisible ? 'block' : 'none';
+      }  
+        
       const filters = document.querySelector('.subfilters');
       if (filters) {
         filters.remove();
@@ -705,8 +716,59 @@ function initProductCatalog() {
     if (filters) filters.remove();
   }
 
-  renderProducts();
+  const minPriceInput = document.getElementById('minPrice');
+  const maxPriceInput = document.getElementById('maxPrice');
+  const sliderMin = document.getElementById('sliderMin');
+  const sliderMax = document.getElementById('sliderMax');
+  const applyPriceFilterBtn = document.querySelector('.apply-price-filter');
 
+  function updateInputs() {
+    if (minPriceInput) minPriceInput.value = minPrice;
+    if (maxPriceInput) maxPriceInput.value = maxPrice;
+    if (sliderMin) sliderMin.value = minPrice;
+    if (sliderMax) sliderMax.value = maxPrice;
+  }
+
+  if (minPriceInput) {
+    minPriceInput.addEventListener('input', function() {
+      const value = Math.min(parseInt(this.value) || 0, maxPrice);
+      minPrice = value;
+      if (sliderMin) sliderMin.value = value;
+    });
+  }
+
+  if (maxPriceInput) {
+    maxPriceInput.addEventListener('input', function() {
+      const value = Math.max(parseInt(this.value) || 10000, minPrice);
+      maxPrice = value;
+      if (sliderMax) sliderMax.value = value;
+    });
+  }
+
+  if (sliderMin) {
+    sliderMin.addEventListener('input', function() {
+      const value = Math.min(parseInt(this.value), maxPrice);
+      minPrice = value;
+      if (minPriceInput) minPriceInput.value = value;
+    });
+  }
+
+  if (sliderMax) {
+    sliderMax.addEventListener('input', function() {
+      const value = Math.max(parseInt(this.value), minPrice);
+      maxPrice = value;
+      if (maxPriceInput) maxPriceInput.value = value;
+    });
+  }
+
+  if (applyPriceFilterBtn) {
+    applyPriceFilterBtn.addEventListener('click', function() {
+      renderProducts();
+    });
+  }
+
+  updateInputs();
+  renderProducts();
 }
 
 function initSpecialistsSlider() {

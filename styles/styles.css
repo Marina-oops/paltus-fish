@@ -1010,16 +1010,20 @@ button:active {
 	margin-bottom: 16px;
 	justify-content: space-between;
 	input {
-		padding: 16px 0px 16px 0px;
-		border: 2px solid #2a3176;
-	        border-radius: 15px;
-		max-width: 166px;
-		width: 100%;
-		box-sizing: border-box;
-		display: flex;
 		font-size: 16px;
 		color: #4f4f4f;
 	}
+}
+
+.price-input-container {
+	padding: 16px 0px 16px 0px;
+	border: 2px solid #2a3176;
+	border-radius: 15px;
+	max-width: 166px;
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
 }
 
 .price-slider {
@@ -1066,18 +1070,10 @@ button:active {
   -webkit-appearance: none;
   width: 16px;
   height: 16px;
-  background-color: #c3f3a7;
+  background-color: #6cc276;
   border-radius: 50%;
   cursor: pointer;
   pointer-events: auto;
-}
-
-#maxPrice {
-	padding: 16px 0px 16px 57px;
-}
-
-#minPrice {
-	padding: 16px 0px 16px 76px;
 }
 
 /* Контент страницы контакты */

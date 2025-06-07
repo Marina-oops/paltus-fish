@@ -2972,6 +2972,56 @@ hr {
 	.product {
 	    max-width: 226px;
 	}
+	.sidebar {
+	  margin-bottom: 24px;
+	}
+	.sidebar-container {
+	    max-width: 274px;
+	    margin-right: 16px;
+	}
+	.price-filter-container {
+	    padding: 24px 17px;
+	    border-radius: 14px;
+	    p {
+	        font-size: 14px;
+	        padding: 0px;
+	        margin-bottom: 11px;
+	    }
+	}
+	.price-inputs {
+	    margin-bottom: 11px;
+	    input {
+	        font-size: 10px;
+	    }
+	}
+	.price-input-container {
+	    padding: 11px 0px 11px 0px;
+	    border-radius: 10px;
+	    max-width: 112px;
+	}
+	.price-slider {
+	    height: 26px;
+	    margin-bottom: 10px;
+	    padding: 0px 6px;
+	}
+	.slider-track-price {
+	    left: 6px;
+	    right: 6px;
+	}
+	.slider-min, 
+	.slider-max {
+	    max-width: 236px;
+	}
+	.slider-min::-webkit-slider-thumb,
+	.slider-max::-webkit-slider-thumb {
+	  width: 11px;
+	  height: 11px;
+	}
+	.apply-price-filter {
+	    border-radius: 5px;
+	    padding: 11px;
+	    font-size: 11px;
+	}
 }
 
 @media (max-width: 1440px) {

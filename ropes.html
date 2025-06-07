@@ -64,7 +64,6 @@
   
   <div class="container">
     <aside class="sidebar">
-      <div class="menu-categories">
         <ul>
           <li><a href="#">НОВИНКИ</a></li>
           <li><a href="#">БРЕНДЫ</a></li>
@@ -75,23 +74,23 @@
           <li><a href="#">ЗИМНЯЯ РЫБАЛКА</a></li>
           <li><a href="#">ТУРИЗМ</a></li>
         </ul>
-      </div>
-      <div class="price-filter-container">
-        <p>ЦЕНА</p>
-        <div class="price-inputs">
-          <input type="number" id="minPrice" placeholder="Мин. цена">
-          <span>-</span>
-          <input type="number" id="maxPrice" placeholder="Макс. цена">
-        </div>
-        <div class="price-slider">
-          <div class="slider-track-price"></div>
-          <input type="range" min="0" max="10000" value="0" class="slider-min" id="sliderMin">
-          <input type="range" min="0" max="10000" value="10000" class="slider-max" id="sliderMax">
-        </div>
-        <button class="apply-price-filter">Применить</button>
-      </div>
-      
     </aside>
+    <aside>
+      <div class="price-filter-container">
+          <p>ЦЕНА</p>
+          <div class="price-inputs">
+            <input type="number" id="minPrice" placeholder="Мин. цена">
+            <span>-</span>
+            <input type="number" id="maxPrice" placeholder="Макс. цена">
+          </div>
+          <div class="price-slider">
+            <div class="slider-track-price"></div>
+            <input type="range" min="0" max="10000" value="0" class="slider-min" id="sliderMin">
+            <input type="range" min="0" max="10000" value="10000" class="slider-max" id="sliderMax">
+          </div>
+          <button class="apply-price-filter">Применить</button>
+        </div>
+     </aside>
 
     <main class="catalog-page">
       <div class="categories-with-filters">

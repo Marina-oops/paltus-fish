@@ -3230,6 +3230,23 @@ hr {
 	.subfilters {
 	    max-width: 857px;
 	}
+	.modal-content {
+	     max-width: 1300px;
+	}
+	.modal-body {
+	     max-width: 1132px;
+	}
+	.slider-track-3 {
+	        width: 376px;
+	}
+	.description-modal {
+	        max-width: 728px;
+	}
+	.title-modal-box {
+	    h1 {
+	        margin-bottom: 36px;
+	    }
+	}
 }
 
 @media (max-width: 1280px) {
@@ -3363,6 +3380,18 @@ hr {
 	    margin-top: 16px;
 	    margin-bottom: 11px;
 	}
+	.modal-content {
+	     max-width: 1140px;
+	}
+	.modal-body {
+	     max-width: 972px;
+	}
+	.slider-track-3 {
+	        width: 296px;
+	}
+	.description-modal {
+	        max-width: 648px;
+	}
 }
 
 @media (max-width: 1152px) {
@@ -3411,6 +3440,44 @@ hr {
 	}
 	.product {
 	    max-width: 140px;
+	}
+	.categories-with-filters {
+	    max-width: 582px;
+	    margin-left: 15px;
+	}
+	.categories {
+	    max-width: 510px;
+	}
+	.subfilters {
+	    max-width: 582px;
+	}
+	.name_product {
+	        font-size: 10px;
+	}
+	.catalog-page {
+	        button {
+	            font-size: 8.5px;
+	        }
+	}
+	.modal-content {
+	     max-width: 1008px;
+	}
+	.modal-body {
+	     max-width: 840px;
+	}
+	.slider-track-3 {
+	        width: 232px;
+	}
+	.description-modal {
+	        max-width: 584px;
+	}
+	.title-modal-box {
+	    h1 {
+	        margin-bottom: 36px;
+	    }
+	}
+	#modalDescription p {
+	    font-size: 12px;
 	}
 }
 

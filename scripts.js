@@ -543,6 +543,31 @@ function initProductCatalog() {
     "КАТУШКИ": ["Для удочек", "Для нахлыста", "Для спиннингов", "Фидерные катушки"],
     "ЛЕСКИ И ШНУРЫ": ["Лески", "Шнуры"]
   };
+
+ function updateCategoryCounts() {
+    const categories = {
+      "УДИЛИЩА": 0,
+      "СПИННИНГИ": 0,
+      "УДОЧКИ": 0,
+      "КАТУШКИ": 0,
+      "ЛЕСКИ И ШНУРЫ": 0
+    };
+
+    PRODUCTS.forEach(product => {
+      if (categories.hasOwnProperty(product.category)) {
+        categories[product.category]++;
+      }
+    });
+
+    document.querySelectorAll('.category-names').forEach(categoryElement => {
+      const categoryName = categoryElement.querySelector('.category-names-text').textContent;
+      const countElement = categoryElement.querySelector('.number-category-names');
+      
+      if (categories.hasOwnProperty(categoryName) && countElement) {
+        countElement.textContent = `(${categories[categoryName]})`;
+      }
+    });
+  }
     
   function renderProducts() {
     if (!productContainer) return;
@@ -555,6 +580,8 @@ function initProductCatalog() {
 
     filtered = filtered.filter(p => p.price >= minPrice && p.price <= maxPrice);
     filtered.sort((a, b) => sortAsc ? a.price - b.price : b.price - a.price);
+
+    updateCurrentCategoryCount(filtered.length);
 
     productContainer.innerHTML = '';
     filtered.forEach(product => {
@@ -691,6 +718,15 @@ function initProductCatalog() {
     });
   }
 
+ function updateCurrentCategoryCount(count) {
+    const activeCategory = document.querySelector('.category-names.active');
+    if (activeCategory) {
+      const countElement = activeCategory.querySelector('.number-category-names');
+      if (countElement) {
+        countElement.textContent = `(${count})`;
+      }
+    }
+
   function showSubFilter() {
     const subs = subcategories[currentCategory] || [];
     const filterDiv = document.createElement('div');
@@ -779,6 +815,7 @@ function initProductCatalog() {
     });
   }
 
+  updateCategoryCounts();
   updateInputs();
   renderProducts();
 }

@@ -668,6 +668,18 @@ function initProductCatalog() {
           currentCategory = catTextElem.textContent;
         }
         selectedSubcategories.clear();
+
+        const priceFilterContainer = document.querySelector('.price-filter-container');
+        if (priceFilterContainer) {
+          priceFilterContainer.style.display = 'none';
+          isPriceFilterVisible = false;
+          
+          const fishElement = document.querySelector('.fish_desktop_aside_1');
+          if (fishElement) {
+            fishElement.style.top = '755px';
+          }
+        }
+          
         renderProducts();
         removeSubFilter();
       });
@@ -763,6 +775,14 @@ function initProductCatalog() {
   function removeSubFilter() {
     const filters = document.querySelector('.subfilters');
     if (filters) filters.remove();
+
+    minPrice = 0;
+    maxPrice = 50000;
+    
+    const minPriceInput = document.getElementById('minPrice');
+    const maxPriceInput = document.getElementById('maxPrice');
+    if (minPriceInput) minPriceInput.value = minPrice;
+    if (maxPriceInput) maxPriceInput.value = maxPrice;
   }
 
   const minPriceInput = document.getElementById('minPrice');

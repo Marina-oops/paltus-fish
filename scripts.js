@@ -528,7 +528,7 @@ function initProductCatalog() {
   let selectedSubcategories = new Set();
   let sortAsc = true;
   let minPrice = 0;
-  let maxPrice = 10000;
+  let maxPrice = 50000;
   let isPriceFilterVisible = false;
 
   const productContainer = document.querySelector('.details-grid-catalog-2');
@@ -665,10 +665,22 @@ function initProductCatalog() {
     filterButton.addEventListener('click', () => {
       
       const priceFilterContainer = document.querySelector('.price-filter-container');
+      const fishElement = document.querySelector('.fish_desktop_aside_1');
       isPriceFilterVisible = !isPriceFilterVisible;
+        
       if (priceFilterContainer) {
         priceFilterContainer.style.display = isPriceFilterVisible ? 'block' : 'none';
       }  
+
+        if (fishElement) {
+            if (isPriceFilterVisible) {
+                fishElement.style.top = '1035px';
+                fishElement.style.transition = 'top 0.3s ease';
+            } else {
+                fishElement.style.top = '755px';
+                fishElement.style.transition = 'top 0.3s ease';
+            }
+        }
         
       const filters = document.querySelector('.subfilters');
       if (filters) {

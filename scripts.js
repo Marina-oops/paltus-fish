@@ -726,7 +726,8 @@ function initProductCatalog() {
         countElement.textContent = `(${count})`;
       }
     }
-
+ }
+    
   function showSubFilter() {
     const subs = subcategories[currentCategory] || [];
     const filterDiv = document.createElement('div');

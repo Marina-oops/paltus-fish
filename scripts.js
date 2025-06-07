@@ -676,7 +676,8 @@ function initProductCatalog() {
           
           const fishElement = document.querySelector('.fish_desktop_aside_1');
           if (fishElement) {
-            fishElement.style.top = '755px';
+            fishElement.classList.remove('fish-filter-active');
+            fishElement.classList.add('fish-filter-inactive');
           }
         }
           
@@ -713,11 +714,11 @@ function initProductCatalog() {
 
         if (fishElement) {
             if (isPriceFilterVisible) {
-                fishElement.style.top = '1035px';
-                fishElement.style.transition = 'top 0.3s ease';
+              fishElement.classList.remove('fish-filter-inactive');
+              fishElement.classList.add('fish-filter-active');
             } else {
-                fishElement.style.top = '755px';
-                fishElement.style.transition = 'top 0.3s ease';
+              fishElement.classList.remove('fish-filter-active');
+              fishElement.classList.add('fish-filter-inactive');
             }
         }
         

@@ -2981,6 +2981,7 @@ hr {
 	}
 	.price-filter-container {
 	    padding: 24px 17px;
+	    border: 1.5px solid #2a3176;
 	    border-radius: 14px;
 	    p {
 	        font-size: 14px;
@@ -2996,6 +2997,7 @@ hr {
 	}
 	.price-input-container {
 	    padding: 11px 0px 11px 0px;
+	    border: 1.5px solid #2a3176;
 	    border-radius: 10px;
 	    max-width: 112px;
 	}
@@ -3007,6 +3009,7 @@ hr {
 	.slider-track-price {
 	    left: 6px;
 	    right: 6px;
+	    height: 1.5px;
 	}
 	.slider-min, 
 	.slider-max {
@@ -3021,6 +3024,12 @@ hr {
 	    border-radius: 5px;
 	    padding: 11px;
 	    font-size: 11px;
+	}
+	.categories-with-filters {
+	    max-width: 938px;
+	    margin-top: 12px;
+	    margin-left: 15px;
+	    margin-bottom: 32px;
 	}
 }
 

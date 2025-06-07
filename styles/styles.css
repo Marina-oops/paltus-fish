@@ -3135,11 +3135,14 @@ hr {
 	        width: 24px;
 	        height: 24px;
 	}
+	.modal-body {
+	    max-width: 1128px;
+	}
 	.slider-product {
 	    border-radius: 20px;
 	}
 	.slider-track-3 {
-	    width: 350px;
+	    width: 398px;
 	    border-radius: 20px;
 	}
 	.slider-dots-wrapper {

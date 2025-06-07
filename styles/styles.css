@@ -3129,20 +3129,20 @@ hr {
 	.modal-content {
 	    border-radius: 34px;
 	    padding: 32px 72px 42px 72px;
-	    max-width: 1296px;
+	    max-width: 1368px;
 	}
 	.close-btn {
 	        width: 24px;
 	        height: 24px;
 	}
 	.modal-body {
-	    max-width: 1128px;
+	    max-width: 1200px;
 	}
 	.slider-product {
 	    border-radius: 20px;
 	}
 	.slider-track-3 {
-	    width: 398px;
+	    width: 412px;
 	    border-radius: 20px;
 	}
 	.slider-dots-wrapper {
@@ -3156,7 +3156,7 @@ hr {
 	    height: 11px;
 	}
 	.description-modal {
-	    max-width: 706px;
+	    max-width: 764px;
 	    padding-top: 14px;
 	}
 	.modal-price {

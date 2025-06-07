@@ -1095,6 +1095,16 @@ button:active {
   pointer-events: auto;
 }
 
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.no-spinner {
+    -moz-appearance: textfield;
+}
+
 /* Контент страницы контакты */
 .contact-page {
   flex: 1;
@@ -3156,6 +3166,15 @@ hr {
 	}
 	.product {
 	    max-width: 212px;
+	}
+	.categories-with-filters {
+	    max-width: 857px;
+	}
+	.categories {
+	    max-width: 786px;
+	}
+	.subfilters {
+	    max-width: 857px;
 	}
 }
 

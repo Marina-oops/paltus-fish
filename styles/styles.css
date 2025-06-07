@@ -283,6 +283,19 @@ img {
 	top: 2578px;
 }
 
+.fish-filter-inactive {
+  top: var(--fish-inactive-position, 755px);
+}
+
+.fish-filter-active {
+  top: var(--fish-active-position, 1035px);
+}
+
+:root {
+  --fish-inactive-position: 755px;
+  --fish-active-position: 1035px;
+}
+
 @media (max-width: 1512px) {
   .fish_desktop_top {
      width: 464px;
@@ -293,6 +306,11 @@ img {
      width: 448px;
      height: 243px;
      top: 506px;
+  }
+
+  :root {
+    --fish-inactive-position: 506px;
+    --fish-active-position: 694px;
   }
 
   .fish_desktop_aside_2 {

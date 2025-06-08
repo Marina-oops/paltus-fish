@@ -546,7 +546,7 @@ function initMobileFeatures(catalogModule) {
     const closeModal = document.querySelector('.close-modal');
 
     const originalPriceFilterContainer = document.querySelector('.price-filter-container');
-    const originalSubFiltersContainer = document.querySelector('.subfilters');
+    const originalSubFiltersContainer = document.querySelector('.sub_category');
 
     const mobilePriceFilter = document.querySelector('.mobile-price-filter');
     const mobileSubFilters = document.querySelector('.mobile-subfilters');
@@ -554,10 +554,6 @@ function initMobileFeatures(catalogModule) {
     if (filterButton && filterModal) {
       filterButton.addEventListener('click', () => {
         
-        if (!document.querySelector('.subfilters')) {
-          showSubFilter();
-        }
-          
          if (originalPriceFilterContainer && mobilePriceFilter) {
           mobilePriceFilter.innerHTML = '';
           mobilePriceFilter.appendChild(originalPriceFilterContainer);

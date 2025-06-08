@@ -3695,6 +3695,15 @@ hr {
 	    font-size: 24px;
 	    cursor: pointer;
 	  }
+
+	.categories {
+		width: fit-content;
+		flex-wrap: nowrap; 
+	}
+	
+	.category-names {
+		min-width: max-content;
+	}
 }
 
 @media (max-width: 834px) {

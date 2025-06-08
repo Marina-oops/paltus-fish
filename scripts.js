@@ -550,53 +550,53 @@ function initMobileFeatures(catalogModule) {
 
     const mobilePriceFilter = document.querySelector('.mobile-price-filter');
     const mobileSubFilters = document.querySelector('.mobile-subfilters');
-    
+
+    const desktopPriceWrapper = document.querySelector('.sidebar-price');
+    const desktopSubFiltersWrapper = document.querySelector('.sub_category');
+
+    function moveFiltersToModal() {
+      if (originalPriceFilterContainer && mobilePriceFilter && !mobilePriceFilter.contains(originalPriceFilterContainer)) {
+        mobilePriceFilter.appendChild(originalPriceFilterContainer);
+      }
+      if (originalSubFiltersContainer && mobileSubFilters && !mobileSubFilters.contains(originalSubFiltersContainer)) {
+        mobileSubFilters.appendChild(originalSubFiltersContainer);
+      }
+    }
+
+    function returnFiltersToDesktop() {
+      if (originalPriceFilterContainer && desktopPriceWrapper && !desktopPriceWrapper.contains(originalPriceFilterContainer)) {
+        desktopPriceWrapper.appendChild(originalPriceFilterContainer);
+      }
+      if (originalSubFiltersContainer && desktopSubFiltersWrapper && !desktopSubFiltersWrapper.contains(originalSubFiltersContainer)) {
+        desktopSubFiltersWrapper.appendChild(originalSubFiltersContainer);
+      }
+    }
+      
     if (filterButton && filterModal) {
       filterButton.addEventListener('click', () => {
-        
-         if (originalPriceFilterContainer && mobilePriceFilter) {
-          mobilePriceFilter.innerHTML = '';
-          mobilePriceFilter.appendChild(originalPriceFilterContainer);
-        }
-
-        if (originalSubFiltersContainer && mobileSubFilters) {
-          mobileSubFilters.innerHTML = '';
-          mobileSubFilters.appendChild(originalSubFiltersContainer);
-        }
-
+        moveFiltersToModal();
         filterModal.style.display = 'block';
       });
     }
 
     if (closeModal) {
       closeModal.addEventListener('click', () => {
-        if (originalPriceFilterContainer) {
-          const asideContainer = document.querySelector('.sidebar-price');
-          if (asideContainer && !asideContainer.contains(originalPriceFilterContainer)) {
-            asideContainer.appendChild(originalPriceFilterContainer);
-          }
-        }
-
-        if (originalSubFiltersContainer) {
-          const subCategoryContainer = document.querySelector('.sub_category');
-          if (subCategoryContainer && !subCategoryContainer.contains(originalSubFiltersContainer)) {
-            subCategoryContainer.appendChild(originalSubFiltersContainer);
-          }
-        }
-
+        returnFiltersToDesktop();
         filterModal.style.display = 'none';
       });
     }
 
     window.addEventListener('click', (event) => {
       if (event.target === filterModal) {
-        closeModal.click();
+        returnFiltersToDesktop();
+        filterModal.style.display = 'none';
       }
     });
 
     const applyFilters = document.querySelector('.apply-filters');
     if (applyFilters) {
       applyFilters.addEventListener('click', () => {
+        returnFiltersToDesktop();
         filterModal.style.display = 'none';
         catalogModule.renderProducts();
       });

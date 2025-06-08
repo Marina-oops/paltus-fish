@@ -968,7 +968,7 @@ button:active {
   }
   
 .filter-modal {
-    display: none !important;
+    display: none;
 }
 
 @media (max-width: 1512px) {

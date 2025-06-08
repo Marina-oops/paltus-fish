@@ -3931,10 +3931,10 @@ hr {
 	        max-width: 624px;
 	}
 	.slider-track-3 {
-	        width: 218px;
+	        width: 200px;
 	}
 	.description-modal {
-	        max-width: 568px;
+	        max-width: 408px;
 	}
 }
 
@@ -3977,6 +3977,25 @@ hr {
 	.product {
 	    max-width: 161px;
 	}
+	.categories-with-filters {
+	        max-width: 644px;
+	}
+	.slider-min, 
+	.slider-max {
+	        max-width: 620px;
+	}
+	.modal-content {
+	        max-width: 668px;
+	}
+	.modal-body {
+	        max-width: 624px;
+	}
+	.slider-track-3 {
+	        width: 186px;
+	}
+	.description-modal {
+	        max-width: 384px;
+	}
 }
 
 @media (max-width: 744px) {
@@ -4007,6 +4026,25 @@ hr {
 	}
 	.product {
 	    max-width: 155px;
+	}
+	.categories-with-filters {
+	        max-width: 624px;
+	}
+	.slider-min, 
+	.slider-max {
+	        max-width: 588px;
+	}
+	.modal-content {
+	        max-width: 644px;
+	}
+	.modal-body {
+	        max-width: 534px;
+	}
+	.slider-track-3 {
+	        width: 172px;
+	}
+	.description-modal {
+	        max-width: 346px;
 	}
 }
 

@@ -561,14 +561,14 @@ function initMobileFeatures(catalogModule) {
       if (filtersMoved) return;
       if (originalPriceFilterContainer && mobilePriceFilter && !mobilePriceFilter.contains(originalPriceFilterContainer)) {
         mobilePriceFilter.appendChild(originalPriceFilterContainer);
+        originalPriceFilterContainer.style.display = 'block';
       }
       if (originalSubFiltersContainer && mobileSubFilters && !mobileSubFilters.contains(originalSubFiltersContainer)) {
         mobileSubFilters.appendChild(originalSubFiltersContainer);
+        originalSubFiltersContainer.style.display = 'block';
       }
       filtersMoved = true;
     }
-
-    const filters = document.querySelector('.subfilters');
     
      function showFilters() {
       if (!filtersMoved) {
@@ -578,18 +578,12 @@ function initMobileFeatures(catalogModule) {
       mobilePriceFilter.style.display = 'block';
       mobileSubFilters.style.display = 'block';
       originalPriceFilterContainer.style.display = 'block';
-      originalSubFiltersContainer.style.display = 'block';
     }
 
     
     if (filterButton && filterModal) {
       filterButton.addEventListener('click', () => {
         showFilters();
-        if (filters) {
-            filters.remove();
-          } else {
-            showSubFilter();
-          }
       });
     }
 
@@ -598,8 +592,15 @@ function initMobileFeatures(catalogModule) {
         filterModal.style.display = 'none';
         mobilePriceFilter.style.display = 'none';
         mobileSubFilters.style.display = 'none';
-        originalPriceFilterContainer.style.display = 'none';
-        originalSubFiltersContainer.style.display = 'none';
+        if (originalPriceFilterContainer && mobilePriceFilter.contains(originalPriceFilterContainer)) {
+          mobilePriceFilter.removeChild(originalPriceFilterContainer);
+          originalPriceFilterContainer.style.display = 'none';
+        }
+        if (originalSubFiltersContainer && mobileSubFilters.contains(originalSubFiltersContainer)) {
+          mobileSubFilters.removeChild(originalSubFiltersContainer);
+          originalSubFiltersContainer.style.display = 'none';
+        }
+        filtersMoved = false;
       });
     }
 
@@ -609,8 +610,15 @@ function initMobileFeatures(catalogModule) {
         filterModal.style.display = 'none';
         mobilePriceFilter.style.display = 'none';
         mobileSubFilters.style.display = 'none';
-        originalPriceFilterContainer.style.display = 'none';
-        originalSubFiltersContainer.style.display = 'none';
+        if (originalPriceFilterContainer && mobilePriceFilter.contains(originalPriceFilterContainer)) {
+          mobilePriceFilter.removeChild(originalPriceFilterContainer);
+          originalPriceFilterContainer.style.display = 'none';
+        }
+        if (originalSubFiltersContainer && mobileSubFilters.contains(originalSubFiltersContainer)) {
+          mobileSubFilters.removeChild(originalSubFiltersContainer);
+          originalSubFiltersContainer.style.display = 'none';
+        }
+        filtersMoved = false;
         if (catalogModule && typeof catalogModule.renderProducts === 'function') {
             catalogModule.renderProducts();
         }

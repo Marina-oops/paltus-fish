@@ -593,6 +593,7 @@ function initMobileFeatures(catalogModule) {
         mobileSubFilters.style.display = 'none';
         originalPriceFilterContainer.style.display = 'none';
         originalSubFiltersContainer.style.display = 'none';
+        removeSubFilter();
       });
     }
 
@@ -604,6 +605,7 @@ function initMobileFeatures(catalogModule) {
         mobileSubFilters.style.display = 'none';
         originalPriceFilterContainer.style.display = 'none';
         originalSubFiltersContainer.style.display = 'none';
+        removeSubFilter();
         if (catalogModule && typeof catalogModule.renderProducts === 'function') {
             catalogModule.renderProducts();
         }

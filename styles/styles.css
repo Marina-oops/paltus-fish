@@ -3704,10 +3704,6 @@ hr {
 	.category-names {
 		min-width: max-content;
 	}
-	.price-filter-container,
-	.sub_category {
-		display: block;
-	}
 }
 
 @media (max-width: 834px) {

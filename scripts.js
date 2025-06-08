@@ -556,29 +556,12 @@ function initMobileFeatures(catalogModule) {
     const mobilePriceFilter = document.querySelector('.mobile-price-filter');
     const mobileSubFilters = document.querySelector('.mobile-subfilters');
 
-    const desktopPriceWrapper = document.querySelector('.sidebar-price');
-    const desktopSubFiltersWrapper = document.querySelector('.sub_category');
-
     function moveFiltersToModal() {
       if (originalPriceFilterContainer && mobilePriceFilter && !mobilePriceFilter.contains(originalPriceFilterContainer)) {
         mobilePriceFilter.appendChild(originalPriceFilterContainer);
       }
       if (originalSubFiltersContainer && mobileSubFilters && !mobileSubFilters.contains(originalSubFiltersContainer)) {
         mobileSubFilters.appendChild(originalSubFiltersContainer);
-      }
-    }
-
-    function returnFiltersToDesktop() {
-      const priceInputs = desktopPriceWrapper.querySelectorAll('input[type="range"], input[type="checkbox"]');
-        priceInputs.forEach(input => {
-          input.checked = false;
-          input.value = input.getAttribute('data-default') || input.value;
-        });
-      if (originalPriceFilterContainer && desktopPriceWrapper && !desktopPriceWrapper.contains(originalPriceFilterContainer)) {
-        desktopPriceWrapper.appendChild(originalPriceFilterContainer);
-      }
-      if (originalSubFiltersContainer && desktopSubFiltersWrapper && !desktopSubFiltersWrapper.contains(originalSubFiltersContainer)) {
-        desktopSubFiltersWrapper.appendChild(originalSubFiltersContainer);
       }
     }
       
@@ -591,14 +574,12 @@ function initMobileFeatures(catalogModule) {
 
     if (closeModal) {
       closeModal.addEventListener('click', () => {
-        returnFiltersToDesktop();
         filterModal.style.display = 'none';
       });
     }
 
     window.addEventListener('click', (event) => {
       if (event.target === filterModal) {
-        returnFiltersToDesktop();
         filterModal.style.display = 'none';
       }
     });
@@ -606,7 +587,6 @@ function initMobileFeatures(catalogModule) {
     const applyFilters = document.querySelector('.apply-filters');
     if (applyFilters) {
       applyFilters.addEventListener('click', () => {
-        returnFiltersToDesktop();
         filterModal.style.display = 'none';
         if (catalogModule && typeof catalogModule.renderProducts === 'function') {
             catalogModule.renderProducts();

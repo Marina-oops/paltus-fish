@@ -1003,7 +1003,6 @@ function initProductCatalog() {
   updateCategoryCounts();
   updateInputs();
   renderProducts();
-  showSubFilter();
 
   return {
     renderProducts

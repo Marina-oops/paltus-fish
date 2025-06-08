@@ -2686,6 +2686,7 @@ hr {
     border: 1px solid #2a3176;
     border-radius: 30px;
     box-sizing: border-box;
+    height: fit-content;
 }
 
 .slider-track-3 {
@@ -3850,10 +3851,10 @@ hr {
 	            margin-bottom: 24px;
 	            font-size: 24px;
 	        }
-	}
-	.close-btn {
-	        width: 30px;
-	        height: 30px;
+		.close-btn {
+		        width: 28px;
+		        height: 28px;
+		}
 	}
 	.modal-body {
 	        max-width: 814px;
@@ -3922,6 +3923,18 @@ hr {
 	.slider-min, 
 	.slider-max {
 	        max-width: 678px;
+	}
+	.modal-content {
+	        max-width: 734px;
+	}
+	.modal-body {
+	        max-width: 624px;
+	}
+	.slider-track-3 {
+	        width: 218px;
+	}
+	.description-modal {
+	        max-width: 568px;
 	}
 }
 

@@ -98,34 +98,57 @@
     </div>
     <main class="catalog-page">
       <div class="categories-with-filters">
-       <div class="categories">
-         <div class="category-names">
-           <span class="category-names-text">УДИЛИЩА</span>
-           <span class="number-category-names">(8)</span>
+        <div class="categories-slider">
+          <div class="categories-wrapper" id="categoriesWrapper">
+           <div class="categories" id="categoriesContainer">
+             <div class="category-names">
+               <span class="category-names-text">УДИЛИЩА</span>
+               <span class="number-category-names">(8)</span>
+             </div>
+             <div class="category-names">
+               <span class="category-names-text">СПИННИНГИ</span>
+               <span class="number-category-names">(5)</span>
+             </div>
+             <div class="category-names">
+               <span class="category-names-text">УДОЧКИ</span>
+               <span class="number-category-names">(10)</span>
+             </div>
+             <div class="category-names">
+               <span class="category-names-text">КАТУШКИ</span>
+               <span class="number-category-names">(4)</span>
+             </div>
+             <div class="category-names">
+               <span class="category-names-text">ЛЕСКИ И ШНУРЫ</span>
+               <span class="number-category-names">(2)</span>
+             </div>
          </div>
-         <div class="category-names">
-           <span class="category-names-text">СПИННИНГИ</span>
-           <span class="number-category-names">(5)</span>
-         </div>
-         <div class="category-names">
-           <span class="category-names-text">УДОЧКИ</span>
-           <span class="number-category-names">(10)</span>
-         </div>
-         <div class="category-names">
-           <span class="category-names-text">КАТУШКИ</span>
-           <span class="number-category-names">(4)</span>
-         </div>
-         <div class="category-names">
-           <span class="category-names-text">ЛЕСКИ И ШНУРЫ</span>
-           <span class="number-category-names">(2)</span>
-         </div>
-       </div>
+        </div>
+      </div>
       <div class="filt_sort">
-        <div class="filter" role="button"></div>
+        <div class="filter" role="button">
+            <span class="filter-icon"></span>
+            <span class="filter-text">Фильтр</span>
+        </div>
         <div class="sort" role="button"></div>
       </div>
     </div>
 
+    <div class="filter-modal" id="filterModal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Фильтры</h3>
+            <span class="close-modal">&times;</span>
+          </div>
+          <div class="modal-body">
+            <div class="mobile-price-filter"></div>
+            <div class="mobile-subfilters"></div>
+          </div>
+          <div class="modal-footer">
+            <button class="apply-filters">Применить</button>
+          </div>
+        </div>
+      </div>
+      
      <div class="sub_category"></div>
      <div class="details-grid-catalog-2">
     

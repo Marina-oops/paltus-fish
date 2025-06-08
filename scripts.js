@@ -589,6 +589,8 @@ function initMobileFeatures(catalogModule) {
         filterModal.style.display = 'none';
         mobilePriceFilter.style.display = 'none';
         mobileSubFilters.style.display = 'none';
+        originalPriceFilterContainer.style.display = 'none';
+        originalSubFiltersContainer.style.display = 'none';
       });
     }
 
@@ -598,6 +600,8 @@ function initMobileFeatures(catalogModule) {
         filterModal.style.display = 'none';
         mobilePriceFilter.style.display = 'none';
         mobileSubFilters.style.display = 'none';
+        originalPriceFilterContainer.style.display = 'none';
+        originalSubFiltersContainer.style.display = 'none';
         if (catalogModule && typeof catalogModule.renderProducts === 'function') {
             catalogModule.renderProducts();
         }

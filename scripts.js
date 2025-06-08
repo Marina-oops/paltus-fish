@@ -575,6 +575,8 @@ function initMobileFeatures(catalogModule) {
       filterModal.style.display = 'block';
       mobilePriceFilter.style.display = 'block';
       mobileSubFilters.style.display = 'block';
+      originalPriceFilterContainer.style.display = 'block';
+      originalSubFiltersContainer.style.display = 'block';
     }
 
     

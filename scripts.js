@@ -577,7 +577,7 @@ function initMobileFeatures() {
     if (applyFilters) {
       applyFilters.addEventListener('click', () => {
         filterModal.style.display = 'none';
-        renderProducts(); // ⚠️ Убедитесь, что renderProducts доступна глобально
+        renderProducts();
       });
     }
   }

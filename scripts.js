@@ -549,7 +549,7 @@ function initMobileFeatures(catalogModule) {
 
     const filterButton = document.querySelector('.filter');
     const filterModal = document.getElementById('filterModal');
-    const closeModal = document.querySelector('.close-modal');
+    const closeModal = document.querySelector('.modal-header');
 
     const originalPriceFilterContainer = document.querySelector('.price-filter-container');
     const originalSubFiltersContainer = document.querySelector('.sub_category');
@@ -589,24 +589,6 @@ function initMobileFeatures(catalogModule) {
 
     if (closeModal) {
       closeModal.addEventListener('click', () => {
-        filterModal.style.display = 'none';
-        mobilePriceFilter.style.display = 'none';
-        mobileSubFilters.style.display = 'none';
-        if (originalPriceFilterContainer && mobilePriceFilter.contains(originalPriceFilterContainer)) {
-          mobilePriceFilter.removeChild(originalPriceFilterContainer);
-          originalPriceFilterContainer.style.display = 'none';
-        }
-        if (originalSubFiltersContainer && mobileSubFilters.contains(originalSubFiltersContainer)) {
-          mobileSubFilters.removeChild(originalSubFiltersContainer);
-          originalSubFiltersContainer.style.display = 'none';
-        }
-        filtersMoved = false;
-      });
-    }
-
-    const applyFilters = document.querySelector('.apply-filters');
-    if (applyFilters) {
-      applyFilters.addEventListener('click', () => {
         filterModal.style.display = 'none';
         mobilePriceFilter.style.display = 'none';
         mobileSubFilters.style.display = 'none';

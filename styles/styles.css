@@ -4143,4 +4143,12 @@ hr {
 	}
 }
 
-
+@media (min-width: 1025px) {
+  .filter-text {
+    display: none;
+  }
+  
+  .filter-modal {
+    display: none !important;
+  }
+}

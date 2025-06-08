@@ -539,6 +539,7 @@ function showProductModal(product) {
 }
 
 let mobileFeaturesInitialized = false;
+let filtersMoved = false;
 
 function initMobileFeatures(catalogModule) {
     if (window.innerWidth > 1024 || mobileFeaturesInitialized) return;
@@ -557,12 +558,14 @@ function initMobileFeatures(catalogModule) {
     const mobileSubFilters = document.querySelector('.mobile-subfilters');
 
     function moveFiltersToModal() {
+      if (filtersMoved) return;
       if (originalPriceFilterContainer && mobilePriceFilter && !mobilePriceFilter.contains(originalPriceFilterContainer)) {
         mobilePriceFilter.appendChild(originalPriceFilterContainer);
       }
       if (originalSubFiltersContainer && mobileSubFilters && !mobileSubFilters.contains(originalSubFiltersContainer)) {
         mobileSubFilters.appendChild(originalSubFiltersContainer);
       }
+      filtersMoved = true;
     }
       
     if (filterButton && filterModal) {

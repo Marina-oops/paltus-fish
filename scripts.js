@@ -567,13 +567,20 @@ function initMobileFeatures(catalogModule) {
       }
       filtersMoved = true;
     }
-      
+
+     function showFilters() {
+      if (!filtersMoved) {
+        moveFiltersToModal();
+      }
+      filterModal.style.display = 'block';
+      mobilePriceFilter.style.display = 'block';
+      mobileSubFilters.style.display = 'block';
+    }
+
+    
     if (filterButton && filterModal) {
       filterButton.addEventListener('click', () => {
-        moveFiltersToModal();
-        filterModal.style.display = 'block';
-        mobilePriceFilter.style.display = 'block';
-        mobileSubFilters.style.display = 'block';
+        showFilters();
       });
     }
 

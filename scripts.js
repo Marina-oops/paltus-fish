@@ -569,12 +569,16 @@ function initMobileFeatures(catalogModule) {
       filterButton.addEventListener('click', () => {
         moveFiltersToModal();
         filterModal.style.display = 'block';
+        mobilePriceFilter.style.display = 'block';
+        mobileSubFilters.style.display = 'block';
       });
     }
 
     if (closeModal) {
       closeModal.addEventListener('click', () => {
         filterModal.style.display = 'none';
+        mobilePriceFilter.style.display = 'none';
+        mobileSubFilters.style.display = 'none';
       });
     }
 
@@ -582,6 +586,8 @@ function initMobileFeatures(catalogModule) {
     if (applyFilters) {
       applyFilters.addEventListener('click', () => {
         filterModal.style.display = 'none';
+        mobilePriceFilter.style.display = 'none';
+        mobileSubFilters.style.display = 'none';
         if (catalogModule && typeof catalogModule.renderProducts === 'function') {
             catalogModule.renderProducts();
         }

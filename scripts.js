@@ -150,7 +150,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 if (window.location.pathname.includes('ropes.html')) {
     window.addEventListener('resize', () => {
-      initMobileFeatures();
+      mobileFeaturesInitialized = false;
+      initMobileFeatures(catalogModule);
       handleResize();
     });
 }
@@ -537,9 +538,13 @@ function showProductModal(product) {
   modal.style.display = 'flex';
 }
 
+let mobileFeaturesInitialized = false;
+
 function initMobileFeatures(catalogModule) {
-  if (window.innerWidth <= 1024) {
+    if (window.innerWidth > 1024 || mobileFeaturesInitialized) return;
+    
     initSwipeSlider();
+    mobileFeaturesInitialized = true;
 
     const filterButton = document.querySelector('.filter');
     const filterModal = document.getElementById('filterModal');
@@ -598,10 +603,11 @@ function initMobileFeatures(catalogModule) {
       applyFilters.addEventListener('click', () => {
         returnFiltersToDesktop();
         filterModal.style.display = 'none';
-        catalogModule.renderProducts();
+        if (catalogModule && typeof catalogModule.renderProducts === 'function') {
+            catalogModule.renderProducts();
+        }
       });
     }
-  }
 }
 
 function initSwipeSlider() {

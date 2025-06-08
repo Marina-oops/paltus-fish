@@ -407,6 +407,10 @@ function initSlider(trackSelector, dotsSelector, slidesSelector) {
 
 function createModal() {
   if (!document.querySelector('#productModal')) {
+    const buttonText = window.innerWidth <= 1024 ? 
+        'В корзину' : 
+        'Добавить в корзину';
+      
     const modalHTML = `
       <div id="productModal" class="modal-2">
         <div class="modal-content">
@@ -421,7 +425,7 @@ function createModal() {
               <p id="modalDescription"></p>
               <div class="modal-price" id="modalPrice"></div>
               <div class="modal-actions">
-                <button type="button">Добавить в корзину</button>
+                <button type="button">${buttonText}</button>
                 <div class="share" type="button"></div>
               </div>
             </div>
@@ -1161,6 +1165,9 @@ class ProductSlider {
       const productDiv = document.createElement('div');
       productDiv.className = 'product';
       productDiv.style.width = `${this.itemWidth}px`;
+      const buttonText = window.innerWidth <= 1024 ? 
+        'В корзину' : 
+        'Добавить в корзину';
       productDiv.innerHTML = `
         <div class="product">
           <div class="block-review">
@@ -1170,7 +1177,7 @@ class ProductSlider {
           <div class="name_product">${product.name}</div>
           <div class="cost">${product.price} руб.</div>
           <div class="buttons_products">
-            <button type="button" data-id="${product.id}">Добавить в корзину</button>
+            <button type="button" data-id="${product.id}">${buttonText}</button>
             <div class="share" type="button" data-id="${product.id}"></div>
           </div>
         </div>
@@ -1186,9 +1193,12 @@ class ProductSlider {
         Cart.addProduct(product);
 
           const btn = productDiv.querySelector('button[data-id]');
+              const addedText = window.innerWidth <= 1024 ? 
+                'В корзину' : 
+                'Добавить в корзину';
               btn.textContent = 'Добавлено!';
               setTimeout(() => {
-                btn.textContent = 'Добавлено в корзину';
+                btn.textContent = addedText;
               }, 1000);
       });
 
@@ -1346,6 +1356,9 @@ function renderSearchResults(PRODUCTS, container) {
   PRODUCTS.forEach(product => {
     const productDiv = document.createElement('div');
     productDiv.className = 'product';
+    const buttonText = window.innerWidth <= 1024 ? 
+        'В корзину' : 
+        'Добавить в корзину';
     productDiv.innerHTML = `
       <div class="product">
         <div class="block-review">
@@ -1355,7 +1368,7 @@ function renderSearchResults(PRODUCTS, container) {
         <div class="name_product">${product.name}</div>
         <div class="cost">${product.price} руб.</div>
         <div class="buttons_products">
-          <button type="button" data-id="${product.id}">Добавить в корзину</button>
+          <button type="button" data-id="${product.id}">${buttonText}</button>
           <div class="share" type="button" data-id="${product.id}"></div>
         </div>
       </div>
@@ -1369,9 +1382,12 @@ function renderSearchResults(PRODUCTS, container) {
       productDiv.querySelector('button[data-id]').addEventListener('click', () => {
         Cart.addProduct(product);
          const btn = productDiv.querySelector('button[data-id]');
+          const addedText = window.innerWidth <= 1024 ? 
+                'В корзину' : 
+                'Добавить в корзину';
           btn.textContent = 'Добавлено!';
           setTimeout(() => {
-            btn.textContent = 'В корзину';
+            btn.textContent = addedText;
           }, 1000);
       });
 

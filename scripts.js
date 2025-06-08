@@ -867,7 +867,7 @@ function initProductCatalog() {
     });
   }
 
-  if (filterButton) {
+  if (filterButton && window.innerWidth > 1024) {
     filterButton.addEventListener('click', () => {
       
       const priceFilterContainer = document.querySelector('.price-filter-container');

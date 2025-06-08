@@ -766,6 +766,11 @@ function initProductCatalog() {
     filtered.forEach(product => {
       const productDiv = document.createElement('div');
       productDiv.className = 'product';
+
+     const buttonText = window.innerWidth <= 1024 ? 
+        'В корзину' : 
+        'Добавить в корзину';
+        
       productDiv.innerHTML = `
         <div class="product">
           <div class="block-review">
@@ -775,7 +780,7 @@ function initProductCatalog() {
           <div class="name_product">${product.name}</div>
           <div class="cost">${product.price} руб.</div>
           <div class="buttons_products">
-            <button type="button" data-id="${product.id}">Добавить в корзину</button>
+            <button type="button" data-id="${product.id}">${buttonText}</button>
             <div class="share" type="button" data-id="${product.id}"></div>
           </div>
         </div>
@@ -790,9 +795,13 @@ function initProductCatalog() {
         Cart.addProduct(product);
 
         const btn = productDiv.querySelector('button[data-id]');
+              const addedText = window.innerWidth <= 1024 ? 
+                'В корзину' : 
+                'Добавить в корзину';
+        
               btn.textContent = 'Добавлено!';
               setTimeout(() => {
-                btn.textContent = 'Добавлено в корзину';
+                btn.textContent = addedText;
               }, 1000);
     });
       

@@ -3680,7 +3680,7 @@ hr {
 	  
 	.modal-content-2 {
 	        position: absolute;
-	        top: 118px;
+	        top: 120px;
 	        width: 100%;
 	        height: 100%;
 	        background: white;
@@ -3884,6 +3884,14 @@ hr {
 	}
 	.product {
 	    max-width: 176px;
+	}
+	.categories-with-filters {
+	        max-width: 710px;
+	        margin: 0px 0px 16px 12px;
+	}
+	.slider-min, 
+	.slider-max {
+	        max-width: 678px;
 	}
 }
 

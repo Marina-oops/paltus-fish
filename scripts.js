@@ -115,6 +115,8 @@ const PRODUCTS = [
      }
     ];
 
+let catalogModule;
+
 document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initCallbackForms();
@@ -129,7 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
        initSpecialistsSlider();
   }
   if (window.location.pathname.includes('ropes.html')) {
-      initMobileFeatures();
+      catalogModule = initProductCatalog();
+      initMobileFeatures(catalogModule);
       handleResize();  
   }
   Cart.init();
@@ -532,7 +535,7 @@ function showProductModal(product) {
   modal.style.display = 'flex';
 }
 
-function initMobileFeatures() {
+function initMobileFeatures(catalogModule) {
   if (window.innerWidth <= 1024) {
     initSwipeSlider();
 
@@ -577,7 +580,7 @@ function initMobileFeatures() {
     if (applyFilters) {
       applyFilters.addEventListener('click', () => {
         filterModal.style.display = 'none';
-        renderProducts();
+        catalogModule.renderProducts();
       });
     }
   }
@@ -797,7 +800,7 @@ function initProductCatalog() {
   });
 
  }
-
+    
   if (window.location.pathname.includes('basket.html')) {
     if (PRODUCTS && PRODUCTS.length > 0) {
       new ProductSlider(PRODUCTS);
@@ -994,6 +997,10 @@ function initProductCatalog() {
   updateCategoryCounts();
   updateInputs();
   renderProducts();
+
+  return {
+    renderProducts
+  };
 }
 
 function initSpecialistsSlider() {

@@ -3840,7 +3840,37 @@ hr {
 	    font-size: 16px;
 	    align-items: center;
 	}
-	
+	.modal-content {
+		border-radius: 20px;
+        	padding: 32px 40px 42px 40px;
+	        max-width: 924px;
+	}
+	.title-modal-box {
+	        h1 {
+	            margin-bottom: 24px;
+	            font-size: 24px;
+	        }
+	}
+	.close-btn {
+	        width: 30px;
+	        height: 30px;
+	}
+	.modal-body {
+	        max-width: 814px;
+	}
+	.slider-track-3 {
+	        width: 218px;
+	}
+	.description-modal {
+	        max-width: 568px;
+	}
+	.modal-price {
+	        font-size: 22px;
+	        margin-top: 4px;
+	}
+	.modal-actions {
+	        margin-top: 8px;
+	}
 }
 
 @media (max-width: 834px) {

@@ -569,6 +569,11 @@ function initMobileFeatures(catalogModule) {
     }
 
     function returnFiltersToDesktop() {
+      const priceInputs = desktopPriceWrapper.querySelectorAll('input[type="range"], input[type="checkbox"]');
+        priceInputs.forEach(input => {
+          input.checked = false;
+          input.value = input.getAttribute('data-default') || input.value;
+        });
       if (originalPriceFilterContainer && desktopPriceWrapper && !desktopPriceWrapper.contains(originalPriceFilterContainer)) {
         desktopPriceWrapper.appendChild(originalPriceFilterContainer);
       }

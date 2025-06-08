@@ -544,26 +544,28 @@ function initMobileFeatures(catalogModule) {
     const filterButton = document.querySelector('.filter');
     const filterModal = document.getElementById('filterModal');
     const closeModal = document.querySelector('.close-modal');
+
+    const originalPriceFilterContainer = document.querySelector('.price-filter-container');
+    const originalSubFiltersContainer = document.querySelector('.subfilters');
+
+    const mobilePriceFilter = document.querySelector('.mobile-price-filter');
+    const mobileSubFilters = document.querySelector('.mobile-subfilters');
     
     if (filterButton && filterModal) {
       filterButton.addEventListener('click', () => {
-        const priceFilter = document.querySelector('.price-filter-container');
-        const subFilters = document.querySelector('.subfilters');
-        const mobilePriceFilter = document.querySelector('.mobile-price-filter');
-        const mobileSubFilters = document.querySelector('.mobile-subfilters');
         
-        if (priceFilter && mobilePriceFilter) {
-          mobilePriceFilter.innerHTML = '';
-          mobilePriceFilter.appendChild(priceFilter.cloneNode(true));
-        }
-
         if (!document.querySelector('.subfilters')) {
           showSubFilter();
         }
           
-        if (subFilters && mobileSubFilters) {
+         if (originalPriceFilterContainer && mobilePriceFilter) {
+          mobilePriceFilter.innerHTML = '';
+          mobilePriceFilter.appendChild(originalPriceFilterContainer);
+        }
+
+        if (originalSubFiltersContainer && mobileSubFilters) {
           mobileSubFilters.innerHTML = '';
-          mobileSubFilters.appendChild(subFilters.cloneNode(true));
+          mobileSubFilters.appendChild(originalSubFiltersContainer);
         }
 
         filterModal.style.display = 'block';
@@ -572,13 +574,27 @@ function initMobileFeatures(catalogModule) {
 
     if (closeModal) {
       closeModal.addEventListener('click', () => {
+        if (originalPriceFilterContainer) {
+          const asideContainer = document.querySelector('.sidebar-price');
+          if (asideContainer && !asideContainer.contains(originalPriceFilterContainer)) {
+            asideContainer.appendChild(originalPriceFilterContainer);
+          }
+        }
+
+        if (originalSubFiltersContainer) {
+          const subCategoryContainer = document.querySelector('.sub_category');
+          if (subCategoryContainer && !subCategoryContainer.contains(originalSubFiltersContainer)) {
+            subCategoryContainer.appendChild(originalSubFiltersContainer);
+          }
+        }
+
         filterModal.style.display = 'none';
       });
     }
 
     window.addEventListener('click', (event) => {
       if (event.target === filterModal) {
-        filterModal.style.display = 'none';
+        closeModal.click();
       }
     });
 

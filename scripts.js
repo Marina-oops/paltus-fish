@@ -438,6 +438,11 @@ function createModal() {
      const closeBtn = modal.querySelector('.close-btn');
     closeBtn.onclick = () => {
       modal.style.display = 'none';
+      document.body.classList.remove('body-no-scroll');
+      const scrollY = document.body.dataset.scrollY;
+      window.scrollTo(0, scrollY || 0);
+      document.body.style.top = '';
+      delete document.body.dataset.scrollY;
     };
   
     const closeImg = closeBtn.querySelector('img');
@@ -468,6 +473,12 @@ function showProductModal(product) {
   }
   modal.style.display = 'flex';
 
+  document.body.classList.add('body-no-scroll');
+  const scrollY = window.scrollY || window.pageYOffset;
+  document.body.style.top = `-${scrollY}px`;
+  document.body.dataset.scrollY = scrollY;
+      
+    
   // Заполняем данные
   modal.querySelector('#modalTitle').textContent = product.name || 'Без названия';
   modal.querySelector('#modalPrice').textContent = product.price ? `${product.price} руб.` : 'Цена не указана';

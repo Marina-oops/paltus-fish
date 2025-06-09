@@ -4245,6 +4245,22 @@ hr {
 	.container {
 		max-width: 420px;
 	}
+	.title-modal-box {
+	        display: flex;
+	        width: 100%;
+	        box-sizing: border-box;
+	        height: 56px;
+	        position: relative;
+	        border-radius: 10px;
+	        padding: 16px 12px 16px 15px;
+	        margin: 0px 0px 24px 0px;
+		background-color: #2a3176;
+		h1 {
+	            font-size: 16px;
+		    font-family: "Nunito", sans-serif;
+    		    color: white;
+	        }
+	}
 }
 	
 @media (max-width: 440px) {

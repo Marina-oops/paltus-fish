@@ -4238,6 +4238,7 @@ hr {
 	}
 	.modal-2 {
 	    background-color: #fff;
+	    overflow-y: auto;
 	}
 	.modal-content {
 	        top: 0;
@@ -4316,8 +4317,6 @@ hr {
 	            height: 56px;
 	        }
 	}
-	
-	
 }
 	
 @media (max-width: 440px) {

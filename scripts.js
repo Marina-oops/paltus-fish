@@ -415,7 +415,7 @@ function createModal() {
       <div id="productModal" class="modal-2">
         <div class="modal-content">
          <div class="title-modal-box">
-          <div class="close-btn"><img src="images/close.png" alt="Закрыть "></div>
+          <div class="close-btn"></div>
           <h1 id="modalTitle"></h1>
           </div>
           <div class="modal-body">
@@ -1284,7 +1284,7 @@ function showThankYouModal() {
   modal.className = 'modal-overlay';
   modal.innerHTML = `
     <div class="modal">
-      <div class="close-btn"><img src="images/close.png" alt="Закрыть "></div>
+      <div class="close-btn"></div>
       <h2>ВАША ЗАЯВКА ОТПРАВЛЕНА!</h2>
       <p style="font-weight: 700;">Спасибо за обращение!</p>
       <p style="font-weight: 700;">Если заявка отправлена в&nbsp;будни с&nbsp;9:00 до&nbsp;18:00 —&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;течение&nbsp;30&nbsp;минут</p>
@@ -1304,7 +1304,7 @@ function showThankYouFeedbackModal() {
   modal.className = 'modal-overlay';
   modal.innerHTML = `
     <div class="modal">
-      <div class="close-btn"><img src="images/close.png" alt="Закрыть "></div>
+      <div class="close-btn"></div>
       <h2>СПАСИБО ЗА ВАШ ОТЗЫВ!</h2>
       <p style="font-weight: 700;">Мы признательны вам за&nbsp;вашу&nbsp;оценку! Она&nbsp;будет полезна другим пользователям</p>
       <p style="color: white;">Д</p>

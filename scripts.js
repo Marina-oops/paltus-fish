@@ -438,11 +438,11 @@ function createModal() {
      const closeBtn = modal.querySelector('.close-btn');
     closeBtn.onclick = () => {
       modal.style.display = 'none';
-      const scrollY = parseInt(document.body.style.getPropertyValue('--scroll-top').replace('px', '') || '0');
       document.body.classList.remove('body-no-scroll');
-      document.documentElement.classList.remove('modal-open');
-      window.scrollTo(0, Math.abs(scrollY));
-      document.body.style.removeProperty('--scroll-top');
+      const scrollY = parseInt(document.body.dataset.scrollY || '0');
+      window.scrollTo(0, scrollY);
+      document.body.style.top = '';
+      delete document.body.dataset.scrollY;
     };
   
     const closeImg = closeBtn.querySelector('img');
@@ -450,12 +450,22 @@ function createModal() {
       closeImg.onclick = (e) => {
         e.stopPropagation();
         modal.style.display = 'none';
+        document.body.classList.remove('body-no-scroll');
+          const scrollY = parseInt(document.body.dataset.scrollY || '0');
+          window.scrollTo(0, scrollY);
+          document.body.style.top = '';
+          delete document.body.dataset.scrollY;
       };
     }
   
     modal.onclick = (e) => {
       if (e.target === modal) {
         modal.style.display = 'none';
+        document.body.classList.remove('body-no-scroll');
+          const scrollY = parseInt(document.body.dataset.scrollY || '0');
+          window.scrollTo(0, scrollY);
+          document.body.style.top = '';
+          delete document.body.dataset.scrollY;
       }
     };
     
@@ -464,12 +474,12 @@ function createModal() {
 
 function showProductModal(product) {
   createModal();
-  const scrollY = window.scrollY;
-  document.body.style.setProperty('--scroll-top', `-${scrollY}px`);
-  document.body.classList.add('body-no-scroll');
-  document.documentElement.classList.add('modal-open');
-
   const modal = document.querySelector('#productModal');
+  const scrollY = window.scrollY || document.documentElement.scrollTop;
+  document.body.dataset.scrollY = scrollY;
+  document.body.style.top = `-${scrollY}px`;
+  document.body.classList.add('body-no-scroll');
+    
   modal.style.display = 'flex';
   if (!modal) {
     console.error('Модальное окно не найдено');

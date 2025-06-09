@@ -947,6 +947,8 @@ button:active {
   font-weight: 700;
   height: 472px;
   margin-bottom: 32px;
+  max-width: 408px;
+  margin-right: 24px;
 }
 
 .sidebar ul {

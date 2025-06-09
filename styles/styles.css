@@ -3890,10 +3890,6 @@ hr {
 	            margin-bottom: 24px;
 	            font-size: 24px;
 	        }
-		.close-btn {
-		        width: 28px;
-		        height: 28px;
-		}
 	}
 	.modal-body {
 	        max-width: 814px;
@@ -4254,21 +4250,73 @@ hr {
 		max-width: 420px;
 	}
 	.title-modal-box {
-	        display: flex;
+		flex-direction: row;
 	        width: 100%;
 	        box-sizing: border-box;
-	        height: 56px;
 	        position: relative;
 	        border-radius: 10px;
-	        padding: 16px 12px 16px 15px;
+	        padding: 10px 16px;
 	        margin: 0px 0px 24px 0px;
 		background-color: #2a3176;
 		h1 {
 	            font-size: 16px;
 		    font-family: "Nunito", sans-serif;
     		    color: white;
+		    margin-bottom: 0px;
+	        }
+		.close-btn {
+		  width: 28px;
+		  height: 28px;
+		  background-image: url(../images/arrow.png);
+		}
+	}
+	.slider-track-3 {
+	        padding-top: 30px;
+		width: 420px;
+	}
+	.slider-dots-wrapper {
+	        margin-top: 16px;
+	        margin-bottom: 16px;
+	}
+	.dot, 
+	.dot-2, 
+	.dot-3 {
+	        width: 12px;
+	        height: 12px;
+	}
+	.description-modal {
+	        max-width: 420px;
+		padding-top: 0px;
+	}
+	#modalDescription p {
+	        font-size: 16px;
+	}
+	.slider-product {
+	        margin-bottom: 32px;
+	}
+	.modal-price {
+	        font-size: 32px;
+	        margin-top: 0px;
+	}
+	.modal-actions {
+	        margin-top: 32px;
+		max-width: 420px;
+        	width: 100%;
+		button {
+	            border-radius: 10px;
+	            font-size: 20px;
+	            padding: 12px;
+	            height: 56px;
+	            max-width: 420px;
+	            width: 100%;
+	        }
+		.share {
+	            max-width: 56px;
+	            height: 56px;
 	        }
 	}
+	
+	
 }
 	
 @media (max-width: 440px) {

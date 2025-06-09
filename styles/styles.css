@@ -4243,7 +4243,7 @@ hr {
 	.modal-content {
 	        top: 0;
 	        left: 0;
-	        position: fixed;
+	        position: relative;
 		padding: 32px 30px 56px 30px;
 	}
 	.mobile-header,
@@ -4257,7 +4257,7 @@ hr {
 	        position: relative;
 	        border-radius: 10px;
 	        padding: 10px 16px;
-	        margin: 0px 0px 24px 0px;
+	        margin: 48px 0px 24px 0px;
 		background-color: #2a3176;
 		h1 {
 	            font-size: 16px;

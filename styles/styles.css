@@ -2883,6 +2883,19 @@ hr {
 	}
 }
 
+.body-no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+  .body-no-scroll {
+    position: relative;
+  }
+}
+
 @media (max-width: 1512px) {
 	.modal {
 	  padding: 28px 36px 43px 38px;

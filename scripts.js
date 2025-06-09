@@ -438,11 +438,11 @@ function createModal() {
      const closeBtn = modal.querySelector('.close-btn');
     closeBtn.onclick = () => {
       modal.style.display = 'none';
+      const scrollY = parseInt(document.body.style.getPropertyValue('--scroll-top').replace('px', '') || '0');
       document.body.classList.remove('body-no-scroll');
-      const scrollY = document.body.dataset.scrollY;
-      window.scrollTo(0, scrollY || 0);
-      document.body.style.top = '';
-      delete document.body.dataset.scrollY;
+      document.documentElement.classList.remove('modal-open');
+      window.scrollTo(0, Math.abs(scrollY));
+      document.body.style.removeProperty('--scroll-top');
     };
   
     const closeImg = closeBtn.querySelector('img');
@@ -463,7 +463,11 @@ function createModal() {
 }
 
 function showProductModal(product) {
-  createModal(); // Создаём модалку, если нет
+  createModal();
+  const scrollY = window.scrollY;
+  document.body.style.setProperty('--scroll-top', `-${scrollY}px`);
+  document.body.classList.add('body-no-scroll');
+  document.documentElement.classList.add('modal-open');
 
   const modal = document.querySelector('#productModal');
   modal.style.display = 'flex';
@@ -473,12 +477,6 @@ function showProductModal(product) {
   }
   modal.style.display = 'flex';
 
-  document.body.classList.add('body-no-scroll');
-  const scrollY = window.scrollY || window.pageYOffset;
-  document.body.style.top = `-${scrollY}px`;
-  document.body.dataset.scrollY = scrollY;
-      
-    
   // Заполняем данные
   modal.querySelector('#modalTitle').textContent = product.name || 'Без названия';
   modal.querySelector('#modalPrice').textContent = product.price ? `${product.price} руб.` : 'Цена не указана';

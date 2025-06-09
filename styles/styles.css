@@ -2887,19 +2887,16 @@ hr {
 
 .body-no-scroll {
   overflow: hidden;
-  position: relative;
-  height: 100vh;
-}
-
-.modal-open {
   position: fixed;
   width: 100%;
-  top: var(--scroll-top);
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 @supports (-webkit-overflow-scrolling: touch) {
   .body-no-scroll {
-    position: relative;
+    position: absolute;
   }
 }
 

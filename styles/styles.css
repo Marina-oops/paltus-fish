@@ -4313,8 +4313,9 @@ hr {
 	            width: 100%;
 	        }
 		.share {
-	            max-width: 56px;
-	            height: 56px;
+	            max-width: 62px;
+	            height: 62px;
+	            margin-top: -3px;
 	        }
 	}
 }

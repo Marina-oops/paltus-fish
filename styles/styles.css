@@ -2641,11 +2641,11 @@ hr {
 }
 
 .modal .close-btn {
-  width: 32px;
+  max-width: 32px;
   height: 32px;
   cursor: pointer;
   display: flex;
-  justify-content: flex-end;
+  justify-self: flex-end;
   width: 100%;
   margin-bottom: 24px;
   background-image: url(../images/close.png);

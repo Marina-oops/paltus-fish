@@ -785,7 +785,7 @@ button:active {
   margin-top: -16px;
   border-top: none;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 24px;
 }
 

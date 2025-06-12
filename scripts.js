@@ -1813,12 +1813,14 @@ const Cart = {
       const itemElement = document.createElement('div');
       itemElement.className = 'cart-item';
       itemElement.innerHTML = `
-        <div class="cart-item-image">
-          <img src="${item.image}" alt="${item.name}">
-        </div>
-        <div class="cart-item-details">
-          <h2>${item.name}</h2>
-          <div class="cart-item-price">${item.price} руб./шт. × ${item.quantity} шт.</div>
+        <div class="cart-item-container">
+            <div class="cart-item-image">
+              <img src="${item.image}" alt="${item.name}">
+            </div>
+            <div class="cart-item-details">
+              <h2>${item.name}</h2>
+              <div class="cart-item-price">${item.price} руб./шт. × ${item.quantity} шт.</div>
+            </div>
         </div>
         <div class="cart-item-controls">
           <div class="buttons-plus-minus">

@@ -3668,10 +3668,13 @@ hr {
 	        font-size: 12px;
 	    }
 	}
-	.quantity,
+	
 	.cart-item-price,
 	.prices {
 	    margin-bottom: 28px;
+	    font-size: 12px;
+	}
+	.quantity {
 	    font-size: 12px;
 	}
 	.cart-item-total {
@@ -3698,6 +3701,9 @@ hr {
 	}
 	#promo-input {
 	    font-size: 12px;
+	}
+	.summary-container {
+	        max-width: 312px;
 	}
 }
 

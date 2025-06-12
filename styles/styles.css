@@ -3925,7 +3925,6 @@ hr {
 	    border-radius: 8px;
 	    padding: 12px;
 	    font-size: 14px;
-	    margin-top: 24px;
 	}
 }
 
@@ -4337,6 +4336,11 @@ hr {
 	            height: 62px;
 	            margin-top: -3px;
 	        }
+	}
+	.apply-filter {
+	    height: 56px;
+	    font-size: 20px;
+	    margin-top: 8px;
 	}
 }
 	

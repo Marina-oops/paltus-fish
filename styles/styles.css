@@ -3935,12 +3935,15 @@ hr {
 	        margin-top: 8px;
 	}
 	.slider-min::-webkit-slider-thumb,
-	.slider-max::-webkit-slider-thumb,
+	.slider-max::-webkit-slider-thumb {
+	  width: 16px;
+	  height: 16px;
+	}
 	.dot, 
 	.dot-2, 
 	.dot-3 {
-	  width: 16px;
-	  height: 16px;
+	  width: 13px;
+	  height: 13px;
 	}
 	.apply-price-filter {
 	    display: none;
@@ -4225,6 +4228,7 @@ hr {
 	}
 	.modal-content-2 {
 	        padding: 24px 30px;
+		top: 0;
 	}
 	.slider-min, 
 	.slider-max {

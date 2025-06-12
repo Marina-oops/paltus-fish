@@ -3915,6 +3915,18 @@ hr {
 	  width: 16px;
 	  height: 16px;
 	}
+	.apply-price-filter {
+	    display: none;
+	}
+	.apply-filter {
+	    display: flex;
+	    width: 100%;
+	    justify-content: center;
+	    border-radius: 8px;
+	    padding: 12px;
+	    font-size: 14px;
+	    margin-top: 24px;
+	}
 }
 
 @media (max-width: 834px) {

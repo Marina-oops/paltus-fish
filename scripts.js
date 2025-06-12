@@ -591,7 +591,7 @@ function initMobileFeatures(catalogModule) {
 
     function updateSubFilters() {
         const oldFilters = document.querySelector('.subfilters');
-        oldFilters.forEach(filter => filter.remove());
+        if (oldFilters) oldFilters.remove();
         
         const subs = subcategories[currentCategory] || [];
         const filterDiv = document.createElement('div');

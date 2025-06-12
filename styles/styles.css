@@ -4359,6 +4359,12 @@ hr {
 	.apply-filter {
 		    font-size: 20px;
 		    margin-top: 8px;
+		    margin-bottom: 32px;
+	}
+	.filter-modal {
+	    overflow-y: auto;
+	    top: 0;
+	    background: #fff;
 	}
 }
 	

@@ -3252,7 +3252,8 @@ hr {
 	    margin-bottom: 22px;
 	    border: 1.5px solid #2a3176;
 	    h2 {
-		font-size: 16px;    
+		font-size: 16px;
+		margin-bottom: 8px;
 	    }
 	}
 	.cart-item-image {
@@ -3270,8 +3271,9 @@ hr {
 	    max-width: 86px;
 	    height: 44px;
 	}
+	.cart-item-price, 
 	.quantity {
-	    font-size: 14px;
+	    font-size: 12px;
 	}
 	.quantity-btn {
 	    max-width: 18px;

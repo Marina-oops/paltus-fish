@@ -4103,6 +4103,26 @@ hr {
 	.apply-price-filter {
 	    display: none;
 	}
+	.basket-container {
+	    flex-direction: column;
+	}
+	.cart-item {
+	        max-width: 924px;
+		padding: 16px;
+		border-radius: 18px;
+		margin-bottom: 16px;
+		justify-content: space-between;
+	}
+	.cart-item-image {
+	        max-width: 10%;
+	}
+	.cart-item-details {
+	        max-width: 312px;
+		h2 {
+	            font-size: 16px;
+	        }
+	}
+	
 }
 
 @media (max-width: 834px) {

@@ -692,10 +692,7 @@ function initMobileFeatures(catalogModule) {
           mobilePriceFilter.removeChild(originalPriceFilterContainer);
           originalPriceFilterContainer.style.display = 'none';
         }
-        if (originalSubFiltersContainer && mobileSubFilters.contains(originalSubFiltersContainer)) {
-          mobileSubFilters.removeChild(originalSubFiltersContainer);
-          originalSubFiltersContainer.style.display = 'none';
-        }
+        originalSubFiltersContainer.style.display = 'none';
         filtersMoved = false;
         document.body.classList.remove('body-no-scroll');
         const scrollY = parseInt(document.body.dataset.scrollY || '0');

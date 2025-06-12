@@ -1413,6 +1413,7 @@ hr {
 		max-width: 204px;
         	width: 100%;
 	}
+	
 }
 
 .catalog-categories {
@@ -3664,6 +3665,18 @@ hr {
 		.line {
 		  height: 1px;
 		}
+		.apply-filter {
+		    button {
+			    display: flex;
+			    width: 100%;
+			    justify-content: center;
+			    border-radius: 8px;
+			    padding: 12px;
+			    font-size: 18px;
+			    height: 56px;
+			    max-width: 1024px;
+		    }
+		}
         }
 	.details-grid-catalog,
 	.details-grid-catalog-2 {
@@ -3917,18 +3930,6 @@ hr {
 	}
 	.apply-price-filter {
 	    display: none;
-	}
-	.apply-filter {
-	    button {
-		    display: flex;
-		    width: 100%;
-		    justify-content: center;
-		    border-radius: 8px;
-		    padding: 12px;
-		    font-size: 18px;
-		    height: 56px;
-		    max-width: 1024px;
-	    }
 	}
 }
 

@@ -573,6 +573,7 @@ function initMobileFeatures(catalogModule) {
     const filterButton = document.querySelector('.filter');
     const filterModal = document.getElementById('filterModal');
     const closeModal = document.querySelector('.modal-header');
+    const closeModal2 = document.querySelector('.apply-filter');
 
     const originalPriceFilterContainer = document.querySelector('.price-filter-container');
     const originalSubFiltersContainer = document.querySelector('.sub_category');
@@ -616,6 +617,30 @@ function initMobileFeatures(catalogModule) {
 
     if (closeModal) {
       closeModal.addEventListener('click', () => {
+        filterModal.style.display = 'none';
+        mobilePriceFilter.style.display = 'none';
+        mobileSubFilters.style.display = 'none';
+        if (originalPriceFilterContainer && mobilePriceFilter.contains(originalPriceFilterContainer)) {
+          mobilePriceFilter.removeChild(originalPriceFilterContainer);
+          originalPriceFilterContainer.style.display = 'none';
+        }
+        if (originalSubFiltersContainer && mobileSubFilters.contains(originalSubFiltersContainer)) {
+          mobileSubFilters.removeChild(originalSubFiltersContainer);
+          originalSubFiltersContainer.style.display = 'none';
+        }
+        filtersMoved = false;
+        document.body.classList.remove('body-no-scroll');
+        const scrollY = parseInt(document.body.dataset.scrollY || '0');
+        window.scrollTo(0, scrollY);
+        document.body.style.top = '';
+        delete document.body.dataset.scrollY;
+        if (catalogModule && typeof catalogModule.renderProducts === 'function') {
+            catalogModule.renderProducts();
+        }
+      });
+    }
+    if (closeModal2) {
+      closeModal2.addEventListener('click', () => {
         filterModal.style.display = 'none';
         mobilePriceFilter.style.display = 'none';
         mobileSubFilters.style.display = 'none';

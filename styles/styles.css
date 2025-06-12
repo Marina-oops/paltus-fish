@@ -3666,7 +3666,6 @@ hr {
 		  height: 1px;
 		}
 		.apply-filter {
-		    button {
 			    display: flex;
 			    width: 100%;
 			    justify-content: center;
@@ -3675,8 +3674,22 @@ hr {
 			    font-size: 18px;
 			    height: 56px;
 			    max-width: 1024px;
-		    }
+			    background: #000000;
+			    color: white;
+			    border: none;
+			    cursor: pointer;
+			    font-weight: 600;
+			    transition: background-color 0.3s ease, transform 0.2s ease; 
 		}
+		.apply-filter:hover {
+		    background: #333333; 
+		    transform: scale(1.05); 
+		}
+		.apply-filter:active {
+		    background: #555555; 
+		    transform: scale(1); 
+		}
+		
         }
 	.details-grid-catalog,
 	.details-grid-catalog-2 {
@@ -4343,10 +4356,8 @@ hr {
 	        }
 	}
 	.apply-filter {
-		button {
 		    font-size: 20px;
 		    margin-top: 8px;
-		}
 	}
 }
 	

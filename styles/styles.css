@@ -4303,22 +4303,25 @@ hr {
 	        padding: 10px 16px;
 	        margin: 0px 0px 24px 0px;
 		background-color: #2a3176;
+		align-items: center;
 		h1 {
 	            font-size: 16px;
 		    font-family: "Nunito", sans-serif;
     		    color: white;
 		    margin-bottom: 0px;
+		    max-width: 300px;
 	        }
 		.close-btn {
 		  width: 28px;
 		  height: 28px;
 		  background-image: url(../images/arrow.png);
 		  transform: scaleX(-1);
+		  margin-left: -8px;
 		}
 	}
 	.slider-track-3 {
 	        padding-top: 30px;
-		width: 418px;
+		width: 416px;
 	}
 	.slider-dots-wrapper {
 	        margin-top: 16px;
@@ -4418,7 +4421,7 @@ hr {
 	        font-size: 13px;
 	}
 	.slider-track-3 {
-	        width: 378px;
+	        width: 376px;
 	}
 	.slider-min, 
 	.slider-max {
@@ -4462,7 +4465,7 @@ hr {
 	        max-width: 346px;
       }
 	.slider-track-3 {
-	        width: 368px;
+	        width: 366px;
 	}
 }
 
@@ -4497,7 +4500,7 @@ hr {
 	        font-size: 12.5px;
 	}
 	.slider-track-3 {
-	        width: 366px;
+	        width: 364px;
 	}
 	.slider-min, 
 	.slider-max {
@@ -4554,7 +4557,7 @@ hr {
 	        font-size: 12px;
 	}
 	.slider-track-3 {
-	        width: 350px;
+	        width: 348px;
 	}
 	.slider-min, 
 	.slider-max {
@@ -4619,7 +4622,7 @@ hr {
 	        max-width: 318px;
 	}
 	.slider-track-3 {
-	        width: 340px;
+	        width: 338px;
 	}
 	.slider-min, 
 	.slider-max {
@@ -4654,7 +4657,7 @@ hr {
 	        font-size: 11.5px;
 	}
 	.slider-track-3 {
-	        width: 332px;
+	        width: 330px;
 	}
 	.price-input-container {
 	        padding: 16px;
@@ -4675,7 +4678,7 @@ hr {
 	        max-width: 306px;
 	}
 	.slider-track-3 {
-	        width: 328px;
+	        width: 326px;
 	}
 	.slider-min, 
 	.slider-max {
@@ -4722,7 +4725,7 @@ hr {
 	        max-width: 301px;
 	}
 	.slider-track-3 {
-	        width: 323px;
+	        width: 321px;
 	}
 }
 

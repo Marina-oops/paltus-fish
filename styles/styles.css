@@ -2911,6 +2911,10 @@ hr {
 	 	margin-bottom: 8px;
 	}
 }
+.cart-item-container {
+    display: flex;
+    gap: 16px;
+}
 
 @media (max-width: 1512px) {
 	.modal {
@@ -3269,7 +3273,7 @@ hr {
 	    border-radius: 10px;
 	    padding: 8px 9px;
 	    max-width: 86px;
-	    height: 44px;
+	    height: 40px;
 	}
 	.cart-item-price, 
 	.quantity {
@@ -3341,6 +3345,9 @@ hr {
 	}
 	.cart-summary {
 	    border: 1.5px solid #2a3176;
+	}
+	.cart-item-image {
+	        max-width: 20%;
 	}
 }
 

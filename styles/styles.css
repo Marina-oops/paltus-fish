@@ -3924,7 +3924,9 @@ hr {
 	    justify-content: center;
 	    border-radius: 8px;
 	    padding: 12px;
-	    font-size: 14px;
+	    font-size: 18px;
+	    height: 56px;
+	    max-width: 1024px;
 	}
 }
 
@@ -4338,7 +4340,6 @@ hr {
 	        }
 	}
 	.apply-filter {
-	    height: 56px;
 	    font-size: 20px;
 	    margin-top: 8px;
 	}

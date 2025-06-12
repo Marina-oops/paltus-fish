@@ -594,7 +594,9 @@ function initMobileFeatures(catalogModule) {
        if (oldFilters) {
             Array.from(oldFilters).forEach(filter => filter.remove());
         }
-        
+
+        const currentCategory = catalogModule.getCurrentCategory();
+        const selectedSubcategories = catalogModule.getSelectedSubcategories();
         const subs = subcategories[currentCategory] || [];
         const filterDiv = document.createElement('div');
         filterDiv.className = 'subfilters';
@@ -608,11 +610,11 @@ function initMobileFeatures(catalogModule) {
 
             checkbox.addEventListener('change', () => {
                 if (checkbox.checked) {
-                    selectedSubcategories.add(sub);
+                    catalogModule.addSubcategory(sub);
                 } else {
-                    selectedSubcategories.delete(sub);
+                    catalogModule.removeSubcategory(sub);
                 }
-                renderProducts();
+                catalogModule.renderProducts();
             });
 
             label.appendChild(checkbox);
@@ -1122,7 +1124,11 @@ function initProductCatalog() {
   renderProducts();
 
   return {
-    renderProducts
+    renderProducts,
+    getCurrentCategory: () => currentCategory,
+    getSelectedSubcategories: () => selectedSubcategories,
+    addSubcategory: (sub) => selectedSubcategories.add(sub),
+    removeSubcategory: (sub) => selectedSubcategories.delete(sub)
   };
 }
 

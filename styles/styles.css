@@ -4277,6 +4277,8 @@ hr {
 	.modal-2 {
 	    background-color: #fff;
 	    overflow-y: auto;
+	    justify-content: normal;
+    	    align-items: normal;
 	}
 	.modal-content {
 	        top: 0;
@@ -4295,7 +4297,7 @@ hr {
 	        position: relative;
 	        border-radius: 10px;
 	        padding: 10px 16px;
-	        margin: 48px 0px 24px 0px;
+	        margin: 0px 0px 24px 0px;
 		background-color: #2a3176;
 		h1 {
 	            font-size: 16px;
@@ -4327,6 +4329,7 @@ hr {
 	.description-modal {
 	        max-width: 420px;
 		padding-top: 0px;
+		margin-bottom: 40px;
 	}
 	#modalDescription p {
 	        font-size: 16px;

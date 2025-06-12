@@ -3645,6 +3645,48 @@ hr {
 	.desktop-header {
 		max-width: 1008px;
 	}
+	.cart-item {
+	    max-width: 650px;
+	}
+	.buttons-plus-minus {
+	    height: 40px;
+	}
+	.cart-item-details {
+	    h2 {
+	        font-size: 12px;
+	    }
+	}
+	.quantity,
+	.cart-item-price,
+	.prices {
+	    margin-bottom: 28px;
+	    font-size: 12px;
+	}
+	.cart-item-total {
+	    font-size: 14px;
+	}
+	.text-price,
+	.pre-price {
+	    margin-bottom: 8px;
+	}
+	.total-price {
+	    font-size: 16px;
+	}
+	.text-total-price {
+	    font-size: 18px;
+	}
+	.checkout-btn {
+	    padding: 8px;
+	}
+	.promokod {
+	    padding: 24px 32px;
+	    hr {
+		margin-top: 16px;
+	   }
+	}
+	#promo-input {
+	    font-size: 12px;
+	}
 }
 
 @media (max-width: 1024px) {

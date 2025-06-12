@@ -4183,6 +4183,9 @@ hr {
 	.text-pers {
 	        max-width: 312px;
 	}
+	.promo-notification {
+	    max-width: 270px;
+	}
 }
 
 @media (max-width: 834px) {
@@ -4250,6 +4253,9 @@ hr {
 	.mobile-header,
 	.container {
 		max-width: 734px;
+	}
+	.cart-item-image {
+	        max-width: 20%;
 	}
 }
 

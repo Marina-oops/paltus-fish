@@ -1063,7 +1063,7 @@ button:active {
 }
 
 .price-input-container {
-	padding: 16px 0px 16px 0px;
+	padding: 16px;
 	border: 2px solid #2a3176;
 	border-radius: 15px;
 	max-width: 166px;
@@ -3083,7 +3083,7 @@ hr {
 	    }
 	}
 	.price-input-container {
-	    padding: 11px 0px 11px 0px;
+	    padding: 11px;
 	    border: 1.5px solid #2a3176;
 	    border-radius: 10px;
 	    max-width: 112px;
@@ -3832,7 +3832,7 @@ hr {
 	        }
 	}
 	.price-input-container {
-	        padding: 16px 0px;
+	        padding: 16px;
 	        border-radius: 15px;
 	        max-width: 149px;
 	}
@@ -3906,6 +3906,14 @@ hr {
 	}
 	.modal-actions {
 	        margin-top: 8px;
+	}
+	.slider-min::-webkit-slider-thumb,
+	.slider-max::-webkit-slider-thumb,
+	.dot, 
+	.dot-2, 
+	.dot-3 {
+	  width: 16px;
+	  height: 16px;
 	}
 }
 
@@ -4602,7 +4610,7 @@ hr {
 	        width: 332px;
 	}
 	.price-input-container {
-	        padding: 16px 0px;
+	        padding: 16px;
 	        border-radius: 15px;
 	        max-width: 138px;
 	}

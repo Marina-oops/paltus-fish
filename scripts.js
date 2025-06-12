@@ -115,6 +115,14 @@ const PRODUCTS = [
      }
     ];
 
+const subcategories = {
+    "УДИЛИЩА": ["Нахлыстовые", "Фидерные", "Матчевые штекерные", "Матчевые телескопические", "Карповые", "На горбушу"],
+    "СПИННИНГИ": ["Морские", "Троллинговые", "Штекерные", "Телескопические", "Джерковые и кастинговые (курковые)"],
+    "УДОЧКИ": ["С кольцами", "Без колец"],
+    "КАТУШКИ": ["Для удочек", "Для нахлыста", "Для спиннингов", "Фидерные катушки"],
+    "ЛЕСКИ И ШНУРЫ": ["Лески", "Шнуры"]
+  };
+
 let catalogModule;
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -583,7 +591,7 @@ function initMobileFeatures(catalogModule) {
 
     function updateSubFilters() {
         const oldFilters = document.querySelector('.subfilters');
-        if (oldFilters) oldFilters.remove();
+        oldFilters.forEach(filter => filter.remove());
         
         const subs = subcategories[currentCategory] || [];
         const filterDiv = document.createElement('div');
@@ -802,14 +810,6 @@ function initProductCatalog() {
   const categoryElements = document.querySelectorAll('.category-names');
   const filterButton = document.querySelector('.filter');
   const sortButton = document.querySelector('.sort');
-
-  const subcategories = {
-    "УДИЛИЩА": ["Нахлыстовые", "Фидерные", "Матчевые штекерные", "Матчевые телескопические", "Карповые", "На горбушу"],
-    "СПИННИНГИ": ["Морские", "Троллинговые", "Штекерные", "Телескопические", "Джерковые и кастинговые (курковые)"],
-    "УДОЧКИ": ["С кольцами", "Без колец"],
-    "КАТУШКИ": ["Для удочек", "Для нахлыста", "Для спиннингов", "Фидерные катушки"],
-    "ЛЕСКИ И ШНУРЫ": ["Лески", "Шнуры"]
-  };
 
  function updateCategoryCounts() {
     const categories = {

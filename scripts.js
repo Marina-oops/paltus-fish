@@ -572,25 +572,9 @@ function showProductModal(product) {
 let mobileFeaturesInitialized = false;
 let filtersMoved = false;
 
-function initMobileFeatures(catalogModule) {
-    if (window.innerWidth > 1024 || mobileFeaturesInitialized) return;
-    
-    initSwipeSlider();
-    mobileFeaturesInitialized = true;
-
-    const filterButton = document.querySelector('.filter');
-    const filterModal = document.getElementById('filterModal');
-    const closeModal = document.querySelector('.modal-header');
-    const closeModal2 = document.querySelector('.apply-filter');
-
-    const originalPriceFilterContainer = document.querySelector('.price-filter-container');
-    const originalSubFiltersContainer = document.querySelector('.sub_category');
-
-    const mobilePriceFilter = document.querySelector('.mobile-price-filter');
-    const mobileSubFilters = document.querySelector('.mobile-subfilters');
-
-    function updateSubFilters() {
-        const oldFilters = document.querySelector('.subfilters');
+function updateSubFilters() {
+       if (window.innerWidth > 1024) return;
+       const oldFilters = document.querySelector('.subfilters');
        if (oldFilters) {
             Array.from(oldFilters).forEach(filter => filter.remove());
         }
@@ -624,7 +608,24 @@ function initMobileFeatures(catalogModule) {
 
         const mobileContainer = document.querySelector('.mobile-subfilters');
         if (mobileContainer) mobileContainer.appendChild(filterDiv);
-    }
+}
+
+function initMobileFeatures(catalogModule) {
+    if (window.innerWidth > 1024 || mobileFeaturesInitialized) return;
+    
+    initSwipeSlider();
+    mobileFeaturesInitialized = true;
+
+    const filterButton = document.querySelector('.filter');
+    const filterModal = document.getElementById('filterModal');
+    const closeModal = document.querySelector('.modal-header');
+    const closeModal2 = document.querySelector('.apply-filter');
+
+    const originalPriceFilterContainer = document.querySelector('.price-filter-container');
+    const originalSubFiltersContainer = document.querySelector('.sub_category');
+
+    const mobilePriceFilter = document.querySelector('.mobile-price-filter');
+    const mobileSubFilters = document.querySelector('.mobile-subfilters');
 
     function moveFiltersToModal() {
       if (filtersMoved) return;

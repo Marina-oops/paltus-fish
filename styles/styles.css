@@ -3679,7 +3679,8 @@ hr {
 			    border: none;
 			    cursor: pointer;
 			    font-weight: 600;
-			    transition: background-color 0.3s ease, transform 0.2s ease; 
+			    transition: background-color 0.3s ease, transform 0.2s ease;
+			    align-items: center;
 		}
 		.apply-filter:hover {
 		    background: #333333; 

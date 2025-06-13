@@ -339,6 +339,12 @@ img {
      height: 262px;
      top: 1285px;
   }
+
+  .fish_desktop_aside_4 {
+     width: 326px;
+     height: 326px;
+     top: 1726px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -3172,7 +3178,7 @@ hr {
 	.line-product {
 	    margin-top: 16px;
 	    margin-bottom: 11px;
-	    height: 1.5px;
+	    height: 1.35px;
 	}
 	.name_product {
 	    font-size: 12px;
@@ -3368,7 +3374,7 @@ hr {
 	}
 	hr {
 	    height: 1.5px;
-	    margin-top: 24px;
+	    margin-top: 16px;
 	}
 	.content-specialists {
 	    p {
@@ -3398,7 +3404,7 @@ hr {
 	    height: 28px;
 	}
 	.places {
-	    border: 1.5px solid #222b66;
+	    border: 1.35px solid #222b66;
 	    border-radius: 8px;
 	}
 	.places-name {
@@ -3474,6 +3480,14 @@ hr {
 	}
 	.desktop-header {
 		max-width: 1296px;
+	}
+	.row-1 {
+	        max-width: 510px;
+	}
+	.content-specialists {
+	    h2 {
+	        font-size: 18.5px;
+	    }
 	}
 }
 
@@ -3634,10 +3648,19 @@ hr {
 	        max-height: 96px;
 	}
 	.row-1 {
-	    max-width: 456px;
+	    max-width: 470px;
 	}
 	.row-2 {
-	    max-width: 360px;
+	    max-width: 376px;
+	}
+	.cart-specialists {
+	        max-width: 306px;
+	}
+	.about-specialists {
+	    max-width: 406px;
+	}
+	.places {
+	    max-width: 124px;
 	}
 }
 
@@ -3779,6 +3802,12 @@ hr {
 	}
 	.cart-item-image {
 	        max-height: 84px;
+	}
+	.row-1 {
+	        max-width: 370px;
+	}
+	.row-2 {
+	        max-width: 352px;
 	}
 }
 

@@ -5338,8 +5338,10 @@ hr {
 	            font-size: 11px;
 	        }
 	}
-	iframe {
-	        width: 435px;
+	.places {
+		iframe {
+		        width: 435px;
+		}
 	}
 }
 
@@ -5441,8 +5443,10 @@ hr {
 	            height: 28px;
 	        }
 	}
-	iframe {
-	        width: 425px;
+	.places {
+		iframe {
+		        width: 425px;
+		}
 	}
 }
 
@@ -5511,8 +5515,10 @@ hr {
 	            max-width: 245px;
 	        }
 	}
-	iframe {
-	        width: 420px;
+	.places {
+		iframe {
+		        width: 420px;
+		}
 	}
 }
 
@@ -5548,8 +5554,10 @@ hr {
 	            min-width: 88px;
 	        }
 	}
-	iframe {
-	        width: 415px;
+	.places {
+		iframe {
+		        width: 415px;
+		}
 	}
 }
 
@@ -5634,8 +5642,10 @@ hr {
 	            font-size: 7.5px;
 	        }
 	}
-	iframe {
-	        width: 385px;
+	.places {
+		iframe {
+		        width: 385px;
+		}
 	}
 }
 

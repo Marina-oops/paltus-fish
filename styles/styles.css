@@ -3885,6 +3885,13 @@ hr {
 	        background-image: none;
 		min-height: 44px;
 	  }
+	.filter:hover {
+		background-image: none;
+	}
+	
+	.filter:active {
+		background-image: none;
+	}
 	  
 	  .filter-icon {
 	    width: 29px;

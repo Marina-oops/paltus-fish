@@ -4379,6 +4379,10 @@ hr {
 	.container {
 		max-width: 644px;
 	}
+	.cart-item-image {
+	        max-width: 30%;
+	        min-width: 30%;
+	}
 }
 
 @media (max-width: 480px) {

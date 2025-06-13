@@ -4300,7 +4300,9 @@ hr {
 	.cart-item-controls {
 	        max-height: 36px;
 	}
-	.row-1,
+	.row-1 {
+	        max-width: 466px;
+	}
 	.row-2 {
 	        max-width: 458px;
 	}
@@ -4430,6 +4432,31 @@ hr {
 	        min-width: 30%;
 		max-height: 124px;
 	}
+	.cart-specialists {
+	        max-width: 242px;
+	}
+	.content-specialists {
+		gap: 16px;
+	        h2 {
+	            font-size: 14.5px;
+	            letter-spacing: -0.4px;
+	        }
+	}
+	.about-specialists {
+	        max-width: 390px;
+	}
+	.line-product {
+	        height: 1.3px;
+	}
+	.places {
+	        max-width: 119px;
+	}
+	.row-1 {
+	        max-width: 371px;
+	}
+	.row-2 {
+	        max-width: 363px;
+	}
 }
 
 @media (max-width: 768px) {
@@ -4500,6 +4527,20 @@ hr {
 	.cart-item-image {
 		max-height: 104px;
 	}
+	.row-1 {
+	        max-width: 338px;
+	}
+	.row-2 {
+	        max-width: 330px;
+	}
+	.about-specialists {
+	        max-width: 322px;
+	}
+	.places {
+	        max-width: 96px;
+	        height: 40px;
+	}
+	
 }
 
 @media (max-width: 744px) {
@@ -4559,6 +4600,18 @@ hr {
 	}
 	.cart-item-image {
 		max-height: 98px;
+	}
+	.row-1 {
+	        max-width: 326px;
+	}
+	.row-2 {
+	        max-width: 318px;
+	}
+	.about-specialists {
+	        max-width: 300px;
+	}
+	.places {
+	        max-width: 89px;
 	}
 }
 

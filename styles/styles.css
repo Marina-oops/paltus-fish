@@ -4957,7 +4957,12 @@ hr {
 	}
 	.arrow-left, 
 	.arrow-right {
-	        height: 24px;
+	        height: 28px;
+	}
+	.header-specialists {
+	     h1 {
+	        max-width: 320px;
+	    }
 	}
 	.content-specialists {
 		flex-direction: column;

@@ -5113,7 +5113,7 @@ hr {
 	        }
 	}
 	iframe {
-	        width: 480px;
+	        width: 470px;
 	}
 }
 
@@ -5188,6 +5188,9 @@ hr {
 	        h1 {
 	            max-width: 275px;
 	        }
+	}
+	iframe {
+	        width: 455px;
 	}
 }
 
@@ -5335,7 +5338,9 @@ hr {
 	            font-size: 11px;
 	        }
 	}
-	
+	iframe {
+	        width: 435px;
+	}
 }
 
 @media (max-width: 402px) {
@@ -5436,6 +5441,9 @@ hr {
 	            height: 28px;
 	        }
 	}
+	iframe {
+	        width: 425px;
+	}
 }
 
 @media (max-width: 394px) {
@@ -5503,6 +5511,9 @@ hr {
 	            max-width: 245px;
 	        }
 	}
+	iframe {
+	        width: 420px;
+	}
 }
 
 @media (max-width: 390px) {
@@ -5536,6 +5547,9 @@ hr {
 	            max-width: 88px;
 	            min-width: 88px;
 	        }
+	}
+	iframe {
+	        width: 415px;
 	}
 }
 
@@ -5619,6 +5633,9 @@ hr {
 	        .name_product {
 	            font-size: 7.5px;
 	        }
+	}
+	iframe {
+	        width: 385px;
 	}
 }
 

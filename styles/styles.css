@@ -4301,9 +4301,10 @@ hr {
 	        max-height: 36px;
 	}
 	.row-1 {
-	        max-width: 466px;
+	        max-width: 462px;
 	}
 	.row-2 {
+		margin-left: 4px;
 	        max-width: 458px;
 	}
 	.about-us-container {
@@ -4452,10 +4453,11 @@ hr {
 	        max-width: 119px;
 	}
 	.row-1 {
-	        max-width: 371px;
+	        max-width: 363px;
 	}
 	.row-2 {
 	        max-width: 363px;
+		margin-left: 8px;
 	}
 }
 
@@ -4528,10 +4530,11 @@ hr {
 		max-height: 104px;
 	}
 	.row-1 {
-	        max-width: 338px;
+	        max-width: 330px;
 	}
 	.row-2 {
 	        max-width: 330px;
+		margin-left: 8px;
 	}
 	.about-specialists {
 	        max-width: 322px;
@@ -4602,10 +4605,11 @@ hr {
 		max-height: 98px;
 	}
 	.row-1 {
-	        max-width: 326px;
+	        max-width: 318px;
 	}
 	.row-2 {
 	        max-width: 318px;
+		margin-left: 8px;
 	}
 	.about-specialists {
 	        max-width: 300px;

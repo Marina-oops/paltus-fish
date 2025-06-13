@@ -4694,6 +4694,9 @@ hr {
 	.promo-notification {
 	    max-width: 420px;
 	}
+	.cart-item-image {
+	        max-width: 25%;
+	}
 }
 	
 @media (max-width: 440px) {

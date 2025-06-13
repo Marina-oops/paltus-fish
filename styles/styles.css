@@ -3352,6 +3352,59 @@ hr {
 	        max-width: 25%;
 		max-height: 108px;
 	}
+	.row-1 {
+	    max-width: 582px;
+	    margin-bottom: 16px;
+	}
+	.row-2 {
+	    max-width: 480px;
+	}
+	.about-us-container {
+	    margin-top: 14px;
+	}
+	.specialists-container {
+	    padding: 48px 32px;
+	    font-size: 14px;
+	}
+	hr {
+	    height: 1.5px;
+	    margin-top: 24px;
+	}
+	.content-specialists {
+	    p {
+	        font-size: 16px;
+	    }
+	}
+	.top-specialists-products-container {
+	    margin-top: 22px;
+	    margin-bottom: 32px;
+	    .name_product {
+	        font-size: 11px;
+	    }
+	    .cost {
+	        font-size: 12px;
+	    }
+	    button {
+	        font-size: 12px;
+	        height: 36px;
+	        border-radius: 8px;
+	    }
+	}
+	.cart-specialists {
+	    max-width: 332px;
+	}
+	.arrow-left, 
+	.arrow-right {
+	    height: 28px;
+	}
+	.places {
+	    border: 1.5px solid #222b66;
+	    border-radius: 8px;
+	}
+	.places-name {
+	    font-size: 11px;
+	    margin-top: 8px;
+	}
 }
 
 @media (max-width: 1440px) {
@@ -3579,6 +3632,12 @@ hr {
 	}
 	.cart-item-image {
 	        max-height: 96px;
+	}
+	.row-1 {
+	    max-width: 456px;
+	}
+	.row-2 {
+	    max-width: 360px;
 	}
 }
 

@@ -2877,6 +2877,9 @@ hr {
 	flex-direction: column;
 	display:flex;
 }
+#arrows-for-slider-2 {
+	display: none;
+}
 .row-1 {
 	display:flex;
 	max-width: 698px;
@@ -4943,6 +4946,27 @@ hr {
 	.promokod {
 		max-width: 420px;
 		width: 100%;
+	}
+	.text-about-us {
+	    justify-content: space-between;
+	}
+	.row-1,
+	.row-2 {
+	        max-width: 420px;
+		margin-left: 0px;
+	}
+	.about-us-container {
+	        gap: 16px;
+	}
+	#arrows-for-slider-1 {
+		display: flex;
+	}
+	#arrows-for-slider-2 {
+		display: none;
+	}
+	.arrow-left, 
+	.arrow-right {
+	        height: 16px;
 	}
 }
 	

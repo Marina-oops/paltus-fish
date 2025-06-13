@@ -4948,7 +4948,7 @@ hr {
 		width: 100%;
 	}
 	.text-about-us {
-	    justify-content: space-between;
+	    flex-direction: column;
 	}
 	.row-1,
 	.row-2 {
@@ -4959,15 +4959,18 @@ hr {
 	        gap: 16px;
 	}
 	#arrows-for-slider-1 {
-		display: flex;
+		display: none;
 	}
 	#arrows-for-slider-2 {
-		display: none;
+		display: flex;
+		justify-content: center;
+        	margin-top: 20px;
 	}
 	.arrow-left, 
 	.arrow-right {
-	        height: 16px;
+	        height: 24px;
 	}
+	
 }
 	
 @media (max-width: 440px) {

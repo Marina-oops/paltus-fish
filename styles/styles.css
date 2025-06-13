@@ -2877,9 +2877,6 @@ hr {
 	flex-direction: column;
 	display:flex;
 }
-#arrows-for-slider-2 {
-	display: none;
-}
 .row-1 {
 	display:flex;
 	max-width: 698px;
@@ -4957,14 +4954,6 @@ hr {
 	}
 	.about-us-container {
 	        gap: 16px;
-	}
-	#arrows-for-slider-1 {
-		display: none;
-	}
-	#arrows-for-slider-2 {
-		display: flex;
-		justify-content: center;
-        	margin-top: 20px;
 	}
 	.arrow-left, 
 	.arrow-right {

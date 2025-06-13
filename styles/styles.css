@@ -5009,9 +5009,9 @@ hr {
 	.places {
 	        max-width: 372px;
 		height: 50px;
-	}
-	iframe {
-		width: 520px;
+		iframe {
+			width: 520px;
+		}
 	}
 	.places-name {
 	        font-size: 16px;
@@ -5112,8 +5112,10 @@ hr {
 	            font-size: 12px;
 	        }
 	}
-	iframe {
-	        width: 470px;
+	.places {
+		iframe {
+		        width: 470px;
+		}
 	}
 }
 
@@ -5167,8 +5169,10 @@ hr {
 		max-height: 84px;
 		min-width: 25%;
 	}
-	iframe {
-	        width: 470px;
+	places {
+		iframe {
+		        width: 470px;
+		}
 	}
 	.top-specialists-products {
 	        .product {
@@ -5189,8 +5193,10 @@ hr {
 	            max-width: 275px;
 	        }
 	}
-	iframe {
-	        width: 455px;
+	places {
+		iframe {
+		        width: 455px;
+		}
 	}
 }
 

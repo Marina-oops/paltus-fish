@@ -4300,6 +4300,55 @@ hr {
 	.cart-item-controls {
 	        max-height: 36px;
 	}
+	.row-1,
+	.row-2 {
+	        max-width: 458px;
+	}
+	.about-us-container {
+	    margin-bottom: 48px;
+	}
+	.specialists-container {
+	        padding: 32px 22px;
+	        font-size: 12px;
+	}
+	.content-specialists {
+	        h2 {
+	            font-size: 16px;
+		    letter-spacing: 0px;
+	        }
+		p {
+	            font-size: 12px;
+	        }
+	}
+	.cart-specialists {
+	        max-width: 300px;
+	}
+	.about-specialists {
+	        max-width: 508px;
+	}
+	.top-specialists-products-container {
+	        margin-top: 16px;
+	        margin-bottom: 28px;
+		.name_product {
+	            font-size: 8px;
+	            min-height: 26px;
+	        }
+		.cost {
+	            font-size: 10px;
+	        }
+		button {
+	            font-size: 8px;
+	            height: 24px;
+	            border-radius: 5px;
+	        }
+	}
+	.top-specialists-places,
+	.top-specialists-products {
+	    margin-top: 12px;
+	}
+	.places {
+	        max-width: 158px;
+	}
 }
 
 @media (max-width: 834px) {

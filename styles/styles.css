@@ -3661,6 +3661,9 @@ hr {
 	}
 	.places {
 	    max-width: 124px;
+	    iframe {
+		width: 260px;
+	    }
 	}
 }
 
@@ -4351,6 +4354,9 @@ hr {
 	}
 	.places {
 	        max-width: 158px;
+		iframe {
+			width: 290px;
+		}
 	}
 	.arrow-left, 
 	.arrow-right {
@@ -4451,6 +4457,9 @@ hr {
 	}
 	.places {
 	        max-width: 119px;
+		iframe {
+			width: 260px;
+		}
 	}
 	.row-1 {
 	        max-width: 363px;
@@ -4542,6 +4551,10 @@ hr {
 	.places {
 	        max-width: 96px;
 	        height: 40px;
+		iframe {
+			width: 230px;
+    			height: 228px;
+		}
 	}
 	
 }
@@ -5010,7 +5023,7 @@ hr {
 	        max-width: 372px;
 		height: 50px;
 		iframe {
-			width: 520px;
+			width: 510px;
 		}
 	}
 	.places-name {

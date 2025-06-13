@@ -5025,7 +5025,11 @@ hr {
 		display: flex;
 	        gap: 16px;
 	        flex-direction: column;
-	        margin-bottom: 40px;
+	        margin-bottom: 64px;
+	}
+	.about-us-container,
+	.specialists-container {
+	        margin-bottom: 64px;
 	}
 }
 	

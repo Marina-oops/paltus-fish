@@ -4192,6 +4192,12 @@ hr {
 	        min-width: 20%;
 	        max-height: 118px;
 	}
+	.cart-item-price {
+	        margin-bottom: 0px;
+	}
+	.cart-item-controls {
+	        max-height: 36px;
+	}
 }
 
 @media (max-width: 834px) {

@@ -4991,12 +4991,25 @@ hr {
 	.top-specialists-products-container {
 	        margin-top: 40px;
 	        margin-bottom: 40px;
+		.name_product {
+	            font-size: 11px;
+	            min-height: 40px;
+	        }
+		.cost {
+	            font-size: 14px;
+	        }
+		button {
+	            font-size: 14px;
+	            height: 32px;
+	            border-radius: 6px;
+	        }
 	}
 	.top-specialists-products {
 	    flex-direction: row;
 	    gap: 8px;
 	    .product {
 	        max-width: 118px;
+		min-width: 118px;
 	    }
 	}
 	.places {
@@ -5011,6 +5024,8 @@ hr {
 	}
 	.top-specialists-places {
 	        gap: 12px;
+		flex-direction: column;
+		margin-top: 0px;
 	}
 	#details-grid-mob-about-us {
 		display: flex;

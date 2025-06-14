@@ -3053,7 +3053,7 @@ select#time-from,
 select#time-to {
   border: none;
   border-bottom: 2px solid #000;
-  padding: 8px 0px;
+  padding: 10px 0px;
   font-size: 20px;
   width: 100%;
   outline: none;
@@ -3568,10 +3568,15 @@ select.input-error {
 	}
 	.order-information {
 	    max-width: 872px;
+	    input {
+		    font-size: 15.5px;
+		}
 	}
-	.order-contact-information,
-	.payment-container {
+	.order-contact-information {
 	    margin-bottom: 64px;
+	}
+	.payment-container {
+	    margin-top: 64px;
 	}
 	.receive {
 	    border: 1.5px solid #2a3176;
@@ -3612,8 +3617,34 @@ select.input-error {
 	.receive-content {
 	    margin-top: 16px;
 	    font-size: 12px;
+	    max-width: 577px;
+	    input {
+	        font-size: 15.5px;
+	        margin-bottom: 14px;
+	    }
+	}
+	.time-container-input {
+	    p {
+	        min-width: 176px;
+		font-size: 16px;
+	    }
+	}
+	select#line-select,
+	select#time-from,
+	select#time-to {
+	  font-size: 16px;
 	}
 	
+	option {
+	  font-size: 12px;
+	}
+	
+	#go-to-home {
+	    margin-top: 24px;
+	    border-radius: 10px;
+	    padding: 12px;
+	    width: 100%;
+	}
 }
 
 @media (max-width: 1440px) {
@@ -3691,6 +3722,9 @@ select.input-error {
 	    h2 {
 	        font-size: 18.5px;
 	    }
+	}
+	.order-information {
+	        max-width: 776px;
 	}
 }
 
@@ -3868,6 +3902,9 @@ select.input-error {
 		width: 260px;
 	    }
 	}
+	.method-payment {
+	        width: 323px;
+	}
 }
 
 @media (max-width: 1152px) {
@@ -4014,6 +4051,35 @@ select.input-error {
 	}
 	.row-2 {
 	        max-width: 352px;
+	}
+	.order-information {
+	        max-width: 584px;
+		h2 {
+		        font-size: 17.5px;
+		}
+		input {
+		    font-size: 12.5px;
+		}
+	}
+	.receive {
+	        max-width: 190px;
+	}
+	#mail-russia {
+		margin-right: 0px;
+	}
+	.receive-content {
+	    max-width: 584px;
+	    input {
+		    font-size: 12.5px;
+		}
+	}
+	.time-container-input {
+	    p {
+	        font-size: 12.5px;
+	    }
+	}
+	.method-payment {
+	        width: 280px;
 	}
 }
 

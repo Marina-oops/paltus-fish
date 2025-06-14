@@ -2079,7 +2079,7 @@ function validateOrderForm() {
       const timeFrom = document.getElementById('time-from');
       const timeTo = document.getElementById('time-to');
 
-      if (!timeFrom.value || !timeTo.value) {
+      if (!timeFrom.value.trim() || !timeTo.value.trim()) {
         timeFrom.classList.add('input-error');
         timeTo.classList.add('input-error');
         alert('Пожалуйста, выберите время получения заказа.');

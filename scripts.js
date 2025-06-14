@@ -2021,7 +2021,7 @@ function initCheckoutProcess() {
     e.preventDefault();
 
     if (!validateOrderForm()) {
-      alert('Пожалуйста, заполните все обязательные поля.');
+      alert('Пожалуйста, заполните все поля.');
       return;
     }
 
@@ -2074,6 +2074,21 @@ function validateOrderForm() {
         input.classList.remove('input-error');
       }
     });
+
+    if (deliveryId === 'courier') {
+      const timeFrom = document.getElementById('time-from');
+      const timeTo = document.getElementById('time-to');
+
+      if (!timeFrom.value || !timeTo.value) {
+        timeFrom.classList.add('input-error');
+        timeTo.classList.add('input-error');
+        alert('Пожалуйста, выберите время получения заказа.');
+        return false;
+      } else {
+        timeFrom.classList.remove('input-error');
+        timeTo.classList.remove('input-error');
+      }
+    }
 
     if (!allFilled) {
       alert('Пожалуйста, заполните все поля адреса доставки.');

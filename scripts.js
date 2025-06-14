@@ -1988,20 +1988,7 @@ function initDeliveryTabs() {
 }
 
 function initDeliveryAndPaymentSelection() {
-  const deliveryOptions = document.querySelectorAll('.receive');
   const paymentOptions = document.querySelectorAll('.method-payment');
-
-  deliveryOptions.forEach(option => {
-    option.addEventListener('click', () => {
-      deliveryOptions.forEach(o => o.classList.remove('active'));
-      option.classList.add('active');
-
-      const contentId = option.id + '-content';
-      document.querySelectorAll('.receive-content').forEach(el => el.style.display = 'none');
-      const content = document.getElementById(contentId);
-      if (content) content.style.display = 'block';
-    });
-  });
 
   paymentOptions.forEach(option => {
     option.addEventListener('click', () => {

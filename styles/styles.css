@@ -3617,7 +3617,7 @@ select.input-error {
 	.receive-content {
 	    margin-top: 16px;
 	    font-size: 12px;
-	    max-width: 577px;
+	    max-width: 646px;
 	    input {
 	        font-size: 15.5px;
 	        margin-bottom: 14px;
@@ -3625,7 +3625,7 @@ select.input-error {
 	}
 	.time-container-input {
 	    p {
-	        min-width: 176px;
+	        min-width: 200px;
 		font-size: 16px;
 	    }
 	}
@@ -3731,6 +3731,14 @@ select.input-error {
 	}
 	.receive {
 	        max-width: 176px;
+	}
+	.receive-content {
+	        max-width: 577px;
+	}
+	.time-container-input {
+	        p {
+	            min-width: 176px;
+	        }
 	}
 }
 
@@ -3909,8 +3917,28 @@ select.input-error {
 	    }
 	}
 	.method-payment {
-	        width: 323px;
+	        width: 320px;
 	}
+	.order-information {
+	        max-width: 666px;
+	}
+	.receive {
+	        max-width: 148px;
+		p {
+	            font-size: 10px;
+	        }
+		h2 {
+	            font-size: 10px;
+	        }
+	}
+	.receive-content {
+	        max-width: 490px;
+	}
+	.time-container-input {
+	        p {
+	            min-width: 147px;
+	        }
+	 }
 }
 
 @media (max-width: 1152px) {

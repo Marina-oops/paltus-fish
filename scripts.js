@@ -157,6 +157,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.location.pathname.includes('make_an_order.html')) {
      initDynamicDates();
   }
+  if (window.location.pathname.includes('basket.html')) {
+     initCheckoutRedirect();
+  }
 });
 
 if (window.location.pathname.includes('ropes.html')) {
@@ -1898,5 +1901,14 @@ function initDynamicDates() {
   if (dayAfterTomorrowElem) dayAfterTomorrowElem.textContent = formatDate(dayAfterTomorrow);
   if (rangeElem) {
     rangeElem.textContent = `${formatDate(rangeStart)} — ${formatDate(rangeEnd)}`;
+  }
+}
+
+function initCheckoutRedirect() {
+  const checkoutBtn = document.querySelector('.checkout-btn');
+  if (checkoutBtn) {
+    checkoutBtn.addEventListener('click', () => {
+      window.location.href = '/make_an_order.html';
+    });
   }
 }

@@ -1510,6 +1510,7 @@ function updateSearchHeader(count, query) {
 const Cart = {
   items: [],
   isInitialized: false,
+  deliveryCost: 0,
   // Инициализация корзины
   init() {
     if (this.isInitialized) return;
@@ -1756,7 +1757,7 @@ const Cart = {
     const subtotal = this.calculateSubtotal();
     const discount = this.getDiscount();
     const discountAmount = discount ? discount.amount : 0;
-    const total = Math.round(subtotal - discountAmount);
+    const total = Math.round(subtotal - discountAmount + this.deliveryCost);
     
     this.togglePromoRemoveButton(!!discount);
     // Обновляем суммы в корзине
@@ -1959,6 +1960,16 @@ function initDeliveryTabs() {
       if (contentBlocks[id]) {
         contentBlocks[id].style.display = 'block';
       }
+
+         if (block.id === 'courier') {
+          Cart.deliveryCost = 400;
+        } else if (block.id === 'mail-russia') {
+          Cart.deliveryCost = 120;
+        } else {
+          Cart.deliveryCost = 0;
+      }
+       
+        Cart.updateUI();
     });
   });
 }

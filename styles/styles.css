@@ -2949,13 +2949,15 @@ hr {
     border: 2px solid #2a3176;
     border-radius: 20px;
     padding: 40px 24px;
-    font-size: 16px;
     margin-bottom: 24px;
     max-width: 264px;
     margin-right: 24px;
     width: 100%;
     h2 {
 	font-size: 16px;
+    }
+    p {
+	font-size: 16px;    
     }
 }
 .receive::hover {
@@ -2972,15 +2974,20 @@ hr {
 #order-name {
 	max-width: 264px;
 }
+.method-payment-container {
+    	display: flex;
+}
 .method-payment {
-	max-width: 512px;
+	width: 512px;
 	border: 2px solid #2a3176;
 	border-radius: 20px;
 	padding: 32px 24px;
 	font-size: 16px;
 	margin-bottom: 24px;
 	margin-right: 24px;
-	width: 100%;
+	p {
+		font-size: 16px;    
+	}
 }
 .method-payment::hover {
     cursor: pointer;

@@ -1758,6 +1758,11 @@ const Cart = {
     const discount = this.getDiscount();
     const discountAmount = discount ? discount.amount : 0;
     const total = Math.round(subtotal - discountAmount + this.deliveryCost);
+
+    const deliveryElement = document.getElementById('cart-delivery');
+    if (deliveryElement) {
+      deliveryElement.textContent = this.deliveryCost + ' руб.';
+    }
     
     this.togglePromoRemoveButton(!!discount);
     // Обновляем суммы в корзине

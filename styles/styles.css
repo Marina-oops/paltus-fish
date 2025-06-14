@@ -2304,6 +2304,9 @@ hr {
     color: #4f4f4f;
     font-size: 22px;
     margin-bottom: 16px;
+	hr {
+	    margin-top: 24px;
+	}
 }
 
 .promo-notification {

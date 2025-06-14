@@ -1908,7 +1908,7 @@ function initCheckoutRedirect() {
   const checkoutBtn = document.querySelector('.checkout-btn');
   if (checkoutBtn) {
     checkoutBtn.addEventListener('click', () => {
-      window.location.href = '/make_an_order.html';
+      window.location.href = '/paltus-fish/make_an_order.html';
     });
   }
 }

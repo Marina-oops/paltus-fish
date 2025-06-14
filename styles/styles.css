@@ -2967,7 +2967,7 @@ hr {
 .receive:hover {
     cursor: pointer;
 }
-.receive:active {
+.receive.active {
     border: 2px solid #6cc276;
     background-color: #6cc276;
 }
@@ -3001,7 +3001,7 @@ hr {
 .method-payment:hover {
     cursor: pointer;
 }
-.method-payment:active {
+.method-payment.active {
     border: 2px solid #6cc276;
     background-color: #6cc276;
 }

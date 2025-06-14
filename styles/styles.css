@@ -2943,6 +2943,7 @@ hr {
 
 .receive-container {
 	margin-bottom: 100px;
+	display: flex;
 }
 .receive {
     border: 2px solid #2a3176;
@@ -2953,9 +2954,23 @@ hr {
     max-width: 264px;
     margin-right: 24px;
     width: 100%;
+    h2 {
+	font-size: 16px;
+    }
+}
+.receive::hover {
+    cursor: pointer;
 }
 .method-payment-container {
-	max-width: 1158px;
+	h2 {
+		font-size: 16px;
+	}
+}
+.order-contact-information {
+	margin-bottom: 100px;
+}
+#order-name {
+	max-width: 264px;
 }
 .method-payment {
 	max-width: 512px;
@@ -2966,6 +2981,15 @@ hr {
 	margin-bottom: 24px;
 	margin-right: 24px;
 	width: 100%;
+}
+.method-payment::hover {
+    cursor: pointer;
+}
+.order-information {
+    max-width: 1128px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width: 1512px) {

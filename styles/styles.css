@@ -2946,7 +2946,6 @@ hr {
 }
 
 .receive-container {
-	margin-bottom: 100px;
 	display: flex;
 }
 .receive {
@@ -3010,6 +3009,29 @@ hr {
     width: 100%;
     display: flex;
     flex-direction: column;
+}
+#self-content,
+#courier-content,
+#mail-content {
+	display: none;
+}
+.receive-container-input {
+	display: flex;
+}
+.receive-content {
+	max-width: 840px;
+	width: 100%;
+	display: flex;
+	font-size: 18px;
+	input {
+		font-size: 20px;
+	}
+}
+.time-container-input {
+	display: flex;
+}
+.payment-container {
+	margin-top: 100px;
 }
 
 @media (max-width: 1512px) {

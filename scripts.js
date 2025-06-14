@@ -154,14 +154,16 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.location.pathname.includes('search.html')) {
       initSearchPage();
   }
+  if (window.location.pathname.includes('basket.html')) {
+     initCheckoutRedirect();
+  }
   if (window.location.pathname.includes('make_an_order.html')) {
      initDynamicDates();
      initPaymentMethodSelection();
      initDeliveryTabs();
-     initBasketRedirect()
-  }
-  if (window.location.pathname.includes('basket.html')) {
-     initCheckoutRedirect();
+     initBasketRedirect();
+     initDeliveryAndPaymentSelection();
+     initCheckoutProcess();
   }
 });
 
@@ -1787,6 +1789,12 @@ const Cart = {
     }
   },
 
+  clear() {
+    this.items = [];
+    localStorage.removeItem('cart');
+    this.updateUI();
+  },
+    
   showAddToCartAnimation() {
     const cartButton = document.getElementById('cart-button');
     if (cartButton) {
@@ -1976,5 +1984,131 @@ function initDeliveryTabs() {
        
         Cart.updateUI();
     });
+  });
+}
+
+function initDeliveryAndPaymentSelection() {
+  const deliveryOptions = document.querySelectorAll('.receive');
+  const paymentOptions = document.querySelectorAll('.method-payment');
+
+  deliveryOptions.forEach(option => {
+    option.addEventListener('click', () => {
+      deliveryOptions.forEach(o => o.classList.remove('active'));
+      option.classList.add('active');
+
+      const contentId = option.id + '-content';
+      document.querySelectorAll('.receive-content').forEach(el => el.style.display = 'none');
+      const content = document.getElementById(contentId);
+      if (content) content.style.display = 'block';
+    });
+  });
+
+  paymentOptions.forEach(option => {
+    option.addEventListener('click', () => {
+      paymentOptions.forEach(o => o.classList.remove('active'));
+      option.classList.add('active');
+    });
+  });
+}
+
+function initCheckoutProcess() {
+  const checkoutBtn = document.querySelector('.checkout-btn');
+  const form = document.getElementById('order-form');
+
+  if (!checkoutBtn || !form) return;
+
+  checkoutBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if (!validateOrderForm()) {
+      alert('Пожалуйста, заполните все обязательные поля.');
+      return;
+    }
+
+    showThankYouZakazModal();
+    Cart.clear();
+    Cart.updateUI();
+    form.reset();
+  });
+}
+
+function validateOrderForm() {
+  const name = document.querySelector('input[name="name"]');
+  const phone = document.querySelector('input[name="phone"]');
+  const email = document.querySelector('input[name="email"]');
+
+  let valid = true;
+
+  [name, phone, email].forEach(input => {
+    if (!input.value.trim()) {
+      input.classList.add('input-error');
+      valid = false;
+    } else {
+      input.classList.remove('input-error');
+    }
+  });
+
+  if (!valid) {
+    alert('Пожалуйста, заполните все контактные данные.');
+    return false;
+  }
+
+  const selectedDelivery = document.querySelector('.receive.active');
+  if (!selectedDelivery) {
+    alert('Пожалуйста, выберите способ доставки.');
+    return false;
+  }
+
+  const deliveryId = selectedDelivery.id;
+
+  if (deliveryId === 'courier' || deliveryId === 'mail-russia') {
+    const addressBlock = document.querySelector(`#${deliveryId}-content`);
+    const addressInputs = addressBlock.querySelectorAll('input[type="text"]');
+    let allFilled = true;
+
+    addressInputs.forEach(input => {
+      if (!input.value.trim()) {
+        input.classList.add('input-error');
+        allFilled = false;
+      } else {
+        input.classList.remove('input-error');
+      }
+    });
+
+    if (!allFilled) {
+      alert('Пожалуйста, заполните все поля адреса доставки.');
+      return false;
+    }
+  }
+
+  const selectedPayment = document.querySelector('.method-payment.active');
+  if (!selectedPayment) {
+    alert('Пожалуйста, выберите способ оплаты.');
+    return false;
+  }
+
+  return true;
+}
+
+
+function showThankYouZakazModal() {
+  const modal = document.createElement('div');
+  modal.className = 'modal-overlay';
+  modal.innerHTML = `
+    <div class="modal">
+      <div class="close-btn"></div>
+      <h2>ВАШ ЗАКАЗ ОФОРМЛЕН!</h2>
+      <p style="font-weight: 700;">Спасибо, что выбрали наш&nbsp;магазин! Для&nbsp;подтверждения заказа с&nbsp;вами свяжется наш&nbsp;сотрудник</p>
+      <p style="font-weight: 700;">Если заказ сделан в&nbsp;будни с&nbsp;9:00 до&nbsp;18:00 —&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;течение&nbsp;15&nbsp;минут</p>
+      <p style="color: white;">Д</p>
+      <p>В другое время позвоним утром следующего рабочего дня</p>
+      <button id="go-to-home">На главную</button>
+    </div>
+  `;
+  document.body.appendChild(modal);
+  document.body.style.overflow = 'hidden';
+
+  modal.querySelector('#go-to-home').addEventListener('click', () => {
+    window.location.href = '/paltus-fish/index.html';
   });
 }

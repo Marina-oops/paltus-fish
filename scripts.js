@@ -2096,11 +2096,11 @@ function showThankYouZakazModal() {
   modal.className = 'modal-overlay';
   modal.innerHTML = `
     <div class="modal">
-      <div class="close-btn"></div>
       <h2>ВАШ ЗАКАЗ ОФОРМЛЕН!</h2>
-      <p style="font-weight: 700;">Спасибо, что выбрали наш&nbsp;магазин! Для&nbsp;подтверждения заказа с&nbsp;вами свяжется наш&nbsp;сотрудник</p>
-      <p style="font-weight: 700;">Если заказ сделан в&nbsp;будни с&nbsp;9:00 до&nbsp;18:00 —&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;течение&nbsp;15&nbsp;минут</p>
-      <p style="color: white;">Д</p>
+      <p>Спасибо, что выбрали наш&nbsp;магазин!</p>
+      <br>
+      <p>Для&nbsp;подтверждения заказа с&nbsp;вами свяжется наш&nbsp;сотрудник<br>Если заказ сделан в&nbsp;будни с&nbsp;9:00 до&nbsp;18:00 —&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;течение&nbsp;15&nbsp;минут</p>
+      <br>
       <p>В другое время позвоним утром следующего рабочего дня</p>
       <button id="go-to-home">На главную</button>
     </div>

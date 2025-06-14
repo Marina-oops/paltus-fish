@@ -3078,7 +3078,7 @@ option {
 }
 
 select.input-error {
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid red !important;
 }
 
 @media (max-width: 1512px) {

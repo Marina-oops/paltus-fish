@@ -154,6 +154,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.location.pathname.includes('search.html')) {
       initSearchPage();
   }
+  if (window.location.pathname.includes('make_an_order.html')) {
+     initDynamicDates();
+  }
 });
 
 if (window.location.pathname.includes('ropes.html')) {
@@ -1867,3 +1870,33 @@ const Cart = {
   }
 
 };
+
+function initDynamicDates() {
+  const formatDate = (date) => {
+    return date.toLocaleDateString('ru-RU', {
+      day: '2-digit',
+      month: 'long'
+    });
+  };
+
+  const today = new Date();
+
+  const dayAfterTomorrow = new Date();
+  dayAfterTomorrow.setDate(today.getDate() + 2);
+
+  const rangeStart = new Date();
+  rangeStart.setDate(today.getDate() + 2);
+
+  const rangeEnd = new Date();
+  rangeEnd.setDate(today.getDate() + 4);
+
+  const todayElem = document.querySelector('.date-today');
+  const dayAfterTomorrowElem = document.querySelector('.date-day-after-tomorrow');
+  const rangeElem = document.querySelector('.date-range');
+
+  if (todayElem) todayElem.textContent = formatDate(today);
+  if (dayAfterTomorrowElem) dayAfterTomorrowElem.textContent = formatDate(dayAfterTomorrow);
+  if (rangeElem) {
+    rangeElem.textContent = `${formatDate(rangeStart)} — ${formatDate(rangeEnd)}`;
+  }
+}

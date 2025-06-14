@@ -2968,7 +2968,7 @@ hr {
     cursor: pointer;
 }
 .receive:active {
-    border: none;
+    border: 2px solid #6cc276;
     background-color: #6cc276;
 }
 .header-order {
@@ -3002,7 +3002,7 @@ hr {
     cursor: pointer;
 }
 .method-payment:active {
-    border: none;
+    border: 2px solid #6cc276;
     background-color: #6cc276;
 }
 .order-information {

@@ -157,6 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.location.pathname.includes('make_an_order.html')) {
      initDynamicDates();
      initPaymentMethodSelection();
+     initDeliveryTabs();
   }
   if (window.location.pathname.includes('basket.html')) {
      initCheckoutRedirect();
@@ -1923,6 +1924,30 @@ function initPaymentMethodSelection() {
       paymentMethods.forEach(el => el.classList.remove('active'));
       if (!isActive) {
         method.classList.add('active');
+      }
+    });
+  });
+}
+
+function initDeliveryTabs() {
+  const receiveBlocks = document.querySelectorAll('.receive');
+  const contentBlocks = {
+    self: document.getElementById('self-content'),
+    courier: document.getElementById('courier-content'),
+    'mail-russia': document.getElementById('mail-content')
+  };
+
+  receiveBlocks.forEach(block => {
+    block.addEventListener('click', () => {
+      
+      receiveBlocks.forEach(el => el.classList.remove('active'));
+      block.classList.add('active');
+
+      Object.values(contentBlocks).forEach(el => el.style.display = 'none');
+
+      const id = block.id;
+      if (contentBlocks[id]) {
+        contentBlocks[id].style.display = 'block';
       }
     });
   });

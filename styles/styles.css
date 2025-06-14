@@ -3077,6 +3077,10 @@ option {
   border-color: red;
 }
 
+select.input-error {
+  border-bottom: 2px solid red;
+}
+
 @media (max-width: 1512px) {
 	.modal {
 	  padding: 28px 36px 43px 38px;

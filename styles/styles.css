@@ -2932,6 +2932,10 @@ hr {
 	background-size: cover;
 	width: 100%;
 	cursor: pointer;
+	max-width: 48px;
+    	height: 37px;
+	margin-right: 20px;
+    	margin-top: 10px;
 }
 .attention-container {
     border: 2px solid #2a3176;
@@ -2963,7 +2967,17 @@ hr {
 .receive::hover {
     cursor: pointer;
 }
+.receive::active {
+    border: none;
+    background-color: #6cc276;
+}
+.header-order {
+	display: flex;
+}
 .method-payment-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
 	h2 {
 		font-size: 16px;
 	}
@@ -2974,23 +2988,22 @@ hr {
 #order-name {
 	max-width: 264px;
 }
-.method-payment-container {
-    	display: flex;
-}
 .method-payment {
 	width: 512px;
 	border: 2px solid #2a3176;
 	border-radius: 20px;
 	padding: 32px 24px;
 	font-size: 16px;
-	margin-bottom: 24px;
-	margin-right: 24px;
 	p {
 		font-size: 16px;    
 	}
 }
 .method-payment::hover {
     cursor: pointer;
+}
+.method-payment::active {
+    border: none;
+    background-color: #6cc276;
 }
 .order-information {
     max-width: 1128px;

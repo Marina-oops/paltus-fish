@@ -68,7 +68,7 @@
          <h1>КОНТАКТНЫЕ ДАННЫЕ ПОКУПАТЕЛЯ</h1>
       </div>
      <div class="basket-container">
-      <div>
+      <div class="order-information">
         <form id="order-form" method="POST" action="send.php">
          <div class="form-section_row">
             <div class="form-block">
@@ -86,17 +86,17 @@
           </div>
           <h1>СПОСОБ ПОЛУЧЕНИЯ</h1>
           <div class="receive-container">
-            <div class="receive" id="self">
+            <div class="receive" id="self" role="button">
               <h2>САМОВЫВОЗ</h2>
               <p>Сегодня, <span class="date-today"></span></p>
               <p style="font-weight: 700;">Бесплатно</p>
             </div>
-            <div class="receive" id="courier">
+            <div class="receive" id="courier" role="button">
               <h2>КУРЬЕРСКАЯ СЛУЖБА</h2>
               <p>Послезавтра, <span class="date-day-after-tomorrow"></span></p>
               <p style="font-weight: 700;">от 400 руб.</p>
             </div>
-            <div class="receive" id="mail-russia">
+            <div class="receive" id="mail-russia" role="button">
               <h2>ПОЧТА РОССИЯ</h2>
               <p><span class="date-range"></span></p>
               <p style="font-weight: 700;">от 120 руб.</p>
@@ -104,15 +104,15 @@
           </div>
           <h1>СПОСОБ ОПЛАТЫ</h1>
           <div class="method-payment-container">
-            <div class="method-payment" id="spb">
+            <div class="method-payment" id="spb" role="button">
               <h2>Оплата СБП по QR-коду</h2>
               <p>Онлайн-оплата без ввода данных карты</p>
             </div>
-            <div class="method-payment" id="bank">
+            <div class="method-payment" id="bank" role="button">
               <h2>Банковский перевод на счёт</h2>
               <p>Комиссия до 3%</p>
             </div>
-            <div class="method-payment" id="upon-receipt">
+            <div class="method-payment" id="upon-receipt" role="button">
               <h2>При получении</h2>
               <p>Наличными или картой курьеру или продавцу</p>
             </div>

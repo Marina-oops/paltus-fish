@@ -158,6 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
      initDynamicDates();
      initPaymentMethodSelection();
      initDeliveryTabs();
+     initBasketRedirect()
   }
   if (window.location.pathname.includes('basket.html')) {
      initCheckoutRedirect();
@@ -1911,6 +1912,15 @@ function initCheckoutRedirect() {
   if (checkoutBtn) {
     checkoutBtn.addEventListener('click', () => {
       window.location.href = '/paltus-fish/make_an_order.html';
+    });
+  }
+}
+
+function initBasketRedirect() {
+  const arrowbackBtn = document.querySelector('.arrow_back');
+  if (arrowbackBtn) {
+    arrowbackBtn.addEventListener('click', () => {
+      window.location.href = '/paltus-fish/basket.html';
     });
   }
 }

@@ -2926,6 +2926,48 @@ hr {
     gap: 16px;
 }
 
+.arrow_back {
+	background-image: url(../images/arrow_back.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	cursor: pointer;
+}
+.attention-container {
+    border: 2px solid #2a3176;
+    border-radius: 10px;
+    padding: 16px 20px;
+    font-size: 16px;
+    margin-bottom: 54px;
+}
+
+.receive-container {
+	margin-bottom: 100px;
+}
+.receive {
+    border: 2px solid #2a3176;
+    border-radius: 20px;
+    padding: 40px 24px;
+    font-size: 16px;
+    margin-bottom: 24px;
+    max-width: 264px;
+    margin-right: 24px;
+    width: 100%;
+}
+.method-payment-container {
+	max-width: 1158px;
+}
+.method-payment {
+	max-width: 512px;
+	border: 2px solid #2a3176;
+	border-radius: 20px;
+	padding: 32px 24px;
+	font-size: 16px;
+	margin-bottom: 24px;
+	margin-right: 24px;
+	width: 100%;
+}
+
 @media (max-width: 1512px) {
 	.modal {
 	  padding: 28px 36px 43px 38px;

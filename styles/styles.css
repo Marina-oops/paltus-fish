@@ -65,6 +65,9 @@ input {
   font-size: 20px;
   width: 100%;
   max-width: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0; 
 }
 
 @media (max-width: 1512px) {

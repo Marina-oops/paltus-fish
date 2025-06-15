@@ -3044,6 +3044,12 @@ hr {
 		min-width: 264px;
 	}
 }
+.time-container {
+    display: flex;
+    max-width: 264px;
+    width: 100%;
+    gap: 24px;
+}
 .payment-container {
 	margin-top: 96px;
 }
@@ -3648,6 +3654,10 @@ select.input-error {
 	.time-container-input {
 	    gap: 16px;
 	}
+	.time-container {
+	    max-width: 208px;
+	    gap: 16px;
+	}
 }
 
 @media (max-width: 1440px) {
@@ -3745,6 +3755,9 @@ select.input-error {
 	}
 	#order-name {
 	        max-width: 182px;
+	}
+	.time-container {
+	    max-width: 182px;
 	}
 }
 
@@ -3943,8 +3956,12 @@ select.input-error {
 	}
 	.time-container-input {
 	        p {
-	            min-width: 154px;
+	            width: 154px;
+		    min-width: unset;
 	        }
+	 }
+	.time-container {
+	        max-width: 320px;
 	 }
 	#order-name {
 	        max-width: 154px;
@@ -4155,6 +4172,9 @@ select.input-error {
 	select#time-to {
 	        font-size: 12.5px;
 	}
+	.time-container {
+	        max-width: 382px;
+	 }
 }
 
 @media (max-width: 1024px) {
@@ -4776,6 +4796,10 @@ select.input-error {
 	option {
 	  font-size: 10px;
 	}
+	.time-container {
+	        max-width: 410px;
+		gap: 8px;
+	 }
 }
 
 @media (max-width: 834px) {
@@ -5534,8 +5558,11 @@ select.input-error {
 	        }
 	}
 	.time-container-input {
+		align-items: start;
+    		flex-direction: column;
 	        p {
-	            min-width: 134px;
+	            min-width: unset;
+		    width: 100%;
 	            font-size: 16px;
 	        }
 	}
@@ -5543,6 +5570,7 @@ select.input-error {
 	select#time-from, 
 	select#time-to {
 	        font-size: 16px;
+		max-width: 135px;
 	}
 	option {
 	  font-size: 16px;
@@ -5652,25 +5680,11 @@ select.input-error {
 	#order-name {
 	        max-width: 320px;
 	}
-	/*
-	.time-container-input {
-	        p {
-	            min-width: 121px;
-	            font-size: 14.5px;
-	        }
-	}
-	.receive-content {
-	        input {
-	            font-size: 14.5px;
-	            margin-bottom: 14px;
-	        }
-	}
 	select#line-select, 
 	select#time-from, 
 	select#time-to {
-	        font-size: 14.5px;
+	        max-width: 121px;
 	}
-	*/
 }
 
 @media (max-width: 430px) {
@@ -5752,24 +5766,11 @@ select.input-error {
 		        width: 455px;
 		}
 	}
-	/*
-	.time-container-input {
-	        p {
-	            min-width: 118px;
-	            font-size: 14px;
-	        }
-	}
-	.receive-content {
-	        input {
-	            font-size: 14px;
-	        }
-	}
 	select#line-select, 
 	select#time-from, 
 	select#time-to {
-	        font-size: 14px;
+	        max-width: 118px;
 	}
-	*/
 }
 
 @media (max-width: 428px) {
@@ -5921,25 +5922,11 @@ select.input-error {
 		        width: 435px;
 		}
 	}
-	/*
-	.time-container-input {
-	        p {
-	            min-width: 112px;
-	            font-size: 13px;
-	        }
-	}
-	.receive-content {
-	        input {
-	            font-size: 13px;
-	            margin-bottom: 12px;
-	        }
-	}
 	select#line-select, 
 	select#time-from, 
 	select#time-to {
-	        font-size: 13px;
+	        max-width: 112px;
 	}
-	*/
 	#order-name {
 	        max-width: 312px;
 	}
@@ -6048,13 +6035,11 @@ select.input-error {
 		        width: 425px;
 		}
 	}
-	/*
-	.time-container-input {
-	        p {
-	            min-width: 109px;
-	        }
+	select#line-select, 
+	select#time-from, 
+	select#time-to {
+	        max-width: 109px;
 	}
-	*/
 }
 
 @media (max-width: 394px) {
@@ -6127,14 +6112,11 @@ select.input-error {
 		        width: 420px;
 		}
 	}
-	/*
-	.time-container-input {
-	        p {
-	            min-width: 106px;
-	            font-size: 12.5px;
-	        }
+	select#line-select, 
+	select#time-from, 
+	select#time-to {
+	        max-width: 106px;
 	}
-	*/
 }
 
 @media (max-width: 390px) {
@@ -6173,6 +6155,11 @@ select.input-error {
 		iframe {
 		        width: 415px;
 		}
+	}
+	select#line-select, 
+	select#time-from, 
+	select#time-to {
+	        max-width: 105px;
 	}
 }
 
@@ -6261,6 +6248,29 @@ select.input-error {
 		iframe {
 		        width: 385px;
 		}
+	}
+	select#line-select, 
+	select#time-from, 
+	select#time-to {
+	        max-width: 95px;
+		font-size: 15.5px;
+	}
+	.receive-content {
+	        input {
+	            font-size: 15.5px;
+	        }
+	}
+	.time-container-input {
+	        p {
+	            font-size: 15.5px;
+	        }
+	}
+	option {
+		font-size: 15.5px;
+	}
+	.receive {
+	        padding: 24px 10px;
+		max-width: 95px;
 	}
 }
 

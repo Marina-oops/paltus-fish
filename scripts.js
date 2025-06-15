@@ -180,6 +180,16 @@ function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
 
+  const textarea = form.querySelector('textarea[name="message"]');
+  const counter = form.querySelector('.number_characters');
+
+  if (textarea && counter) {
+      textarea.addEventListener('input', () => {
+        const currentLength = textarea.value.length;
+        counter.textContent = `${currentLength}/100`;
+      });
+  }
+    
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     const inputs = form.querySelectorAll('input, textarea');
@@ -199,6 +209,7 @@ function initContactForm() {
     setTimeout(() => {
       showThankYouModal();
       form.reset();
+      if (counter) counter.textContent = '0/100';
     }, 500);
   });
 }

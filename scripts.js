@@ -1483,7 +1483,6 @@ function renderSearchResults(PRODUCTS, container) {
         <div class="cost">${product.price} руб.</div>
         <div class="buttons_products">
           <button type="button" data-id="${product.id}">${buttonText}</button>
-          <div class="share" type="button" data-id="${product.id}"></div>
         </div>
       </div>
     `;
@@ -1503,10 +1502,6 @@ function renderSearchResults(PRODUCTS, container) {
           setTimeout(() => {
             btn.textContent = addedText;
           }, 1000);
-      });
-
-      productDiv.querySelector('.share').addEventListener('click', (e) => {
-        this.handleShareClick(e, product.id);
       });
   });
 }

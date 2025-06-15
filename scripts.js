@@ -445,6 +445,7 @@ function createModal() {
               <div class="modal-price" id="modalPrice"></div>
               <div class="modal-actions">
                 <button type="button">${buttonText}</button>
+                <div class="share" type="button"></div>
               </div>
             </div>
           </div>
@@ -1291,7 +1292,6 @@ class ProductSlider {
           <div class="cost">${product.price} руб.</div>
           <div class="buttons_products">
             <button type="button" data-id="${product.id}">${buttonText}</button>
-            <div class="share" type="button" data-id="${product.id}"></div>
           </div>
         </div>
       `;
@@ -1314,30 +1314,7 @@ class ProductSlider {
                 btn.textContent = addedText;
               }, 1000);
       });
-
-      productDiv.querySelector('.share').addEventListener('click', (e) => {
-        this.handleShareClick(e, product.id);
-      });
     });
-  }
-
-  handleShareClick(e, productId) {
-    const shareUrl = `${window.location.origin}/${productId}`;
-    if (navigator.share) {
-      navigator.share({
-        title: 'Товар на сайте',
-        text: 'Посмотрите этот товар!',
-        url: shareUrl
-      }).catch(err => {
-        console.error('Ошибка при попытке поделиться:', err);
-      });
-    } else {
-      navigator.clipboard.writeText(shareUrl).then(() => {
-        alert('Ссылка на товар скопирована в буфер обмена');
-      }).catch(err => {
-        console.error('Не удалось скопировать ссылку:', err);
-      });
-    }
   }
 
   setupEventListeners() {

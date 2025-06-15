@@ -67,7 +67,6 @@ input {
   max-width: none;
   -webkit-appearance: none;
   appearance: none;
-  border-radius: 0; 
 }
 
 @media (max-width: 1512px) {
@@ -3070,6 +3069,9 @@ select#time-to {
   color: #4f4f4f;
   cursor: pointer;
   background-color: white;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0; 
 }
 
 option {
@@ -5107,6 +5109,9 @@ select.input-error {
 	}
 	.method-payment {
 	        width: 318px;
+	}
+	.details-grid {
+	        grid-template-columns: repeat(auto-fit, minmax(204px, 1fr));
 	}
 }
 

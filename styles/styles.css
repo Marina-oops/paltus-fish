@@ -5649,6 +5649,28 @@ select.input-error {
 		        width: 470px;
 		}
 	}
+	#order-name {
+	        max-width: 320px;
+	}
+	/*
+	.time-container-input {
+	        p {
+	            min-width: 121px;
+	            font-size: 14.5px;
+	        }
+	}
+	.receive-content {
+	        input {
+	            font-size: 14.5px;
+	            margin-bottom: 14px;
+	        }
+	}
+	select#line-select, 
+	select#time-from, 
+	select#time-to {
+	        font-size: 14.5px;
+	}
+	*/
 }
 
 @media (max-width: 430px) {
@@ -5730,6 +5752,24 @@ select.input-error {
 		        width: 455px;
 		}
 	}
+	/*
+	.time-container-input {
+	        p {
+	            min-width: 118px;
+	            font-size: 14px;
+	        }
+	}
+	.receive-content {
+	        input {
+	            font-size: 14px;
+	        }
+	}
+	select#line-select, 
+	select#time-from, 
+	select#time-to {
+	        font-size: 14px;
+	}
+	*/
 }
 
 @media (max-width: 428px) {
@@ -5881,6 +5921,28 @@ select.input-error {
 		        width: 435px;
 		}
 	}
+	/*
+	.time-container-input {
+	        p {
+	            min-width: 112px;
+	            font-size: 13px;
+	        }
+	}
+	.receive-content {
+	        input {
+	            font-size: 13px;
+	            margin-bottom: 12px;
+	        }
+	}
+	select#line-select, 
+	select#time-from, 
+	select#time-to {
+	        font-size: 13px;
+	}
+	*/
+	#order-name {
+	        max-width: 312px;
+	}
 }
 
 @media (max-width: 402px) {
@@ -5986,6 +6048,13 @@ select.input-error {
 		        width: 425px;
 		}
 	}
+	/*
+	.time-container-input {
+	        p {
+	            min-width: 109px;
+	        }
+	}
+	*/
 }
 
 @media (max-width: 394px) {
@@ -6058,6 +6127,14 @@ select.input-error {
 		        width: 420px;
 		}
 	}
+	/*
+	.time-container-input {
+	        p {
+	            min-width: 106px;
+	            font-size: 12.5px;
+	        }
+	}
+	*/
 }
 
 @media (max-width: 390px) {

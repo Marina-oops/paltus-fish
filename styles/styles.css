@@ -4723,7 +4723,7 @@ select.input-error {
 	}
 	.order-information {
 	        h2 {
-	            font-size: 12px;
+	            font-size: 16px;
 	        }
 		input {
 	            font-size: 10px;
@@ -4769,6 +4769,9 @@ select.input-error {
 	}
 	.method-payment {
 	        width: 458px;
+	}
+	.payment-container {
+	        margin-top: 48px;
 	}
 }
 
@@ -4872,6 +4875,22 @@ select.input-error {
 	        max-width: 363px;
 		margin-left: 8px;
 	}
+	.arrow_back {
+	        max-width: 28px;
+	        height: 22px;
+		margin-right: 10px;
+	}
+	.receive-content {
+	        max-width: 488px;
+	}
+	.time-container-input {
+	        p {
+	            min-width: 158px;
+	        }
+	}
+	.method-payment {
+	        width: 363px;
+	}
 }
 
 @media (max-width: 768px) {
@@ -4960,7 +4979,17 @@ select.input-error {
     			height: 228px;
 		}
 	}
-	
+	.receive-content {
+	        max-width: 444px;
+	}
+	.time-container-input {
+	        p {
+	            min-width: 143px;
+	        }
+	}
+	.method-payment {
+	        width: 330px;
+	}
 }
 
 @media (max-width: 744px) {
@@ -5033,6 +5062,17 @@ select.input-error {
 	}
 	.places {
 	        max-width: 89px;
+	}
+	.receive-content {
+	        max-width: 428px;
+	}
+	.time-container-input {
+	        p {
+	            min-width: 137px;
+	        }
+	}
+	.method-payment {
+	        width: 318px;
 	}
 }
 

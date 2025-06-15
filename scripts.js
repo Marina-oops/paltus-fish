@@ -248,6 +248,16 @@ function initFeedbackForm() {
   const form = document.getElementById('feedback-form');
   if (!form) return;
 
+  const textarea = form.querySelector('textarea[name="message"]');
+  const counter = form.querySelector('.number_characters');
+
+  if (textarea && counter) {
+      textarea.addEventListener('input', () => {
+        const currentLength = textarea.value.length;
+        counter.textContent = `${currentLength}/170`;
+      });
+  }
+    
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     const inputs = form.querySelectorAll('input, textarea');
@@ -267,6 +277,7 @@ function initFeedbackForm() {
     setTimeout(() => {
       showThankYouFeedbackModal();
       form.reset();
+      if (counter) counter.textContent = '0/170';
     }, 500);
   });
 }

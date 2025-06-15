@@ -311,7 +311,7 @@ img {
 }
 
 .fish-404-2 {
-	transform: scaleX(-1) rotate(25deg);
+	transform: scaleX(-1);
 	right: 0;
 	bottom: 0;
 }

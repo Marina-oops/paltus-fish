@@ -3096,7 +3096,7 @@ select.input-error {
 
 @media (max-width: 1024px) {
 	.modal {
-	  padding: 24px 24px 56px 40px;
+	  padding: 32px;
 	  max-width: 480px;
 	}
 	.modal h2 {
@@ -4917,6 +4917,9 @@ select.input-error {
 	}
 	.method-payment {
 	        width: 363px;
+	}
+	#go-to-home {
+	    padding: 10px;
 	}
 }
 

@@ -3569,11 +3569,14 @@ select.input-error {
 	.order-information {
 	    max-width: 872px;
 	    input {
-		    font-size: 15.5px;
+		    font-size: 16px;
 		}
 	}
 	.order-contact-information {
 	    margin-bottom: 64px;
+	    .form-section_row {
+		    gap: 16px;
+	    }
 	}
 	.payment-container {
 	    margin-top: 64px;
@@ -3582,8 +3585,8 @@ select.input-error {
 	    border: 1.5px solid #2a3176;
 	    border-radius: 14px;
 	    padding: 24px 16px;
-	    max-width: 200px;
-	    margin-right: 24px;
+	    max-width: 208px;
+	    margin-right: 16px;
 	    p {
 	        font-size: 12px;
 	    }
@@ -3592,10 +3595,10 @@ select.input-error {
 	    }
 	}
 	#order-name {
-	    max-width: 176px;
+	    max-width: 208px;
 	}
 	.method-payment {
-	    width: 424px;
+	    width: 428px;
 	    border: 1.5px solid #2a3176;
 	    border-radius: 15px;
 	    padding: 22px 16px;
@@ -3605,6 +3608,7 @@ select.input-error {
 	    }
  	}
 	.method-payment-container {
+	    gap: 16px;
 	    h2 {
 	        font-size: 12px;
 	    }
@@ -3619,7 +3623,7 @@ select.input-error {
 	    font-size: 12px;
 	    max-width: 646px;
 	    input {
-	        font-size: 15.5px;
+	        font-size: 16px;
 	        margin-bottom: 14px;
 	    }
 	}
@@ -3720,10 +3724,10 @@ select.input-error {
 	        max-width: 776px;
 	}
 	.method-payment {
-	        width: 376px;
+	        width: 380px;
 	}
 	.receive {
-	        max-width: 176px;
+	        max-width: 182px;
 	}
 	.receive-content {
 	        max-width: 577px;
@@ -3732,6 +3736,9 @@ select.input-error {
 	        p {
 	            min-width: 176px;
 	        }
+	}
+	#order-name {
+	        max-width: 182px;
 	}
 }
 
@@ -3910,13 +3917,20 @@ select.input-error {
 	    }
 	}
 	.method-payment {
-	        width: 320px;
+	        width: 325px;
 	}
 	.order-information {
 	        max-width: 666px;
 	}
 	.receive {
-	        max-width: 148px;
+	        max-width: 154px;
+		h2 {
+	            font-size: 11px;
+	            letter-spacing: -0.1px;
+	        }
+		p {
+		    font-size: 11px;
+		}
 	}
 	.receive-content {
 	        max-width: 490px;
@@ -3926,6 +3940,20 @@ select.input-error {
 	            min-width: 147px;
 	        }
 	 }
+	#order-name {
+	        max-width: 154px;
+	}
+	.method-payment-container {
+	        h2 {
+	            font-size: 11px;
+	            letter-spacing: -0.1px;
+	        }
+	}
+	.method-payment {
+	        p {
+	            font-size: 11px;
+	        }
+	}
 }
 
 @media (max-width: 1152px) {

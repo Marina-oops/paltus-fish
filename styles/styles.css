@@ -305,13 +305,15 @@ img {
 	top: 2578px;
 }
 
-.fish-404,
-.fish-404-2 {
+.fish-404 {
 	bottom: 0;
+	left: 0;
 }
 
 .fish-404-2 {
 	transform: scaleX(-1);
+	right: 0;
+	bottom: 0;
 }
 
 .fish-filter-inactive {
@@ -320,6 +322,10 @@ img {
 
 .fish-filter-active {
   top: var(--fish-active-position, 1035px);
+}
+
+.logo-404-container {
+	
 }
 
 @media (max-width: 1512px) {
@@ -3118,6 +3124,8 @@ select.input-error {
 	line-height: 120%;
 	color: #2A3176;
 	margin-bottom: 96px;
+	display: flex;
+    	justify-content: center;
 }
 .text-404 {
 	font-family: "Nunito", sans-serif;
@@ -3125,10 +3133,17 @@ select.input-error {
 	font-size: 24px;
 	line-height: 120%;
 	margin-bottom: 64px;
+	display: flex;
+    	justify-content: center;
+    	text-align: center;
 }
 .cameback {
     padding: 14px 24px;
     border-radius: 10px;
+}
+.cameback-container {
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width: 1512px) {

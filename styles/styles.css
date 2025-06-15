@@ -262,6 +262,8 @@ img {
 .fish_desktop_aside_3,
 .fish_desktop_aside_4,
 .fish_mobile_footer_1, 
+.fish-404,
+.fish-404-2,
 .fish_mobile_footer_2 {
 	position: absolute;
 	z-index: -1;
@@ -301,6 +303,15 @@ img {
 
 .fish_desktop_aside_4 {
 	top: 2578px;
+}
+
+.fish-404,
+.fish-404-2 {
+	bottom: 0;
+}
+
+.fish-404-2 {
+	transform: scaleX(-1);
 }
 
 .fish-filter-inactive {

@@ -3097,6 +3097,28 @@ option {
 select.input-error {
   border-bottom: 2px solid red !important;
 }
+.logo-404 {
+	
+}
+.text-header-404 {
+	font-family: "Roboto", sans-serif;
+	font-weight: 700;
+	font-size: 450px;
+	line-height: 120%;
+	color: #2A3176;
+	margin-bottom: 96px;
+}
+.text-404 {
+	font-family: "Nunito", sans-serif;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 120%;
+	margin-bottom: 64px;
+}
+.cameback {
+    padding: 14px 24px;
+    border-radius: 10px;
+}
 
 @media (max-width: 1512px) {
 	.modal {

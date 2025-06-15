@@ -1893,12 +1893,12 @@ const Cart = {
 
 function initDynamicDates() {
   const formatDate = (date) => {
-    return date.toLocaleDateString('ru-RU', {
-      day: '2-digit',
-      month: 'long'
-    });
+      const parts = date.toLocaleDateString('ru-RU', {
+        day: '2-digit',
+        month: 'long'
+      }).split(' ');
+      return parts.join('\u00A0');
   };
-
   const today = new Date();
 
   const dayAfterTomorrow = new Date();

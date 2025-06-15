@@ -4773,6 +4773,9 @@ select.input-error {
 	.payment-container {
 	        margin-top: 48px;
 	}
+	option {
+	  font-size: 10px;
+	}
 }
 
 @media (max-width: 834px) {
@@ -5401,6 +5404,9 @@ select.input-error {
 		max-width: 420px;
 		width: 100%;
 	}
+	.cart-summary {
+	        margin-top: 54px;
+	}
 	.text-about-us {
 	    flex-direction: column;
 	}
@@ -5488,6 +5494,74 @@ select.input-error {
 	.about-us-container,
 	.specialists-container {
 	        margin-bottom: 64px;
+	}
+	.header-order {
+	    flex-direction: column;
+	    gap: 16px;
+	}
+	.arrow_back {
+	        max-width: 32px;
+	        height: 25px;
+	        margin-top: 0px;
+	}
+	#order-name {
+	        max-width: 360px;
+	}
+	.order-information {
+	        h2 {
+	            font-size: 20px;
+	        }
+		input {
+	            font-size: 18px;
+	        }
+	} 
+	.order-contact-information {
+	        margin-bottom: 54px;
+	}
+	.receive {
+	        h2 {
+	            font-size: 11px;
+	            min-height: 29px;
+	        }
+		p {
+	            font-size: 9px;
+	        }
+	}
+	.receive-content {
+		input {
+	            font-size: 16px;
+		    margin-bottom: 16px;
+	        }
+	}
+	.time-container-input {
+	        p {
+	            min-width: 134px;
+	            font-size: 16px;
+	        }
+	}
+	select#line-select, 
+	select#time-from, 
+	select#time-to {
+	        font-size: 16px;
+	}
+	option {
+	  font-size: 16px;
+	}
+	.method-payment {
+	        width: 100%;
+		min-height: 124px;
+		p {
+	            font-size: 18px;
+	        }
+	}
+	.method-payment-container {
+	        gap: 16px;
+		h2 {
+	            font-size: 18px;
+	        }
+	}
+	.payment-container {
+	        margin-top: 54px;
 	}
 }
 	

@@ -3731,6 +3731,22 @@ select.input-error {
 	    max-width: 208px;
 	    gap: 16px;
 	}
+	.fish-404-2,
+	.fish-404 {
+	        max-width: 858px;
+    		height: 828px;
+	}
+	.logo-404 {
+	    width: 210px;
+    	    height: 142px;
+	}
+	.text-header-404 {
+	    font-size: 300px;
+	}
+	.text-404 {
+	    font-size: 16px;
+	    margin-bottom: 40px;
+	}
 }
 
 @media (max-width: 1440px) {

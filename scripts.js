@@ -1930,7 +1930,7 @@ function initCheckoutRedirect() {
   const checkoutBtn = document.querySelector('.checkout-btn');
   if (checkoutBtn) {
     checkoutBtn.addEventListener('click', () => {
-      window.location.href = '/paltus-fish/make_an_order.html';
+      window.location.href = '/make_an_order.html';
     });
   }
 }
@@ -1939,7 +1939,7 @@ function init404Redirect() {
   const redirectBtn = document.querySelector('.cameback');
   if (redirectBtn) {
     redirectBtn.addEventListener('click', () => {
-      window.location.href = '/paltus-fish/index.html';
+      window.location.href = '/index.html';
     });
   }
 }
@@ -1948,7 +1948,7 @@ function initBasketRedirect() {
   const arrowbackBtn = document.querySelector('.arrow_back');
   if (arrowbackBtn) {
     arrowbackBtn.addEventListener('click', () => {
-      window.location.href = '/paltus-fish/basket.html';
+      window.location.href = '/basket.html';
     });
   }
 }
@@ -2125,6 +2125,6 @@ function showThankYouZakazModal() {
   document.body.style.overflow = 'hidden';
 
   modal.querySelector('#go-to-home').addEventListener('click', () => {
-    window.location.href = '/paltus-fish/index.html';
+    window.location.href = '/index.html';
   });
 }

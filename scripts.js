@@ -445,7 +445,6 @@ function createModal() {
               <div class="modal-price" id="modalPrice"></div>
               <div class="modal-actions">
                 <button type="button">${buttonText}</button>
-                <div class="share" type="button"></div>
               </div>
             </div>
           </div>

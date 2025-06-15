@@ -1623,6 +1623,7 @@ hr {
       width: 25px;
       height: 25px;
       border: 1px solid #2a3176;
+      padding: 0px;
 }
 
 .slider-container {

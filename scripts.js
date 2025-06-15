@@ -906,21 +906,20 @@ function initProductCatalog() {
               }, 1000);
     });
       
-    productDiv.querySelectorAll('.share').forEach(button => {
-      button.addEventListener('click', (e) => {
-        const productId = e.currentTarget.getAttribute('data-id');
-        const shareUrl = `${window.location.origin.href}${productId}`;
-    
+    const shareButton = productDiv.querySelector('.share');
+    if (shareButton) {
+      shareButton.addEventListener('click', () => {
+        const shareUrl = `${window.location.origin}${window.location.pathname}?product=${product.id}`;
+        
         if (navigator.share) {
           navigator.share({
-            title: 'Товар на сайте',
+            title: product.name,
             text: 'Посмотрите этот товар!',
             url: shareUrl
           }).catch(err => {
             console.error('Ошибка при попытке поделиться:', err);
           });
         } else {
-          // Фолбэк: копируем ссылку в буфер обмена
           navigator.clipboard.writeText(shareUrl).then(() => {
             alert('Ссылка на товар скопирована в буфер обмена');
           }).catch(err => {
@@ -928,8 +927,9 @@ function initProductCatalog() {
           });
         }
       });
+    }
+            
     });
-  });
 
  }
     
@@ -1139,6 +1139,17 @@ function initProductCatalog() {
     addSubcategory: (sub) => selectedSubcategories.add(sub),
     removeSubcategory: (sub) => selectedSubcategories.delete(sub)
   };
+    const urlParams = new URLSearchParams(window.location.search);
+    const productIdFromUrl = urlParams.get('product');
+    
+    if (productIdFromUrl) {
+      const productToShow = PRODUCTS.find(p => p.id == productIdFromUrl);
+      if (productToShow) {
+        setTimeout(() => {
+          showProductModal(productToShow);
+        }, 0);
+      }
+    }
 }
 
 function initSpecialistsSlider() {

@@ -112,6 +112,38 @@ const PRODUCTS = [
       image: "images/spinnings/spin-5.jpg",
       category: "СПИННИНГИ",
       subcategory: "Морские"
+     },
+    {
+      id: 14,
+      name: "Спиннинг WFT Oceanic Pro TIDECUTTER Travel (2,10м, 200-700гр)",
+      price: 4250,
+      image: "images/spinnings/spin-5.jpg",
+      category: "УДОЧКИ",
+      subcategory: "С кольцами"
+     },
+    {
+      id: 15,
+      name: "Спиннинг WFT Oceanic Pro TIDECUTTER Travel (2,10м, 200-700гр)",
+      price: 4250,
+      image: "images/spinnings/spin-5.jpg",
+      category: "КАТУШКИ",
+      subcategory: "Для спиннингов"
+     },
+    {
+      id: 16,
+      name: "Спиннинг WFT Oceanic Pro TIDECUTTER Travel (2,10м, 200-700гр)",
+      price: 4250,
+      image: "images/spinnings/spin-5.jpg",
+      category: "ЛЕСКИ И ШНУРЫ",
+      subcategory: "Лески"
+     },
+    {
+      id: 17,
+      name: "Спиннинг WFT Oceanic Pro TIDECUTTER Travel (2,10м, 200-700гр)",
+      price: 4250,
+      image: "images/spinnings/spin-5.jpg",
+      category: "КАТУШКИ",
+      subcategory: "Для спиннингов"
      }
     ];
 

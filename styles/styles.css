@@ -2389,7 +2389,6 @@ hr {
 	        font-size: 16.5px;
 	        height: 49px;
 	        border-radius: 9px;
-	        max-width: 204px;
 	        width: 100%;
 	}
 }
@@ -6186,7 +6185,7 @@ select.input-error {
 	}
 	.buttons_products,
 	.cost,
-	.name-product,
+	.name_product,
 	.line-product {
 	        max-width: 167px;
     	}
@@ -6270,7 +6269,7 @@ select.input-error {
 	.product,
 	.buttons_products,
 	.cost,
-	.name-product,
+	.name_product,
 	.line-product {
 	        max-width: 163px;
     	}
@@ -6321,7 +6320,7 @@ select.input-error {
 	.product,
 	.buttons_products,
 	.cost,
-	.name-product,
+	.name_product,
 	.line-product {
 	        max-width: 161px;
     	}
@@ -6445,7 +6444,7 @@ select.input-error {
 	.product,
 	.buttons_products,
 	.cost,
-	.name-product,
+	.name_product,
 	.line-product {
 	        max-width: 146px;
     	}

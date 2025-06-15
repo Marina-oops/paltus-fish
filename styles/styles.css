@@ -3621,7 +3621,7 @@ select.input-error {
 	.receive-content {
 	    margin-top: 16px;
 	    font-size: 12px;
-	    max-width: 646px;
+	    max-width: 656px;
 	    input {
 	        font-size: 16px;
 	        margin-bottom: 14px;
@@ -3641,6 +3641,12 @@ select.input-error {
 	
 	option {
 	  font-size: 12px;
+	}
+	.receive-container-input {
+	    gap: 16px;
+	}
+	.time-container-input {
+	    gap: 8px;
 	}
 }
 
@@ -3933,7 +3939,7 @@ select.input-error {
 		}
 	}
 	.receive-content {
-	        max-width: 490px;
+	        max-width: 493px;
 	}
 	.time-container-input {
 	        p {
@@ -4114,6 +4120,7 @@ select.input-error {
 	        max-width: 190px;
 		h2 {
 			font-size: 12px;
+			letter-spacing: 0px;
 		}
 	}
 	#mail-russia {
@@ -4692,6 +4699,61 @@ select.input-error {
 	.places-name {
 	        font-size: 8px;
 	 }
+	.order-information {
+	        max-width: 924px;
+	}
+	.order-contact-information {
+		margin-bottom: 48px;
+	        .form-section_row {
+	            gap: 8px;
+	        }
+	}
+	#order-name {
+	        max-width: 303px;
+	}
+	.receive {
+	        max-width: 303px;
+		margin-right: 8px;
+	}
+	.order-information {
+	        h2 {
+	            font-size: 16px;
+	        }
+		input {
+	            font-size: 10px;
+	        }
+	}
+	.receive-content {
+		max-width: 614px;
+	        input {
+	            font-size: 10px;
+	        }
+	}
+	.time-container-input {
+	        p {
+	            font-size: 10px;
+	        }
+	}
+	select#line-select, 
+	select#time-from, 
+	select#time-to {
+	        font-size: 10px;
+	}
+	.receive-container-input {
+	    gap: 8px;
+	}
+	.time-container-input {
+	    gap: 8px;
+	    p {
+	            min-width: 200px;
+	    }
+	}
+	.method-payment-container {
+	        gap: 8px;
+	}
+	.method-payment {
+	        width: 458px;
+	}
 }
 
 @media (max-width: 834px) {

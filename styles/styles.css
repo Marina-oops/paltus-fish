@@ -3733,19 +3733,22 @@ select.input-error {
 	}
 	.fish-404-2,
 	.fish-404 {
-	        max-width: 858px;
-    		height: 828px;
+	        max-width: 658px;
+    		height: 635px;
 	}
 	.logo-404 {
-	    width: 210px;
-    	    height: 142px;
+	    width: 140px;
+    	    height: 95px;
 	}
 	.text-header-404 {
-	    font-size: 300px;
+	    font-size: 210px;
 	}
 	.text-404 {
 	    font-size: 16px;
 	    margin-bottom: 40px;
+	}
+	.logo-404-container {
+	    margin-top: 24px;
 	}
 }
 

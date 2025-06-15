@@ -3066,6 +3066,7 @@ select#time-to {
   transition: border-color 0.3s;
   color: #4f4f4f;
   cursor: pointer;
+  background-color: white;
 }
 
 option {
@@ -5546,12 +5547,13 @@ select.input-error {
 	        margin-bottom: 54px;
 	}
 	.receive {
+		max-width: 420px;
+        	margin-right: 0px;
 	        h2 {
-	            font-size: 11px;
-	            min-height: 29px;
+	            font-size: 18px;
 	        }
 		p {
-	            font-size: 9px;
+	            font-size: 18px;
 	        }
 	}
 	.receive-content {

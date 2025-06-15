@@ -1030,6 +1030,7 @@ button:active {
     color: #c3f3a7;
 }
 
+.search-page,
 .catalog-page {
   flex: 1;
   max-width: 1129px;
@@ -1392,6 +1393,7 @@ hr {
     flex-direction: column;
 }
 
+.search-page,
 .catalog-page {
 	.block-review {
 		border: 1px solid #2a3176;
@@ -3218,6 +3220,7 @@ select.input-error {
 	    max-width: 310px;
 	    margin-top: 0px;
 	}
+	.search-page,
 	.catalog-page {
 		max-width: 969px;
 		.block-review {
@@ -3359,6 +3362,7 @@ select.input-error {
 	.buttons_products {
 	    gap: 6px;
 	}
+	.search-page,
 	.catalog-page {
 	    button {
 	        font-size: 11px;
@@ -3684,6 +3688,7 @@ select.input-error {
         max-width: 286px;
         margin-top: 0px;
     }
+    .search-page,
     .catalog-page {
 		max-width: 896px;
         	padding-left: 2px;
@@ -3796,6 +3801,7 @@ select.input-error {
         max-width: 226px;
         margin-top: 0px;
     }
+    .search-page,
     .catalog-page {
 		max-width: 722px;
         	padding-left: 2px;
@@ -3882,6 +3888,7 @@ select.input-error {
 	.buttons_products {
 	    gap: 6px;
 	}
+	.search-page,
 	.catalog-page {
 	    button {
 	        font-size: 11px;
@@ -4011,6 +4018,7 @@ select.input-error {
         max-width: 190px;
         margin-top: 0px;
     }
+    .search-page,
     .catalog-page {
 		max-width: 610px;
         	padding-left: 2px;
@@ -4045,6 +4053,7 @@ select.input-error {
 	.name_product {
 	        font-size: 10px;
 	}
+	.search-page,
 	.catalog-page {
 	        button {
 	            font-size: 8.5px;
@@ -4286,6 +4295,7 @@ select.input-error {
 	    max-width: 271px;
 	    margin-top: 0px;
 	}
+	.search-page,
 	.catalog-page {
 		max-width: 924px;
         	padding-left: 0px;
@@ -4470,6 +4480,7 @@ select.input-error {
 	        font-size: 14px;
 	        margin-bottom: 8px;
 	}
+	.search-page,
 	.catalog-page {
 	        button {
 	            font-size: 14px;
@@ -4831,6 +4842,7 @@ select.input-error {
         max-width: 190px;
         margin-top: 0px;
     }
+    .search-page,
     .catalog-page {
 		.block-review {
 			padding: 0px;
@@ -4949,6 +4961,7 @@ select.input-error {
         max-width: 190px;
         margin-top: 0px;
     }
+    .search-page,
     .catalog-page {
 		.block-review {
 			padding: 0px;
@@ -5038,6 +5051,7 @@ select.input-error {
     .button_review button {
         max-width: 184px;
     }
+    .search-page,
     .catalog-page {
 		.block-review {
 			padding: 0px;
@@ -5180,6 +5194,7 @@ select.input-error {
 	        height: 138px;
 	        margin-top: 12px;
 	}
+	.search-page,
 	.catalog-page {
 		.block-review {
 			padding: 0px;
@@ -5207,6 +5222,7 @@ select.input-error {
 	.slider-max {
 	        max-width: 364px;
 	}
+	.search-page,
 	.catalog-page {
 	        button {
 	            max-width: 480px;
@@ -5236,6 +5252,7 @@ select.input-error {
 	        font-size: 18px;
 	        margin-bottom: 10px;
 	}
+	.search-page,
 	.catalog-page {
 	        button {
 	            font-size: 18px;
@@ -5623,6 +5640,7 @@ select.input-error {
     .form-block {
 	        max-width: 320px;
     }
+    .search-page,
     .catalog-page {
 		.block-review {
 			padding: 0px;
@@ -5712,7 +5730,8 @@ select.input-error {
     .logo-footer {
         width: 246px;
         height: 70px;
-    }	
+    }
+    .search-page,
     .catalog-page {
 		.block-review {
 			padding: 0px;
@@ -5791,6 +5810,7 @@ select.input-error {
 }
 
 @media (max-width: 428px) {
+    .search-page,
     .catalog-page {
 		.block-review {
 			padding: 0px;
@@ -5860,6 +5880,7 @@ select.input-error {
 	.form-block {
 	        max-width: 312px;
         }
+	.search-page,
 	.catalog-page {
 		.block-review {
 			padding: 0px;
@@ -5979,6 +6000,7 @@ select.input-error {
         width: 264px;
         height: 75px;
     }
+    .search-page,
     .catalog-page {
 		.block-review {
 			padding: 0px;
@@ -6189,6 +6211,7 @@ select.input-error {
     .footer-middle {
         gap: 26px;
     }
+    .search-page,
     .catalog-page {
 		.block-review {
 			padding: 0px;

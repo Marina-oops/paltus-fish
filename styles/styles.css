@@ -1624,6 +1624,17 @@ hr {
       height: 25px;
       border: 1px solid #2a3176;
       padding: 0px;
+      background-color: #fff;
+}
+
+.subfilters input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 1px;
+  left: 6px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #2a3176;
 }
 
 .slider-container {

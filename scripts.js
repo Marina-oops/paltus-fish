@@ -157,9 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.location.pathname.includes('basket.html')) {
      initCheckoutRedirect();
   }
-  if (window.location.pathname.includes('404.html')) {
-     init404Redirect();
-  }
+  init404Redirect();
   if (window.location.pathname.includes('make_an_order.html')) {
      initDynamicDates();
      initPaymentMethodSelection();

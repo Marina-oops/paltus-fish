@@ -3917,12 +3917,6 @@ select.input-error {
 	}
 	.receive {
 	        max-width: 148px;
-		p {
-	            font-size: 10px;
-	        }
-		h2 {
-	            font-size: 10px;
-	        }
 	}
 	.receive-content {
 	        max-width: 490px;

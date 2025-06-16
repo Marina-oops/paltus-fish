@@ -339,33 +339,33 @@ img {
   .fish_desktop_aside_1 {
      width: 448px;
      height: 243px;
-     top: 606px;
+     top: 573px;
   }
 
 .fish-filter-inactive {
-  top: var(--fish-inactive-position, 606px);
+  top: var(--fish-inactive-position, 573px);
 }
 
 .fish-filter-active {
-  top: var(--fish-active-position, 814px);
+  top: var(--fish-active-position, 781px);
 }
 	
   .fish_desktop_aside_2 {
      width: 336px;
      height: 267px;
-     top: 984px;
+     top: 951px;
   }
 
   .fish_desktop_aside_3 {
      width: 296px;
      height: 262px;
-     top: 1385px;
+     top: 1352px;
   }
 
   .fish_desktop_aside_4 {
      width: 326px;
      height: 326px;
-     top: 1826px;
+     top: 1793px;
   }
 }
 
@@ -1026,7 +1026,7 @@ button:active {
 	  border-radius: 20px;
 	  max-width: 274px;
 	  font-size: 14px;
-	  height: 332px;
+	  height: 400px;
    }
    .sidebar li {
 	  margin-bottom: 5px;

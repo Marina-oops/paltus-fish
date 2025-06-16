@@ -161,6 +161,23 @@ const PRODUCTS = [
         "Универсален в разных стилях ловли. Бюджетная цена делает воблер привлекательным для широкого круга российских рыболовов.",
       ],
       category: "НОВИНКИ"
+    },
+    {
+      id: 19,
+      name: "Удилище Komandor штекерное JuniorCarp, 390см",
+      price: 3905,
+      image: "images/udilishe/udilishe-1.jpg",
+      images: [
+        "images/udilishe/udilishe-1.jpg",
+        "images/udilishe/udilishe-2.jpg",
+        "images/udilishe/udilishe-3.jpg"
+      ],
+      description: [
+        "Разработан для ловли щуки в труднодоступных местах, эффективен в технике «‎Кавер Шэдинг». Отличается высокой отзывчивостью на малейшие подвижки вершинки спиннинга и способность к активной игре.",
+        "Материал: прочный пластик с текстурированным покрытием и металлизированной окраской. Система балансировки TMB с подвижными и зафиксированными шариками обеспечивает дальний заброс, живую игру и устойчивость. ",
+        "Универсален в разных стилях ловли. Бюджетная цена делает воблер привлекательным для широкого круга российских рыболовов.",
+      ],
+      category: "БРЕНДЫ"
     }
     ];
 
@@ -891,6 +908,9 @@ function initProductCatalog() {
   if (window.location.pathname.includes('new.html')) {
        currentCategory = "НОВИНКИ";
   }
+  if (window.location.pathname.includes('brends.html')) {
+       currentCategory = "БРЕНДЫ";
+  }
   let selectedSubcategories = new Set();
   let sortAsc = true;
   let minPrice = 0;
@@ -909,7 +929,8 @@ function initProductCatalog() {
       "УДОЧКИ": 0,
       "КАТУШКИ": 0,
       "ЛЕСКИ И ШНУРЫ": 0,
-      "НОВИНКИ": 0
+      "НОВИНКИ": 0,
+      "БРЕНДЫ": 0
     };
 
     PRODUCTS.forEach(product => {

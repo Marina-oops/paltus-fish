@@ -884,7 +884,12 @@ function handleResize() {
 // Функция для товаров
 
 function initProductCatalog() {
-  let currentCategory = "УДИЛИЩА";
+  if (window.location.pathname.includes('ropes.html')) {
+       let currentCategory = "УДИЛИЩА";
+  }
+  if (window.location.pathname.includes('new.html')) {
+       let currentCategory = "НОВИНКИ";
+  }
   let selectedSubcategories = new Set();
   let sortAsc = true;
   let minPrice = 0;

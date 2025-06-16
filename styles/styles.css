@@ -289,20 +289,20 @@ img {
 }
 
 .fish_desktop_aside_1 {
-	top: 755px;
+	top: 855px;
 	transition: top 0.3s ease;
 }
 
 .fish_desktop_aside_2 {
-	top: 1319px;
+	top: 1419px;
 }
 
 .fish_desktop_aside_3 {
-	top: 1918px;
+	top: 2018px;
 }
 
 .fish_desktop_aside_4 {
-	top: 2578px;
+	top: 2678px;
 }
 
 .fish-404 {
@@ -317,11 +317,11 @@ img {
 }
 
 .fish-filter-inactive {
-  top: var(--fish-inactive-position, 755px);
+  top: var(--fish-inactive-position, 855px);
 }
 
 .fish-filter-active {
-  top: var(--fish-active-position, 1035px);
+  top: var(--fish-active-position, 1135px);
 }
 
 .logo-404-container {
@@ -339,33 +339,33 @@ img {
   .fish_desktop_aside_1 {
      width: 448px;
      height: 243px;
-     top: 506px;
+     top: 606px;
   }
 
 .fish-filter-inactive {
-  top: var(--fish-inactive-position, 506px);
+  top: var(--fish-inactive-position, 606px);
 }
 
 .fish-filter-active {
-  top: var(--fish-active-position, 714px);
+  top: var(--fish-active-position, 814px);
 }
 	
   .fish_desktop_aside_2 {
      width: 336px;
      height: 267px;
-     top: 884px;
+     top: 984px;
   }
 
   .fish_desktop_aside_3 {
      width: 296px;
      height: 262px;
-     top: 1285px;
+     top: 1385px;
   }
 
   .fish_desktop_aside_4 {
      width: 326px;
      height: 326px;
-     top: 1726px;
+     top: 1826px;
   }
 }
 
@@ -991,7 +991,7 @@ button:active {
   font-family: "Nunito", sans-serif;
   font-size: 20px;
   font-weight: 700;
-  height: 472px;
+  height: 572px;
   margin-bottom: 32px;
   max-width: 408px;
   margin-right: 24px;

@@ -4977,7 +4977,10 @@ select.input-error {
 		gap: 8px;
 	 }
 	.text-header-404 {
-	        margin-top: 400px;
+	        margin-top: 480px;
+	}
+	.logo-404-container {
+	        display: none;
 	}
 }
 

@@ -1064,7 +1064,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-if  if (window.location.pathname.includes('ropes.html') || window.location.pathname.includes('new.html') || window.location.pathname.includes('brends.html') || window.location.pathname.includes('fishing_equipment.html') || window.location.pathname.includes('bait.html') || window.location.pathname.includes('fishing_accessories.html') || window.location.pathname.includes('cases_and_tubes.html') || window.location.pathname.includes('winter_fishing.html') || window.location.pathname.includes('tourism.html')) { 
+if (window.location.pathname.includes('ropes.html') || window.location.pathname.includes('new.html') || window.location.pathname.includes('brends.html') || window.location.pathname.includes('fishing_equipment.html') || window.location.pathname.includes('bait.html') || window.location.pathname.includes('fishing_accessories.html') || window.location.pathname.includes('cases_and_tubes.html') || window.location.pathname.includes('winter_fishing.html') || window.location.pathname.includes('tourism.html')) { 
     window.addEventListener('resize', () => {
       mobileFeaturesInitialized = false;
       initMobileFeatures(catalogModule);

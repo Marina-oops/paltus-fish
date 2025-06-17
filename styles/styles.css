@@ -309,10 +309,15 @@ img {
 	top: 2678px;
 }
 
-.fish-404-mob,
 .fish-404 {
 	bottom: 0;
 	left: 0;
+}
+
+.fish-404-mob {
+    bottom: -60px;
+    left: 0;
+    transform: rotate(20deg);
 }
 
 .fish-404-2 {
@@ -322,9 +327,9 @@ img {
 }
 
 .fish-404-mob-2 {
-	transform: scaleX(-1) rotate(45deg);
-	right: 0;
-	top: 0;
+    transform: scaleX(-1) rotate(80deg);
+    right: -10px;
+    top: 90px;
 }
 
 .fish-filter-inactive {
@@ -408,9 +413,6 @@ img {
 		max-width: 433px;
         	height: 433px;
 	}
-    .404-page {
-	    margin-top: 454px;
-    }
 }
 
 .top-header {
@@ -4974,6 +4976,9 @@ select.input-error {
 	        max-width: 410px;
 		gap: 8px;
 	 }
+	.text-header-404 {
+	        margin-top: 400px;
+	}
 }
 
 @media (max-width: 834px) {

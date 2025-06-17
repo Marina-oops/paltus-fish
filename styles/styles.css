@@ -5820,6 +5820,29 @@ select.input-error {
 	    flex-direction: column;
 	    gap: 16px;
 	}
+	.text-header-404 {
+	        font-size: 180px;
+	}
+	.text-404 {
+	        font-size: 20px;
+   	 }
+	.fish-404-mob, 
+	.fish-404-mob-2 {
+	        max-width: 356px;
+	        height: 356px;
+	}
+	.fish-404-mob-2 {
+	    right: -20px;
+	    top: 0px;
+	}
+	.text-header-404 {
+	        margin-top: 290px;
+	}
+	.fish-404-mob {
+	    bottom: -90px;
+	    left: -50px;
+	    transform: rotate(10deg);
+	}
 }
 	
 @media (max-width: 440px) {

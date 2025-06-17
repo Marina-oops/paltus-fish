@@ -257,7 +257,7 @@ const PRODUCTS = [
     {
       id: 16,
       name: "Леска AZOR FISHING нейлон, 100м, 0,16мм, 3,9кг",
-      price: 4250,
+      price: 1000,
       image: "images/leska.jpg",
       images: [
         "images/leska.jpg"
@@ -323,7 +323,7 @@ const PRODUCTS = [
     {
       id: 20,
       name: "Воблер LureMax KILLER 120F MDR-012 17,5 гр",
-      price: 3905,
+      price: 395,
       image: "images/vobler.jpg",
       images: [
         "images/vobler.jpg"
@@ -338,7 +338,7 @@ const PRODUCTS = [
     {
       id: 21,
       name: "Набор блесен для рыбалки 12 штук от 2,5-5г в пластиковом боксе для хранения",
-      price: 3905,
+      price: 1015,
       image: "images/blecn.jpg",
       images: [
         "images/blecn.jpg"
@@ -352,10 +352,10 @@ const PRODUCTS = [
     {
       id: 22,
       name: "Балансир рыболовный Usami Dansa 50 мм вес 8 гр",
-      price: 3905,
+      price: 400,
       image: "images/balansir.jpg",
       images: [
-        "images/udilishe/balansir.jpg"
+        "images/balansir.jpg"
       ],
       description: [
         "Usami Dansa 50 мм (8 грамм) - балансир для вертикальной ловли со льда. Рисует плавную восьмерку, имитируя малька.",
@@ -367,12 +367,10 @@ const PRODUCTS = [
     {
       id: 23,
       name: "Раттлины #1 70мм 16.5г",
-      price: 3905,
-      image: "images/udilishe/udilishe-1.jpg",
+      price: 315,
+      image: "images/rattlin.jpg",
       images: [
-        "images/udilishe/udilishe-1.jpg",
-        "images/udilishe/udilishe-2.jpg",
-        "images/udilishe/udilishe-3.jpg"
+        "images/rattlin.jpg"
       ],
       description: [
         "Раттлины – универсальные приманки для разных видов рыбалки (лёд, заброс, троллинг) как в пресной, так и в морской воде.",
@@ -383,7 +381,7 @@ const PRODUCTS = [
     {
       id: 24,
       name: "Тейл-спиннер 10,5гр 30мм",
-      price: 3905,
+      price: 340,
       image: "images/spiner.jpg",
       images: [
         "images/spiner.jpg"
@@ -398,10 +396,10 @@ const PRODUCTS = [
     {
       id: 25,
       name: "Силиконовая приманка для рыбалки, LJ ProSeries TIOGA",
-      price: 3905,
-      image: "images/udilishe/sea-prim.jpg",
+      price: 395,
+      image: "images/sea-prim.jpg",
       images: [
-        "images/udilishe/sea-prim.jpg"
+        "images/sea-prim.jpg"
       ],
       description: [
         "Tioga - гибридная червеобразная приманка для окуня и судака. Утолщенная передняя часть и хвостик-копытце создают привлекательные колебания. Ребрышки усиливают игру и делают движения живыми. Имеет запах макрели.",
@@ -413,12 +411,10 @@ const PRODUCTS = [
     {
       id: 26,
       name: "Муха рыболовная (мушка, стример) Playfishing 3006",
-      price: 3905,
-      image: "images/udilishe/udilishe-1.jpg",
+      price: 400,
+      image: "images/muchi.jpg",
       images: [
-        "images/udilishe/udilishe-1.jpg",
-        "images/udilishe/udilishe-2.jpg",
-        "images/udilishe/udilishe-3.jpg"
+        "images/muchi.jpg"
       ],
       description: [
         "Набор 3 штуки от мастерской Playfishing.",
@@ -429,7 +425,7 @@ const PRODUCTS = [
     {
       id: 27,
       name: "Приманка тасманский дьявол 20гр",
-      price: 3905,
+      price: 425,
       image: "images/tasman.jpg",
       images: [
         "images/tasman.jpg"
@@ -444,7 +440,7 @@ const PRODUCTS = [
     {
       id: 28,
       name: "Чехол Kame для снастей и удочек, с 3 отделениями 160см",
-      price: 3905,
+      price: 1215,
       image: "images/chexol.jpg",
       images: [
         "images/chexol.jpg"
@@ -457,7 +453,7 @@ const PRODUCTS = [
     {
       id: 29,
       name: "Тубус Fisherman",
-      price: 3905,
+      price: 1800,
       image: "images/tubus.jpg",
       images: [
         "images/tubus.jpg"
@@ -470,7 +466,7 @@ const PRODUCTS = [
     {
       id: 30,
       name: "Палатка 2-местная Northland Valley 2",
-      price: 3905,
+      price: 8905,
       image: "images/palatka.jpg",
       images: [
         "images/palatka.jpg"
@@ -485,7 +481,7 @@ const PRODUCTS = [
     {
       id: 31,
       name: "Ледобур HS-150D R правое вращение (LH-150RD) Helios",
-      price: 3905,
+      price: 2100,
       image: "images/ledobur.jpg",
       images: [
         "images/ledobur.jpg"
@@ -500,7 +496,7 @@ const PRODUCTS = [
     {
       id: 32,
       name: "Хапуга для зимней рыбалки",
-      price: 3905,
+      price: 1200,
       image: "images/xapuga.jpg",
       images: [
         "images/xapuga.jpg"
@@ -514,7 +510,7 @@ const PRODUCTS = [
     {
       id: 33,
       name: "Хапуга для зимней рыбалки",
-      price: 3905,
+      price: 1200,
       image: "images/xapuga.jpg",
       images: [
         "images/xapuga.jpg"
@@ -528,7 +524,7 @@ const PRODUCTS = [
     {
       id: 34,
       name: "Подсак",
-      price: 3905,
+      price: 1400,
       image: "images/podsak.jpg",
       images: [
         "images/podsak.jpg"
@@ -541,7 +537,7 @@ const PRODUCTS = [
     {
       id: 35,
       name: "Садок металлический, круглый, с ручкой, диаметр 45 см.",
-      price: 3905,
+      price: 1200,
       image: "images/sadok.jpg",
       images: [
         "images/sadok.jpg"
@@ -556,7 +552,7 @@ const PRODUCTS = [
     {
       id: 36,
       name: "Коробка для наживки Grantham 1,25л",
-      price: 3905,
+      price: 300,
       image: "images/box.jpg",
       images: [
         "images/box.jpg"
@@ -571,7 +567,7 @@ const PRODUCTS = [
     {
       id: 37,
       name: "Подсак",
-      price: 3905,
+      price: 1400,
       image: "images/podsak.jpg",
       images: [
         "images/podsak.jpg"
@@ -584,7 +580,7 @@ const PRODUCTS = [
     {
       id: 38,
       name: "Кейс для хранения снастей Рыбиста RB-KHSM-03",
-      price: 3905,
+      price: 500,
       image: "images/case.jpg",
       images: [
         "images/case.jpg"
@@ -597,7 +593,7 @@ const PRODUCTS = [
     {
       id: 39,
       name: "Универсальный держатель удочки на саморезах",
-      price: 3905,
+      price: 600,
       image: "images/derzh.jpg",
       images: [
         "images/derzh.jpg"
@@ -610,7 +606,7 @@ const PRODUCTS = [
     {
       id: 40,
       name: "Кукан 3,5м. AZOR FISHING",
-      price: 3905,
+      price: 700,
       image: "images/cucan.jpg",
       images: [
         "images/cucan.jpg"
@@ -625,7 +621,7 @@ const PRODUCTS = [
     {
       id: 41,
       name: "CARP PRO Cratus Сигнализатор поклевки электронный",
-      price: 3905,
+      price: 1300,
       image: "images/signal.jpg",
       images: [
         "images/signal.jpg"
@@ -640,7 +636,7 @@ const PRODUCTS = [
     {
       id: 42,
       name: "Кормушка Пуля классика 60гр",
-      price: 3905,
+      price: 200,
       image: "images/puly.jpg",
       images: [
         "images/puly.jpg"
@@ -655,7 +651,7 @@ const PRODUCTS = [
     {
       id: 43,
       name: "Рогатка FLAGMAN 6мм",
-      price: 3905,
+      price: 1300,
       image: "images/rogatka.jpg",
       images: [
         "images/rogatka.jpg"
@@ -669,7 +665,7 @@ const PRODUCTS = [
     {
       id: 44,
       name: "Электронные подвесные весы WeiHeng WH-A08 до 50кг",
-      price: 3905,
+      price: 395,
       image: "images/ves.jpg",
       images: [
         "images/ves.jpg"

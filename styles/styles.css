@@ -5833,11 +5833,11 @@ select.input-error {
 	}
 	.fish-404-mob-2 {
 	    right: -70px;
-	    top: -40px;
+	    top: -90px;
 	    transform: scaleX(-1) rotate(70deg);
 	}
 	.text-header-404 {
-	        margin-top: 260px;
+	        margin-top: 200px;
 	}
 	.fish-404-mob {
 	    bottom: -90px;

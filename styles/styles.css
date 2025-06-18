@@ -5844,6 +5844,10 @@ select.input-error {
 	    left: -50px;
 	    transform: rotate(10deg);
 	}
+	.subfilters input[type="checkbox"]:checked::after {
+	  width: 25px;
+	  height: 25px;
+	}
 }
 	
 @media (max-width: 440px) {

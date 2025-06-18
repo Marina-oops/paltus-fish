@@ -4711,6 +4711,12 @@ select.input-error {
 	        width: 25px;
 	        height: 25px;
 	}
+	.subfilters input[type="checkbox"]:checked::after {
+	  width: 25px;
+	  height: 25px;
+	  top: -1px;
+  	  font-size: 16px;
+	}
 	.subfilters label {
 	    font-size: 16px;
 	    align-items: center;
@@ -5843,10 +5849,6 @@ select.input-error {
 	    bottom: -90px;
 	    left: -50px;
 	    transform: rotate(10deg);
-	}
-	.subfilters input[type="checkbox"]:checked::after {
-	  width: 25px;
-	  height: 25px;
 	}
 }
 	

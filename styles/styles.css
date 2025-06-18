@@ -5828,8 +5828,8 @@ select.input-error {
    	 }
 	.fish-404-mob, 
 	.fish-404-mob-2 {
-	        max-width: 356px;
-	        height: 356px;
+	        max-width: 306px;
+	        height: 306px;
 	}
 	.fish-404-mob-2 {
 	    right: -70px;
@@ -5837,7 +5837,7 @@ select.input-error {
 	    transform: scaleX(-1) rotate(70deg);
 	}
 	.text-header-404 {
-	        margin-top: 200px;
+	        margin-top: 150px;
 	}
 	.fish-404-mob {
 	    bottom: -90px;
